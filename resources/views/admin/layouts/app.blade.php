@@ -194,6 +194,26 @@
             <li class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">
               <a href="{{ route('dashboard') }}" class="nav-link"><i data-feather="monitor"></i> <span>Dashboard</span></a>
             </li>
+            <li class="{{ request()->routeIs('users.*') ? 'active' : '' }}">
+                <a href="{{ route('users.index') }}" class="nav-link">
+                    <i data-feather="users"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+
+            <li class="{{ request()->routeIs('roles.*') ? 'active' : '' }}">
+                <a href="{{ route('roles.index') }}" class="nav-link">
+                    <i data-feather="shield"></i>
+                    <span>Roles</span>
+                </a>
+            </li>
+
+            <li class="{{ request()->routeIs('permissions.*') ? 'active' : '' }}">
+                <a href="{{ route('permissions.index') }}" class="nav-link">
+                    <i data-feather="key"></i>
+                    <span>Permissions</span>
+                </a>
+            </li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="anchor"></i><span>Other
                   Pages</span></a>
