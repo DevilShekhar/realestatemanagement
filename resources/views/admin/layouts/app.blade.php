@@ -16,7 +16,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon">
     <!-- Add this to your <head> section if SweetAlert is not included -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -182,9 +182,9 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html"> <img alt="image" src="assets/img/logo.png" class="header-logo" /> <span
-                class="logo-name">Otika</span>
-            </a>
+           <a href="{{ url('dashboard') }}">
+              <img alt="image" src="{{ asset('assets/img/logo.png') }}" class="header-logo">
+          </a>
           </div>
           <ul class="sidebar-menu">
             <li class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">
