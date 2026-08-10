@@ -18,6 +18,10 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon">
     <!-- Add this to your <head> section if SweetAlert is not included -->
+      <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
+      <link rel="stylesheet" href="{{ asset('assets/bundles/datatables/datatables.min.css') }}">
+      <link rel="stylesheet" href="{{ asset('assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css') }}">
+      
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
@@ -242,12 +246,16 @@
     <script src="{{ asset('assets/js/app.min.js') }}"></script>
     <!-- JS Libraries -->
     <script src="{{ asset('assets/bundles/apexcharts/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('assets/bundles/datatables/datatables.min.js') }}"></script>
+
+    <script src="{{ asset('assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js') }}"></script>
     <!-- Page Specific JS -->
     <script src="{{ asset('assets/js/page/index.js') }}"></script>
     <!-- Template JS -->
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
     <!-- Custom JS -->
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+    
     @stack('scripts')
     </body>
 </html>
