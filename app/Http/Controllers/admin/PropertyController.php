@@ -22,25 +22,47 @@ class PropertyController extends Controller
     /**
      * Display a listing of properties.
      */
-    public function index()
-    {
-        $properties = Property::with([
-            'propertyCategory',
-            'country',
-            'state',
-            'city',
-            'area',
-            'creator',
-            'updater',
-        ])
-            ->latest('id')
-            ->paginate(10);
+   public function index()
+{
+    $user = Auth::user();
 
-        return view(
-            'admin.properties.index',
-            compact('properties')
-        );
+    $query = Property::with([
+        'propertyCategory',
+        'country',
+        'state',
+        'city',
+        'area',
+        'creator',
+        'updater',
+    ]);
+
+    // Super Admin & Admin → Show all properties
+    if ($user->hasAnyRole(['super-admin', 'admin'])) {
+
+        // No restriction
+
     }
+    // Seller → Show only properties created by logged-in seller
+    elseif ($user->hasRole('seller')) {
+
+        $query->where('created_by', $user->id);
+
+    }
+    // Other roles → Show no properties
+    else {
+
+        $query->whereRaw('1 = 0');
+    }
+
+    $properties = $query
+        ->latest('id')
+        ->paginate(10);
+
+    return view(
+        'admin.properties.index',
+        compact('properties')
+    );
+}
 
     /**
      * Show the form for creating a new property.
@@ -969,70 +991,84 @@ class PropertyController extends Controller
             );
     }
     public function storeImages(Request $request, Property $property)
-{
-    $validated = $request->validate([
-        'images' => [
-            'required',
-            'array',
-            'min:1',
-        ],
+    {
+        $validated = $request->validate([
+            'images' => [
+                'required',
+                'array',
+                'min:1',
+            ],
 
-        'images.*' => [
-            'required',
-            'image',
-            'mimes:jpg,jpeg,png,webp',
-            'max:5120',
-        ],
-    ]);
-
-
-    foreach ($validated['images'] as $image) {
-
-        /*
-        |--------------------------------------------------------------------------
-        | Store Image
-        |--------------------------------------------------------------------------
-        | Stored in:
-        | storage/app/public/properties/{property_id}
-        */
-
-        $path = $image->store(
-            'properties/' . $property->id,
-            'public'
-        );
+            'images.*' => [
+                'required',
+                'image',
+                'mimes:jpg,jpeg,png,webp',
+                'max:5120',
+            ],
+        ]);
 
 
-        /*
-        |--------------------------------------------------------------------------
-        | Save Image Record
-        |--------------------------------------------------------------------------
-        */
+        foreach ($validated['images'] as $image) {
 
-        PropertyImage::create([
-            'property_id' => $property->id,
+            /*
+            |--------------------------------------------------------------------------
+            | Store Image
+            |--------------------------------------------------------------------------
+            | Stored in:
+            | storage/app/public/properties/{property_id}
+            */
 
-            'image' => $path,
+            $path = $image->store(
+                'properties/' . $property->id,
+                'public'
+            );
 
-            'title' => pathinfo(
-                $image->getClientOriginalName(),
-                PATHINFO_FILENAME
-            ),
 
-            'is_primary' => false,
+            /*
+            |--------------------------------------------------------------------------
+            | Save Image Record
+            |--------------------------------------------------------------------------
+            */
 
-            'created_by' => Auth::id(),
+            PropertyImage::create([
+                'property_id' => $property->id,
 
+                'image' => $path,
+
+                'title' => pathinfo(
+                    $image->getClientOriginalName(),
+                    PATHINFO_FILENAME
+                ),
+
+                'is_primary' => false,
+
+                'created_by' => Auth::id(),
+
+                'updated_by' => Auth::id(),
+            ]);
+        }
+
+
+        return redirect()
+            ->route('properties.show', $property->id)
+            ->with(
+                'success',
+                'Property images uploaded successfully.'
+            );
+    }
+    public function approve(Property $property)
+    {
+        $property->update([
+            'approval' => 1,
             'updated_by' => Auth::id(),
         ]);
+
+        return redirect()
+            ->route('properties.show', $property->id)
+            ->with(
+                'success',
+                'Property approved successfully.'
+            );
     }
-
-
-    return redirect()
-        ->route('properties.show', $property->id)
-        ->with(
-            'success',
-            'Property images uploaded successfully.'
-        );
-}
     
 }
