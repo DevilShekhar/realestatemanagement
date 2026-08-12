@@ -11,6 +11,7 @@ use App\Http\Controllers\admin\CountryController;
 use App\Http\Controllers\admin\StateController;
 use App\Http\Controllers\admin\CityController;
 use App\Http\Controllers\admin\AreaController;
+use App\Http\Controllers\admin\PropertyController;
 
 
 Route::get('/', function () {
@@ -33,4 +34,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('states', StateController::class);
     Route::resource('cities', CityController::class);
     Route::resource('areas', AreaController::class);
+    Route::resource('properties', PropertyController::class);
+    Route::put('properties/{property}/amenities',[PropertyController::class, 'updateAmenities'])->name('properties.amenities.update');
+    Route::post('properties/{property}/images',[PropertyController::class, 'storeImages'])->name('properties.images.store');
+    
 });
