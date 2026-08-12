@@ -1656,7 +1656,7 @@
             </div>
         @endif       
         <div class="card">
-            <div class="card-header">
+            <div class="card-header d-flex justify-content-between align-items-center">
                 <div>
                     <h4 class="mb-1">
                         {{ $property->title }}
@@ -1667,9 +1667,19 @@
                         </small>
                     @endif
                 </div>
-                <div class="card-header-action">
-                    <a  href="{{ route('properties.edit', $property->id) }}"
-                        class="btn btn-primary">
+                <div class="card-header-action d-flex align-items-center justify-content-end">
+                    @if($property->approval == 0)
+                        <button  type="button" class="btn btn-success mr-2" data-toggle="modal" data-target="#approvePropertyModal">
+                            <i data-feather="check-circle"></i>
+                            Approve Property
+                        </button>
+                    @else
+                        <span class="badge badge-success mr-2 p-2">
+                            <i data-feather="check-circle"></i>
+                            Approved
+                        </span>
+                    @endif
+                    <a href="{{ route('properties.edit', $property->id) }}" class="btn btn-primary" >
                         <i class="fas fa-edit"></i>
                         Edit Property
                     </a>
@@ -2334,83 +2344,37 @@
                 </div>
             </div>
             <div class="card-body">
-
-    <div class="media-gallery-card">
-
-        {{-- =====================================================
-            HEADER
-        ====================================================== --}}
-
-        <div class="media-gallery-header">
-
-            <div class="media-gallery-icon">
-
-                <i data-feather="image"></i>
-
-            </div>
-
-            <h4>
-                Media Gallery
-            </h4>
-
-
-            {{-- ADD IMAGE BUTTON --}}
-
-            <div class="ml-auto">
-
-                <button
-                    type="button"
-                    class="btn btn-primary btn-sm"
-                    data-toggle="modal"
-                    data-target="#uploadImagesModal"
-                >
-
-                    <i data-feather="plus"></i>
-
-                    Add Images
-
-                </button>
-
-            </div>
-
-        </div>
-
-
-        {{-- =====================================================
-            IMAGE GALLERY
-        ====================================================== --}}
-
-        <div class="media-gallery-scroll">
-
-            @forelse($property->images as $image)
-
-                <div class="media-gallery-item">
-
-                   <img
-    src="{{ asset('storage/' . $image->image) }}"
-    alt="{{ $image->title ?? $property->title }}"
->
+                <div class="media-gallery-card">     
+                    <div class="media-gallery-header">
+                        <div class="media-gallery-icon">
+                            <i data-feather="image"></i>
+                        </div>
+                        <h4>
+                            Media Gallery
+                        </h4>
+                        <div class="ml-auto">
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#uploadImagesModal" >
+                                <i data-feather="plus"></i>
+                                Add Images
+                            </button>
+                        </div>
+                    </div>      
+                    <div class="media-gallery-scroll">
+                        @forelse($property->images as $image)
+                            <div class="media-gallery-item">
+                            <img src="{{ asset('storage/' . $image->image) }}"  alt="{{ $image->title ?? $property->title }}"  >
+                            </div>
+                        @empty
+                            <div class="media-gallery-empty">
+                                <i data-feather="image"></i>
+                                <span>
+                                    No images available
+                                </span>
+                            </div>
+                        @endforelse
+                    </div>
                 </div>
-
-            @empty
-
-                <div class="media-gallery-empty">
-
-                    <i data-feather="image"></i>
-
-                    <span>
-                        No images available
-                    </span>
-
-                </div>
-
-            @endforelse
-
-        </div>
-
-    </div>
-
-</div>
+            </div>
             <div class="card-body">
                 <div class="record-information-card">
                     <div class="record-information-header">
@@ -3109,6 +3073,135 @@
                 </div>
 
             </form>
+
+        </div>
+
+    </div>
+
+</div>
+{{-- =========================================================
+    APPROVE PROPERTY MODAL
+========================================================= --}}
+
+<div
+    class="modal fade"
+    id="approvePropertyModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="approvePropertyModalLabel"
+    aria-hidden="true"
+>
+
+    <div
+        class="modal-dialog modal-dialog-centered"
+        role="document"
+    >
+
+        <div class="modal-content">
+
+            {{-- MODAL HEADER --}}
+            <div class="modal-header">
+
+                <h5
+                    class="modal-title"
+                    id="approvePropertyModalLabel"
+                >
+
+                    <i data-feather="check-circle"></i>
+
+                    Approve Property
+
+                </h5>
+
+                <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                >
+
+                    <span aria-hidden="true">
+                        &times;
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            {{-- MODAL BODY --}}
+            <div class="modal-body text-center">
+
+                <div class="mb-3">
+
+                    <i
+                        data-feather="check-circle"
+                        style="
+                            width: 50px;
+                            height: 50px;
+                            color: #28a745;
+                        "
+                    ></i>
+
+                </div>
+
+                <h5>
+                    Approve Property?
+                </h5>
+
+                <p class="text-muted mb-0">
+
+                    Are you sure you want to approve
+
+                    <strong>
+                        {{ $property->title }}
+                    </strong>
+
+                    ?
+
+                </p>
+
+            </div>
+
+
+            {{-- MODAL FOOTER --}}
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                >
+
+                    Cancel
+
+                </button>
+
+
+                <form
+                    action="{{ route('properties.approve', $property->id) }}"
+                    method="POST"
+                    class="d-inline"
+                >
+
+                    @csrf
+
+                    @method('PUT')
+
+                    <button
+                        type="submit"
+                        class="btn btn-success"
+                    >
+
+                        <i data-feather="check"></i>
+
+                        Yes, Approve
+
+                    </button>
+
+                </form>
+
+            </div>
 
         </div>
 

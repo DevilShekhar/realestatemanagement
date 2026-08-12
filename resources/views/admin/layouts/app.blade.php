@@ -214,65 +214,214 @@
                     <span>Permissions</span>
                 </a>
             </li>
-            <li class="dropdown
-                {{ request()->routeIs('property-categories.*')
-                    || request()->routeIs('amenities.*')
-                    || request()->routeIs('countries.*')
-                    || request()->routeIs('states.*')
-                    || request()->routeIs('cities.*')
-                    || request()->routeIs('areas.*')
-                    || request()->routeIs('properties.*')
-                    ? 'active'
-                    : '' }}">
-                <a href="#" class="menu-toggle nav-link has-dropdown">
-                    <i data-feather="home"></i>
-                    <span>Property Management</span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li class="{{ request()->routeIs('property-categories.*') ? 'active' : '' }}">
-                        <a class="nav-link"  href="{{ route('property-categories.index') }}">
-                            <i data-feather="layers"></i>
-                            <span>Property Categories</span>
-                        </a>
-                    </li>
-                    <li class="{{ request()->routeIs('amenities.*') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('amenities.index') }}">
-                            <i data-feather="star"></i>
-                            <span>Amenities</span>
-                        </a>
-                    </li>
-                    <li class="{{ request()->routeIs('countries.*') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('countries.index') }}">
-                            <i data-feather="globe"></i>
-                            <span>Countries</span>
-                        </a>
-                    </li>
-                    <li class="{{ request()->routeIs('states.*') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('states.index') }}">
-                            <i data-feather="map"></i>
-                            <span>States</span>
-                        </a>
-                    </li>
-                    <li class="{{ request()->routeIs('cities.*') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('cities.index') }}">
-                            <i data-feather="map-pin"></i>
-                            <span>Cities</span>
-                        </a>
-                    </li>
-                    <li class="{{ request()->routeIs('areas.*') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('areas.index') }}">
-                            <i data-feather="navigation"></i>
-                            <span>Areas</span>
-                        </a>
-                    </li>
-                    <li class="{{ request()->routeIs('properties.*') ? 'active' : '' }}">
-                        <a  class="nav-link" href="{{ route('properties.index') }}">
-                            <i data-feather="home"></i>
-                            <span>Properties</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+           <li class="dropdown
+              {{ request()->routeIs('property-categories.*')
+                  || request()->routeIs('amenities.*')
+                  || request()->routeIs('countries.*')
+                  || request()->routeIs('states.*')
+                  || request()->routeIs('cities.*')
+                  || request()->routeIs('areas.*')
+                  || request()->routeIs('properties.*')
+                  || request()->routeIs('properties.search')
+                  ? 'active'
+                  : '' }}">
+
+              <a href="#" class="menu-toggle nav-link has-dropdown">
+
+                  <i data-feather="home"></i>
+
+                  <span>
+                      Property Management
+                  </span>
+
+              </a>
+
+
+              <ul class="dropdown-menu">
+
+                  {{-- =====================================================
+                      PROPERTY CATEGORIES
+                  ====================================================== --}}
+
+                  <li class="{{ request()->routeIs('property-categories.*') ? 'active' : '' }}">
+
+                      <a
+                          class="nav-link"
+                          href="{{ route('property-categories.index') }}"
+                      >
+
+                          <i data-feather="layers"></i>
+
+                          <span>
+                              Property Categories
+                          </span>
+
+                      </a>
+
+                  </li>
+
+
+                  {{-- =====================================================
+                      AMENITIES
+                  ====================================================== --}}
+
+                  <li class="{{ request()->routeIs('amenities.*') ? 'active' : '' }}">
+
+                      <a
+                          class="nav-link"
+                          href="{{ route('amenities.index') }}"
+                      >
+
+                          <i data-feather="star"></i>
+
+                          <span>
+                              Amenities
+                          </span>
+
+                      </a>
+
+                  </li>
+
+
+                  {{-- =====================================================
+                      COUNTRIES
+                  ====================================================== --}}
+
+                  <li class="{{ request()->routeIs('countries.*') ? 'active' : '' }}">
+
+                      <a
+                          class="nav-link"
+                          href="{{ route('countries.index') }}"
+                      >
+
+                          <i data-feather="globe"></i>
+
+                          <span>
+                              Countries
+                          </span>
+
+                      </a>
+
+                  </li>
+
+
+                  {{-- =====================================================
+                      STATES
+                  ====================================================== --}}
+
+                  <li class="{{ request()->routeIs('states.*') ? 'active' : '' }}">
+
+                      <a
+                          class="nav-link"
+                          href="{{ route('states.index') }}"
+                      >
+
+                          <i data-feather="map"></i>
+
+                          <span>
+                              States
+                          </span>
+
+                      </a>
+
+                  </li>
+
+
+                  {{-- =====================================================
+                      CITIES
+                  ====================================================== --}}
+
+                  <li class="{{ request()->routeIs('cities.*') ? 'active' : '' }}">
+
+                      <a
+                          class="nav-link"
+                          href="{{ route('cities.index') }}"
+                      >
+
+                          <i data-feather="map-pin"></i>
+
+                          <span>
+                              Cities
+                          </span>
+
+                      </a>
+
+                  </li>
+
+
+                  {{-- =====================================================
+                      AREAS
+                  ====================================================== --}}
+
+                  <li class="{{ request()->routeIs('areas.*') ? 'active' : '' }}">
+
+                      <a
+                          class="nav-link"
+                          href="{{ route('areas.index') }}"
+                      >
+
+                          <i data-feather="navigation"></i>
+
+                          <span>
+                              Areas
+                          </span>
+
+                      </a>
+
+                  </li>
+
+
+                  {{-- =====================================================
+                      PROPERTIES - ADMIN
+                  ====================================================== --}}
+
+                  <li class="{{ request()->routeIs('properties.index')
+                              || request()->routeIs('properties.create')
+                              || request()->routeIs('properties.edit')
+                              || request()->routeIs('properties.show')
+                              ? 'active'
+                              : '' }}">
+
+                      <a
+                          class="nav-link"
+                          href="{{ route('properties.index') }}"
+                      >
+
+                          <i data-feather="home"></i>
+
+                          <span>
+                              Properties
+                          </span>
+
+                      </a>
+
+                  </li>
+
+
+                  {{-- =====================================================
+                      GET PROPERTIES - BUYER SEARCH
+                  ====================================================== --}}
+
+                  <li class="{{ request()->routeIs('properties.search') ? 'active' : '' }}">
+
+                      <a
+                          class="nav-link"
+                          href="{{ route('properties.search') }}"
+                      >
+
+                          <i data-feather="search"></i>
+
+                          <span>
+                              Get Properties
+                          </span>
+
+                      </a>
+
+                  </li>
+
+              </ul>
+
+          </li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="anchor"></i><span>Other
                   Pages</span></a>
