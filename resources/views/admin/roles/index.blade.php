@@ -72,6 +72,10 @@
                                                             Action
                                                         </button>
                                                         <div class="dropdown-menu">
+                                                            <a href="{{ route('roles.permissions', $role->id) }}" class="dropdown-item">
+                                                                <i class="fas fa-key"></i>
+                                                                Assign Permission
+                                                            </a>
                                                             <a href="{{ route('roles.show', $role->id) }}" class="dropdown-item">
                                                                 <i class="fas fa-eye"></i>
                                                                 View
@@ -113,12 +117,7 @@
                                         @endforelse
                                     </tbody>
                                 </table>
-                            </div>
-                            @if($roles->hasPages())
-                                <div class="mt-4">
-                                    {{ $roles->links() }}
-                                </div>
-                            @endif
+                            </div>                            
                         </div>
                     </div>
                 </div>
@@ -126,3 +125,15 @@
         </div>
     </section>
 @endsection
+@push('scripts')
+    <script>
+        $(document).ready(function () {
+            $('#table-1').DataTable({
+                pageLength: 10,
+                ordering: true,
+                searching: true,
+                lengthChange: true
+            });
+        });
+    </script>
+@endpush
