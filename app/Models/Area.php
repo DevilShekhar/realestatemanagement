@@ -7,21 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class City extends Model
+class Area extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'country_id',
         'state_id',
+        'city_id',
         'name',
-        'status',
         'created_by',
         'updated_by',
-    ];
-
-    protected $casts = [
-        'status' => 'boolean',
     ];
 
     /*
@@ -48,13 +44,13 @@ class City extends Model
 
     /*
     |--------------------------------------------------------------------------
-    | Areas
+    | City
     |--------------------------------------------------------------------------
     */
 
-    public function areas(): HasMany
+    public function city(): BelongsTo
     {
-        return $this->hasMany(Area::class);
+        return $this->belongsTo(City::class);
     }
 
     /*
