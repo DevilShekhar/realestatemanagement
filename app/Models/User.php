@@ -85,4 +85,13 @@ class User extends Authenticatable
     {
         return $this->hasMany(Visit::class, 'buyer_id');
     }
+    public function createdCountries()
+    {
+        return $this->hasMany(Country::class, 'created_by');
+    }
+
+    public function updatedCountries()
+    {
+        return $this->hasMany(Country::class, 'updated_by');
+    }
 }
