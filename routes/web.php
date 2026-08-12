@@ -5,6 +5,8 @@ use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\RoleController;
 use App\Http\Controllers\admin\PermissionController;
 use App\Http\Controllers\admin\UserController;
+use App\Http\Controllers\admin\PropertyCategoryController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,4 +22,5 @@ Route::middleware(['auth'])->group(function () {
     Route::put('roles/{role}/permissions', [RoleController::class, 'updatePermissions'])->name('roles.permissions.update');
     Route::resource('permissions',PermissionController::class);
     Route::resource('users',UserController::class);
+    Route::resource('property-categories', PropertyCategoryController::class);
 });
