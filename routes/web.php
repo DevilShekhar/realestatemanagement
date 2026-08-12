@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\RoleController;
 use App\Http\Controllers\admin\PermissionController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\admin\PropertyCategoryController;
+use App\Http\Controllers\admin\AmenityController;
 
 
 Route::get('/', function () {
@@ -23,4 +24,5 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('permissions',PermissionController::class);
     Route::resource('users',UserController::class);
     Route::resource('property-categories', PropertyCategoryController::class);
+    Route::resource('amenities', AmenityController::class);
 });
