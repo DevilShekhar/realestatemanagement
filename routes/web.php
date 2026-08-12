@@ -9,6 +9,7 @@ use App\Http\Controllers\admin\PropertyCategoryController;
 use App\Http\Controllers\admin\AmenityController;
 use App\Http\Controllers\admin\CountryController;
 use App\Http\Controllers\admin\StateController;
+use App\Http\Controllers\admin\CityController;
 
 
 Route::get('/', function () {
@@ -29,4 +30,5 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('amenities', AmenityController::class);
     Route::resource('countries', CountryController::class);
     Route::resource('states', StateController::class);
+    Route::resource('cities', CityController::class);
 });
