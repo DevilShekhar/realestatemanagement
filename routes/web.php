@@ -8,6 +8,8 @@ use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\admin\PropertyCategoryController;
 use App\Http\Controllers\admin\AmenityController;
 use App\Http\Controllers\admin\CountryController;
+use App\Http\Controllers\admin\StateController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,4 +28,5 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('property-categories', PropertyCategoryController::class);
     Route::resource('amenities', AmenityController::class);
     Route::resource('countries', CountryController::class);
+    Route::resource('states', StateController::class);
 });
