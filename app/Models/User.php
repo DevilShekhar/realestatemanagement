@@ -73,7 +73,7 @@ class User extends Authenticatable
 
     public function properties()
     {
-        return $this->hasMany(Property::class, 'seller_id');
+        return $this->hasMany(Property::class, 'created_by');
     }
 
     public function enquiries()
