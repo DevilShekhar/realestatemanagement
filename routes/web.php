@@ -16,6 +16,8 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('roles',RoleController::class);
+    Route::get('roles/{role}/permissions', [RoleController::class, 'permissions'])->name('roles.permissions');
+    Route::put('roles/{role}/permissions', [RoleController::class, 'updatePermissions'])->name('roles.permissions.update');
     Route::resource('permissions',PermissionController::class);
     Route::resource('users',UserController::class);
 });

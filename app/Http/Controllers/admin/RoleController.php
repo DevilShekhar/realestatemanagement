@@ -188,4 +188,42 @@ class RoleController extends Controller
                 'Role deleted successfully.'
             );
     }
+    public function permissions(Role $role)
+    {
+        $permissions = Permission::where('guard_name', 'web')
+            ->orderBy('name')
+            ->get();
+
+        $role->load('permissions');
+
+        return view(
+            'admin.roles.permissions',
+            compact('role', 'permissions')
+        );
+    }
+
+    public function updatePermissions(Request $request, Role $role)
+    {
+        $validated = $request->validate([
+            'permissions' => [
+                'nullable',
+                'array',
+            ],
+
+            'permissions.*' => [
+                'exists:permissions,id',
+            ],
+        ]);
+
+        $permissions = Permission::whereIn(
+            'id',
+            $validated['permissions'] ?? []
+        )->get();
+
+        $role->syncPermissions($permissions);
+
+        return redirect()
+            ->route('roles.index')
+            ->with('success', 'Permissions assigned successfully.');
+    }
 }
