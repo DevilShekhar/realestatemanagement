@@ -812,6 +812,27 @@
                                         </div>
 
                                     </div>
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+
+                                            <label for="monthly_rent">
+                                                Monthly Rent
+                                            </label>
+
+
+                                            <input
+                                                type="number"
+                                                name="monthly_rent"
+                                                id="monthly_rent"
+                                                min="0"
+                                                class="form-control"
+                                                value="{{ old('monthly_rent', $property->monthly_rent) }}"
+                                                placeholder="Example: 2000">
+
+                                        </div>
+
+                                    </div>
 
 
                                     {{-- Bedrooms --}}
