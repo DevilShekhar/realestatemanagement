@@ -1627,6 +1627,291 @@
     }
 
 }
+
+/* Edit Images Modal Styles */
+.edit-images-modal .modal-content {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(20, 35, 70, 0.18);
+}
+
+.edit-images-modal .modal-header {
+    padding: 18px 22px;
+    border-bottom: 1px solid #e7ebf2;
+}
+
+.edit-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.edit-modal-title h5 {
+    margin: 0;
+    color: #17213b;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.edit-modal-title small {
+    color: #8993a6;
+    font-size: 12px;
+}
+
+.edit-modal-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff3e0;
+    color: #e67e22;
+}
+
+.edit-modal-icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+/* Existing Images Grid */
+.existing-images-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.existing-image-item {
+    position: relative;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px solid #e2e7ee;
+    background: #f3f5f8;
+    transition: all 0.2s ease;
+}
+
+.existing-image-item:hover {
+    border-color: #e67e22;
+}
+
+.existing-image-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Delete Image Button */
+.delete-image-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(220, 53, 69, 0.9);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0;
+}
+
+.existing-image-item:hover .delete-image-btn {
+    opacity: 1;
+}
+
+.delete-image-btn:hover {
+    background: #dc3545;
+    transform: scale(1.1);
+}
+
+.delete-image-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Image Number Badge */
+.image-number-badge {
+    position: absolute;
+    left: 6px;
+    bottom: 6px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    background: rgba(20, 25, 35, 0.75);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* Upload New Images Section */
+.edit-upload-area {
+    border: 2px dashed #cbd5e5;
+    border-radius: 10px;
+    background: #f8faff;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 15px;
+}
+
+.edit-upload-area:hover {
+    border-color: #e67e22;
+    background: #fffbf5;
+}
+
+.edit-upload-area.dragover {
+    border-color: #e67e22;
+    background: #fff5eb;
+}
+
+.edit-upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.edit-upload-content svg {
+    width: 32px;
+    height: 32px;
+    color: #e67e22;
+}
+
+.edit-upload-content h6 {
+    margin: 0;
+    color: #202b42;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.edit-upload-content p {
+    margin: 0;
+    color: #68758a;
+    font-size: 12px;
+}
+
+/* New Images Preview Grid */
+.new-images-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.new-preview-item {
+    position: relative;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #e2e7ee;
+    background: #f3f5f8;
+}
+
+.new-preview-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.remove-new-preview {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(220, 53, 69, 0.9);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.remove-new-preview:hover {
+    background: #dc3545;
+    transform: scale(1.1);
+}
+
+.remove-new-preview svg {
+    width: 12px;
+    height: 12px;
+}
+
+/* Section Divider */
+.edit-section-divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.edit-section-divider::before,
+.edit-section-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #e7ebf2;
+}
+
+.edit-section-divider span {
+    padding: 0 15px;
+    color: #8993a6;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .existing-images-grid,
+    .new-images-preview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .existing-images-grid,
+    .new-images-preview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .existing-image-item {
+        height: 120px;
+    }
+    .new-preview-item {
+        height: 100px;
+    }
+}
+
+/* Modal Footer */
+.edit-images-modal .modal-footer {
+    border-top: 1px solid #e7ebf2;
+    padding: 15px 22px;
+}
+
+.edit-images-modal .modal-footer .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 7px;
+}
+
+.edit-images-modal .modal-footer svg {
+    width: 15px;
+    height: 15px;
+}
+
+
+
 </style>
 <section class="section">
     <div class="section-header">
@@ -1670,7 +1955,7 @@
                 </div>
                 <div class="card-header-action d-flex align-items-center justify-content-end">
                     @if($property->approval == 0)
-                        <button  type="button" class="btn btn-success mr-2" data-toggle="modal" data-target="#approvePropertyModal">
+                        <button  type="button" class="btn btn-success mr-2" data-toggle="modal" data-target="#approvePropertyModal" >
                             <i data-feather="check-circle"></i>
                             Approve Property
                         </button>
@@ -1680,7 +1965,7 @@
                             Approved
                         </span>
                     @endif
-                    <a href="{{ route('properties.edit', $property->id) }}" class="btn btn-primary" >
+                    <a href="{{ route('properties.edit', $property->id) }}" class="btn btn-primary">
                         <i class="fas fa-edit"></i>
                         Edit Property
                     </a>
@@ -2353,10 +2638,14 @@
                         <h4>
                             Media Gallery
                         </h4>
-                        <div class="ml-auto">
+                        <div class="ml-auto d-flex gap-2">
                             <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#uploadImagesModal" >
                                 <i data-feather="plus"></i>
                                 Add Images
+                            </button>
+                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editImagesModal" style="margin-left: 1rem;">
+                                <i data-feather="edit-2"></i>
+                                Edit Images
                             </button>
                         </div>
                     </div>
@@ -3209,6 +3498,84 @@
     </div>
 
 </div>
+<div class="modal fade edit-images-modal" id="editImagesModal" tabindex="-1" role="dialog" aria-labelledby="editImagesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            {{-- HEADER --}}
+            <div class="modal-header">
+                <div class="edit-modal-title">
+                    <div class="edit-modal-icon">
+                        <i data-feather="edit-2"></i>
+                    </div>
+                    <div>
+                        <h5 id="editImagesModalLabel">Edit Property Images</h5>
+                        <small>Delete existing images or upload new ones</small>
+                    </div>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form action="{{ route('properties.images.update', $property->id) }}" method="POST" enctype="multipart/form-data" id="editImagesForm">
+                @csrf
+                @method('PUT')
+
+                <div class="modal-body">
+                    {{-- EXISTING IMAGES --}}
+                    @if($property->images && $property->images->count() > 0)
+                        <div class="existing-images-grid">
+                            @foreach($property->images as $image)
+                                <div class="existing-image-item">
+                                    <img src="{{ asset('storage/' . $image->image) }}" alt="{{ $image->title ?? $property->title }}">
+                                    <span class="image-number-badge">#{{ $loop->iteration }}</span>
+                                    <button type="button" class="delete-image-btn" onclick="deleteExistingImage('{{ $image->id }}', this)" title="Delete this image">
+                                        <i data-feather="x"></i>
+                                    </button>
+                                </div>
+                            @endforeach
+                        </div>
+                        <input type="hidden" name="delete_images" id="deleteImagesInput" value="">
+                    @else
+                        <div class="text-center py-4" style="color: #8993a6;">
+                            <i data-feather="image" style="width: 40px; height: 40px; display: block; margin: 0 auto 10px;"></i>
+                            <p>No images available. Upload some below.</p>
+                        </div>
+                    @endif
+
+                    {{-- DIVIDER --}}
+                    <div class="edit-section-divider">
+                        <span>Add New Images</span>
+                    </div>
+
+                    {{-- UPLOAD NEW IMAGES --}}
+                    <div class="edit-upload-area" id="editUploadArea">
+                        <input type="file" name="new_images[]" id="editImagesInput" accept="image/jpeg,image/png,image/jpg,image/webp" multiple hidden>
+                        <div class="edit-upload-content">
+                            <i data-feather="upload-cloud"></i>
+                            <h6>Click to browse or drag & drop</h6>
+                            <p>JPG, JPEG, PNG or WEBP</p>
+                            <button type="button" class="btn btn-outline-warning btn-sm mt-2" id="editChooseImagesBtn">
+                                <i data-feather="folder"></i> Choose Images
+                            </button>
+                        </div>
+                    </div>
+
+                    {{-- NEW IMAGES PREVIEW --}}
+                    <div class="new-images-preview-grid" id="newImagesPreviewGrid"></div>
+                </div>
+
+                {{-- FOOTER --}}
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-warning" id="editImagesSubmitBtn">
+                        <i data-feather="save"></i> Update Images
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 @endsection
 @push('scripts')
 
@@ -3583,6 +3950,170 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const editUploadArea = document.getElementById('editUploadArea');
+    const editFileInput = document.getElementById('editImagesInput');
+    const editChooseBtn = document.getElementById('editChooseImagesBtn');
+    const editPreviewGrid = document.getElementById('newImagesPreviewGrid');
+    const editSubmitBtn = document.getElementById('editImagesSubmitBtn');
+    let newSelectedFiles = [];
+    let deletedImageIds = [];
+
+    if (editUploadArea && editFileInput && editChooseBtn) {
+        // Open file picker
+        editChooseBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            editFileInput.click();
+        });
+
+        editUploadArea.addEventListener('click', function() {
+            editFileInput.click();
+        });
+
+        // Handle file selection
+        editFileInput.addEventListener('change', function() {
+            const files = Array.from(this.files);
+            addNewFiles(files);
+        });
+
+        // Drag and drop
+        editUploadArea.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            this.classList.add('dragover');
+        });
+
+        editUploadArea.addEventListener('dragleave', function() {
+            this.classList.remove('dragover');
+        });
+
+        editUploadArea.addEventListener('drop', function(e) {
+            e.preventDefault();
+            this.classList.remove('dragover');
+            const files = Array.from(e.dataTransfer.files);
+            addNewFiles(files);
+        });
+
+        // Add new files to preview
+        function addNewFiles(files) {
+            files.forEach(function(file) {
+                if (!file.type.startsWith('image/')) return;
+                const exists = newSelectedFiles.some(function(item) {
+                    return item.name === file.name && item.size === file.size;
+                });
+                if (!exists) {
+                    newSelectedFiles.push(file);
+                }
+            });
+            updateNewPreview();
+            updateEditFileInput();
+        }
+
+        // Update new images preview
+        function updateNewPreview() {
+            editPreviewGrid.innerHTML = '';
+
+            newSelectedFiles.forEach(function(file, index) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const item = document.createElement('div');
+                    item.className = 'new-preview-item';
+                    item.innerHTML = `
+                        <img src="${e.target.result}" alt="Preview ${index + 1}">
+                        <button type="button" class="remove-new-preview" data-index="${index}">
+                            <i data-feather="x"></i>
+                        </button>
+                    `;
+                    editPreviewGrid.appendChild(item);
+                    if (typeof feather !== 'undefined') feather.replace();
+                };
+                reader.readAsDataURL(file);
+            });
+
+            // Remove new image previews
+            document.querySelectorAll('.remove-new-preview').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const index = parseInt(this.dataset.index);
+                    newSelectedFiles.splice(index, 1);
+                    updateNewPreview();
+                    updateEditFileInput();
+                });
+            });
+        }
+
+        // Update file input
+        function updateEditFileInput() {
+            const dataTransfer = new DataTransfer();
+            newSelectedFiles.forEach(function(file) {
+                dataTransfer.items.add(file);
+            });
+            editFileInput.files = dataTransfer.files;
+        }
+    }
+    window.deleteExistingImage = function(imageId, buttonElement) {
+
+
+        // Add to deleted list
+        deletedImageIds.push(imageId);
+        document.getElementById('deleteImagesInput').value = JSON.stringify(deletedImageIds);
+
+        // Remove from UI
+        const item = buttonElement.closest('.existing-image-item');
+        item.style.borderColor = '#dc3545';
+        item.style.opacity = '0.5';
+        item.style.transform = 'scale(0.95)';
+        setTimeout(function() {
+            item.style.transition = 'all 0.3s ease';
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.8)';
+            setTimeout(function() {
+                item.remove();
+                // Check if no images left
+                const remaining = document.querySelectorAll('.existing-image-item');
+                if (remaining.length === 0) {
+                    const grid = document.querySelector('.existing-images-grid');
+                    if (grid) {
+                        grid.innerHTML = `
+                            <div style="grid-column: 1 / -1; text-align: center; padding: 20px; color: #8993a6;">
+                                <i data-feather="image" style="width: 40px; height: 40px; display: block; margin: 0 auto 10px;"></i>
+                                <p>No images remaining. Upload new ones below.</p>
+                            </div>
+                        `;
+                        if (typeof feather !== 'undefined') feather.replace();
+                    }
+                }
+            }, 300);
+        }, 100);
+    };
+    $('#editImagesModal').on('hidden.bs.modal', function() {
+        // Reset new images
+        newSelectedFiles = [];
+        updateNewPreview();
+        updateEditFileInput();
+        // Reset deleted images
+        deletedImageIds = [];
+        document.getElementById('deleteImagesInput').value = '';
+        // Reset submit button
+        if (editSubmitBtn) {
+            editSubmitBtn.disabled = false;
+            editSubmitBtn.innerHTML = '<i data-feather="save"></i> Update Images';
+            if (typeof feather !== 'undefined') feather.replace();
+        }
+    });
+    if (typeof feather !== 'undefined') {
+        feather.replace();
+    }
+
+    // Re-run after modal opens
+    $('#editImagesModal').on('shown.bs.modal', function() {
+        if (typeof feather !== 'undefined') {
+            feather.replace();
+        }
+    });
+});
 </script>
 
 @endpush

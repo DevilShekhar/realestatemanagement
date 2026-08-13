@@ -44,4 +44,5 @@ Route::middleware(['auth'])->group(function () {
     Route::post('properties/{property}/images',[PropertyController::class, 'storeImages'])->name('properties.images.store');
     Route::put('properties/{property}/approve',[PropertyController::class, 'approve'])->name('properties.approve');
     Route::get('/get-properties',[PropertySearchController::class, 'index'])->name('properties.search');
+    Route::put('properties/{property}/images', [PropertyController::class, 'updateImages'])->name('properties.images.update');
 });
