@@ -14,10 +14,14 @@ use App\Http\Controllers\admin\AreaController;
 use App\Http\Controllers\admin\PropertyController;
 use App\Http\Controllers\admin\PropertySearchController;
 use App\Http\Controllers\frontend\HomePageController;
+use App\Http\Controllers\Frontend\SellerRegistrationController;
 
 
 Route::get('/', [HomePageController::class, 'index'])->name('frontend.home');
-
+Route::prefix('seller')->name('seller.')->group(function () {
+    Route::get('/register', [SellerRegistrationController::class, 'create'])->name('register');
+    Route::post('/register', [SellerRegistrationController::class, 'store'])->name('register.store');
+});
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
