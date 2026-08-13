@@ -1,5 +1,6 @@
+@can('edit areas')
 @extends('admin.layouts.app')
-@section('content') 
+@section('content')
 <section class="section">
     <div class="section-header">
         <h1>Edit Area</h1>
@@ -272,3 +273,8 @@
     });
 </script>
 @endpush
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan

@@ -1,3 +1,4 @@
+@can('create properties')
 @extends('admin.layouts.app')
 
 @section('content')
@@ -2247,7 +2248,7 @@ $(document).ready(function () {
             }
         }
     }
- 
+
 
     showCategoryFields();
 
@@ -2255,3 +2256,8 @@ $(document).ready(function () {
 </script>
 
 @endpush
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan

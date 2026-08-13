@@ -14,7 +14,7 @@ use App\Http\Controllers\admin\AreaController;
 use App\Http\Controllers\admin\PropertyController;
 use App\Http\Controllers\admin\PropertySearchController;
 use App\Http\Controllers\frontend\HomePageController;
-
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [HomePageController::class, 'index'])->name('frontend.home');
 

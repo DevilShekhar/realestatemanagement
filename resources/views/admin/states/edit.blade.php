@@ -1,5 +1,6 @@
+@can('edit states')
 @extends('admin.layouts.app')
-@section('content') 
+@section('content')
 <section class="section">
     <div class="section-header">
         <h1>Edit State</h1>
@@ -125,3 +126,8 @@
     </div>
 </section>
 @endsection
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan

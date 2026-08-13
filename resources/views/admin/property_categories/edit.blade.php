@@ -1,3 +1,4 @@
+@can('edit categories')
 @extends('admin.layouts.app')
 
 @section('content')
@@ -177,4 +178,8 @@
         </div>
 
     </section>
-@endsection
+@endsection@else
+    @php
+        abort(403);
+    @endphp
+@endcan

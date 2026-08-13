@@ -1,10 +1,11 @@
+@can('edit properties')
 @extends('admin.layouts.app')
 
 @section('content')
 
 <section class="section">
 
-    
+
     <div class="section-header">
 
         <h1>Edit Property</h1>
@@ -34,7 +35,7 @@
 
     <div class="section-body">
 
-       
+
         @if($errors->any())
 
             <div class="alert alert-danger alert-dismissible fade show">
@@ -64,7 +65,7 @@
         @endif
 
 
-        
+
         @if(session('success'))
 
             <div class="alert alert-success alert-dismissible fade show">
@@ -84,7 +85,7 @@
         @endif
 
 
-      
+
         <div class="row">
 
             <div class="col-12">
@@ -112,7 +113,7 @@
                         <div class="card-body">
 
 
-                            
+
                             <div class="form-section-title">
                                 Basic Information
                             </div>
@@ -2660,7 +2661,7 @@ $(document).ready(function () {
     }
 
 
-    
+
 
     showCategoryFields();
 
@@ -2669,3 +2670,8 @@ $(document).ready(function () {
 </script>
 
 @endpush
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan

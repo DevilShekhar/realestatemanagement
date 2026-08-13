@@ -49,6 +49,8 @@ class RolePermissionSeeder extends Seeder
             'create properties',
             'edit properties',
             'delete properties',
+            'show properties',
+            'get search properties',
 
             // Own Properties
             'view own properties',
@@ -57,6 +59,7 @@ class RolePermissionSeeder extends Seeder
             'delete own properties',
 
             // Property Approval
+            'view property',
             'view property approvals',
             'approve properties',
             'reject properties',
@@ -85,12 +88,24 @@ class RolePermissionSeeder extends Seeder
             'delete amenities',
 
             // Cities
+            'view countries',
+            'create countries',
+            'edit countries',
+            'delete countries',
+
+            // Cities
             'view cities',
             'create cities',
             'edit cities',
             'delete cities',
 
-            // States
+            // Areas
+            'view areas',
+            'create areas',
+            'edit areas',
+            'delete areas',
+
+            //States
             'view states',
             'create states',
             'edit states',
@@ -200,161 +215,6 @@ class RolePermissionSeeder extends Seeder
         $superAdmin->syncPermissions(
             Permission::all()
         );
-
-        /*
-        |--------------------------------------------------------------------------
-        | ADMIN
-        |--------------------------------------------------------------------------
-        */
-
-        $admin->syncPermissions([
-
-            'view dashboard',
-
-            'view users',
-            'create users',
-            'edit users',
-            'delete users',
-
-            'view customers',
-            'create customers',
-            'edit customers',
-            'delete customers',
-
-            'view agents',
-            'create agents',
-            'edit agents',
-            'delete agents',
-            'approve agents',
-
-            'view properties',
-            'edit properties',
-            'delete properties',
-
-            'view property approvals',
-            'approve properties',
-            'reject properties',
-            'request property modification',
-
-            'view categories',
-            'create categories',
-            'edit categories',
-            'delete categories',
-
-            'view amenities',
-            'create amenities',
-            'edit amenities',
-            'delete amenities',
-
-            'view cities',
-            'create cities',
-            'edit cities',
-            'delete cities',
-
-            'view states',
-            'create states',
-            'edit states',
-            'delete states',
-
-            'view enquiries',
-            'manage enquiries',
-
-            'view visits',
-            'manage visits',
-
-            'view reports',
-            'generate reports',
-
-            'view notifications',
-            'manage notifications',
-        ]);
-
-        /*
-        |--------------------------------------------------------------------------
-        | AGENT
-        |--------------------------------------------------------------------------
-        */
-
-        $agent->syncPermissions([
-
-            'view dashboard',
-
-            'view assigned properties',
-            'manage assigned properties',
-
-            'view assigned buyers',
-
-            'view enquiries',
-            'manage enquiries',
-            'respond enquiries',
-
-            'view visits',
-            'manage visits',
-            'update visit outcome',
-
-            'manage transactions',
-
-            'view commission report',
-
-            'view notifications',
-        ]);
-
-        /*
-        |--------------------------------------------------------------------------
-        | BUYER
-        |--------------------------------------------------------------------------
-        */
-
-        $buyer->syncPermissions([
-
-            'view dashboard',
-
-            'view properties',
-
-            'view wishlist',
-            'add wishlist',
-            'remove wishlist',
-
-            'create enquiries',
-            'view enquiries',
-
-            'book visits',
-            'view visits',
-
-            'view notifications',
-        ]);
-
-        /*
-        |--------------------------------------------------------------------------
-        | SELLER
-        |--------------------------------------------------------------------------
-        */
-
-        $seller->syncPermissions([
-
-            'view dashboard',
-
-            'view properties',
-
-            'view own properties',
-            'create own properties',
-            'edit own properties',
-            'delete own properties',
-
-            'upload property images',
-            'delete property images',
-
-            'upload property documents',
-            'delete property documents',
-
-            'view enquiries',
-            'respond enquiries',
-
-            'view visits',
-
-            'view notifications',
-        ]);
-
         app()[PermissionRegistrar::class]
             ->forgetCachedPermissions();
     }

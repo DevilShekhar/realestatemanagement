@@ -1,5 +1,6 @@
+@can('create states')
 @extends('admin.layouts.app')
-@section('content') 
+@section('content')
 <section class="section">
      <div class="section-header">
         <h1>Create State</h1>
@@ -68,7 +69,7 @@
                                     </div>
                                 @enderror
                             </div>
-                        </div>                
+                        </div>
                     </div>
                 </div>
                  <div class="card-footer d-flex justify-content-between">
@@ -86,3 +87,8 @@
     </div>
 </section>
 @endsection
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan

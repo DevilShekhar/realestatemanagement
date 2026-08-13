@@ -1,3 +1,4 @@
+@can('view states')
 @extends('admin.layouts.app')
 
 @section('content')
@@ -165,7 +166,7 @@
                                         @endforelse
                                     </tbody>
                                 </table>
-                            </div>                          
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -190,3 +191,8 @@
 </script>
 
 @endpush
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan

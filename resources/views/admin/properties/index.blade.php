@@ -1,3 +1,4 @@
+@can('view properties')
 @extends('admin.layouts.app')
 
 @section('content')
@@ -182,7 +183,7 @@
                                                     <div class="dropdown">
                                                         <button class="btn btn-primary dropdown-toggle"  type="button" data-toggle="dropdown"> Action </button>
                                                         <div class="dropdown-menu">
-                                                            
+
                                                             <a href="{{ route('properties.show', $property->id) }}"class="dropdown-item">
                                                                 <i class="fas fa-eye"></i>
                                                                 View
@@ -226,7 +227,7 @@
                                         @endforelse
                                     </tbody>
                                 </table>
-                            </div>                            
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -247,3 +248,8 @@
     });
 </script>
 @endpush
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan

@@ -1,3 +1,4 @@
+@can('view categories')
 @extends('admin.layouts.app')
 
 @section('content')
@@ -101,7 +102,7 @@
 
                                     </div>
 
-                                   
+
 
                                 </div>
 
@@ -142,3 +143,8 @@
 
     </section>
 @endsection
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan
