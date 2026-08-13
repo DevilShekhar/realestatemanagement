@@ -7990,16 +7990,7 @@ li .single-footer-contact-info .text p span{
     width: 100%;
     z-index: 1;
 }
-.single-service-sidebar:before {
-    position: absolute;
-    top: -300px;
-    right: -30px;
-    bottom: -5000px;
-    width: 1px;
-    background: #ededed;
-    content: "";
-    z-index: -1;
-}
+ 
 .single-service-sidebar .single-sidebar{
     position: relative;
     display: block;
