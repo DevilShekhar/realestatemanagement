@@ -1,3 +1,4 @@
+@can('create amenities')
 @extends('admin.layouts.app')
 
 @section('content')
@@ -140,3 +141,8 @@
 
     </section>
 @endsection
+@else
+@php
+abort(403);
+@endphp
+@endcan

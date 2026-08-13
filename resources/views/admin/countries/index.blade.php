@@ -1,3 +1,4 @@
+@can('view countries')
 @extends('admin.layouts.app')
 
 @section('content')
@@ -102,9 +103,11 @@
                                                 Updated At
                                             </th>
 
+                                            @can('edit countries')
                                             <th width="180">
                                                 Action
                                             </th>
+                                            @endcan
 
                                         </tr>
                                     </thead>
@@ -167,6 +170,7 @@
                                                 </td>
 
                                                 {{-- Action --}}
+                                                @can('edit countries')
                                                 <td>
 
                                                     <div class="dropdown">
@@ -217,6 +221,7 @@
                                                     </div>
 
                                                 </td>
+                                                @endcan
 
                                             </tr>
 
@@ -293,3 +298,8 @@
 </script>
 
 @endpush
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan

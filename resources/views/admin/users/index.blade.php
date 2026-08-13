@@ -1,4 +1,5 @@
-@extends('admin.layouts.app') 
+@can('view users')
+@extends('admin.layouts.app')
 @section('content')
     <section class="section">
         <div class="section-header">
@@ -128,4 +129,9 @@
         });
     </script>
 @endpush
- 
+
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan

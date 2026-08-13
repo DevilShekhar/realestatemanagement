@@ -1,3 +1,4 @@
+@can('show properties')
 @extends('admin.layouts.app')
 
 @section('content')
@@ -1627,7 +1628,7 @@
 
 }
 </style>
-<section class="section">    
+<section class="section">
     <div class="section-header">
         <h1>Property Details</h1>
         <div class="section-header-breadcrumb">
@@ -1646,7 +1647,7 @@
             </div>
         </div>
     </div>
-    <div class="section-body">       
+    <div class="section-body">
         @if(session('success'))
             <div class="alert alert-success alert-dismissible fade show">
                 {{ session('success') }}
@@ -1654,7 +1655,7 @@
                     <span>&times;</span>
                 </button>
             </div>
-        @endif       
+        @endif
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <div>
@@ -1687,7 +1688,7 @@
             </div>
             <div class="card-body">
                 <div class="property-card">
-                    <div class="row g-0">                        
+                    <div class="row g-0">
                         <div class="col-lg-4">
                             <div class="property-image">
                                 @if($property->images && $property->images->count())
@@ -1696,17 +1697,17 @@
                                     <img src="{{ asset('assets/images/default-property.jpg') }}" alt="{{ $property->title }}" >
                                 @endif
                             </div>
-                        </div>                      
+                        </div>
                         <div class="col-lg-8">
-                            <div class="property-details">                           
+                            <div class="property-details">
                                 <div class="property-header">
-                                    <h2>{{ $property->title }} </h2>                                  
+                                    <h2>{{ $property->title }} </h2>
                                     <div class="property-location">
                                           <i data-feather="map-pin"></i>
-                                        <span>                                           
+                                        <span>
                                             @if($property->propertyArea)
                                                 {{ $property->propertyArea->name }}
-                                            @endif                                           
+                                            @endif
                                             @if($property->city)
                                                 @if($property->propertyArea),
                                                 @endif
@@ -1724,9 +1725,9 @@
                                             @endif
                                         </span>
                                     </div>
-                                </div>                               
-                                <div class="property-divider"></div>                              
-                                <div class="row property-info">                                   
+                                </div>
+                                <div class="property-divider"></div>
+                                <div class="row property-info">
                                     <div class="col-lg-3 col-md-6">
                                         <div class="property-info-item">
                                             <div class="property-icon category-icon">
@@ -1756,7 +1757,7 @@
                                                 }}
                                             </div>
                                         </div>
-                                    </div>                                   
+                                    </div>
                                     <div class="col-lg-3 col-md-6">
                                         <div class="property-info-item">
                                             <div class="property-icon price-icon">
@@ -1792,10 +1793,10 @@
                             </div>
                         </div>
                     </div>
-                </div>             
-            </div> 
+                </div>
+            </div>
             <div class="card-body">
-                <div class="row">   
+                <div class="row">
                     <div class="col-lg-6">
                         <div class="property-info-card">
                             <div class="property-info-card-header">
@@ -1930,9 +1931,9 @@
                 </div>
             </div>
             <div class="card-body">
-                <div class="row">                
+                <div class="row">
                     <div class="col-lg-6">
-                        <div class="property-detail-card">                     
+                        <div class="property-detail-card">
                             <div class="property-card-header">
                                 <div class="property-card-icon property-icon-blue">
                                     @php
@@ -1951,7 +1952,7 @@
                                     @endif
                                 </div>
                                 <h4>{{ $property->propertyCategory->name ?? 'Property Details' }} Details </h4>
-                            </div>                        
+                            </div>
                             <div class="property-details-list">
                                 @if($categoryName === 'residential')
                                     <div class="property-detail-item">
@@ -2009,7 +2010,7 @@
                                     <div class="property-detail-item">
                                         <span> Total Floors </span>
                                         <strong> {{ $property->total_floors ?? '-' }} </strong>
-                                    </div>                                   
+                                    </div>
                                     <div class="property-detail-item">
                                         <span> Year Built </span>
                                         <strong> {{ $property->construction_year ?? '-' }}</strong>
@@ -2253,7 +2254,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">                       
+                    <div class="col-lg-6">
                         <div class="property-detail-card price-card">
                             <div class="property-card-header">
                                 <div class="property-card-icon property-icon-yellow">
@@ -2311,8 +2312,8 @@
                                     </div>
                                 @endif
                             </div>
-                        </div>                    
-                        <div class="property-detail-card amenities-card">                           
+                        </div>
+                        <div class="property-detail-card amenities-card">
                             <div class="property-card-header">
                                 <div class="property-card-icon property-icon-blue">
                                     <i data-feather="star"></i>
@@ -2344,7 +2345,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <div class="media-gallery-card">     
+                <div class="media-gallery-card">
                     <div class="media-gallery-header">
                         <div class="media-gallery-icon">
                             <i data-feather="image"></i>
@@ -2358,7 +2359,7 @@
                                 Add Images
                             </button>
                         </div>
-                    </div>      
+                    </div>
                     <div class="media-gallery-scroll">
                         @forelse($property->images as $image)
                             <div class="media-gallery-item">
@@ -2438,7 +2439,7 @@
 </section>
 <div  class="modal fade"  id="amenitiesModal"  tabindex="-1" role="dialog" aria-labelledby="amenitiesModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content amenities-modal">          
+        <div class="modal-content amenities-modal">
             <div class="modal-header">
                 <div class="amenities-modal-title">
                     <div class="amenities-modal-icon">
@@ -2458,11 +2459,11 @@
                         &times;
                     </span>
                 </button>
-            </div>         
+            </div>
             <form action="{{ route('properties.amenities.update', $property->id) }}"  method="POST" >
                 @csrf
                 @method('PUT')
-                <div class="modal-body">  
+                <div class="modal-body">
                     <div class="row amenities-modal-list">
                         @forelse($amenities as $amenity)
                             @php
@@ -3585,3 +3586,8 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 @endpush
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan

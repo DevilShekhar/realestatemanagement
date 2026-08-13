@@ -1,6 +1,7 @@
+@can('create roles')
 @extends('admin.layouts.app')
 @section('content')
-    <section class="section">        
+    <section class="section">
         <div class="section-header">
             <h1>Create Role</h1>
             <div class="section-header-breadcrumb">
@@ -55,7 +56,7 @@
                                                 {{ $message }}
                                             </div>
                                         @enderror
-                                    </div>                                                           
+                                    </div>
                                 </div>
                                 <div class="form-group mb-0 mt-4">
                                     <a href="{{ route('roles.index') }}" class="btn btn-secondary">
@@ -76,3 +77,8 @@
     </section>
 @endsection
 
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan

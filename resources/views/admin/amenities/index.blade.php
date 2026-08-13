@@ -1,3 +1,4 @@
+@can('view amenities')
 @extends('admin.layouts.app')
 
 @section('content')
@@ -52,7 +53,7 @@
                         {{-- Card Header --}}
                         <div class="card-header">
                             <h4>Amenity Management</h4>
-
+                            @can('create amenities')
                             <div class="card-header-action">
                                 <a href="{{ route('amenities.create') }}"
                                    class="btn btn-primary">
@@ -62,6 +63,7 @@
 
                                 </a>
                             </div>
+                            @endcan
                         </div>
 
                         <div class="card-body">
@@ -101,9 +103,11 @@
                                                 Updated At
                                             </th>
 
+                                            @can('edit amenities')
                                             <th width="180">
                                                 Action
                                             </th>
+                                            @endcan
 
                                         </tr>
                                     </thead>
@@ -166,6 +170,7 @@
                                                 </td>
 
                                                 {{-- Action --}}
+                                                @can('edit amenities')
                                                 <td>
 
                                                     <div class="dropdown">
@@ -215,6 +220,7 @@
                                                     </div>
 
                                                 </td>
+                                                @endcan
 
                                             </tr>
 
@@ -273,7 +279,6 @@
     </section>
 @endsection
 
-
 @push('scripts')
 
 <script>
@@ -290,3 +295,10 @@
 </script>
 
 @endpush
+
+
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan

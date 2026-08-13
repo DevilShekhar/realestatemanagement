@@ -1,3 +1,4 @@
+@can('edit users')
 @extends('admin.layouts.app')
 @section('content')
 <section class="section">
@@ -110,7 +111,7 @@
                                             {{ $message }}
                                         </div>
                                     @enderror
-                                </div>                          
+                                </div>
                                 <div class="form-group col-md-12">
                                     <label> Address </label>
                                     <textarea name="address" class="form-control @error('address') is-invalid @enderror" rows="4" placeholder="Enter address">{{ old('address', $user->address) }}</textarea>
@@ -196,3 +197,8 @@
     </div>
 </section>
 @endsection
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan

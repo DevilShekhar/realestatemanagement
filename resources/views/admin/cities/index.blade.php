@@ -1,3 +1,4 @@
+@can('view cities')
 @extends('admin.layouts.app')
 
 @section('content') <section class="section">
@@ -53,6 +54,7 @@
                     <div class="card-header">
                         <h4>City Management</h4>
 
+                        @can('create cities')
                         <div class="card-header-action">
                             <a href="{{ route('cities.create') }}"
                                class="btn btn-primary">
@@ -62,6 +64,7 @@
 
                             </a>
                         </div>
+                        @endcan
                     </div>
 
                     <div class="card-body">
@@ -109,9 +112,11 @@
                                             Updated At
                                         </th>
 
+                                        @can('edit cities')
                                         <th width="180">
                                             Action
                                         </th>
+                                        @endcan
 
                                     </tr>
                                 </thead>
@@ -184,6 +189,7 @@
                                             </td>
 
                                             {{-- Action --}}
+                                            @can('edit cities')
                                             <td>
 
                                                 <div class="dropdown">
@@ -233,6 +239,7 @@
                                                 </div>
 
                                             </td>
+                                            @endcan
 
                                         </tr>
 
@@ -316,3 +323,8 @@
 </script>
 
 @endpush
+@else
+    @php
+        abort(403);
+    @endphp
+@endcan
