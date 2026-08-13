@@ -113,137 +113,507 @@ class PropertyController extends Controller
     /**
      * Store a newly created property.
      */
-    public function store(Request $request)
-    {
-        $validated = $request->validate([
+   public function store(Request $request)
+{
+    $validated = $request->validate([
 
-            'property_category_id' => [
-                'required',
-                'exists:property_categories,id',
-            ],
+        /*
+        |--------------------------------------------------------------------------
+        | PROPERTY CATEGORY
+        |--------------------------------------------------------------------------
+        */
 
-            'country_id' => [
-                'required',
-                'exists:countries,id',
-            ],
+        'property_category_id' => [
+            'required',
+            'exists:property_categories,id',
+        ],
 
-            'state_id' => [
-                'required',
-                Rule::exists('states', 'id')
-                    ->where(function ($query) use ($request) {
-                        return $query->where(
+
+        /*
+        |--------------------------------------------------------------------------
+        | LOCATION
+        |--------------------------------------------------------------------------
+        */
+
+        'country_id' => [
+            'required',
+            'exists:countries,id',
+        ],
+
+        'state_id' => [
+            'required',
+            Rule::exists('states', 'id')
+                ->where(function ($query) use ($request) {
+                    return $query->where(
+                        'country_id',
+                        $request->country_id
+                    );
+                }),
+        ],
+
+        'city_id' => [
+            'required',
+            Rule::exists('cities', 'id')
+                ->where(function ($query) use ($request) {
+                    return $query
+                        ->where(
                             'country_id',
                             $request->country_id
+                        )
+                        ->where(
+                            'state_id',
+                            $request->state_id
                         );
-                    }),
-            ],
+                }),
+        ],
 
-            'city_id' => [
-                'required',
-                Rule::exists('cities', 'id')
-                    ->where(function ($query) use ($request) {
-                        return $query
-                            ->where(
-                                'country_id',
-                                $request->country_id
-                            )
-                            ->where(
-                                'state_id',
-                                $request->state_id
-                            );
-                    }),
-            ],
+        'area_id' => [
+            'required',
+            Rule::exists('areas', 'id')
+                ->where(function ($query) use ($request) {
+                    return $query
+                        ->where(
+                            'country_id',
+                            $request->country_id
+                        )
+                        ->where(
+                            'state_id',
+                            $request->state_id
+                        )
+                        ->where(
+                            'city_id',
+                            $request->city_id
+                        );
+                }),
+        ],
 
-            'area_id' => [
-                'required',
-                Rule::exists('areas', 'id')
-                    ->where(function ($query) use ($request) {
-                        return $query
-                            ->where(
-                                'country_id',
-                                $request->country_id
-                            )
-                            ->where(
-                                'state_id',
-                                $request->state_id
-                            )
-                            ->where(
-                                'city_id',
-                                $request->city_id
-                            );
-                    }),
-            ],
 
-            'title' => [
-                'required',
-                'string',
-                'max:255',
-            ],
+        /*
+        |--------------------------------------------------------------------------
+        | BASIC PROPERTY
+        |--------------------------------------------------------------------------
+        */
 
-            'description' => [
-                'nullable',
-                'string',
-            ],
+        'title' => [
+            'required',
+            'string',
+            'max:255',
+        ],
 
-            'address' => [
-                'nullable',
-                'string',
-            ],
+        'purpose' => [
+            'required',
+            'in:sale,rent',
+        ],
 
-            'pincode' => [
-                'nullable',
-                'string',
-                'max:20',
-            ],
+        'description' => [
+            'nullable',
+            'string',
+        ],
 
-            'price' => [
-                'nullable',
-                'numeric',
-                'min:0',
-            ],
+        'address' => [
+            'nullable',
+            'string',
+        ],
 
-            'bedrooms' => [
-                'nullable',
-                'integer',
-                'min:0',
-            ],
+        'pincode' => [
+            'nullable',
+            'string',
+            'max:20',
+        ],
 
-            'bathrooms' => [
-                'nullable',
-                'integer',
-                'min:0',
-            ],
+        'landmark' => [
+            'nullable',
+            'string',
+            'max:255',
+        ],
 
-            'area' => [
-                'nullable',
-                'numeric',
-                'min:0',
-            ],
 
-            'area_unit' => [
-                'nullable',
-                'string',
-                'max:50',
-            ],
-        ]);
+        /*
+        |--------------------------------------------------------------------------
+        | PRICE
+        |--------------------------------------------------------------------------
+        */
 
-        $validated['slug'] = $this->generateUniqueSlug(
-            $validated['title']
+        'price' => [
+            'nullable',
+            'numeric',
+            'min:0',
+        ],
+
+        'monthly_rent' => [
+            'nullable',
+            'numeric',
+            'min:0',
+        ],
+
+        'security_deposit' => [
+            'nullable',
+            'numeric',
+            'min:0',
+        ],
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | AVAILABILITY
+        |--------------------------------------------------------------------------
+        */
+
+        'available_from' => [
+            'nullable',
+            'date',
+        ],
+
+        'lease_period' => [
+            'nullable',
+            'integer',
+            'min:0',
+        ],
+
+        'lease_period_unit' => [
+            'nullable',
+            'string',
+            'max:50',
+        ],
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | RESIDENTIAL
+        |--------------------------------------------------------------------------
+        */
+
+        'bedrooms' => [
+            'nullable',
+            'integer',
+            'min:0',
+        ],
+
+        'bhk' => [
+            'nullable',
+            'string',
+            'max:50',
+        ],
+
+        'bathrooms' => [
+            'nullable',
+            'integer',
+            'min:0',
+        ],
+
+        'balconies' => [
+            'nullable',
+            'integer',
+            'min:0',
+        ],
+
+        'parking' => [
+            'nullable',
+            'string',
+            'max:100',
+        ],
+
+        'facing' => [
+            'nullable',
+            'string',
+            'max:50',
+        ],
+
+        'floor_number' => [
+            'nullable',
+            'integer',
+            'min:0',
+        ],
+
+        'total_floors' => [
+            'nullable',
+            'integer',
+            'min:0',
+        ],
+
+        'furnishing' => [
+            'nullable',
+            'string',
+            'max:100',
+        ],
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | PROPERTY DETAILS
+        |--------------------------------------------------------------------------
+        */
+
+        'construction_year' => [
+            'nullable',
+            'integer',
+            'min:1900',
+            'max:' . date('Y'),
+        ],
+
+        'ownership' => [
+            'nullable',
+            'string',
+            'max:100',
+        ],
+
+        'purchase_year' => [
+            'nullable',
+            'integer',
+            'min:1900',
+            'max:' . date('Y'),
+        ],
+
+        'property_age' => [
+            'nullable',
+            'integer',
+            'min:0',
+        ],
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | AREA
+        |--------------------------------------------------------------------------
+        */
+
+        'area' => [
+            'nullable',
+            'numeric',
+            'min:0',
+        ],
+
+        'area_unit' => [
+            'nullable',
+            'string',
+            'max:50',
+        ],
+
+        'built_up_area' => [
+            'nullable',
+            'numeric',
+            'min:0',
+        ],
+
+        'carpet_area' => [
+            'nullable',
+            'numeric',
+            'min:0',
+        ],
+
+        'plot_area' => [
+            'nullable',
+            'numeric',
+            'min:0',
+        ],
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | PROJECT
+        |--------------------------------------------------------------------------
+        */
+
+        'project_name' => [
+            'nullable',
+            'string',
+            'max:255',
+        ],
+
+        'developer_name' => [
+            'nullable',
+            'string',
+            'max:255',
+        ],
+
+        'project_status' => [
+            'nullable',
+            'string',
+            'max:100',
+        ],
+
+        'launch_date' => [
+            'nullable',
+            'date',
+        ],
+
+        'possession_date' => [
+            'nullable',
+            'date',
+        ],
+
+        'total_units' => [
+            'nullable',
+            'integer',
+            'min:0',
+        ],
+
+        'available_units' => [
+            'nullable',
+            'integer',
+            'min:0',
+        ],
+
+        'rera_number' => [
+            'nullable',
+            'string',
+            'max:100',
+        ],
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | COMMERCIAL
+        |--------------------------------------------------------------------------
+        */
+
+        'washrooms' => [
+            'nullable',
+            'integer',
+            'min:0',
+        ],
+
+        'commercial_type' => [
+            'nullable',
+            'string',
+            'max:100',
+        ],
+
+        'business_type' => [
+            'nullable',
+            'string',
+            'max:100',
+        ],
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | PLOT / LAND
+        |--------------------------------------------------------------------------
+        */
+
+        'road_width' => [
+            'nullable',
+            'numeric',
+            'min:0',
+        ],
+
+        'road_width_unit' => [
+            'nullable',
+            'string',
+            'max:50',
+        ],
+
+        'boundary_wall' => [
+            'nullable',
+            'string',
+            'max:100',
+        ],
+
+        'land_type' => [
+            'nullable',
+            'string',
+            'max:100',
+        ],
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | LOCATION COORDINATES
+        |--------------------------------------------------------------------------
+        */
+
+        'latitude' => [
+            'nullable',
+            'numeric',
+            'between:-90,90',
+        ],
+
+        'longitude' => [
+            'nullable',
+            'numeric',
+            'between:-180,180',
+        ],
+
+        'additional_notes' => [
+            'nullable',
+            'string',
+        ],
+    ]);
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | GENERATE SLUG
+    |--------------------------------------------------------------------------
+    */
+
+    $validated['slug'] = $this->generateUniqueSlug(
+        $validated['title']
+    );
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | PROPERTY CODE
+    |--------------------------------------------------------------------------
+    */
+
+    $validated['property_code'] = $this->generatePropertyCode();
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | STATUS
+    |--------------------------------------------------------------------------
+    */
+
+    $validated['status'] = 1;
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | CREATED BY
+    |--------------------------------------------------------------------------
+    */
+
+    $validated['created_by'] = Auth::id();
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | CREATE PROPERTY
+    |--------------------------------------------------------------------------
+    */
+
+    Property::create($validated);
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | REDIRECT
+    |--------------------------------------------------------------------------
+    */
+
+    return redirect()
+        ->route('properties.index')
+        ->with(
+            'success',
+            'Property created successfully.'
         );
+}
+private function generatePropertyCode()
+{
+    do {
+        $code = 'PROP-' . now()->format('Ymd') . '-' . strtoupper(
+            substr(bin2hex(random_bytes(4)), 0, 6)
+        );
+    } while (
+        Property::where('property_code', $code)->exists()
+    );
 
-        $validated['status'] = 1;
-
-        $validated['created_by'] = Auth::id();
-
-        Property::create($validated);
-
-        return redirect()
-            ->route('properties.index')
-            ->with(
-                'success',
-                'Property created successfully.'
-            );
-    }
+    return $code;
+}
 
     /**
      * Display the specified property.
