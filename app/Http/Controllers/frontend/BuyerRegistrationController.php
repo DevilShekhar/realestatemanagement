@@ -7,18 +7,18 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-class SellerRegistrationController extends Controller
+class BuyerRegistrationController extends Controller
 {
     /**
-     * Show seller registration page.
+     * Show buyer registration page.
      */
     public function create()
     {
-        return view('frontend.seller.register');
+        return view('frontend.buyer.register');
     }
 
     /**
-     * Store seller registration.
+     * Store buyer registration.
      */
     public function store(Request $request)
     {
@@ -60,9 +60,8 @@ class SellerRegistrationController extends Controller
             'password' => Hash::make($validated['password']),
         ]);
 
-        // Assign Seller role
-        $user->assignRole('seller');
+        $user->assignRole('buyer');
 
-        return redirect()->route('login')->with('success', 'Seller registration completed successfully.');
+        return redirect()->route('login')->with('success', 'Buyer registration completed successfully.');
     }
 }

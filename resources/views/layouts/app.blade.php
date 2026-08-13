@@ -326,8 +326,7 @@
 <script src="{{ asset('assets/frontend/js/owl.js') }}"></script>
 <script src="{{ asset('assets/frontend/js/validation.js') }}"></script>
 <script src="{{ asset('assets/frontend/js/wow.js') }}"></script>
-<script src="{{ asset('assets/frontend/js/jquery.bootstrap-touchspin.js') }}"></script>
-
+ 
 
 <!-- Map Helper -->
 <script src="{{ asset('assets/frontend/js/map-helper.js') }}"></script>

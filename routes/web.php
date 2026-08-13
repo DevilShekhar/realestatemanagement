@@ -16,12 +16,19 @@ use App\Http\Controllers\admin\PropertySearchController;
 use App\Http\Controllers\frontend\HomePageController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Frontend\SellerRegistrationController;
+use App\Http\Controllers\Frontend\BuyerRegistrationController;
+
 
 
 Route::get('/', [HomePageController::class, 'index'])->name('frontend.home');
 Route::prefix('seller')->name('seller.')->group(function () {
     Route::get('/register', [SellerRegistrationController::class, 'create'])->name('register');
     Route::post('/register', [SellerRegistrationController::class, 'store'])->name('register.store');
+});
+
+Route::prefix('buyer')->name('buyer.')->group(function () {
+    Route::get('/register', [BuyerRegistrationController::class, 'create'])->name('register');
+    Route::post('/register', [BuyerRegistrationController::class, 'store'])->name('register.store');
 });
 Auth::routes();
 
