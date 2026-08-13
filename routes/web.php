@@ -13,12 +13,10 @@ use App\Http\Controllers\admin\CityController;
 use App\Http\Controllers\admin\AreaController;
 use App\Http\Controllers\admin\PropertyController;
 use App\Http\Controllers\admin\PropertySearchController;
+use App\Http\Controllers\frontend\HomePageController;
 
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomePageController::class, 'index'])->name('frontend.home');
 
 Auth::routes();
 
