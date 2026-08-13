@@ -3,17 +3,17 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Amenity;
 use App\Models\Area;
 use App\Models\City;
 use App\Models\Country;
 use App\Models\Property;
-use App\Models\Amenity;
 use App\Models\PropertyCategory;
-use App\Models\State;
 use App\Models\PropertyImage;
-use Illuminate\Support\Facades\Storage;
+use App\Models\State;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
@@ -22,47 +22,47 @@ class PropertyController extends Controller
     /**
      * Display a listing of properties.
      */
-   public function index()
-{
-    $user = Auth::user();
+    public function index()
+    {
+        $user = Auth::user();
 
-    $query = Property::with([
-        'propertyCategory',
-        'country',
-        'state',
-        'city',
-        'area',
-        'creator',
-        'updater',
-    ]);
+        $query = Property::with([
+            'propertyCategory',
+            'country',
+            'state',
+            'city',
+            'area',
+            'creator',
+            'updater',
+        ]);
 
-    // Super Admin & Admin → Show all properties
-    if ($user->hasAnyRole(['super-admin', 'admin'])) {
+        // Super Admin & Admin → Show all properties
+        if ($user->hasAnyRole(['super-admin', 'admin'])) {
 
-        // No restriction
+            // No restriction
 
+        }
+        // Seller → Show only properties created by logged-in seller
+        elseif ($user->hasRole('seller')) {
+
+            $query->where('created_by', $user->id);
+
+        }
+        // Other roles → Show no properties
+        else {
+
+            $query->whereRaw('1 = 0');
+        }
+
+        $properties = $query
+            ->latest('id')
+            ->paginate(10);
+
+        return view(
+            'admin.properties.index',
+            compact('properties')
+        );
     }
-    // Seller → Show only properties created by logged-in seller
-    elseif ($user->hasRole('seller')) {
-
-        $query->where('created_by', $user->id);
-
-    }
-    // Other roles → Show no properties
-    else {
-
-        $query->whereRaw('1 = 0');
-    }
-
-    $properties = $query
-        ->latest('id')
-        ->paginate(10);
-
-    return view(
-        'admin.properties.index',
-        compact('properties')
-    );
-}
 
     /**
      * Show the form for creating a new property.
@@ -91,10 +91,10 @@ class PropertyController extends Controller
             ->get();
 
         $areas = Area::with([
-                'country',
-                'state',
-                'city',
-            ])
+            'country',
+            'state',
+            'city',
+        ])
             ->orderBy('name')
             ->get();
 
@@ -113,507 +113,491 @@ class PropertyController extends Controller
     /**
      * Store a newly created property.
      */
-   public function store(Request $request)
-{
-    $validated = $request->validate([
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
 
-        /*
-        |--------------------------------------------------------------------------
-        | PROPERTY CATEGORY
-        |--------------------------------------------------------------------------
-        */
+            /*
+            |--------------------------------------------------------------------------
+            | PROPERTY CATEGORY
+            |--------------------------------------------------------------------------
+            */
 
-        'property_category_id' => [
-            'required',
-            'exists:property_categories,id',
-        ],
+            'property_category_id' => [
+                'required',
+                'exists:property_categories,id',
+            ],
 
+            /*
+            |--------------------------------------------------------------------------
+            | LOCATION
+            |--------------------------------------------------------------------------
+            */
 
-        /*
-        |--------------------------------------------------------------------------
-        | LOCATION
-        |--------------------------------------------------------------------------
-        */
+            'country_id' => [
+                'required',
+                'exists:countries,id',
+            ],
 
-        'country_id' => [
-            'required',
-            'exists:countries,id',
-        ],
+            'state_id' => [
+                'required',
+                Rule::exists('states', 'id')
+                    ->where(function ($query) use ($request) {
+                        return $query->where(
+                            'country_id',
+                            $request->country_id
+                        );
+                    }),
+            ],
 
-        'state_id' => [
-            'required',
-            Rule::exists('states', 'id')
-                ->where(function ($query) use ($request) {
-                    return $query->where(
-                        'country_id',
-                        $request->country_id
-                    );
-                }),
-        ],
-
-        'city_id' => [
+            'city_id' => [
             'required',
             Rule::exists('cities', 'id')
-                ->where(function ($query) use ($request) {
-                    return $query
-                        ->where(
-                            'country_id',
-                            $request->country_id
-                        )
-                        ->where(
-                            'state_id',
-                            $request->state_id
-                        );
-                }),
+                    ->where(function ($query) use ($request) {
+                        return $query
+                            ->where(
+                                'country_id',
+                                $request->country_id
+                            )
+                            ->where(
+                                'state_id',
+                                $request->state_id
+                            );
+                    }),
         ],
 
-        'area_id' => [
+            'area_id' => [
             'required',
             Rule::exists('areas', 'id')
-                ->where(function ($query) use ($request) {
-                    return $query
-                        ->where(
-                            'country_id',
-                            $request->country_id
-                        )
-                        ->where(
-                            'state_id',
-                            $request->state_id
-                        )
-                        ->where(
-                            'city_id',
-                            $request->city_id
-                        );
-                }),
+                    ->where(function ($query) use ($request) {
+                        return $query
+                            ->where(
+                                'country_id',
+                                $request->country_id
+                            )
+                            ->where(
+                                'state_id',
+                                $request->state_id
+                            )
+                            ->where(
+                                'city_id',
+                                $request->city_id
+                            );
+                    }),
         ],
 
-
-        /*
+            /*
         |--------------------------------------------------------------------------
         | BASIC PROPERTY
         |--------------------------------------------------------------------------
         */
 
-        'title' => [
+            'title' => [
             'required',
             'string',
             'max:255',
         ],
 
-        'purpose' => [
+            'purpose' => [
             'required',
             'in:sale,rent',
         ],
 
-        'description' => [
+            'description' => [
             'nullable',
             'string',
         ],
 
-        'address' => [
+            'address' => [
             'nullable',
             'string',
         ],
 
-        'pincode' => [
+            'pincode' => [
             'nullable',
             'string',
             'max:20',
         ],
 
-        'landmark' => [
+            'landmark' => [
             'nullable',
             'string',
             'max:255',
         ],
 
-
-        /*
+            /*
         |--------------------------------------------------------------------------
         | PRICE
         |--------------------------------------------------------------------------
         */
 
-        'price' => [
+            'price' => [
             'nullable',
             'numeric',
             'min:0',
         ],
 
-        'monthly_rent' => [
+            'monthly_rent' => [
             'nullable',
             'numeric',
             'min:0',
         ],
 
-        'security_deposit' => [
+            'security_deposit' => [
             'nullable',
             'numeric',
             'min:0',
         ],
 
-
-        /*
+            /*
         |--------------------------------------------------------------------------
         | AVAILABILITY
         |--------------------------------------------------------------------------
         */
 
-        'available_from' => [
+            'available_from' => [
             'nullable',
             'date',
         ],
 
-        'lease_period' => [
+            'lease_period' => [
             'nullable',
             'integer',
             'min:0',
         ],
 
-        'lease_period_unit' => [
+            'lease_period_unit' => [
             'nullable',
             'string',
             'max:50',
         ],
 
-
-        /*
+            /*
         |--------------------------------------------------------------------------
         | RESIDENTIAL
         |--------------------------------------------------------------------------
         */
 
-        'bedrooms' => [
+            'bedrooms' => [
             'nullable',
             'integer',
             'min:0',
         ],
 
-        'bhk' => [
+            'bhk' => [
             'nullable',
             'string',
             'max:50',
         ],
 
-        'bathrooms' => [
+            'bathrooms' => [
             'nullable',
             'integer',
             'min:0',
         ],
 
-        'balconies' => [
+            'balconies' => [
             'nullable',
             'integer',
             'min:0',
         ],
 
-        'parking' => [
+            'parking' => [
             'nullable',
             'string',
             'max:100',
         ],
 
-        'facing' => [
+            'facing' => [
             'nullable',
             'string',
             'max:50',
         ],
 
-        'floor_number' => [
+            'floor_number' => [
             'nullable',
             'integer',
             'min:0',
         ],
 
-        'total_floors' => [
+            'total_floors' => [
             'nullable',
             'integer',
             'min:0',
         ],
 
-        'furnishing' => [
+            'furnishing' => [
             'nullable',
             'string',
             'max:100',
         ],
 
-
-        /*
+            /*
         |--------------------------------------------------------------------------
         | PROPERTY DETAILS
         |--------------------------------------------------------------------------
         */
 
-        'construction_year' => [
+            'construction_year' => [
             'nullable',
             'integer',
             'min:1900',
-            'max:' . date('Y'),
+            'max:'.date('Y'),
         ],
 
-        'ownership' => [
+            'ownership' => [
             'nullable',
             'string',
             'max:100',
         ],
 
-        'purchase_year' => [
+            'purchase_year' => [
             'nullable',
             'integer',
             'min:1900',
-            'max:' . date('Y'),
+            'max:'.date('Y'),
         ],
 
-        'property_age' => [
+            'property_age' => [
             'nullable',
             'integer',
             'min:0',
         ],
 
-
-        /*
+            /*
         |--------------------------------------------------------------------------
         | AREA
         |--------------------------------------------------------------------------
         */
 
-        'area' => [
+            'area' => [
             'nullable',
             'numeric',
             'min:0',
         ],
 
-        'area_unit' => [
+            'area_unit' => [
             'nullable',
             'string',
             'max:50',
         ],
 
-        'built_up_area' => [
+            'built_up_area' => [
             'nullable',
             'numeric',
             'min:0',
         ],
 
-        'carpet_area' => [
+            'carpet_area' => [
             'nullable',
             'numeric',
             'min:0',
         ],
 
-        'plot_area' => [
+            'plot_area' => [
             'nullable',
             'numeric',
             'min:0',
         ],
 
-
-        /*
+            /*
         |--------------------------------------------------------------------------
         | PROJECT
         |--------------------------------------------------------------------------
         */
 
-        'project_name' => [
+            'project_name' => [
             'nullable',
             'string',
             'max:255',
         ],
 
-        'developer_name' => [
+            'developer_name' => [
             'nullable',
             'string',
             'max:255',
         ],
 
-        'project_status' => [
+            'project_status' => [
             'nullable',
             'string',
             'max:100',
         ],
 
-        'launch_date' => [
+            'launch_date' => [
             'nullable',
             'date',
         ],
 
-        'possession_date' => [
+            'possession_date' => [
             'nullable',
             'date',
         ],
 
-        'total_units' => [
+            'total_units' => [
             'nullable',
             'integer',
             'min:0',
         ],
 
-        'available_units' => [
+            'available_units' => [
             'nullable',
             'integer',
             'min:0',
         ],
 
-        'rera_number' => [
+            'rera_number' => [
             'nullable',
             'string',
             'max:100',
         ],
 
-
-        /*
+            /*
         |--------------------------------------------------------------------------
         | COMMERCIAL
         |--------------------------------------------------------------------------
         */
 
-        'washrooms' => [
+            'washrooms' => [
             'nullable',
             'integer',
             'min:0',
         ],
 
-        'commercial_type' => [
+            'commercial_type' => [
             'nullable',
             'string',
             'max:100',
         ],
 
-        'business_type' => [
+            'business_type' => [
             'nullable',
             'string',
             'max:100',
         ],
 
-
-        /*
+            /*
         |--------------------------------------------------------------------------
         | PLOT / LAND
         |--------------------------------------------------------------------------
         */
 
-        'road_width' => [
+            'road_width' => [
             'nullable',
             'numeric',
             'min:0',
         ],
 
-        'road_width_unit' => [
+            'road_width_unit' => [
             'nullable',
             'string',
             'max:50',
         ],
 
-        'boundary_wall' => [
+            'boundary_wall' => [
             'nullable',
             'string',
             'max:100',
         ],
 
-        'land_type' => [
+            'land_type' => [
             'nullable',
             'string',
             'max:100',
         ],
 
-
-        /*
+            /*
         |--------------------------------------------------------------------------
         | LOCATION COORDINATES
         |--------------------------------------------------------------------------
         */
 
-        'latitude' => [
+            'latitude' => [
             'nullable',
             'numeric',
             'between:-90,90',
         ],
 
-        'longitude' => [
+            'longitude' => [
             'nullable',
             'numeric',
             'between:-180,180',
         ],
 
-        'additional_notes' => [
+            'additional_notes' => [
             'nullable',
             'string',
         ],
-    ]);
+        ]);
 
+        /*
+        |--------------------------------------------------------------------------
+        | GENERATE SLUG
+        |--------------------------------------------------------------------------
+        */
 
-    /*
-    |--------------------------------------------------------------------------
-    | GENERATE SLUG
-    |--------------------------------------------------------------------------
-    */
-
-    $validated['slug'] = $this->generateUniqueSlug(
-        $validated['title']
-    );
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | PROPERTY CODE
-    |--------------------------------------------------------------------------
-    */
-
-    $validated['property_code'] = $this->generatePropertyCode();
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | STATUS
-    |--------------------------------------------------------------------------
-    */
-
-    $validated['status'] = 1;
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | CREATED BY
-    |--------------------------------------------------------------------------
-    */
-
-    $validated['created_by'] = Auth::id();
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | CREATE PROPERTY
-    |--------------------------------------------------------------------------
-    */
-
-    Property::create($validated);
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | REDIRECT
-    |--------------------------------------------------------------------------
-    */
-
-    return redirect()
-        ->route('properties.index')
-        ->with(
-            'success',
-            'Property created successfully.'
+        $validated['slug'] = $this->generateUniqueSlug(
+            $validated['title']
         );
-}
-private function generatePropertyCode()
-{
-    do {
-        $code = 'PROP-' . now()->format('Ymd') . '-' . strtoupper(
-            substr(bin2hex(random_bytes(4)), 0, 6)
-        );
-    } while (
-        Property::where('property_code', $code)->exists()
-    );
 
-    return $code;
-}
+        /*
+        |--------------------------------------------------------------------------
+        | PROPERTY CODE
+        |--------------------------------------------------------------------------
+        */
+
+        $validated['property_code'] = $this->generatePropertyCode();
+
+        /*
+        |--------------------------------------------------------------------------
+        | STATUS
+        |--------------------------------------------------------------------------
+        */
+
+        $validated['status'] = 1;
+
+        /*
+        |--------------------------------------------------------------------------
+        | CREATED BY
+        |--------------------------------------------------------------------------
+        */
+
+        $validated['created_by'] = Auth::id();
+
+        /*
+        |--------------------------------------------------------------------------
+        | CREATE PROPERTY
+        |--------------------------------------------------------------------------
+        */
+
+        Property::create($validated);
+
+        /*
+        |--------------------------------------------------------------------------
+        | REDIRECT
+        |--------------------------------------------------------------------------
+        */
+
+        return redirect()
+            ->route('properties.index')
+            ->with(
+                'success',
+                'Property created successfully.'
+            );
+    }
+
+    private function generatePropertyCode()
+    {
+        do {
+            $code = 'PROP-'.now()->format('Ymd').'-'.strtoupper(
+                substr(bin2hex(random_bytes(4)), 0, 6)
+            );
+        } while (
+            Property::where('property_code', $code)->exists()
+        );
+
+        return $code;
+    }
 
     /**
      * Display the specified property.
@@ -651,16 +635,17 @@ private function generatePropertyCode()
         $countries = Country::where('status', true)->orderBy('name')->get();
         $states = State::where('status', true)->with('country')->orderBy('name')->get();
         $cities = City::where('status', true)->with('state')->orderBy('name')->get();
-        $areas = Area::with(['country','state','city'])->orderBy('name')->get();
+        $areas = Area::with(['country', 'state', 'city'])->orderBy('name')->get();
+
         return view('admin.properties.edit', compact(
-            'property','categories','countries','states','cities','areas'
+            'property', 'categories', 'countries', 'states', 'cities', 'areas'
         ));
     }
 
     /**
      * Update the specified property.
      */
-    public function update(Request $request, Property $property) 
+    public function update(Request $request, Property $property)
     {
         /*
         |--------------------------------------------------------------------------
@@ -681,7 +666,6 @@ private function generatePropertyCode()
                 'exists:property_categories,id',
             ],
 
-
             /*
             |--------------------------------------------------------------------------
             | Country
@@ -692,7 +676,6 @@ private function generatePropertyCode()
                 'required',
                 'exists:countries,id',
             ],
-
 
             /*
             |--------------------------------------------------------------------------
@@ -713,7 +696,6 @@ private function generatePropertyCode()
 
                     }),
             ],
-
 
             /*
             |--------------------------------------------------------------------------
@@ -737,7 +719,6 @@ private function generatePropertyCode()
 
                     }),
             ],
-
 
             /*
             |--------------------------------------------------------------------------
@@ -770,7 +751,6 @@ private function generatePropertyCode()
                     }),
             ],
 
-
             /*
             |--------------------------------------------------------------------------
             | Property Title
@@ -782,7 +762,6 @@ private function generatePropertyCode()
                 'string',
                 'max:255',
             ],
-
 
             /*
             |--------------------------------------------------------------------------
@@ -796,7 +775,6 @@ private function generatePropertyCode()
                 'max:50',
             ],
 
-
             /*
             |--------------------------------------------------------------------------
             | Description
@@ -808,7 +786,6 @@ private function generatePropertyCode()
                 'string',
             ],
 
-
             /*
             |--------------------------------------------------------------------------
             | Address
@@ -819,7 +796,6 @@ private function generatePropertyCode()
                 'nullable',
                 'string',
             ],
-
 
             /*
             |--------------------------------------------------------------------------
@@ -833,7 +809,6 @@ private function generatePropertyCode()
                 'max:255',
             ],
 
-
             /*
             |--------------------------------------------------------------------------
             | Pincode
@@ -845,7 +820,6 @@ private function generatePropertyCode()
                 'string',
                 'max:20',
             ],
-
 
             /*
             |--------------------------------------------------------------------------
@@ -859,7 +833,6 @@ private function generatePropertyCode()
                 'min:0',
             ],
 
-
             /*
             |--------------------------------------------------------------------------
             | Property Area
@@ -871,7 +844,6 @@ private function generatePropertyCode()
                 'numeric',
                 'min:0',
             ],
-
 
             /*
             |--------------------------------------------------------------------------
@@ -885,7 +857,6 @@ private function generatePropertyCode()
                 'max:50',
             ],
 
-
             /*
             |--------------------------------------------------------------------------
             | Built-up Area
@@ -897,7 +868,6 @@ private function generatePropertyCode()
                 'numeric',
                 'min:0',
             ],
-
 
             /*
             |--------------------------------------------------------------------------
@@ -911,7 +881,6 @@ private function generatePropertyCode()
                 'min:0',
             ],
 
-
             /*
             |--------------------------------------------------------------------------
             | Parking
@@ -923,7 +892,6 @@ private function generatePropertyCode()
                 'integer',
                 'min:0',
             ],
-
 
             /*
             |--------------------------------------------------------------------------
@@ -983,9 +951,8 @@ private function generatePropertyCode()
                 'nullable',
                 'integer',
                 'min:1900',
-                'max:' . date('Y'),
+                'max:'.date('Y'),
             ],
-
 
             /*
             |--------------------------------------------------------------------------
@@ -1010,7 +977,6 @@ private function generatePropertyCode()
                 'integer',
                 'min:0',
             ],
-
 
             /*
             |--------------------------------------------------------------------------
@@ -1047,7 +1013,6 @@ private function generatePropertyCode()
                 'max:100',
             ],
 
-
             /*
             |--------------------------------------------------------------------------
             | Rental Fields
@@ -1083,7 +1048,6 @@ private function generatePropertyCode()
                 'max:50',
             ],
 
-
             /*
             |--------------------------------------------------------------------------
             | Resale Fields
@@ -1094,7 +1058,7 @@ private function generatePropertyCode()
                 'nullable',
                 'integer',
                 'min:1900',
-                'max:' . date('Y'),
+                'max:'.date('Y'),
             ],
 
             'property_age' => [
@@ -1102,7 +1066,6 @@ private function generatePropertyCode()
                 'integer',
                 'min:0',
             ],
-
 
             /*
             |--------------------------------------------------------------------------
@@ -1156,7 +1119,6 @@ private function generatePropertyCode()
                 'max:255',
             ],
 
-
             /*
             |--------------------------------------------------------------------------
             | Map Location
@@ -1173,7 +1135,6 @@ private function generatePropertyCode()
                 'numeric',
             ],
 
-
             /*
             |--------------------------------------------------------------------------
             | Status
@@ -1186,7 +1147,6 @@ private function generatePropertyCode()
             ],
 
         ]);
-
 
         /*
         |--------------------------------------------------------------------------
@@ -1203,7 +1163,6 @@ private function generatePropertyCode()
 
         }
 
-
         /*
         |--------------------------------------------------------------------------
         | Updated By
@@ -1212,7 +1171,6 @@ private function generatePropertyCode()
 
         $validated['updated_by'] = Auth::id();
 
-
         /*
         |--------------------------------------------------------------------------
         | Update Property
@@ -1220,7 +1178,6 @@ private function generatePropertyCode()
         */
 
         $property->update($validated);
-
 
         /*
         |--------------------------------------------------------------------------
@@ -1241,7 +1198,6 @@ private function generatePropertyCode()
      */
     public function destroy(Property $property)
     {
-         
 
         if ($property->amenities()->exists()) {
             return redirect()
@@ -1315,13 +1271,14 @@ private function generatePropertyCode()
                 )
                 ->exists()
         ) {
-            $slug = $originalSlug . '-' . $counter;
+            $slug = $originalSlug.'-'.$counter;
             $counter++;
         }
 
         return $slug;
     }
-    public function updateAmenities(Request $request, Property $property) 
+
+    public function updateAmenities(Request $request, Property $property)
     {
         $validated = $request->validate([
             'amenities' => ['nullable', 'array'],
@@ -1331,9 +1288,7 @@ private function generatePropertyCode()
             ],
         ]);
 
-
         $amenityIds = $validated['amenities'] ?? [];
-
 
         $syncData = [];
 
@@ -1349,9 +1304,7 @@ private function generatePropertyCode()
 
         }
 
-
         $property->amenities()->sync($syncData);
-
 
         return redirect()
             ->route('properties.show', $property->id)
@@ -1360,6 +1313,7 @@ private function generatePropertyCode()
                 'Property amenities updated successfully.'
             );
     }
+
     public function storeImages(Request $request, Property $property)
     {
         $validated = $request->validate([
@@ -1377,7 +1331,6 @@ private function generatePropertyCode()
             ],
         ]);
 
-
         foreach ($validated['images'] as $image) {
 
             /*
@@ -1389,10 +1342,9 @@ private function generatePropertyCode()
             */
 
             $path = $image->store(
-                'properties/' . $property->id,
+                'properties/'.$property->id,
                 'public'
             );
-
 
             /*
             |--------------------------------------------------------------------------
@@ -1418,7 +1370,6 @@ private function generatePropertyCode()
             ]);
         }
 
-
         return redirect()
             ->route('properties.show', $property->id)
             ->with(
@@ -1426,6 +1377,7 @@ private function generatePropertyCode()
                 'Property images uploaded successfully.'
             );
     }
+
     public function approve(Property $property)
     {
         $property->update([
@@ -1440,5 +1392,47 @@ private function generatePropertyCode()
                 'Property approved successfully.'
             );
     }
-    
+
+    public function updateImages(Request $request, Property $property)
+    {
+        $request->validate([
+            'delete_images' => 'nullable|string',
+            'new_images.*' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
+        ]);
+        // Delete images
+        if ($request->delete_images) {
+            $deleteIds = json_decode($request->delete_images, true);
+
+            if (is_array($deleteIds) && count($deleteIds) > 0) {
+
+                $images = $property->images()
+                    ->whereIn('id', $deleteIds)
+                    ->get();
+
+                foreach ($images as $image) {
+
+                    if (Storage::disk('public')->exists($image->image)) {
+                        Storage::disk('public')->delete($image->image);
+                    }
+
+                    $image->delete();
+                }
+            }
+        }
+
+        // Upload new images
+        if ($request->hasFile('new_images')) {
+            foreach ($request->file('new_images') as $file) {
+                $path = $file->store('properties/'.$property->id, 'public');
+                $property->images()->create([
+                    'image' => $path,
+                    'title' => $property->title,
+                    'property_id' => $property->id,
+                ]);
+            }
+        }
+
+        return redirect()->route('properties.show', $property->id)
+            ->with('success', 'Property images updated successfully!');
+    }
 }
