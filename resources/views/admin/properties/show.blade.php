@@ -2643,10 +2643,12 @@
                                 <i data-feather="plus"></i>
                                 Add Images
                             </button>
+                            @can('media gallery')
                             <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editImagesModal" style="margin-left: 1rem;">
                                 <i data-feather="edit-2"></i>
                                 Edit Images
                             </button>
+                            @endcan
                         </div>
                     </div>
                     <div class="media-gallery-scroll">
@@ -2665,6 +2667,7 @@
                     </div>
                 </div>
             </div>
+            @can('media gallery')
             <div class="card-body">
                 <div class="record-information-card">
                     <div class="record-information-header">
@@ -2681,7 +2684,20 @@
                                         Created By
                                     </div>
                                     <div class="record-info-value">
-                                        {{ $property->creator->name ?? 'Admin' }}
+                                        <p class="mb-1">
+                                            <i class="fas fa-user mr-1"></i>
+                                            <strong>{{ $property->creator?->name ?? 'Admin' }}</strong>
+                                        </p>
+
+                                        <p class="mb-1">
+                                            <i class="fas fa-phone mr-1"></i>
+                                            {{ $property->creator?->mobile ?? 'N/A' }}
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <i class="fas fa-envelope mr-1"></i>
+                                            {{ $property->creator?->email ?? 'N/A' }}
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="record-info-row">
@@ -2704,7 +2720,20 @@
                                         Last Updated By
                                     </div>
                                     <div class="record-info-value">
-                                        {{ $property->updater->name ?? 'Admin' }}
+                                        <div>
+                                            <i class="fas fa-user mr-1"></i>
+                                            <strong>{{ $property->updater?->name ?? 'Admin' }}</strong>
+                                        </div>
+
+                                        <div>
+                                            <i class="fas fa-phone mr-1"></i>
+                                            {{ $property->updater?->mobile ?? 'N/A' }}
+                                        </div>
+
+                                        <div>
+                                            <i class="fas fa-envelope mr-1"></i>
+                                            {{ $property->updater?->email ?? 'N/A' }}
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="record-info-row">
@@ -2723,6 +2752,7 @@
                     </div>
                 </div>
             </div>
+            @endcan
         </div>
     </div>
 </section>

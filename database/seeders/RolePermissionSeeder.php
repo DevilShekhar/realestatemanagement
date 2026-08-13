@@ -165,6 +165,9 @@ class RolePermissionSeeder extends Seeder
             'manage sms settings',
             'backup system',
             'view audit logs',
+
+            //image
+            'media gallery'
         ];
 
         foreach ($permissions as $permission) {
