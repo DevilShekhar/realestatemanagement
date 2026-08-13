@@ -4,158 +4,276 @@
 
 <style>
 /* =========================================================
-   PROPERTY SEARCH PAGE
+   MODERN PROPERTY SEARCH
 ========================================================= */
 
 .property-search-page {
     width: 100%;
     min-height: 100vh;
-    padding: 30px;
-    background: #f7f8fa;
+    padding: 28px;
+    background:
+        radial-gradient(circle at 85% 10%, rgba(99, 82, 230, .08), transparent 28%),
+        #f7f8fc;
+    font-family: "Inter", "Poppins", sans-serif;
+    color: #121936;
 }
 
-
 /* =========================================================
-   PAGE HEADER
+   HEADER
 ========================================================= */
 
 .property-page-header {
+    position: relative;
+    overflow: hidden;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    margin-bottom: 25px;
+    min-height: 220px;
+    padding: 25px 28px;
+    margin-bottom: 24px;
+
+    border: 1px solid #ececf7;
+    border-radius: 22px;
+
+    background:
+        linear-gradient(100deg, #ffffff 0%, #ffffff 55%, #f3f2ff 100%);
+
+    box-shadow: 0 12px 40px rgba(36, 39, 85, .06);
 }
 
+.property-page-header::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+
+    width: 55%;
+    height: 230px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(111, 91, 235, .02),
+            rgba(111, 91, 235, .13)
+        );
+
+    clip-path: polygon(
+        0 100%,
+        5% 70%,
+        10% 80%,
+        16% 45%,
+        22% 65%,
+        28% 30%,
+        34% 60%,
+        40% 20%,
+        46% 50%,
+        53% 12%,
+        59% 45%,
+        66% 25%,
+        73% 55%,
+        80% 32%,
+        87% 60%,
+        94% 40%,
+        100% 55%,
+        100% 100%
+    );
+
+    pointer-events: none;
+}
 
 .property-header-left {
-    min-width: 0;
+    position: relative;
+    z-index: 2;
+    width: 100%;
 }
 
+/* =========================================================
+   BREADCRUMB
+========================================================= */
 
 .property-breadcrumb {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
 
-    margin-bottom: 12px;
+    margin-bottom: 30px;
 
-    font-size: 12px;
-    color: #8a9099;
+    font-size: 13px;
+    color: #737b98;
 }
 
-
 .property-breadcrumb a {
-    color: #666d77;
+    color: #66708e;
     text-decoration: none;
 }
 
-
 .property-breadcrumb a:hover {
-    color: #111827;
+    color: #4d46d9;
 }
 
+.property-breadcrumb i {
+    color: #4d46d9;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
 
 .property-heading-content {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 28px;
 }
 
-
 .property-heading-icon {
-    width: 52px;
-    height: 52px;
+    width: 125px;
+    height: 125px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 13px;
+    flex-shrink: 0;
 
-    background: #111827;
-    color: #ffffff;
+    border-radius: 27px;
 
-    font-size: 22px;
+    background:
+        linear-gradient(
+            145deg,
+            #6255e8,
+            #3026b9
+        );
+
+    color: #fff;
+
+    font-size: 52px;
 
     box-shadow:
-        0 7px 18px rgba(17, 24, 39, .12);
+        0 18px 35px rgba(74, 65, 218, .25);
 }
-
 
 .property-header-small {
     display: block;
 
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 
-    font-size: 10px;
+    color: #5045e8;
+
+    font-size: 14px;
     font-weight: 800;
 
-    letter-spacing: 1.4px;
-
-    color: #8b919b;
+    letter-spacing: .5px;
 }
-
 
 .property-heading-content h1 {
     margin: 0;
 
-    font-size: 28px;
-    line-height: 1.2;
+    color: #111936;
 
-    font-weight: 750;
+    font-size: 48px;
+    line-height: 1.1;
 
-    color: #1f2937;
+    font-weight: 800;
 }
-
 
 .property-heading-content p {
-    margin: 6px 0 0;
+    margin: 12px 0 0;
 
-    font-size: 13px;
+    color: #68718f;
 
-    color: #7b818b;
+    font-size: 17px;
 }
 
+/* =========================================================
+   HEADER RIGHT
+========================================================= */
 
 .property-header-right {
-    display: flex;
-    align-items: center;
-}
+    position: relative;
+    z-index: 3;
 
+    min-width: 315px;
+}
 
 .property-header-badge {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
 
-    padding: 9px 14px;
+    padding: 20px 24px;
 
-    border: 1px solid #e3e6ea;
-    border-radius: 30px;
+    border: 1px solid #ededf6;
+    border-radius: 15px;
 
-    background: #ffffff;
+    background: rgba(255,255,255,.96);
 
-    font-size: 12px;
-    font-weight: 600;
+    color: #18203d;
 
-    color: #555c66;
+    font-size: 14px;
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 30px rgba(39, 42, 92, .08);
 }
 
+.property-header-badge::before {
+    content: "\F3F5";
 
-.badge-dot,
-.result-status-dot {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eeecff;
+
+    color: #4f45df;
+
+    font-family: "bootstrap-icons";
+    font-size: 23px;
+}
+
+.badge-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.badge-title {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.badge-subtitle {
+    color: #7b829d;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.badge-live {
+    margin-left: auto;
+    color: #22a76a;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.badge-dot {
     width: 7px;
     height: 7px;
 
+    display: inline-block;
+
+    margin-right: 4px;
+
     border-radius: 50%;
 
-    background: #20a464;
-
-    box-shadow:
-        0 0 0 4px rgba(32, 164, 100, .10);
+    background: #25b574;
 }
-
 
 /* =========================================================
    SEARCH CARD
@@ -164,169 +282,223 @@
 .property-search-card {
     overflow: hidden;
 
-    background: #ffffff;
+    background: #fff;
 
-    border: 1px solid #e5e7eb;
-    border-radius: 16px;
+    border: 1px solid #e8e9f3;
+    border-radius: 22px;
 
     box-shadow:
-        0 5px 25px rgba(15, 23, 42, .035);
+        0 15px 45px rgba(31, 34, 79, .07);
 }
-
 
 .search-card-header {
-    padding: 20px 24px;
+    padding: 28px 32px 23px;
 
-    border-bottom: 1px solid #edf0f2;
+    border-bottom: 1px solid #e9eaf2;
 }
-
 
 .search-card-title {
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 18px;
 }
 
-
 .search-card-icon {
-    width: 40px;
-    height: 40px;
+    width: 54px;
+    height: 54px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 10px;
+    border-radius: 15px;
 
-    background: #f2f3f5;
+    background: #eeedff;
 
-    color: #111827;
+    color: #5146df;
 
-    font-size: 17px;
+    font-size: 23px;
 }
-
 
 .search-card-title h2 {
     margin: 0;
 
-    font-size: 16px;
-    font-weight: 700;
+    color: #151d3a;
 
-    color: #252a32;
+    font-size: 21px;
+    font-weight: 800;
 }
-
 
 .search-card-title p {
-    margin: 4px 0 0;
+    margin: 5px 0 0;
 
-    font-size: 12px;
+    color: #737b98;
 
-    color: #858b94;
+    font-size: 13px;
 }
 
+/* Purple line under header */
 
-.search-card-body {
-    padding: 25px;
-}
+.search-card-header::after {
+    content: "";
 
-
-/* =========================================================
-   MAIN LABEL
-========================================================= */
-
-.filter-main-label {
     display: block;
 
-    margin-bottom: 9px;
+    width: 140px;
+    height: 3px;
 
-    font-size: 12px;
-    font-weight: 700;
+    margin-top: 23px;
 
-    color: #363c45;
+    border-radius: 10px;
+
+    background: #5045e5;
 }
 
+.search-card-body {
+    padding: 30px 32px 28px;
+}
 
 /* =========================================================
-   PURPOSE TABS
+   LABEL
+========================================================= */
+
+.filter-main-label,
+.filter-group > label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #151d3a;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: .3px;
+}
+
+.required-star {
+    color: #ef4444;
+}
+
+/* =========================================================
+   PURPOSE
 ========================================================= */
 
 .purpose-tabs {
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
-    gap: 6px;
+    gap: 18px;
 
-    padding: 5px;
-
-    background: #f3f4f6;
-
-    border: 1px solid #e5e7eb;
-    border-radius: 11px;
+    width: 100%;
 }
 
-
 .purpose-tab {
+    position: relative;
+
     margin: 0;
 
     cursor: pointer;
 }
 
-
 .purpose-tab input {
-    display: none;
+    position: absolute;
+    opacity: 0;
 }
 
-
 .purpose-tab span {
-    min-width: 145px;
+    min-height: 82px;
 
-    min-height: 48px;
+    display: flex;
+    align-items: center;
 
-    padding: 7px 17px;
+    gap: 16px;
+
+    padding: 15px 22px;
+
+    border: 1px solid #e2e4ee;
+    border-radius: 13px;
+
+    background: #fff;
+
+    color: #17203d;
+
+    transition: all .2s ease;
+}
+
+.purpose-tab span::after {
+    content: "";
+
+    width: 23px;
+    height: 23px;
+
+    margin-left: auto;
+
+    border: 2px solid #d4d7e4;
+    border-radius: 50%;
+
+    transition: all .2s ease;
+}
+
+.purpose-tab span i {
+    width: 42px;
+    height: 42px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    gap: 9px;
+    flex-shrink: 0;
 
-    border-radius: 8px;
+    border-radius: 11px;
 
-    color: #6b7280;
+    background: #f0efff;
 
-    transition:
-        background .2s ease,
-        color .2s ease,
-        box-shadow .2s ease;
+    color: #5146df;
+
+    font-size: 20px;
 }
-
-
-.purpose-tab span i {
-    font-size: 17px;
-}
-
 
 .purpose-tab span strong {
-    font-size: 13px;
-    font-weight: 700;
-}
+    display: block;
 
+    font-size: 16px;
+    font-weight: 800;
+}
 
 .purpose-tab span small {
-    display: none;
+    display: block;
 
-    font-size: 10px;
+    margin-top: 4px;
+
+    color: #747c99;
+
+    font-size: 12px;
 }
 
+.purpose-tab:hover span {
+    border-color: #a9a4f8;
+}
 
 .purpose-tab input:checked + span {
-    background: #111827;
+    border-color: #564ae8;
 
-    color: #ffffff;
+    background:
+        linear-gradient(
+            100deg,
+            #f6f5ff,
+            #ffffff
+        );
 
     box-shadow:
-        0 4px 12px rgba(17, 24, 39, .15);
+        0 5px 18px rgba(80, 69, 229, .08);
 }
 
+.purpose-tab input:checked + span::after {
+    border: 6px solid #564ae8;
+    box-shadow: 0 0 0 1px #564ae8;
+}
 
 /* =========================================================
    FILTER GROUP
@@ -336,23 +508,17 @@
     width: 100%;
 }
 
+.filter-row-title {
+    margin: 28px 0 14px;
 
-.filter-group > label {
-    display: block;
+    color: #151d3a;
 
-    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 800;
 
-    font-size: 12px;
-    font-weight: 700;
-
-    color: #363c45;
+    text-transform: uppercase;
+    letter-spacing: .3px;
 }
-
-
-.required-star {
-    color: #dc3545;
-}
-
 
 /* =========================================================
    SELECT
@@ -362,82 +528,95 @@
     position: relative;
 }
 
-
 .select-left-icon {
     position: absolute;
 
-    left: 15px;
+    left: 17px;
     top: 50%;
 
     z-index: 3;
 
     transform: translateY(-50%);
 
-    color: #858c96;
+    color: #70799a;
 
-    font-size: 15px;
+    font-size: 17px;
 
     pointer-events: none;
 }
 
-
 .filter-control {
     width: 100%;
-    height: 48px;
+    height: 62px;
 
-    padding-left: 43px;
-    padding-right: 42px;
+    padding: 14px 28px 14px 49px !important;
 
-    border: 1px solid #dfe3e7 !important;
-    border-radius: 9px !important;
+    border: 1px solid #e1e4ee !important;
+    border-radius: 11px !important;
 
-    background-color: #ffffff !important;
+    background: #fff !important;
 
-    color: #343a43 !important;
+    color: #17203d !important;
 
     font-size: 13px !important;
-    font-weight: 500;
+    font-weight: 600;
 
     box-shadow: none !important;
 
-    cursor: pointer;
-
-    transition:
-        border-color .2s ease,
-        box-shadow .2s ease;
+    transition: all .2s ease;
 }
-
 
 .filter-control:hover {
-    border-color: #c8cdd3 !important;
+    border-color: #b9bdf0 !important;
 }
-
 
 .filter-control:focus {
-    border-color: #111827 !important;
+    border-color: #5a4ee8 !important;
 
     box-shadow:
-        0 0 0 3px rgba(17, 24, 39, .06) !important;
+        0 0 0 4px rgba(86, 74, 232, .08) !important;
 }
 
+.select-wrapper::after {
+    content: "";
+
+    position: absolute;
+
+    left: 49px;
+    right: 45px;
+    top: 25px;
+
+    height: 1px;
+
+    background: transparent;
+
+    pointer-events: none;
+}
 
 .select-arrow {
     position: absolute;
 
-    right: 15px;
+    right: 17px;
     top: 50%;
 
     z-index: 3;
 
     transform: translateY(-50%);
 
-    color: #858c96;
+    color: #68718d;
 
-    font-size: 11px;
+    font-size: 12px;
 
     pointer-events: none;
 }
 
+/* =========================================================
+   FLOATING FIELD LABEL
+========================================================= */
+
+.filter-group > label {
+    margin-bottom: 9px;
+}
 
 /* =========================================================
    AMENITIES
@@ -445,49 +624,52 @@
 
 .amenities-box {
     width: 100%;
-    min-height: 48px;
+    min-height: 62px;
 
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 
-    gap: 7px;
+    gap: 8px;
 
-    padding: 7px 9px;
+    padding: 10px 14px;
 
-    border: 1px solid #dfe3e7;
-    border-radius: 9px;
+    border: 1px solid #e1e4ee;
+    border-radius: 11px;
 
-    background: #ffffff;
+    background: #fff;
+
+    transition: border-color .2s ease;
 }
 
+.amenities-box:focus-within {
+    border-color: #5a4ee8;
+    box-shadow: 0 0 0 4px rgba(86, 74, 232, .08);
+}
 
 .amenity-checkbox {
     margin: 0;
-
     cursor: pointer;
 }
-
 
 .amenity-checkbox input {
     display: none;
 }
 
-
 .amenity-checkbox span {
-    min-height: 31px;
+    min-height: 34px;
 
     display: inline-flex;
     align-items: center;
 
-    padding: 5px 11px;
+    padding: 7px 13px;
 
-    border: 1px solid #e0e3e6;
-    border-radius: 20px;
+    border: 1px solid #e0e2ec;
+    border-radius: 30px;
 
-    background: #f8f9fa;
+    background: #fafaff;
 
-    color: #666d77;
+    color: #68718e;
 
     font-size: 11px;
     font-weight: 600;
@@ -495,104 +677,91 @@
     transition: all .2s ease;
 }
 
-
-.amenity-checkbox span:hover {
-    border-color: #c5c9ce;
-}
-
-
 .amenity-checkbox input:checked + span {
-    background: #111827;
+    border-color: #564ae8;
 
-    border-color: #111827;
+    background: #564ae8;
 
-    color: #ffffff;
+    color: #fff;
 }
-
 
 .amenity-checkbox input:checked + span::before {
-    content: "✓";
+    content: "\F26A";
 
     margin-right: 5px;
 
-    font-size: 10px;
+    font-family: "bootstrap-icons";
 }
 
+/* =========================================================
+   LOADING
+========================================================= */
 
 .amenity-loading {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 9px;
 
-    color: #9298a1;
+    color: #8a91a9;
 
-    font-size: 11px;
+    font-size: 12px;
 }
 
-
 .mini-loader {
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
 
-    border: 2px solid #e4e6e8;
-    border-top-color: #111827;
+    border: 2px solid #e4e5ee;
+    border-top-color: #564ae8;
 
     border-radius: 50%;
 
-    animation:
-        miniLoader .7s linear infinite;
+    animation: miniLoader .7s linear infinite;
 }
 
-
 @keyframes miniLoader {
-
     to {
         transform: rotate(360deg);
     }
-
 }
-
 
 .empty-amenities {
-    color: #9298a1;
-
-    font-size: 11px;
+    color: #9298ad;
+    font-size: 12px;
 }
 
-
 /* =========================================================
-   SEARCH ACTIONS
+   ACTIONS
 ========================================================= */
 
 .search-actions {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 
-    gap: 10px;
+    gap: 15px;
 
-    margin-top: 24px;
-    padding-top: 20px;
+    margin-top: 28px;
+    padding-top: 24px;
 
-    border-top: 1px solid #edf0f2;
+    border-top: 1px solid #eceef5;
 }
-
 
 .clear-filter-btn,
 .search-property-btn {
-    min-height: 44px;
+    min-height: 52px;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    gap: 7px;
+    gap: 9px;
 
-    padding: 0 19px;
+    padding: 0 22px;
 
-    border-radius: 8px;
+    border-radius: 11px;
 
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
 
     cursor: pointer;
@@ -600,120 +769,123 @@
     transition: all .2s ease;
 }
 
-
 .clear-filter-btn {
-    border: 1px solid #dfe2e6;
+    border: 1px solid #e0e3ed;
 
-    background: #ffffff;
+    background: #fff;
 
-    color: #5d646e;
+    color: #4f5876;
 }
-
 
 .clear-filter-btn:hover {
-    background: #f7f8f9;
+    border-color: #c9cce0;
 
-    border-color: #cdd1d5;
+    background: #f8f8fc;
 
-    color: #252a32;
+    color: #242b49;
 }
-
 
 .search-property-btn {
-    min-width: 175px;
+    min-width: 230px;
 
-    border: 1px solid #111827;
+    border: 0;
 
-    background: #111827;
+    background:
+        linear-gradient(
+            135deg,
+            #6558ed,
+            #4235cf
+        );
 
-    color: #ffffff;
+    color: #fff;
 
     box-shadow:
-        0 5px 13px rgba(17, 24, 39, .12);
+        0 10px 22px rgba(80, 69, 229, .25);
 }
-
 
 .search-property-btn:hover {
-    background: #1f2937;
-
-    border-color: #1f2937;
-
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 
     box-shadow:
-        0 7px 18px rgba(17, 24, 39, .17);
+        0 14px 28px rgba(80, 69, 229, .32);
 }
 
+.search-property-btn i {
+    font-size: 17px;
+}
 
 /* =========================================================
-   RESULT SECTION
+   RESULTS
 ========================================================= */
 
 .property-result-section {
-    margin-top: 30px;
+    margin-top: 35px;
 }
-
 
 .property-result-header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
 
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
-
 
 .result-small-label {
     display: block;
 
     margin-bottom: 5px;
 
-    font-size: 10px;
+    color: #564ae8;
+
+    font-size: 11px;
     font-weight: 800;
 
-    letter-spacing: 1.2px;
-
-    color: #969ca5;
+    letter-spacing: 1px;
 }
-
 
 .property-result-header h2 {
     margin: 0;
 
-    font-size: 21px;
-    font-weight: 750;
+    color: #151d3a;
 
-    color: #252a32;
+    font-size: 25px;
+    font-weight: 800;
 }
-
 
 .property-result-header p {
     margin: 5px 0 0;
 
+    color: #7c849e;
+
     font-size: 12px;
-
-    color: #858b94;
 }
-
 
 .result-status {
     display: flex;
     align-items: center;
     gap: 8px;
 
-    padding: 8px 13px;
+    padding: 10px 16px;
 
-    border: 1px solid #e4e7e9;
+    border: 1px solid #e5e7f0;
     border-radius: 30px;
 
-    background: #ffffff;
+    background: #fff;
 
-    color: #646b75;
+    color: #68718c;
 
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
+.result-status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #26af72;
+}
 
 /* =========================================================
    PROPERTY CARD
@@ -724,116 +896,90 @@
 
     overflow: hidden;
 
-    background: #ffffff;
+    background: #fff;
 
-    border: 1px solid #e4e6e9;
-    border-radius: 14px;
+    border: 1px solid #e7e8f0;
+    border-radius: 17px;
 
     box-shadow:
-        0 4px 16px rgba(15, 23, 42, .035);
+        0 8px 25px rgba(36, 39, 82, .055);
 
-    transition:
-        transform .22s ease,
-        box-shadow .22s ease,
-        border-color .22s ease;
+    transition: all .25s ease;
 }
-
 
 .property-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
 
-    border-color: #d8dce0;
+    border-color: #d3d0fa;
 
     box-shadow:
-        0 12px 28px rgba(15, 23, 42, .09);
+        0 18px 35px rgba(36, 39, 82, .12);
 }
-
-
-/* =========================================================
-   PROPERTY IMAGE
-========================================================= */
 
 .property-card-image {
     position: relative;
 
-    height: 215px;
+    height: 230px;
 
     overflow: hidden;
 
-    background: #eef0f2;
+    background: #eff0f5;
 }
-
 
 .property-card-image img {
     width: 100%;
     height: 100%;
 
-    display: block;
-
     object-fit: cover;
 
-    transition:
-        transform .35s ease;
+    transition: transform .4s ease;
 }
 
-
-.property-card:hover
-.property-card-image img {
-    transform: scale(1.035);
+.property-card:hover .property-card-image img {
+    transform: scale(1.05);
 }
-
 
 .property-card-overlay {
     position: absolute;
-
     inset: 0;
 
     background:
         linear-gradient(
             to bottom,
-            rgba(0,0,0,.18),
-            transparent 35%,
-            rgba(0,0,0,.22)
+            rgba(20, 23, 50, .08),
+            transparent 45%,
+            rgba(20, 23, 50, .25)
         );
-
-    pointer-events: none;
 }
-
 
 .property-purpose-badge {
     position: absolute;
 
-    top: 14px;
-    left: 14px;
+    top: 15px;
+    left: 15px;
 
-    padding: 6px 11px;
+    padding: 7px 12px;
 
     border-radius: 20px;
 
-    background: #ffffff;
+    background: #fff;
 
-    color: #252a32;
+    color: #4238c9;
 
     font-size: 10px;
     font-weight: 800;
 
-    text-transform: uppercase;
-
-    letter-spacing: .4px;
-
-    box-shadow:
-        0 3px 10px rgba(0,0,0,.12);
+    box-shadow: 0 5px 15px rgba(0,0,0,.12);
 }
-
 
 .property-favorite {
     position: absolute;
 
-    top: 12px;
-    right: 12px;
+    top: 13px;
+    right: 13px;
 
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
 
     display: flex;
     align-items: center;
@@ -842,172 +988,94 @@
     border: 0;
     border-radius: 50%;
 
-    background: rgba(255,255,255,.94);
+    background: rgba(255,255,255,.95);
 
-    color: #4e555e;
-
-    font-size: 15px;
+    color: #59617d;
 
     cursor: pointer;
 
-    box-shadow:
-        0 3px 10px rgba(0,0,0,.10);
-
-    transition: all .2s ease;
+    box-shadow: 0 5px 14px rgba(0,0,0,.12);
 }
-
 
 .property-favorite:hover {
-    color: #dc3545;
-
-    transform: scale(1.06);
+    color: #ef476f;
 }
-
-
-/* =========================================================
-   NO IMAGE
-========================================================= */
-
-.property-no-image {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    gap: 6px;
-
-    color: #9aa0a8;
-
-    background: #f0f2f4;
-
-    font-size: 12px;
-}
-
-
-.property-no-image i {
-    font-size: 28px;
-}
-
 
 /* =========================================================
    CARD CONTENT
 ========================================================= */
 
 .property-card-content {
-    padding: 17px;
+    padding: 19px;
 }
-
 
 .property-card-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 8px;
+    gap: 10px;
 
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 }
-
 
 .property-category {
-    display: inline-flex;
+    padding: 6px 9px;
 
-    padding: 5px 9px;
+    border-radius: 6px;
 
-    border-radius: 5px;
+    background: #f0efff;
 
-    background: #f2f3f5;
+    color: #5549df;
 
-    color: #666d76;
-
-    font-size: 10px;
-    font-weight: 700;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 9px;
+    font-weight: 800;
 }
-
 
 .property-approved {
     display: inline-flex;
     align-items: center;
     gap: 4px;
 
-    color: #238b57;
+    color: #209c65;
 
     font-size: 10px;
     font-weight: 700;
-
-    white-space: nowrap;
 }
-
-
-.property-approved i {
-    font-size: 11px;
-}
-
-
-/* =========================================================
-   TITLE
-========================================================= */
 
 .property-title {
-    margin: 0 0 8px;
+    margin: 0 0 9px;
 
-    overflow: hidden;
+    color: #1b2341;
 
-    color: #252a32;
-
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.35;
 
-    font-weight: 750;
+    font-weight: 800;
 
     display: -webkit-box;
-
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+
+    overflow: hidden;
 }
-
-
-/* =========================================================
-   LOCATION
-========================================================= */
 
 .property-location {
     display: flex;
     align-items: flex-start;
 
-    gap: 6px;
-
-    min-height: 18px;
+    gap: 7px;
 
     margin-bottom: 14px;
 
-    color: #7c838c;
+    color: #7b839c;
 
     font-size: 11px;
-    line-height: 1.4;
 }
-
 
 .property-location i {
-    flex-shrink: 0;
-
-    margin-top: 1px;
-
-    color: #8d939b;
+    color: #5c50df;
 }
-
-
-/* =========================================================
-   PRICE
-========================================================= */
 
 .property-price {
     display: flex;
@@ -1015,31 +1083,20 @@
 
     gap: 5px;
 
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 
-    color: #1f2937;
+    color: #202846;
 }
 
-
 .property-price strong {
-    font-size: 20px;
-    line-height: 1;
-
+    font-size: 21px;
     font-weight: 800;
 }
 
-
 .property-price span {
-    color: #8a9098;
-
+    color: #858da6;
     font-size: 11px;
-    font-weight: 500;
 }
-
-
-/* =========================================================
-   AMENITIES
-========================================================= */
 
 .property-amenities {
     display: flex;
@@ -1047,81 +1104,56 @@
 
     gap: 6px;
 
-    min-height: 28px;
-
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
-
 
 .property-amenities span {
     display: inline-flex;
     align-items: center;
 
-    gap: 3px;
+    gap: 4px;
 
-    padding: 5px 8px;
+    padding: 6px 8px;
 
-    border-radius: 5px;
+    border-radius: 6px;
 
-    background: #f6f7f8;
+    background: #f7f7fb;
 
-    color: #6d737c;
+    color: #68718c;
 
     font-size: 9px;
     font-weight: 600;
 }
-
-
-.property-amenities span i {
-    color: #5c636d;
-
-    font-size: 9px;
-}
-
-
-/* =========================================================
-   CARD FOOTER
-========================================================= */
 
 .property-card-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 10px;
+    padding-top: 14px;
 
-    padding-top: 13px;
-
-    border-top: 1px solid #edf0f2;
+    border-top: 1px solid #eceef4;
 }
-
 
 .property-code {
     display: flex;
     flex-direction: column;
-
     gap: 2px;
 }
 
-
 .property-code span {
-    color: #9a9fa7;
+    color: #9aa1b5;
 
     font-size: 8px;
-
     text-transform: uppercase;
-
     letter-spacing: .5px;
 }
 
-
 .property-code strong {
-    color: #5f6670;
+    color: #59627d;
 
     font-size: 10px;
-    font-weight: 700;
 }
-
 
 .view-property-btn {
     display: inline-flex;
@@ -1129,40 +1161,33 @@
 
     gap: 5px;
 
-    color: #111827;
+    color: #4d42d5;
 
     font-size: 11px;
-    font-weight: 750;
+    font-weight: 800;
 
     text-decoration: none;
-
-    white-space: nowrap;
 }
-
-
-.view-property-btn i {
-    font-size: 11px;
-
-    transition:
-        transform .2s ease;
-}
-
 
 .view-property-btn:hover {
-    color: #111827;
+    color: #3026b9;
 }
 
+.view-property-btn i {
+    transition: transform .2s ease;
+}
 
 .view-property-btn:hover i {
-    transform: translateX(3px);
+    transform: translateX(4px);
 }
 
-
 /* =========================================================
-   LOADING
+   LOADING / EMPTY / ERROR
 ========================================================= */
 
-.property-loading {
+.property-loading,
+.no-properties,
+.ajax-error {
     min-height: 250px;
 
     display: flex;
@@ -1170,152 +1195,67 @@
     align-items: center;
     justify-content: center;
 
-    background: #ffffff;
+    padding: 50px 20px;
 
-    border: 1px solid #e5e7eb;
-    border-radius: 14px;
+    border: 1px solid #e7e8f0;
+    border-radius: 17px;
+
+    background: #fff;
 }
 
-
 .property-loader {
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
 
-    border: 3px solid #e6e8eb;
-    border-top-color: #111827;
+    border: 3px solid #e5e6ef;
+    border-top-color: #564ae8;
 
     border-radius: 50%;
 
-    animation:
-        propertyLoader .7s linear infinite;
+    animation: propertyLoader .7s linear infinite;
 }
 
-
 @keyframes propertyLoader {
-
     to {
         transform: rotate(360deg);
     }
-
 }
 
-
-.property-loading p {
-    margin: 12px 0 0;
-
-    color: #838993;
-
+.property-loading p,
+.no-properties p,
+.ajax-error p {
+    color: #8088a1;
     font-size: 12px;
 }
 
-
-/* =========================================================
-   NO PROPERTIES
-========================================================= */
-
-.no-properties {
-    padding: 60px 20px;
-
-    text-align: center;
-
-    background: #ffffff;
-
-    border: 1px solid #e5e7eb;
-    border-radius: 14px;
-}
-
-
-.no-property-icon {
-    width: 60px;
-    height: 60px;
+.no-property-icon,
+.ajax-error-icon {
+    width: 62px;
+    height: 62px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin: 0 auto 15px;
+    margin-bottom: 15px;
 
     border-radius: 50%;
 
-    background: #f1f2f4;
+    background: #f0efff;
 
-    color: #737a84;
+    color: #564ae8;
 
     font-size: 25px;
 }
 
-
-.no-properties h3 {
-    margin: 0 0 6px;
-
-    color: #30353d;
-
-    font-size: 17px;
-}
-
-
-.no-properties p {
-    margin: 0 0 18px;
-
-    color: #8a9098;
-
-    font-size: 12px;
-}
-
-
-/* =========================================================
-   AJAX ERROR
-========================================================= */
-
-.ajax-error {
-    padding: 55px 20px;
-
-    text-align: center;
-
-    background: #ffffff;
-
-    border: 1px solid #e5e7eb;
-    border-radius: 14px;
-}
-
-
-.ajax-error-icon {
-    width: 55px;
-    height: 55px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin: 0 auto 13px;
-
-    border-radius: 50%;
-
-    background: #fff4f4;
-
-    color: #dc3545;
-
-    font-size: 22px;
-}
-
-
+.no-properties h3,
 .ajax-error h3 {
     margin: 0 0 5px;
 
-    color: #30353d;
+    color: #252d4b;
 
-    font-size: 16px;
+    font-size: 18px;
 }
-
-
-.ajax-error p {
-    margin: 0;
-
-    color: #858b94;
-
-    font-size: 12px;
-}
-
 
 /* =========================================================
    PAGINATION
@@ -1326,28 +1266,25 @@
     align-items: center;
     justify-content: center;
 
-    flex-wrap: wrap;
-
-    gap: 6px;
+    gap: 7px;
 
     margin-top: 25px;
 }
 
-
 .pagination-btn {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    border: 1px solid #dfe2e5;
-    border-radius: 7px;
+    border: 1px solid #e0e2eb;
+    border-radius: 8px;
 
-    background: #ffffff;
+    background: #fff;
 
-    color: #5f6670;
+    color: #626b86;
 
     font-size: 11px;
     font-weight: 700;
@@ -1357,205 +1294,175 @@
     transition: all .2s ease;
 }
 
-
 .pagination-btn:hover {
-    border-color: #bfc4ca;
-
-    background: #f6f7f8;
+    border-color: #aaa5f4;
+    color: #4d42d5;
 }
-
 
 .pagination-btn.active {
-    border-color: #111827;
+    border-color: #564ae8;
 
-    background: #111827;
+    background: #564ae8;
 
-    color: #ffffff;
+    color: #fff;
 }
-
 
 /* =========================================================
    RESPONSIVE
 ========================================================= */
 
+@media (max-width: 1100px) {
+
+    .property-page-header {
+        min-height: 190px;
+    }
+
+    .property-heading-icon {
+        width: 90px;
+        height: 90px;
+
+        font-size: 38px;
+    }
+
+    .property-heading-content h1 {
+        font-size: 38px;
+    }
+
+    .property-header-right {
+        min-width: 260px;
+    }
+}
+
 @media (max-width: 991px) {
 
     .property-search-page {
-        padding: 22px;
+        padding: 20px;
     }
-
 
     .property-page-header {
         align-items: flex-start;
     }
 
-
     .property-header-right {
         display: none;
     }
 
-}
+    .property-heading-content h1 {
+        font-size: 34px;
+    }
 
+    .purpose-tabs {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width: 767px) {
 
     .property-search-page {
-        padding: 15px;
+        padding: 12px;
     }
 
+    .property-page-header {
+        padding: 20px;
 
-    .property-heading-icon {
-        width: 44px;
-        height: 44px;
-
-        font-size: 18px;
+        min-height: auto;
     }
 
+    .property-breadcrumb {
+        margin-bottom: 20px;
+    }
 
     .property-heading-content {
-        gap: 10px;
+        gap: 15px;
     }
 
+    .property-heading-icon {
+        width: 65px;
+        height: 65px;
+
+        border-radius: 17px;
+
+        font-size: 28px;
+    }
 
     .property-heading-content h1 {
-        font-size: 22px;
+        font-size: 27px;
     }
-
 
     .property-heading-content p {
-        font-size: 11px;
+        font-size: 12px;
     }
 
-
-    .search-card-header {
-        padding: 17px;
-    }
-
-
+    .search-card-header,
     .search-card-body {
-        padding: 17px;
+        padding: 20px;
     }
-
-
-    .purpose-tabs {
-        width: 100%;
-    }
-
-
-    .purpose-tab {
-        flex: 1;
-    }
-
-
-    .purpose-tab span {
-        min-width: 0;
-        width: 100%;
-
-        padding: 7px 10px;
-    }
-
-
-    .purpose-tab span small {
-        display: none;
-    }
-
 
     .search-actions {
         flex-direction: column-reverse;
-
         align-items: stretch;
     }
-
 
     .clear-filter-btn,
     .search-property-btn {
         width: 100%;
     }
 
-
     .property-result-header {
-        align-items: flex-start;
-
-        gap: 15px;
-
         flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .property-heading-icon {
+        display: none;
     }
 
-
-    .result-status {
-        align-self: flex-start;
+    .property-heading-content h1 {
+        font-size: 23px;
     }
 
+    .property-breadcrumb {
+        font-size: 11px;
+    }
+
+    .purpose-tab span {
+        min-height: 70px;
+    }
 
     .property-card-image {
         height: 210px;
     }
-
 }
-
-
-@media (max-width: 480px) {
-
-    .property-heading-content h1 {
-        font-size: 20px;
-    }
-
-
-    .property-heading-content p {
-        display: none;
-    }
-
-
-    .purpose-tab span i {
-        display: none;
-    }
-
-
-    .purpose-tab span strong {
-        font-size: 12px;
-    }
-
-}
-    </style>
+</style>
 <section class="property-search-page">
 
-    {{-- =========================================================
-        PAGE HEADER
-    ========================================================== --}}
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
 
     <div class="property-page-header">
 
         <div class="property-header-left">
 
-            <div class="property-breadcrumb">
-
-                <a href="{{ route('dashboard') }}">
-                    Dashboard
-                </a>
-
-                <span>
-                    /
-                </span>
-
-                <span>
-                    Properties
-                </span>
-
-            </div>
+            <!-- Breadcrumb -->
+           
 
 
+            <!-- Main Heading -->
             <div class="property-heading-content">
 
                 <div class="property-heading-icon">
-
-                    <i class="bi bi-buildings"></i>
-
+                    <i data-feather="search"></i>
                 </div>
 
                 <div>
 
                     <span class="property-header-small">
-                        FIND YOUR PERFECT PROPERTY
+                        PROPERTY SEARCH
                     </span>
 
                     <h1>
@@ -1563,7 +1470,7 @@
                     </h1>
 
                     <p>
-                        Find verified properties available for rent or purchase.
+                        Find your perfect property with advanced filters
                     </p>
 
                 </div>
@@ -1573,49 +1480,37 @@
         </div>
 
 
-        {{-- HEADER RIGHT --}}
-
-        <div class="property-header-right">
-
-            <div class="property-header-badge">
-
-                <span class="badge-dot"></span>
-
-                Live Listings
-
-            </div>
-
-        </div>
+        <!-- Header Right -->
+        
 
     </div>
 
 
-    {{-- =========================================================
-        SEARCH CARD
-    ========================================================== --}}
+    <!-- =====================================================
+         SEARCH CARD
+    ====================================================== -->
 
     <div class="property-search-card">
 
-        {{-- CARD HEADER --}}
-
+        <!-- Card Header -->
         <div class="search-card-header">
 
             <div class="search-card-title">
 
                 <div class="search-card-icon">
 
-                    <i class="bi bi-search"></i>
+                    <i data-feather="sliders"></i>
 
                 </div>
 
                 <div>
 
                     <h2>
-                        Find Your Property
+                        Search & Filter Properties
                     </h2>
 
                     <p>
-                        Use the filters below to find the right property.
+                        Use the filters below to find exactly what you're looking for
                     </p>
 
                 </div>
@@ -1625,8 +1520,7 @@
         </div>
 
 
-        {{-- CARD BODY --}}
-
+        <!-- Card Body -->
         <div class="search-card-body">
 
             <form
@@ -1634,50 +1528,22 @@
                 autocomplete="off"
             >
 
-                {{-- =================================================
-                    PURPOSE
-                ================================================== --}}
+                <!-- =================================================
+                     PURPOSE
+                ================================================== -->
 
                 <div class="row mb-4">
 
                     <div class="col-12">
 
                         <label class="filter-main-label">
-                            Property Purpose
+                            Purpose
                         </label>
 
 
                         <div class="purpose-tabs">
 
-                            {{-- RENT --}}
-
-                            <label class="purpose-tab active">
-
-                                <input
-                                    type="radio"
-                                    name="purpose"
-                                    value="rent"
-                                    checked
-                                >
-
-                                <span>
-
-                                    <i class="bi bi-house-door"></i>
-
-                                    <strong>
-                                        Rent
-                                    </strong>
-
-                                    <small>
-                                        Rental properties
-                                    </small>
-
-                                </span>
-
-                            </label>
-
-
-                            {{-- PURCHASE --}}
+                            <!-- FOR SALE -->
 
                             <label class="purpose-tab">
 
@@ -1689,15 +1555,51 @@
 
                                 <span>
 
-                                    <i class="bi bi-building"></i>
+                                    <i data-feather="home"></i>
 
-                                    <strong>
-                                        Purchase
-                                    </strong>
+                                    <div>
 
-                                    <small>
-                                        Properties for sale
-                                    </small>
+                                        <strong>
+                                            For Sale
+                                        </strong>
+
+                                        <small>
+                                            Buy properties
+                                        </small>
+
+                                    </div>
+
+                                </span>
+
+                            </label>
+
+
+                            <!-- FOR RENT -->
+
+                            <label class="purpose-tab">
+
+                                <input
+                                    type="radio"
+                                    name="purpose"
+                                    value="rent"
+                                    checked
+                                >
+
+                                <span>
+
+                                    <i data-feather="key"></i>
+
+                                    <div>
+
+                                        <strong>
+                                            For Rent
+                                        </strong>
+
+                                        <small>
+                                            Rent properties
+                                        </small>
+
+                                    </div>
 
                                 </span>
 
@@ -1710,74 +1612,34 @@
                 </div>
 
 
-                {{-- =================================================
-                    FILTER ROW
-                ================================================== --}}
+               
 
-                <div class="row g-4">
+                <!-- =================================================
+                     LOCATION
+                ================================================== -->
 
-
-                    {{-- =================================================
-                        PROPERTY TYPE
-                    ================================================== --}}
-
-                    <div class="col-lg-6 col-md-6 col-12">
-
-                        <div class="filter-group">
-
-                            <label for="property_category_id">
-
-                                Property Type
-
-                                <span class="required-star">
-                                    *
-                                </span>
-
-                            </label>
+                <div class="filter-row-title">
+                    Location
+                </div>
 
 
-                            <div class="select-wrapper">
-
-                                <i class="bi bi-buildings select-left-icon"></i>
-
-                                <select
-                                    name="property_category_id"
-                                    id="property_category_id"
-                                    class="form-select filter-control"
-                                >
-
-                                    <option value="">
-                                        All Property Types
-                                    </option>
-
-                                </select>
+                <div class="row g-3">
 
 
-                                <i class="bi bi-chevron-down select-arrow"></i>
+                    <!-- COUNTRY -->
 
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    {{-- =================================================
-                        COUNTRY
-                    ================================================== --}}
-
-                    <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-xl-3">
 
                         <div class="filter-group">
 
-                            <label for="country_id">
-                                Country
-                            </label>
-
+                           
 
                             <div class="select-wrapper">
 
-                                <i class="bi bi-globe2 select-left-icon"></i>
+                                <i
+                                    data-feather="globe"
+                                    class="select-left-icon"
+                                ></i>
 
                                 <select
                                     name="country_id"
@@ -1786,14 +1648,12 @@
                                 >
 
                                     <option value="">
-                                        All Countries
+                                        Select country
                                     </option>
 
                                 </select>
 
-
-                                <i class="bi bi-chevron-down select-arrow"></i>
-
+                                 
                             </div>
 
                         </div>
@@ -1801,22 +1661,20 @@
                     </div>
 
 
-                    {{-- =================================================
-                        STATE
-                    ================================================== --}}
+                    <!-- STATE -->
 
-                    <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-xl-3">
 
                         <div class="filter-group">
 
-                            <label for="state_id">
-                                State
-                            </label>
-
+                           
 
                             <div class="select-wrapper">
 
-                                <i class="bi bi-map select-left-icon"></i>
+                                <i
+                                    data-feather="map-pin"
+                                    class="select-left-icon"
+                                ></i>
 
                                 <select
                                     name="state_id"
@@ -1825,13 +1683,12 @@
                                 >
 
                                     <option value="">
-                                        All States
+                                        Select state
                                     </option>
 
                                 </select>
 
-
-                                <i class="bi bi-chevron-down select-arrow"></i>
+                                 
 
                             </div>
 
@@ -1840,22 +1697,19 @@
                     </div>
 
 
-                    {{-- =================================================
-                        CITY
-                    ================================================== --}}
+                    <!-- CITY -->
 
-                    <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-xl-3">
 
                         <div class="filter-group">
 
-                            <label for="city_id">
-                                City
-                            </label>
-
-
+                            
                             <div class="select-wrapper">
 
-                                <i class="bi bi-geo-alt select-left-icon"></i>
+                                <i
+                                    data-feather="home"
+                                    class="select-left-icon"
+                                ></i>
 
                                 <select
                                     name="city_id"
@@ -1864,13 +1718,12 @@
                                 >
 
                                     <option value="">
-                                        All Cities
+                                        Select city
                                     </option>
 
                                 </select>
 
-
-                                <i class="bi bi-chevron-down select-arrow"></i>
+                                
 
                             </div>
 
@@ -1879,22 +1732,20 @@
                     </div>
 
 
-                    {{-- =================================================
-                        AREA
-                    ================================================== --}}
+                    <!-- AREA -->
 
-                    <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-xl-3">
 
                         <div class="filter-group">
 
-                            <label for="area_id">
-                                Area / Locality
-                            </label>
-
+                           
 
                             <div class="select-wrapper">
 
-                                <i class="bi bi-pin-map select-left-icon"></i>
+                                <i
+                                    data-feather="crosshair"
+                                    class="select-left-icon"
+                                ></i>
 
                                 <select
                                     name="area_id"
@@ -1903,13 +1754,60 @@
                                 >
 
                                     <option value="">
-                                        All Areas
+                                        Select area
                                     </option>
 
                                 </select>
 
+                                
 
-                                <i class="bi bi-chevron-down select-arrow"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+ <!-- =================================================
+                     PROPERTY DETAILS
+                ================================================== -->
+
+                <div class="filter-row-title">
+                    Property Details
+                </div>
+
+
+                <div class="row g-3">
+
+
+                    <!-- PROPERTY TYPE -->
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+
+                        <div class="filter-group">
+
+                             
+
+                            <div class="select-wrapper">
+
+                                <i
+                                    data-feather="home"
+                                    class="select-left-icon"
+                                ></i>
+
+                                <select
+                                    name="property_category_id"
+                                    id="property_category_id"
+                                    class="form-select filter-control"
+                                >
+
+                                    <option value="">
+                                        Select property type
+                                    </option>
+
+                                </select>
+
+                               
 
                             </div>
 
@@ -1918,20 +1816,683 @@
                     </div>
 
 
-                    {{-- =================================================
-                        AMENITIES
-                    ================================================== --}}
+                    <!-- CATEGORY -->
 
-                    <div class="col-lg-6 col-md-6 col-12">
+                     
+
+                </div>
+
+
+                <!-- =================================================
+                     AMENITIES
+                ================================================== -->
+
+               
+
+
+                <div class="row">
+
+                    <div class="col-12">
 
                         <div class="filter-group">
 
-                            <label>
-                                Amenities
-                            </label>
+                                               
+ 
+                                <div id="categoryWiseFilters" class="category-wise-filters">
+
+                                    {{-- =========================================================
+                                        RESIDENTIAL
+                                    ========================================================== --}}
+                                    <div id="residentialFilters"
+                                        class="category-filter-section category-wise-panel"
+                                        data-category-type="residential"
+                                        style="display:none;">
+
+                                        <div class="category-filter-header">
+                                            <div class="category-filter-header-left">
+                                                <div class="category-filter-icon">
+                                                    <i data-feather="home"></i>
+                                                </div>
+                                                <div>
+                                                    <h5>Residential Property Filters</h5>
+                                                    <p>Use residential-specific details to refine results.</p>
+                                                </div>
+                                            </div>
+                                            <span class="category-filter-badge">Residential</span>
+                                        </div>
+
+                                        <div class="row property-filter-grid">
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="bhk">BHK</label>
+                                                    <div class="property-input-wrapper">
+                                                       
+                                                        <select id="bhk" name="bhk" class="form-control category-data-filter">
+                                                            <option value="">Any BHK</option>
+                                                            <option value="1">1 BHK</option>
+                                                            <option value="2">2 BHK</option>
+                                                            <option value="3">3 BHK</option>
+                                                            <option value="4">4 BHK</option>
+                                                            <option value="5">5 BHK</option>
+                                                            <option value="6">6+ BHK</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="bedrooms">Bedrooms</label>
+                                                    <div class="property-input-wrapper">
+                                                       
+                                                        <select id="bedrooms" name="bedrooms" class="form-control category-data-filter">
+                                                            <option value="">Any Bedrooms</option>
+                                                            <option value="1">1+</option>
+                                                            <option value="2">2+</option>
+                                                            <option value="3">3+</option>
+                                                            <option value="4">4+</option>
+                                                            <option value="5">5+</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="bathrooms">Bathrooms</label>
+                                                    <div class="property-input-wrapper">
+                                                        
+                                                        <select id="bathrooms" name="bathrooms" class="form-control category-data-filter">
+                                                            <option value="">Any Bathrooms</option>
+                                                            <option value="1">1+</option>
+                                                            <option value="2">2+</option>
+                                                            <option value="3">3+</option>
+                                                            <option value="4">4+</option>
+                                                            <option value="5">5+</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="balconies">Balconies</label>
+                                                    <div class="property-input-wrapper">
+                                                       
+                                                        <select id="balconies" name="balconies" class="form-control category-data-filter">
+                                                            <option value="">Any Balconies</option>
+                                                            <option value="1">1+</option>
+                                                            <option value="2">2+</option>
+                                                            <option value="3">3+</option>
+                                                            <option value="4">4+</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="facing">Facing</label>
+                                                    <div class="property-input-wrapper">
+                                                       
+                                                        <select id="facing" name="facing" class="form-control category-data-filter">
+                                                            <option value="">Any Facing</option>
+                                                            <option value="North">North</option>
+                                                            <option value="South">South</option>
+                                                            <option value="East">East</option>
+                                                            <option value="West">West</option>
+                                                            <option value="North-East">North-East</option>
+                                                            <option value="North-West">North-West</option>
+                                                            <option value="South-East">South-East</option>
+                                                            <option value="South-West">South-West</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="floor_number">Floor Number</label>
+                                                    <input type="number" id="floor_number" name="floor_number"
+                                                        class="form-control category-data-filter" min="0"
+                                                        placeholder="Floor number">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="total_floors">Total Floors</label>
+                                                    <input type="number" id="total_floors" name="total_floors"
+                                                        class="form-control category-data-filter" min="0"
+                                                        placeholder="Total floors">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="furnishing">Furnishing</label>
+                                                    <div class="property-input-wrapper">
+                                                       
+                                                        <select id="furnishing" name="furnishing" class="form-control category-data-filter">
+                                                            <option value="">Any Furnishing</option>
+                                                            <option value="Unfurnished">Unfurnished</option>
+                                                            <option value="Semi Furnished">Semi Furnished</option>
+                                                            <option value="Fully Furnished">Fully Furnished</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="construction_year">Construction Year</label>
+                                                    <input type="number" id="construction_year" name="construction_year"
+                                                        class="form-control category-data-filter"
+                                                        min="1900" max="{{ date('Y') }}" placeholder="YYYY">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="ownership">Ownership</label>
+                                                    <input type="text" id="ownership" name="ownership"
+                                                        class="form-control category-data-filter"
+                                                        placeholder="Ownership">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="monthly_rent">Monthly Rent</label>
+                                                    <input type="number" id="monthly_rent" name="monthly_rent"
+                                                        class="form-control category-data-filter" min="0"
+                                                        placeholder="Maximum monthly rent">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="parking">Parking</label>
+                                                    <input type="number" id="parking" name="parking"
+                                                        class="form-control category-data-filter" min="0"
+                                                        placeholder="Parking spaces">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
 
 
-                            <div
+                                    {{-- =========================================================
+                                        COMMERCIAL
+                                    ========================================================== --}}
+                                    <div id="commercialFilters"
+                                        class="category-filter-section category-wise-panel"
+                                        data-category-type="commercial"
+                                        style="display:none;">
+
+                                        <div class="category-filter-header">
+                                            <div class="category-filter-header-left">
+                                                <div class="category-filter-icon">
+                                                    <i data-feather="briefcase"></i>
+                                                </div>
+                                                <div>
+                                                    <h5>Commercial Property Filters</h5>
+                                                    <p>Use commercial-specific details to refine results.</p>
+                                                </div>
+                                            </div>
+                                            <span class="category-filter-badge">Commercial</span>
+                                        </div>
+
+                                        <div class="row property-filter-grid">
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="commercial_type">Commercial Type</label>
+                                                    <div class="property-input-wrapper">
+                                                        
+                                                        <select id="commercial_type" name="commercial_type"
+                                                                class="form-control category-data-filter">
+                                                            <option value="">All Commercial Types</option>
+                                                            <option value="Office">Office</option>
+                                                            <option value="Shop">Shop</option>
+                                                            <option value="Warehouse">Warehouse</option>
+                                                            <option value="Showroom">Showroom</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="business_type">Business Type</label>
+                                                    <input type="text" id="business_type" name="business_type"
+                                                        class="form-control category-data-filter"
+                                                        placeholder="Business type">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="washrooms">Washrooms</label>
+                                                    <input type="number" id="washrooms" name="washrooms"
+                                                        class="form-control category-data-filter" min="0"
+                                                        placeholder="Minimum washrooms">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="commercial_floor_number">Floor Number</label>
+                                                    <input type="number" id="commercial_floor_number"
+                                                        class="form-control category-data-alias"
+                                                        data-search-name="floor_number"
+                                                        min="0" placeholder="Floor number">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="commercial_total_floors">Total Floors</label>
+                                                    <input type="number" id="commercial_total_floors"
+                                                        class="form-control category-data-alias"
+                                                        data-search-name="total_floors"
+                                                        min="0" placeholder="Total floors">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="commercial_furnishing">Furnishing</label>
+                                                    <div class="property-input-wrapper">
+                                                         
+                                                        <select id="commercial_furnishing"
+                                                                class="form-control category-data-alias"
+                                                                data-search-name="furnishing">
+                                                            <option value="">Any Furnishing</option>
+                                                            <option value="Unfurnished">Unfurnished</option>
+                                                            <option value="Semi Furnished">Semi Furnished</option>
+                                                            <option value="Fully Furnished">Fully Furnished</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="commercial_parking">Parking</label>
+                                                    <input type="number" id="commercial_parking"
+                                                        class="form-control category-data-alias"
+                                                        data-search-name="parking"
+                                                        min="0" placeholder="Parking spaces">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="commercial_construction_year">Construction Year</label>
+                                                    <input type="number" id="commercial_construction_year"
+                                                        class="form-control category-data-alias"
+                                                        data-search-name="construction_year"
+                                                        min="1900" max="{{ date('Y') }}" placeholder="YYYY">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    {{-- =========================================================
+                                        LAND / PLOT
+                                    ========================================================== --}}
+                                    <div id="landFilters"
+                                        class="category-filter-section category-wise-panel"
+                                        data-category-type="land"
+                                        style="display:none;">
+
+                                        <div class="category-filter-header">
+                                            <div class="category-filter-header-left">
+                                                <div class="category-filter-icon">
+                                                    <i data-feather="map"></i>
+                                                </div>
+                                                <div>
+                                                    <h5>Land / Plot Filters</h5>
+                                                    <p>Use land-specific details to refine results.</p>
+                                                </div>
+                                            </div>
+                                            <span class="category-filter-badge">Land / Plot</span>
+                                        </div>
+
+                                        <div class="row property-filter-grid">
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="plot_area">Plot Area</label>
+                                                    <input type="number" id="plot_area" name="plot_area"
+                                                        class="form-control category-data-filter"
+                                                        min="0" step="0.01" placeholder="Plot area">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="road_width">Road Width</label>
+                                                    <input type="number" id="road_width" name="road_width"
+                                                        class="form-control category-data-filter"
+                                                        min="0" step="0.01" placeholder="Road width">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="road_width_unit">Road Width Unit</label>
+                                                    <select id="road_width_unit" name="road_width_unit"
+                                                            class="form-control category-data-filter">
+                                                        <option value="">Any Unit</option>
+                                                        <option value="ft">Feet</option>
+                                                        <option value="m">Meter</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="boundary_wall">Boundary Wall</label>
+                                                    <select id="boundary_wall" name="boundary_wall"
+                                                            class="form-control category-data-filter">
+                                                        <option value="">Any</option>
+                                                        <option value="1">Yes</option>
+                                                        <option value="0">No</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="land_type">Land Type</label>
+                                                    <select id="land_type" name="land_type"
+                                                            class="form-control category-data-filter">
+                                                        <option value="">Any Land Type</option>
+                                                        <option value="Residential Plot">Residential Plot</option>
+                                                        <option value="Commercial Plot">Commercial Plot</option>
+                                                        <option value="Agricultural Land">Agricultural Land</option>
+                                                        <option value="Industrial Land">Industrial Land</option>
+                                                        <option value="Farm Land">Farm Land</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="land_facing">Facing</label>
+                                                    <select id="land_facing" name="facing"
+                                                            class="form-control category-data-alias">
+                                                        <option value="">Any Facing</option>
+                                                        <option value="North">North</option>
+                                                        <option value="South">South</option>
+                                                        <option value="East">East</option>
+                                                        <option value="West">West</option>
+                                                        <option value="North-East">North-East</option>
+                                                        <option value="North-West">North-West</option>
+                                                        <option value="South-East">South-East</option>
+                                                        <option value="South-West">South-West</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="land_parking">Parking</label>
+                                                    <input type="number" id="land_parking"
+                                                        class="form-control category-data-alias"
+                                                        data-search-name="parking"
+                                                        min="0" placeholder="Parking spaces">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="additionalCategoryFilters">
+
+                                    {{-- Rental --}}
+                                    <div id="rentalFilters"
+                                        class="category-filter-section category-wise-panel"
+                                        data-category-type="rental"
+                                        style="display:none;">
+
+                                        <div class="category-filter-header">
+                                            <div class="category-filter-header-left">
+                                                <div class="category-filter-icon">
+                                                    <i data-feather="key"></i>
+                                                </div>
+                                                <div>
+                                                    <h5>Rental Filters</h5>
+                                                    <p>Filter rental-specific availability and lease details.</p>
+                                                </div>
+                                            </div>
+                                            <span class="category-filter-badge">Rental</span>
+                                        </div>
+
+                                        <div class="row property-filter-grid">
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="rental_monthly_rent">Monthly Rent</label>
+                                                    <input type="number" id="rental_monthly_rent"
+                                                        class="form-control category-data-alias"
+                                                        data-search-name="monthly_rent"
+                                                        min="0" placeholder="Maximum monthly rent">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="security_deposit">Security Deposit</label>
+                                                    <input type="number" id="security_deposit"
+                                                        name="security_deposit"
+                                                        class="form-control category-data-filter"
+                                                        min="0" placeholder="Maximum deposit">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="available_from">Available From</label>
+                                                    <input type="date" id="available_from"
+                                                        name="available_from"
+                                                        class="form-control category-data-filter">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="lease_period">Lease Period</label>
+                                                    <input type="number" id="lease_period"
+                                                        name="lease_period"
+                                                        class="form-control category-data-filter"
+                                                        min="0" placeholder="Lease period">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="lease_period_unit">Lease Period Unit</label>
+                                                    <select id="lease_period_unit"
+                                                            name="lease_period_unit"
+                                                            class="form-control category-data-filter">
+                                                        <option value="">Any Unit</option>
+                                                        <option value="month">Month</option>
+                                                        <option value="year">Year</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    {{-- Resale --}}
+                                    <div id="resaleFilters"
+                                        class="category-filter-section category-wise-panel"
+                                        data-category-type="resale"
+                                        style="display:none;">
+
+                                        <div class="category-filter-header">
+                                            <div class="category-filter-header-left">
+                                                <div class="category-filter-icon">
+                                                    <i data-feather="refresh-cw"></i>
+                                                </div>
+                                                <div>
+                                                    <h5>Resale Filters</h5>
+                                                    <p>Filter resale properties by purchase year and age.</p>
+                                                </div>
+                                            </div>
+                                            <span class="category-filter-badge">Resale</span>
+                                        </div>
+
+                                        <div class="row property-filter-grid">
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="purchase_year">Purchase Year</label>
+                                                    <input type="number" id="purchase_year"
+                                                        name="purchase_year"
+                                                        class="form-control category-data-filter"
+                                                        min="1900" max="{{ date('Y') }}" placeholder="YYYY">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="property_age">Property Age</label>
+                                                    <input type="number" id="property_age"
+                                                        name="property_age"
+                                                        class="form-control category-data-filter"
+                                                        min="0" placeholder="Maximum age">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    {{-- New Project --}}
+                                    <div id="newProjectFilters"
+                                        class="category-filter-section category-wise-panel"
+                                        data-category-type="project"
+                                        style="display:none;">
+
+                                        <div class="category-filter-header">
+                                            <div class="category-filter-header-left">
+                                                <div class="category-filter-icon">
+                                                    <i data-feather="layers"></i>
+                                                </div>
+                                                <div>
+                                                    <h5>New Project Filters</h5>
+                                                    <p>Filter projects using developer and possession details.</p>
+                                                </div>
+                                            </div>
+                                            <span class="category-filter-badge">New Project</span>
+                                        </div>
+
+                                        <div class="row property-filter-grid">
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="project_name">Project Name</label>
+                                                    <input type="text" id="project_name"
+                                                        name="project_name"
+                                                        class="form-control category-data-filter"
+                                                        placeholder="Project name">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="developer_name">Developer Name</label>
+                                                    <input type="text" id="developer_name"
+                                                        name="developer_name"
+                                                        class="form-control category-data-filter"
+                                                        placeholder="Developer name">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="project_status">Project Status</label>
+                                                    <select id="project_status"
+                                                            name="project_status"
+                                                            class="form-control category-data-filter">
+                                                        <option value="">Any Status</option>
+                                                        <option value="Upcoming">Upcoming</option>
+                                                        <option value="Under Construction">Under Construction</option>
+                                                        <option value="Ready to Move">Ready to Move</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="launch_date">Launch Date</label>
+                                                    <input type="date" id="launch_date"
+                                                        name="launch_date"
+                                                        class="form-control category-data-filter">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="possession_date">Possession Date</label>
+                                                    <input type="date" id="possession_date"
+                                                        name="possession_date"
+                                                        class="form-control category-data-filter">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="total_units">Total Units</label>
+                                                    <input type="number" id="total_units"
+                                                        name="total_units"
+                                                        class="form-control category-data-filter"
+                                                        min="0" placeholder="Minimum units">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="available_units">Available Units</label>
+                                                    <input type="number" id="available_units"
+                                                        name="available_units"
+                                                        class="form-control category-data-filter"
+                                                        min="0" placeholder="Minimum available">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+                                                    <label for="rera_number">RERA Number</label>
+                                                    <input type="text" id="rera_number"
+                                                        name="rera_number"
+                                                        class="form-control category-data-filter"
+                                                        placeholder="RERA number">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                 <div class="filter-row-title">
+                                    Amenities
+                                </div>
+                                 <label>
+                                Select Amenities
+                            </label>      
+
+                                <div
                                 class="amenities-box"
                                 id="amenitiesList"
                             >
@@ -1953,46 +2514,44 @@
                 </div>
 
 
-                {{-- =================================================
-                    SEARCH ACTIONS
-                ================================================== --}}
+                <!-- =================================================
+                     ACTIONS
+                ================================================== -->
 
-                <div class="row">
+                <div class="search-actions">
 
-                    <div class="col-12">
+                    <!-- RESET -->
 
-                        <div class="search-actions">
+                    <button
+                        type="button"
+                        id="clearFilters"
+                        class="clear-filter-btn"
+                    >
 
-                            <button
-                                type="button"
-                                id="clearFilters"
-                                class="clear-filter-btn"
-                            >
+                        <i data-feather="rotate-ccw"></i>
 
-                                <i class="bi bi-arrow-counterclockwise"></i>
+                        <span>
+                            Reset Filters
+                        </span>
 
-                                Clear Filters
-
-                            </button>
+                    </button>
 
 
-                            <button
-                                type="submit"
-                                id="searchPropertyBtn"
-                                class="search-property-btn"
-                            >
+                    <!-- SEARCH -->
 
-                                <i class="bi bi-search"></i>
+                    <button
+                        type="submit"
+                        id="searchPropertyBtn"
+                        class="search-property-btn"
+                    >
 
-                                <span>
-                                    Search Properties
-                                </span>
+                        <span>
+                            Search Properties
+                        </span>
 
-                            </button>
+                        <i data-feather="search"></i>
 
-                        </div>
-
-                    </div>
+                    </button>
 
                 </div>
 
@@ -2003,11 +2562,13 @@
     </div>
 
 
-    {{-- =========================================================
-        PROPERTY RESULT HEADER
-    ========================================================== --}}
+    <!-- =====================================================
+         PROPERTY RESULTS
+    ====================================================== -->
 
     <div class="property-result-section">
+
+        <!-- Result Header -->
 
         <div class="property-result-header">
 
@@ -2039,9 +2600,9 @@
         </div>
 
 
-        {{-- =====================================================
-            LOADING
-        ====================================================== --}}
+        <!-- =================================================
+             LOADING
+        ================================================== -->
 
         <div
             id="propertyLoading"
@@ -2057,9 +2618,9 @@
         </div>
 
 
-        {{-- =====================================================
-            PROPERTY LISTING
-        ====================================================== --}}
+        <!-- =================================================
+             PROPERTY LISTING
+        ================================================== -->
 
         <div
             id="propertyListing"
@@ -2067,9 +2628,9 @@
         ></div>
 
 
-        {{-- =====================================================
-            NO PROPERTY
-        ====================================================== --}}
+        <!-- =================================================
+             NO PROPERTIES
+        ================================================== -->
 
         <div
             id="noProperties"
@@ -2079,7 +2640,7 @@
 
             <div class="no-property-icon">
 
-                <i class="bi bi-house-x"></i>
+                <i data-feather="home"></i>
 
             </div>
 
@@ -2097,18 +2658,20 @@
                 class="clear-filter-btn"
             >
 
-                <i class="bi bi-arrow-counterclockwise"></i>
+                <i data-feather="rotate-ccw"></i>
 
-                Clear Filters
+                <span>
+                    Reset Filters
+                </span>
 
             </button>
 
         </div>
 
 
-        {{-- =====================================================
-            PAGINATION
-        ====================================================== --}}
+        <!-- =================================================
+             PAGINATION
+        ================================================== -->
 
         <div
             id="propertyPagination"
@@ -2117,7 +2680,723 @@
 
     </div>
 
+
+
+<style id="property-search-professional-final">
+/* =========================================================
+   PROPERTY SEARCH — PROFESSIONAL FINAL UI
+   IMPORTANT: IDs/classes used by the existing AJAX script
+   are intentionally NOT changed.
+========================================================= */
+
+.property-search-page{
+    --p-primary:#2563eb;
+    --p-primary-dark:#1d4ed8;
+    --p-primary-soft:#eff6ff;
+    --p-dark:#0f172a;
+    --p-text:#172033;
+    --p-muted:#7b8798;
+    --p-border:#e4e9f0;
+    --p-bg:#f5f7fb;
+    background:
+        radial-gradient(circle at 5% 0%,rgba(37,99,235,.07),transparent 25%),
+        linear-gradient(180deg,#f8fafc 0%,#f3f6fa 100%) !important;
+    padding:24px 24px 48px !important;
+    min-height:100vh;
+}
+
+.property-search-page *,
+.property-search-page *::before,
+.property-search-page *::after{box-sizing:border-box}
+
+.property-search-page .property-page-header{
+    max-width:1480px;
+    margin:0 auto 20px !important;
+     display:flex !important;
+    align-items:flex-end !important;
+    justify-content:space-between !important;
+    gap:24px;
+    border:0 !important;
+    background:transparent !important;
+}
+
+.property-search-page .property-page-eyebrow{
+    display:inline-flex !important;
+    align-items:center;
+    gap:7px;
+    margin:0 0 8px !important;
+    padding:5px 9px !important;
+    background:#eaf2ff !important;
+    border:1px solid #dbeafe !important;
+    border-radius:6px !important;
+    color:#2563eb !important;
+    font-size:9px !important;
+    font-weight:800 !important;
+    letter-spacing:.11em;
+    text-transform:uppercase;
+}
+
+.property-search-page .property-page-title h1{
+    margin:0 !important;
+    color:#0f172a !important;
+    font-size:29px !important;
+    line-height:1.15 !important;
+    font-weight:800 !important;
+    letter-spacing:-.035em;
+}
+
+.property-search-page .property-page-title p{
+    margin:7px 0 0 !important;
+    color:#8490a2 !important;
+    font-size:12px !important;
+}
+
+.property-search-page .property-breadcrumb{
+    display:flex !important;
+    align-items:center !important;
+    gap:8px !important;
+    min-height:38px;
+    padding:0 12px !important;
+    background:#fff !important;
+    border:1px solid var(--p-border) !important;
+    border-radius:9px !important;
+    box-shadow:0 5px 18px rgba(15,23,42,.035) !important;
+    font-size:10px !important;
+}
+
+.property-search-page .property-breadcrumb a{
+    color:#64748b !important;
+    text-decoration:none !important;
+}
+
+.property-search-page .property-breadcrumb a:hover{color:#2563eb !important}
+.property-search-page .property-breadcrumb .active{
+    color:#2563eb !important;
+    font-weight:700 !important;
+}
+
+.property-search-page .section-body{
+    max-width:1480px;
+    margin:0 auto !important;
+    padding:0 !important;
+}
+
+.property-search-page .property-search-card{
+    overflow:hidden !important;
+    margin:0 !important;
+    background:#fff !important;
+    border:1px solid #e3e8ef !important;
+    border-radius:18px !important;
+    box-shadow:0 18px 55px rgba(15,23,42,.07),0 3px 12px rgba(15,23,42,.025) !important;
+}
+
+.property-search-page .property-search-card .card-body{padding:0 !important}
+
+/* Premium header */
+.property-search-page .property-search-header{
+    position:relative !important;
+    overflow:hidden;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:25px;
+    min-height:106px;
+    padding:24px 28px !important;
+    background:linear-gradient(115deg,#0f172a 0%,#172554 62%,#1d4ed8 100%) !important;
+    border:0 !important;
+}
+
+.property-search-page .property-search-header::before{
+    content:"";
+    position:absolute;
+    width:300px;height:300px;
+    top:-190px;right:4%;
+    border-radius:50%;
+    background:rgba(255,255,255,.055);
+}
+
+.property-search-page .property-search-header-content{
+    position:relative;
+    z-index:1;
+    display:flex !important;
+    align-items:center !important;
+    gap:14px !important;
+}
+
+.property-search-page .property-search-icon{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:50px !important;
+    height:50px !important;
+    flex:0 0 50px !important;
+    background:rgba(255,255,255,.11) !important;
+    border:1px solid rgba(255,255,255,.16) !important;
+    border-radius:13px !important;
+    color:#fff !important;
+}
+
+.property-search-page .property-search-label{
+    margin:0 0 4px !important;
+    color:#93c5fd !important;
+    font-size:9px !important;
+    font-weight:800 !important;
+    letter-spacing:.14em !important;
+}
+
+.property-search-page .property-search-header h4{
+    margin:0 !important;
+    color:#fff !important;
+    font-size:19px !important;
+    font-weight:800 !important;
+}
+
+.property-search-page .property-search-header p{
+    margin:5px 0 0 !important;
+    color:rgba(255,255,255,.68) !important;
+    font-size:10px !important;
+}
+
+.property-search-page .property-clear-btn{
+    position:relative;
+    z-index:2;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:7px !important;
+    min-height:38px !important;
+    padding:0 14px !important;
+    background:rgba(255,255,255,.1) !important;
+    border:1px solid rgba(255,255,255,.22) !important;
+    border-radius:8px !important;
+    color:#fff !important;
+    font-size:10px !important;
+    font-weight:700 !important;
+}
+
+.property-search-page .property-clear-btn:hover{
+    background:#fff !important;
+    color:#1d4ed8 !important;
+}
+
+/* Body */
+.property-search-page .property-search-body{
+    padding:27px 28px 30px !important;
+    background:#fff !important;
+}
+
+.property-search-page .filter-section{
+    margin:0 !important;
+    padding:0 !important;
+    background:transparent !important;
+    border:0 !important;
+}
+
+.property-search-page .filter-section-heading{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:15px;
+    margin:0 0 17px !important;
+}
+
+.property-search-page .filter-section-heading-left{
+    display:flex !important;
+    align-items:center !important;
+    gap:10px !important;
+}
+
+.property-search-page .filter-section-icon{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:34px !important;
+    height:34px !important;
+    flex:0 0 34px !important;
+    background:#eff6ff !important;
+    border:1px solid #dbeafe !important;
+    border-radius:9px !important;
+    color:#2563eb !important;
+}
+
+.property-search-page .filter-section-heading h5{
+    margin:0 0 2px !important;
+    color:#334155 !important;
+    font-size:12px !important;
+    font-weight:800 !important;
+}
+
+.property-search-page .filter-section-heading p{
+    margin:0 !important;
+    color:#98a3b2 !important;
+    font-size:9px !important;
+}
+
+.property-search-page .property-filter-grid{
+    margin-left:-8px !important;
+    margin-right:-8px !important;
+    row-gap:17px !important;
+}
+
+.property-search-page .property-filter-grid>[class*="col-"]{
+    padding-left:8px !important;
+    padding-right:8px !important;
+}
+
+.property-search-page .property-filter-field label{
+    display:block !important;
+    margin:0 0 7px !important;
+    color:#475569 !important;
+    font-size:10px !important;
+    font-weight:750 !important;
+}
+
+.property-search-page .property-input-wrapper{position:relative !important}
+
+.property-search-page .property-input-icon{
+    position:absolute !important;
+    top:50% !important;
+    left:12px !important;
+    z-index:5 !important;
+    display:flex !important;
+    color:#94a3b8 !important;
+    transform:translateY(-50%) !important;
+    pointer-events:none !important;
+}
+
+.property-search-page .property-filter-field input,
+.property-search-page .property-filter-field select,
+.property-search-page .property-filter-field .form-control{
+    width:100% !important;
+    height:43px !important;
+    min-height:43px !important;
+    padding:0 12px !important;
+    background:#fff !important;
+    border:1px solid #dfe5ec !important;
+    border-radius:9px !important;
+    color:#334155 !important;
+    font-size:10.5px !important;
+    font-weight:500 !important;
+    box-shadow:none !important;
+}
+
+.property-search-page .property-input-wrapper select{
+    padding-left:36px !important;
+    padding-right:30px !important;
+}
+
+.property-search-page .property-filter-field input:focus,
+.property-search-page .property-filter-field select:focus{
+    border-color:#60a5fa !important;
+    box-shadow:0 0 0 3px rgba(37,99,235,.08) !important;
+    outline:0 !important;
+}
+
+/* Dynamic category panels */
+.property-search-page .category-filter-section{
+    position:relative !important;
+    margin:25px 0 0 !important;
+    padding:20px !important;
+    background:linear-gradient(135deg,#fbfdff 0%,#f7faff 100%) !important;
+    border:1px solid #dfe8f3 !important;
+    border-radius:12px !important;
+}
+
+.property-search-page .category-filter-header{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:15px;
+    margin:0 0 19px !important;
+    padding:0 0 14px !important;
+    border-bottom:1px solid #e8eef5 !important;
+}
+
+.property-search-page .category-filter-header-left{
+    display:flex !important;
+    align-items:center !important;
+    gap:10px !important;
+}
+
+.property-search-page .category-filter-icon{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:36px !important;
+    height:36px !important;
+    flex:0 0 36px !important;
+    background:#eaf2ff !important;
+    border:1px solid #d7e7ff !important;
+    border-radius:9px !important;
+    color:#2563eb !important;
+}
+
+.property-search-page .category-filter-header h5{
+    margin:0 0 3px !important;
+    color:#27364a !important;
+    font-size:13px !important;
+    font-weight:800 !important;
+}
+
+.property-search-page .category-filter-header p{
+    margin:0 !important;
+    color:#98a3b2 !important;
+    font-size:9px !important;
+}
+
+.property-search-page .category-filter-badge{
+    display:inline-flex !important;
+    align-items:center !important;
+    min-height:26px !important;
+    padding:0 10px !important;
+    background:#eff6ff !important;
+    border:1px solid #dbeafe !important;
+    border-radius:20px !important;
+    color:#2563eb !important;
+    font-size:9px !important;
+    font-weight:800 !important;
+}
+
+/* Amenities — keep both old/new class names working */
+.property-search-page #amenitiesList,
+.property-search-page #amenitiesContainer{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:8px !important;
+}
+
+.property-search-page .amenity-checkbox,
+.property-search-page .amenity-item{
+    display:inline-flex !important;
+    align-items:center !important;
+    gap:7px !important;
+    min-height:35px !important;
+    margin:0 !important;
+    padding:0 11px !important;
+    background:#fff !important;
+    border:1px solid #e1e7ef !important;
+    border-radius:8px !important;
+    color:#5f6d80 !important;
+    font-size:10px !important;
+    font-weight:650 !important;
+    cursor:pointer !important;
+}
+
+.property-search-page .amenity-checkbox:hover,
+.property-search-page .amenity-item:hover{
+    background:#eff6ff !important;
+    border-color:#bfdbfe !important;
+    color:#2563eb !important;
+}
+
+.property-search-page .amenity-checkbox input,
+.property-search-page .amenity-item input{
+    width:14px !important;
+    height:14px !important;
+    margin:0 !important;
+    accent-color:#2563eb !important;
+}
+
+/* Results */
+.property-search-page .property-results-section{
+    margin-top:31px !important;
+    padding-top:27px !important;
+    border-top:1px solid #e9eef4 !important;
+}
+
+.property-search-page .property-listing,
+.property-search-page #propertyListing{
+    row-gap:19px !important;
+}
+
+.property-search-page .property-card{
+    overflow:hidden !important;
+    height:100% !important;
+    background:#fff !important;
+    border:1px solid #e4e9f0 !important;
+    border-radius:13px !important;
+    box-shadow:0 7px 25px rgba(15,23,42,.05) !important;
+    transition:.22s ease !important;
+}
+
+.property-search-page .property-card:hover{
+    transform:translateY(-4px) !important;
+    box-shadow:0 16px 35px rgba(15,23,42,.10) !important;
+}
+
+.property-search-page .property-card-image,
+.property-search-page .property-image-wrapper{
+    position:relative !important;
+    overflow:hidden !important;
+    height:205px !important;
+    background:#eef2f7 !important;
+}
+
+.property-search-page .property-card-image img,
+.property-search-page .property-image-wrapper img,
+.property-search-page .property-image{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    display:block !important;
+}
+
+.property-search-page .property-card-body{
+    padding:16px !important;
+}
+
+.property-search-page .property-category{
+    color:#2563eb !important;
+    font-size:9px !important;
+    font-weight:800 !important;
+}
+
+.property-search-page .property-title{
+    margin:7px 0 !important;
+    color:#172033 !important;
+    font-size:14px !important;
+    font-weight:800 !important;
+    line-height:1.4 !important;
+}
+
+.property-search-page .property-location{
+    color:#8490a2 !important;
+    font-size:9px !important;
+}
+
+.property-search-page .property-price{
+    margin-top:12px !important;
+    color:#172033 !important;
+    font-size:17px !important;
+    font-weight:850 !important;
+}
+
+.property-search-page .property-meta{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:7px !important;
+    margin-top:12px !important;
+}
+
+.property-search-page .property-meta span{
+    padding:5px 8px !important;
+    border-radius:5px !important;
+    background:#f5f7fa !important;
+    color:#626978 !important;
+    font-size:9px !important;
+}
+
+/* Loading / empty */
+.property-search-page .property-loading{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    padding:35px;
+    color:#7b8798;
+    font-size:10px;
+}
+
+.property-search-page .no-properties{
+    padding:45px 20px !important;
+    text-align:center !important;
+    background:#fafcff !important;
+    border:1px dashed #dce4ed !important;
+    border-radius:12px !important;
+}
+
+.property-search-page .no-property-icon{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:50px !important;
+    height:50px !important;
+    margin:0 auto 12px !important;
+    background:#eff6ff !important;
+    border:1px solid #dbeafe !important;
+    border-radius:50% !important;
+    color:#2563eb !important;
+}
+
+.property-search-page .no-properties h3{
+    margin:0 0 6px !important;
+    color:#334155 !important;
+    font-size:14px !important;
+    font-weight:800 !important;
+}
+
+.property-search-page .no-properties p{
+    margin:0 !important;
+    color:#94a3b8 !important;
+    font-size:10px !important;
+}
+
+.property-search-page .clear-filter-btn{
+    display:inline-flex !important;
+    align-items:center !important;
+    gap:7px !important;
+    margin-top:15px !important;
+    padding:9px 13px !important;
+    background:#2563eb !important;
+    border:0 !important;
+    border-radius:7px !important;
+    color:#fff !important;
+    font-size:9px !important;
+    font-weight:700 !important;
+}
+
+/* Pagination */
+.property-search-page .property-pagination{
+    margin-top:22px !important;
+}
+
+.property-search-page .property-pagination button,
+.property-search-page .property-pagination a{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    min-width:34px !important;
+    height:34px !important;
+    margin:0 3px !important;
+    padding:0 9px !important;
+    background:#fff !important;
+    border:1px solid #e1e7ef !important;
+    border-radius:7px !important;
+    color:#64748b !important;
+    font-size:9px !important;
+}
+
+.property-search-page .property-pagination .active,
+.property-search-page .property-pagination button:hover,
+.property-search-page .property-pagination a:hover{
+    background:#2563eb !important;
+    border-color:#2563eb !important;
+    color:#fff !important;
+}
+
+/* Responsive */
+@media(max-width:991px){
+    .property-search-page .property-page-header{
+        align-items:flex-start !important;
+        flex-direction:column !important;
+    }
+    .property-search-page .property-breadcrumb{width:100%}
+}
+
+@media(max-width:767px){
+    .property-search-page{
+        padding:16px 12px 35px !important;
+    }
+    .property-search-page .property-page-title h1{
+        font-size:23px !important;
+    }
+    .property-search-page .property-search-header{
+        align-items:flex-start !important;
+        flex-direction:column !important;
+        padding:20px !important;
+    }
+    .property-search-page .property-clear-btn{
+        width:100% !important;
+    }
+    .property-search-page .property-search-body{
+        padding:20px 16px 22px !important;
+    }
+    .property-search-page .category-filter-header{
+        align-items:flex-start !important;
+        flex-direction:column !important;
+    }
+}
+
+@media(max-width:575px){
+    .property-search-page .property-card-image,
+    .property-search-page .property-image-wrapper{
+        height:190px !important;
+    }
+}
+</style>
+
+
+
+<style id="category-wise-filter-final">
+.category-wise-filters {
+    margin-top: 24px;
+}
+
+.category-wise-panel {
+    animation: categoryFilterIn .22s ease;
+}
+
+@keyframes categoryFilterIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.category-wise-panel .property-filter-field {
+    height: 100%;
+}
+
+.category-wise-panel .property-filter-field label {
+    min-height: 15px;
+}
+
+.category-wise-panel .property-filter-field select:disabled,
+.category-wise-panel .property-filter-field input:disabled {
+    cursor: not-allowed;
+}
+
+@media (max-width: 767px) {
+    .category-wise-filters {
+        margin-top: 18px;
+    }
+}
+</style>
+
+
+<style id="category-data-filter-style">
+.category-wise-filters,
+#additionalCategoryFilters{
+    margin-top:24px;
+}
+
+.category-wise-panel{
+    animation:categoryFilterIn .22s ease;
+}
+
+@keyframes categoryFilterIn{
+    from{opacity:0;transform:translateY(5px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+.category-wise-panel .property-filter-field{
+    height:100%;
+}
+
+.category-wise-panel .property-filter-field input,
+.category-wise-panel .property-filter-field select{
+    width:100%;
+}
+</style>
+
 </section>
+
+
+<!-- =========================================================
+     FEATHER ICONS
+========================================================= -->
+
+<script src="https://unpkg.com/feather-icons"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        feather.replace();
+    });
+</script>
 
 
 {{-- =========================================================
@@ -2510,6 +3789,107 @@ document.addEventListener('DOMContentLoaded', function () {
 
             }
         );
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Category-Wise Database Fields
+        |--------------------------------------------------------------------------
+        | Only visible/enabled category fields are submitted.
+        | Names are aligned with the Create Property database fields.
+        |--------------------------------------------------------------------------
+        */
+
+        document
+            .querySelectorAll(
+                '.category-wise-panel:not([style*="display: none"]) .category-data-filter'
+            )
+            .forEach(function (field) {
+
+                if (
+                    !field.disabled &&
+                    field.name &&
+                    field.value !== ''
+                ) {
+
+                    params.append(
+                        field.name,
+                        field.value
+                    );
+
+                }
+
+            });
+
+        document
+            .querySelectorAll(
+                '.category-wise-panel:not([style*="display: none"]) .category-data-alias'
+            )
+            .forEach(function (field) {
+
+                const searchName =
+                    field.dataset.searchName;
+
+                if (
+                    !field.disabled &&
+                    searchName &&
+                    field.value !== ''
+                ) {
+
+                    params.append(
+                        searchName,
+                        field.value
+                    );
+
+                }
+
+            });
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Rental / Resale / New Project Fields
+        |--------------------------------------------------------------------------
+        */
+
+        [
+            'security_deposit',
+            'available_from',
+            'lease_period',
+            'lease_period_unit',
+            'purchase_year',
+            'property_age',
+            'project_name',
+            'developer_name',
+            'project_status',
+            'launch_date',
+            'possession_date',
+            'total_units',
+            'available_units',
+            'rera_number'
+        ].forEach(function (fieldName) {
+
+            const field =
+                document.querySelector(
+                    '.category-wise-filter-input[name="' +
+                    fieldName +
+                    '"]'
+                );
+
+            if (
+                field &&
+                !field.disabled &&
+                field.value !== ''
+            ) {
+
+                params.append(
+                    fieldName,
+                    field.value
+                );
+
+            }
+
+        });
 
 
         /*
@@ -3379,6 +4759,51 @@ document.addEventListener('DOMContentLoaded', function () {
         areaSelect.value = '';
 
 
+        /*
+        |--------------------------------------------------------------------------
+        | Clear Category-Wise Filters
+        |--------------------------------------------------------------------------
+        */
+
+        document
+            .querySelectorAll(
+                '.category-wise-panel input, .category-wise-panel select, .category-wise-panel textarea'
+            )
+            .forEach(function (field) {
+
+                if (field.type === 'checkbox' || field.type === 'radio') {
+
+                    field.checked = false;
+
+                } else {
+
+                    field.value = '';
+
+                }
+
+            });
+
+        document
+            .querySelectorAll(
+                '.category-wise-panel'
+            )
+            .forEach(function (panel) {
+
+                panel.style.display = 'none';
+
+                panel
+                    .querySelectorAll(
+                        'input, select, textarea'
+                    )
+                    .forEach(function (field) {
+
+                        field.disabled = true;
+
+                    });
+
+            });
+
+
         document
             .querySelectorAll(
                 'input[name="amenities[]"]'
@@ -3413,6 +4838,73 @@ document.addEventListener('DOMContentLoaded', function () {
             'click',
             clearAllFilters
         );
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Category-Wise Filter Change
+    |--------------------------------------------------------------------------
+    */
+
+    document.addEventListener(
+        'change',
+        function (event) {
+
+            if (
+                event.target.matches(
+                    '.category-wise-panel input, .category-wise-panel select, .category-wise-panel textarea'
+                )
+            ) {
+
+                loadProperties(1);
+
+            }
+
+        }
+    );
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Category-Wise Text Input
+    |--------------------------------------------------------------------------
+    | Debounce text/number entry so typing does not create a request
+    | for every single character.
+    |--------------------------------------------------------------------------
+    */
+
+    let categoryFilterTimer = null;
+
+    document.addEventListener(
+        'input',
+        function (event) {
+
+            if (
+                !event.target.matches(
+                    '.category-wise-panel input[type="text"], .category-wise-panel input[type="number"]'
+                )
+            ) {
+
+                return;
+
+            }
+
+            clearTimeout(
+                categoryFilterTimer
+            );
+
+            categoryFilterTimer =
+                setTimeout(
+                    function () {
+
+                        loadProperties(1);
+
+                    },
+                    450
+                );
+
+        }
+    );
 
 
     /*
@@ -3522,4 +5014,208 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </script>
 
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const categorySelect =
+        document.getElementById('property_category_id');
+
+    const panels = {
+        residential:
+            document.getElementById('residentialFilters'),
+
+        commercial:
+            document.getElementById('commercialFilters'),
+
+        land:
+            document.getElementById('landFilters'),
+
+        rental:
+            document.getElementById('rentalFilters'),
+
+        resale:
+            document.getElementById('resaleFilters'),
+
+        project:
+            document.getElementById('newProjectFilters')
+    };
+
+    function normalizeCategory(value) {
+
+        return String(value || '')
+            .toLowerCase()
+            .trim()
+            .replace(/[_-]+/g, ' ')
+            .replace(/\s+/g, ' ');
+    }
+
+    function hidePanels() {
+
+        Object.values(panels)
+            .forEach(function (panel) {
+
+                if (!panel) {
+                    return;
+                }
+
+                panel.style.display =
+                    'none';
+
+                panel
+                    .querySelectorAll(
+                        'input, select, textarea'
+                    )
+                    .forEach(function (field) {
+
+                        field.disabled =
+                            true;
+
+                    });
+
+            });
+    }
+
+    function showCategoryPanel() {
+
+        hidePanels();
+
+        if (!categorySelect) {
+            return;
+        }
+
+        const option =
+            categorySelect.options[
+                categorySelect.selectedIndex
+            ];
+
+        if (
+            !option ||
+            !option.value
+        ) {
+            return;
+        }
+
+        const category =
+            normalizeCategory(
+                option.textContent
+            );
+
+        let panel = null;
+
+        if (
+            category.includes('residential') ||
+            category.includes('resident') ||
+            category.includes('apartment') ||
+            category.includes('villa') ||
+            category.includes('house')
+        ) {
+
+            panel =
+                panels.residential;
+
+        } else if (
+            category.includes('commercial') ||
+            category.includes('office') ||
+            category.includes('shop') ||
+            category.includes('warehouse') ||
+            category.includes('showroom')
+        ) {
+
+            panel =
+                panels.commercial;
+
+        } else if (
+            category.includes('land') ||
+            category.includes('plot') ||
+            category.includes('agricultural')
+        ) {
+
+            panel =
+                panels.land;
+
+        } else if (
+            category.includes('rental') ||
+            category.includes('rent')
+        ) {
+
+            panel =
+                panels.rental;
+
+        } else if (
+            category.includes('resale')
+        ) {
+
+            panel =
+                panels.resale;
+
+        } else if (
+            category.includes('new project') ||
+            category.includes('project')
+        ) {
+
+            panel =
+                panels.project;
+
+        }
+
+        if (!panel) {
+            return;
+        }
+
+        panel.style.display =
+            'block';
+
+        panel
+            .querySelectorAll(
+                'input, select, textarea'
+            )
+            .forEach(function (field) {
+
+                field.disabled =
+                    false;
+
+            });
+
+        if (
+            typeof feather !== 'undefined'
+        ) {
+
+            feather.replace();
+
+        }
+    }
+
+    if (categorySelect) {
+
+        categorySelect.addEventListener(
+            'change',
+            showCategoryPanel
+        );
+
+        showCategoryPanel();
+
+    }
+
+});
+</script>
+
 @endsection
+
+<script>
+document.addEventListener('change', function (event) {
+    if (!event.target.classList.contains('amenity-checkbox')) {
+        return;
+    }
+
+    /*
+     * The original AJAX script handles filtering.
+     * This delegated listener intentionally does not make a second request.
+     * It only refreshes Feather icons when the dynamic amenity markup changes.
+     */
+    if (typeof feather !== 'undefined') {
+        feather.replace();
+    }
+});
+</script>
