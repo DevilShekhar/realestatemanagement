@@ -7,7 +7,7 @@
 
   <title>Dashboard</title>
   <meta content="" name="description">
-  <meta content="" name="keywords"> 
+  <meta content="" name="keywords">
   <!-- Google Fonts -->
     <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- Template CSS -->
@@ -21,7 +21,7 @@
       <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
       <link rel="stylesheet" href="{{ asset('assets/bundles/datatables/datatables.min.css') }}">
       <link rel="stylesheet" href="{{ asset('assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css') }}">
-      
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
@@ -469,7 +469,7 @@
         </div>
       </footer>
     </div>
-  </div>      
+  </div>
    <!-- General JS Files -->
     <script src="{{ asset('assets/js/app.min.js') }}"></script>
     <!-- JS Libraries -->
@@ -483,7 +483,7 @@
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
     <!-- Custom JS -->
     <script src="{{ asset('assets/js/custom.js') }}"></script>
-    
+
     @stack('scripts')
     </body>
 </html>
