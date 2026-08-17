@@ -2003,173 +2003,72 @@
                                 @enderror
 
                             </div>
-
-
-                            {{-- =================================================
-                                MAP LOCATION
-                            ================================================== --}}
+                             @can('property map location')
                             <div class="form-section-title">
                                 Map Location
                             </div>
-
-
                             <div class="row">
-
-                                {{-- Latitude --}}
                                 <div class="col-md-6">
-
                                     <div class="form-group">
-
                                         <label for="latitude">
                                             Latitude
                                         </label>
-
-
-                                        <input
-                                            type="text"
-                                            name="latitude"
-                                            id="latitude"
-                                            class="form-control"
-                                            value="{{ old('latitude', $property->latitude) }}"
-                                            placeholder="Example: 18.5204">
-
+                                        <input  type="text" name="latitude" id="latitude" class="form-control"  value="{{ old('latitude', $property->latitude) }}" placeholder="Example: 18.5204">
                                     </div>
-
                                 </div>
-
-
-                                {{-- Longitude --}}
                                 <div class="col-md-6">
-
                                     <div class="form-group">
-
                                         <label for="longitude">
                                             Longitude
                                         </label>
-
-
-                                        <input
-                                            type="text"
-                                            name="longitude"
-                                            id="longitude"
-                                            class="form-control"
-                                            value="{{ old('longitude', $property->longitude) }}"
-                                            placeholder="Example: 73.8567">
-
+                                        <input type="text" name="longitude"  id="longitude" class="form-control" value="{{ old('longitude', $property->longitude) }}" placeholder="Example: 73.8567">
                                     </div>
-
                                 </div>
-
                             </div>
-
-
-                            {{-- =================================================
-                                STATUS
-                            ================================================== --}}
+                            @endcan
                             <div class="form-section-title">
                                 Status
                             </div>
-
-
                             <div class="row">
-
                                 <div class="col-md-6">
-
                                     <div class="form-group">
-
                                         <label for="status">
                                             Status
                                             <span class="text-danger">*</span>
                                         </label>
-
-
-                                        <select
-                                            name="status"
-                                            id="status"
-                                            class="form-control @error('status') is-invalid @enderror">
-
-                                            <option
-                                                value="1"
-                                                {{ old('status', $property->status) == 1 ? 'selected' : '' }}>
-
+                                        <select  name="status" id="status"  class="form-control @error('status') is-invalid @enderror">
+                                            <option  value="1" {{ old('status', $property->status) == 1 ? 'selected' : '' }}>
                                                 Active
-
                                             </option>
-
-                                            <option
-                                                value="0"
-                                                {{ old('status', $property->status) == 0 ? 'selected' : '' }}>
-
+                                            <option value="0" {{ old('status', $property->status) == 0 ? 'selected' : '' }}>
                                                 Inactive
-
                                             </option>
-
+                                             <option value="2"
+                                                {{ old('status', $property->status) == 2 ? 'selected' : '' }}>
+                                                Sold
+                                            </option>
                                         </select>
-
-
                                         @error('status')
-
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
-
                                         @enderror
-
                                     </div>
-
                                 </div>
-
                             </div>
-
-                        </div>
-
-
-                        {{-- =================================================
-                            CARD FOOTER
-                        ================================================== --}}
+                        </div>                       
                         <div class="card-footer d-flex justify-content-between">
-
-                            <a
-                                href="{{ route('properties.index') }}"
-                                class="btn btn-light">
-
-                                <i class="fas fa-arrow-left"></i>
-
-                                Cancel
-
-                            </a>
-
-
-                            <button
-                                type="submit"
-                                class="btn btn-primary">
-
-                                <i class="fas fa-save"></i>
-
-                                Update Property
-
-                            </button>
-
+                            <a href="{{ route('properties.index') }}" class="btn btn-light"><i class="fas fa-arrow-left"></i> Cancel </a>
+                            <button  type="submit" class="btn btn-primary"> <i class="fas fa-save"></i> Update Property</button>
                         </div>
-
                     </form>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
-
 @endsection
-
-
-{{-- =============================================================
-    STYLES
-============================================================= --}}
+ 
 @push('styles')
 
 <style>

@@ -8,6 +8,7 @@ use App\Models\Area;
 use App\Models\City;
 use App\Models\Country;
 use App\Models\Property;
+use App\Models\PropertyEnquiry;
 use App\Models\PropertyCategory;
 use App\Models\PropertyImage;
 use App\Models\State;
@@ -36,13 +37,15 @@ class PropertyController extends Controller
             'updater',
         ]);
 
-        // Super Admin & Admin → Show all properties
+        // Only Active (1) and Inactive (0) properties
+        $query->whereIn('status', [0, 1]);
+        // Super Admin & Admin → Show all active/inactive properties
         if ($user->hasAnyRole(['super-admin', 'admin'])) {
 
-            // No restriction
+            // No additional restriction
 
         }
-        // Seller → Show only properties created by logged-in seller
+        // Seller → Show only their own active/inactive properties
         elseif ($user->hasRole('seller')) {
 
             $query->where('created_by', $user->id);
@@ -60,6 +63,50 @@ class PropertyController extends Controller
 
         return view(
             'admin.properties.index',
+            compact('properties')
+        );
+    }
+    public function soldOutProperty()
+    {
+        $user = Auth::user();
+
+        $query = Property::with([
+            'propertyCategory',
+            'country',
+            'state',
+            'city',
+            'area',
+            'creator',
+            'updater',
+        ]);
+
+        // Only Sold properties
+        $query->where('status', 2);
+
+        // Super Admin & Admin → Show all sold properties
+        if ($user->hasAnyRole(['super-admin', 'admin'])) {
+
+            // No restriction
+
+        }
+        // Seller → Show only their own sold properties
+        elseif ($user->hasRole('seller')) {
+
+            $query->where('created_by', $user->id);
+
+        }
+        // Other roles → Show no properties
+        else {
+
+            $query->whereRaw('1 = 0');
+        }
+
+        $properties = $query
+            ->latest('id')
+            ->paginate(10);
+
+        return view(
+            'admin.properties.sold-out',
             compact('properties')
         );
     }
@@ -613,6 +660,7 @@ class PropertyController extends Controller
             'creator',
             'updater',
             'images',
+            'enquiries.buyer',
             'amenities',
         ]);
 
@@ -1141,10 +1189,7 @@ class PropertyController extends Controller
             |--------------------------------------------------------------------------
             */
 
-            'status' => [
-                'required',
-                'boolean',
-            ],
+            'status' => 'required|in:0,1,2',
 
         ]);
 
@@ -1434,5 +1479,44 @@ class PropertyController extends Controller
 
         return redirect()->route('properties.show', $property->id)
             ->with('success', 'Property images updated successfully!');
+    }
+    public function storeEnquiry(Request $request, $propertyId)
+    {
+        $request->validate([
+            'property_available' => 'required|in:yes,no,maybe',
+            'enquiry_type' => 'nullable|in:general,site_visit,price,documentation,other',
+            'note' => 'required|string|max:2000',
+            'follow_up_required' => 'required|in:yes,no',
+        ]);
+
+        $property = Property::findOrFail($propertyId);
+
+        // Check if buyer has already enquired for this property
+        $alreadyEnquired = PropertyEnquiry::where('property_id', $property->id)
+            ->where('buyer_id', auth()->id())
+            ->exists();
+
+        if ($alreadyEnquired) {
+            return back()->with(
+                'error',
+                'You have already submitted an enquiry for this property.'
+            );
+        }
+
+        // Create enquiry
+        PropertyEnquiry::create([
+            'property_id' => $property->id,
+            'buyer_id' => auth()->id(),
+            'property_available' => $request->property_available,
+            'enquiry_type' => $request->enquiry_type,
+            'note' => $request->note,
+            'follow_up_required' => $request->follow_up_required,
+            'status' => 'Pending',
+        ]);
+
+        return back()->with(
+            'success',
+            'Buyer enquiry submitted successfully.'
+        );
     }
 }

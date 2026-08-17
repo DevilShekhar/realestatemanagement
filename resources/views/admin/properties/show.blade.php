@@ -1954,6 +1954,7 @@
                     @endif
                 </div>
                 <div class="card-header-action d-flex align-items-center justify-content-end">
+                    @can('approve property')
                     @if($property->approval == 0)
                         <button  type="button" class="btn btn-success mr-2" data-toggle="modal" data-target="#approvePropertyModal" >
                             <i data-feather="check-circle"></i>
@@ -1965,10 +1966,48 @@
                             Approved
                         </span>
                     @endif
-                    <a href="{{ route('properties.edit', $property->id) }}" class="btn btn-primary">
-                        <i class="fas fa-edit"></i>
-                        Edit Property
-                    </a>
+                    @endcan
+                    @if($property->status == 2)
+                        <span class="btn btn-danger">
+                            <i class="fas fa-check-circle"></i>
+                            Sold Out
+                        </span>
+                    @else
+                        @can('edit own properties')
+                            <a href="{{ route('properties.edit', $property->id) }}" class="btn btn-primary">
+                                <i class="fas fa-edit"></i>
+                                Edit Property
+                            </a>
+                        @endcan
+                    @endif
+                    @if($property->status != 2)
+
+                        @can('property enquiry')
+                            @php
+                                $alreadyEnquired = \App\Models\PropertyEnquiry::where('property_id', $property->id)
+                                    ->where('buyer_id', auth()->id())
+                                    ->exists();
+                            @endphp
+
+                            @if(!$alreadyEnquired)
+                                <button
+                                    type="button"
+                                    class="btn btn-info mr-2"
+                                    data-toggle="modal"
+                                    data-target="#buyerEnquiryModal"
+                                >
+                                    <i data-feather="message-circle"></i>
+                                    Enquiry
+                                </button>
+                            @else
+                                <span class="badge badge-success mr-2 p-2">
+                                    <i data-feather="check-circle"></i>
+                                    Enquiry Submitted
+                                </span>
+                            @endif
+                        @endcan
+
+                    @endif
                 </div>
             </div>
             <div class="card-body">
@@ -2607,10 +2646,14 @@
                                     Amenities
                                 </h4>
                                 <div class="ml-auto">
-                                    <button  type="button" class="btn btn-sm btn-primary" data-toggle="modal"  data-target="#amenitiesModal">
-                                        <i data-feather="plus"></i>
-                                        Add Amenities
-                                    </button>
+                                    @if($property->status != 2)
+                                        @can('manage amenities')
+                                        <button  type="button" class="btn btn-sm btn-primary" data-toggle="modal"  data-target="#amenitiesModal">
+                                            <i data-feather="plus"></i>
+                                            Add Amenities
+                                        </button>
+                                        @endcan
+                                    @endif
                                 </div>
                             </div>
                             <div class="amenities-list">
@@ -2639,16 +2682,20 @@
                             Media Gallery
                         </h4>
                         <div class="ml-auto d-flex gap-2">
-                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#uploadImagesModal" >
-                                <i data-feather="plus"></i>
-                                Add Images
-                            </button>
-                            @can('media gallery')
-                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editImagesModal" style="margin-left: 1rem;">
-                                <i data-feather="edit-2"></i>
-                                Edit Images
-                            </button>
-                            @endcan
+                            @if($property->status != 2)
+                                @can('add media gallery')
+                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#uploadImagesModal" >
+                                    <i data-feather="plus"></i>
+                                    Add Images
+                                </button>
+                                @endcan
+                                @can('media gallery')
+                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editImagesModal" style="margin-left: 1rem;">
+                                    <i data-feather="edit-2"></i>
+                                    Edit Images
+                                </button>
+                                @endcan
+                            @endif
                         </div>
                     </div>
                     <div class="media-gallery-scroll">
@@ -2752,6 +2799,269 @@
                     </div>
                 </div>
             </div>
+            @endcan
+            @can('property contact info')
+            <div class="card-body">
+                <div class="record-information-card">
+
+                    <div class="record-information-header">
+                        <div class="record-information-icon">
+                            <i data-feather="user"></i>
+                        </div>
+                        <h4>Seller Contact Information</h4>
+                    </div>
+
+                    <div class="row record-information-body">
+
+                        {{-- Seller Name --}}
+                        <div class="col-lg-4">
+                            <div class="record-info-box">
+                                <div class="record-info-row">
+                                    <div class="record-info-label">
+                                        Seller Name
+                                    </div>
+
+                                    <div class="record-info-value">
+                                        <i class="fas fa-user mr-1"></i>
+                                        <strong>
+                                            {{ $property->creator?->name ?? 'N/A' }}
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Mobile --}}
+                        <div class="col-lg-4">
+                            <div class="record-info-box">
+                                <div class="record-info-row">
+                                    <div class="record-info-label">
+                                        Mobile Number
+                                    </div>
+
+                                    <div class="record-info-value">
+                                        <i class="fas fa-phone mr-1"></i>
+                                        {{ $property->creator?->mobile ?? 'N/A' }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Email --}}
+                        <div class="col-lg-4">
+                            <div class="record-info-box">
+                                <div class="record-info-row">
+                                    <div class="record-info-label">
+                                        Email Address
+                                    </div>
+
+                                    <div class="record-info-value">
+                                        <i class="fas fa-envelope mr-1"></i>
+                                        {{ $property->creator?->email ?? 'N/A' }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Latitude --}}
+                        <div class="col-lg-4">
+                            <div class="record-info-box">
+                                <div class="record-info-row">
+                                    <div class="record-info-label">
+                                        Latitude
+                                    </div>
+
+                                    <div class="record-info-value">
+                                        <i class="fas fa-map-marker-alt mr-1"></i>
+                                        {{ $property->latitude ?? 'N/A' }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Longitude --}}
+                        <div class="col-lg-4">
+                            <div class="record-info-box">
+                                <div class="record-info-row">
+                                    <div class="record-info-label">
+                                        Longitude
+                                    </div>
+
+                                    <div class="record-info-value">
+                                        <i class="fas fa-map-marker-alt mr-1"></i>
+                                        {{ $property->longitude ?? 'N/A' }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Map --}}
+                        <div class="col-lg-4">
+                            <div class="record-info-box">
+                                <div class="record-info-row">
+                                    <div class="record-info-label">
+                                        Location
+                                    </div>
+
+                                    <div class="record-info-value">
+
+                                        @if($property->latitude && $property->longitude)
+
+                                            <a
+                                                href="https://www.google.com/maps?q={{ $property->latitude }},{{ $property->longitude }}"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="btn btn-sm btn-primary"
+                                            >
+                                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                                View on Map
+                                            </a>
+
+                                        @else
+
+                                            <span class="text-muted">
+                                                Location not available
+                                            </span>
+
+                                        @endif
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            @endcan
+            @can('property enquiries')
+                <div class="card-body">
+                    <div class="record-information-card">
+                        <div class="record-information-header">
+                            <div class="record-information-icon">
+                                <i data-feather="message-circle"></i>
+                            </div>
+                            <h4>Buyer Enquiries</h4>
+                            <div class="ml-auto">
+                                <span class="badge badge-primary p-2">
+                                    {{ $property->enquiries->count() }} Enquiries
+                                </span>
+                            </div>
+                        </div>
+                        <div class="record-information-body">
+                            @if($property->enquiries->count() > 0)
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+                                                <th>Contact Info</th>
+                                                <th>Available</th>
+                                                <th>Enquiry </th>
+                                                <th>Follow-up</th>
+                                                <th>Note</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @forelse($property->enquiries as $key => $enquiry)
+                                                <tr>
+                                                    <td>
+                                                        {{ $key + 1 }}
+                                                    </td>
+                                                    <td>
+                                                        <strong>
+                                                            {{ $enquiry->buyer?->name ?? 'N/A' }}
+                                                        </strong>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <i class="fas fa-phone mr-1"></i>
+                                                            {{ $enquiry->buyer?->mobile ?? 'N/A' }}
+                                                        </div>
+
+                                                        <div class="mt-1">
+                                                            <i class="fas fa-envelope mr-1"></i>
+                                                            {{ $enquiry->buyer?->email ?? 'N/A' }}
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        @if($enquiry->property_available === 'yes')
+                                                            <span class="badge badge-success">
+                                                                <i class="fas fa-check mr-1"></i>
+                                                                Yes
+                                                            </span>
+                                                        @elseif($enquiry->property_available === 'no')
+                                                            <span class="badge badge-danger">
+                                                                <i class="fas fa-times mr-1"></i>
+                                                                No
+                                                            </span>
+                                                        @else
+                                                            <span class="badge badge-warning">
+                                                                <i class="fas fa-question mr-1"></i>
+                                                                Maybe
+                                                            </span>
+                                                        @endif
+                                                    </td>
+                                                    <td>
+                                                        @if($enquiry->enquiry_type)
+                                                            {{ ucwords(
+                                                                str_replace(
+                                                                    '_',
+                                                                    ' ',
+                                                                    $enquiry->enquiry_type
+                                                                )
+                                                            ) }}
+                                                        @else
+                                                            N/A
+                                                        @endif
+                                                    </td>
+                                                    <td>
+                                                        @if($enquiry->follow_up_required === 'yes')
+                                                            <span class="badge badge-info">
+                                                                <i class="fas fa-bell mr-1"></i>
+                                                                Required
+                                                            </span>
+                                                        @else
+                                                            <span class="badge badge-secondary">
+                                                                Not Required
+                                                            </span>
+                                                        @endif
+                                                    </td>
+                                                    <td style="min-width: 220px;">
+                                                        {{ $enquiry->note ?? 'N/A' }}
+                                                    </td>
+                                                </tr>
+                                            @empty
+                                                <tr>
+                                                    <td colspan="7" class="text-center py-4">
+                                                        <i data-feather="message-circle"></i>
+                                                        <div class="mt-2 text-muted">
+                                                            No buyer enquiries for this property.
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            @endforelse
+                                        </tbody>
+                                    </table>
+                                </div>
+                            @else
+                                <div class="text-center py-4">
+                                    <i
+                                        data-feather="message-circle"
+                                        style="width: 45px; height: 45px;"
+                                    ></i>
+                                    <h5 class="mt-3">
+                                        No Buyer Enquiries
+                                    </h5>
+                                    <p class="text-muted mb-0">
+                                        No enquiry has been submitted for this property yet.
+                                    </p>
+                                </div>
+                            @endif
+                        </div>
+                    </div>
+                </div>
             @endcan
         </div>
     </div>
@@ -3343,12 +3653,7 @@
 
                         </span>
 
-                    </div>
-
-
-                    {{-- =================================================
-                        IMAGE PREVIEW
-                    ================================================== --}}
+                    </div> 
 
                     <div
                         class="image-preview-grid"
@@ -3357,13 +3662,7 @@
                     </div>
 
 
-                </div>
-
-
-                {{-- =================================================
-                    FOOTER
-                ================================================== --}}
-
+                </div> 
                 <div class="modal-footer">
 
                     <button
@@ -3528,6 +3827,248 @@
     </div>
 
 </div>
+@can('property enquiry')
+<div
+    class="modal fade"
+    id="buyerEnquiryModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="buyerEnquiryModalLabel"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+
+        <div class="modal-content">
+
+            {{-- HEADER --}}
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="buyerEnquiryModalLabel">
+                    <i data-feather="message-circle"></i>
+                    Buyer Enquiry
+                </h5>
+
+                <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+
+            {{-- FORM --}}
+            <form
+                action="{{ route('properties.enquiry.store', $property->id) }}"
+                method="POST"
+            >
+
+                @csrf
+
+                <div class="modal-body">
+
+                    {{-- Property --}}
+                    <div class="form-group">
+                        <label>
+                            Property
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            value="{{ $property->title }}"
+                            readonly
+                        >
+
+                        <input
+                            type="hidden"
+                            name="property_id"
+                            value="{{ $property->id }}"
+                        >
+                    </div>
+
+
+                    {{-- Property Available --}}
+                    <div class="form-group">
+                        <label>
+                            Property Available?
+                            <span class="text-danger">*</span>
+                        </label>
+
+                        <div class="d-flex">
+
+                            <div class="custom-control custom-radio mr-4">
+                                <input
+                                    type="radio"
+                                    id="propertyAvailableYes"
+                                    name="property_available"
+                                    value="yes"
+                                    class="custom-control-input"
+                                    required
+                                >
+
+                                <label
+                                    class="custom-control-label"
+                                    for="propertyAvailableYes"
+                                >
+                                    Yes
+                                </label>
+                            </div>
+
+                            <div class="custom-control custom-radio mr-4">
+                                <input
+                                    type="radio"
+                                    id="propertyAvailableNo"
+                                    name="property_available"
+                                    value="no"
+                                    class="custom-control-input"
+                                >
+
+                                <label
+                                    class="custom-control-label"
+                                    for="propertyAvailableNo"
+                                >
+                                    No
+                                </label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <input
+                                    type="radio"
+                                    id="propertyAvailableMaybe"
+                                    name="property_available"
+                                    value="maybe"
+                                    class="custom-control-input"
+                                >
+
+                                <label
+                                    class="custom-control-label"
+                                    for="propertyAvailableMaybe"
+                                >
+                                    Maybe
+                                </label>
+                            </div>
+
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label for="enquiryType">
+                            Enquiry Type
+                        </label>
+
+                        <select
+                            name="enquiry_type"
+                            id="enquiryType"
+                            class="form-control"
+                        >
+                            <option value="">Select Enquiry Type</option>
+                            <option value="general">General Enquiry</option>
+                            <option value="site_visit">Site Visit</option>
+                            <option value="price">Price Discussion</option>
+                            <option value="documentation">Documentation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+
+                    {{-- Note --}}
+                    <div class="form-group">
+                        <label for="enquiryNote">
+                            Note
+                            <span class="text-danger">*</span>
+                        </label>
+
+                        <textarea
+                            name="note"
+                            id="enquiryNote"
+                            rows="4"
+                            class="form-control"
+                            placeholder="Enter buyer enquiry details..."
+                            required
+                        ></textarea>
+                    </div>
+
+
+                    {{-- Follow Up --}}
+                    <div class="form-group mb-0">
+
+                        <label>
+                            Follow-up Required?
+                        </label>
+
+                        <div class="d-flex">
+
+                            <div class="custom-control custom-radio mr-4">
+                                <input
+                                    type="radio"
+                                    id="followupYes"
+                                    name="follow_up_required"
+                                    value="yes"
+                                    class="custom-control-input"
+                                    checked
+                                >
+
+                                <label
+                                    class="custom-control-label"
+                                    for="followupYes"
+                                >
+                                    Yes
+                                </label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <input
+                                    type="radio"
+                                    id="followupNo"
+                                    name="follow_up_required"
+                                    value="no"
+                                    class="custom-control-input"
+                                >
+
+                                <label
+                                    class="custom-control-label"
+                                    for="followupNo"
+                                >
+                                    No
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                {{-- FOOTER --}}
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        <i data-feather="send"></i>
+                        Submit Enquiry
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+@endcan
 <div class="modal fade edit-images-modal" id="editImagesModal" tabindex="-1" role="dialog" aria-labelledby="editImagesModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
