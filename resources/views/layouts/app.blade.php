@@ -56,7 +56,7 @@
         <header class="main-header header-style2 stricky">
             <div class="inner-container clearfix">
                 <div class="logo-box-style2 float-left">
-                    <a href="index-2.html">
+                    <a href="{{ route('frontend.home') }}">
                         <img src="{{ asset('assets/frontend/images/resources/logo.png') }}" alt="Awesome Logo">
                     </a>
                 </div>
@@ -71,8 +71,8 @@
                         </div>
                         <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation clearfix">
-                                <li class="current"><a href="index-2.html">Home</a> </li>
-                                <li class=" "><a href="about.html">About Us</a> </li>
+                                <li class="{{ request()->routeIs('frontend.home') ? 'current' : '' }}"> <a href="{{ route('frontend.home') }}">Home</a>  </li>
+                               <li class="{{ request()->routeIs('frontend.about') ? 'current' : '' }}"> <a href="{{ route('frontend.about') }}">About Us</a> </li>
                                 <li class=" "><a href="services.html">Services</a>
                                     <ul>
                                         <li><a href="services.html">View All Services</a></li>
@@ -83,17 +83,14 @@
                                         <li><a href="ser-glass-wrought.html">Glass & Wrought</a></li>
                                         <li><a href="ser-space-planning.html">Space Planning</a></li>
                                     </ul>
-                                </li>
-                               
-                                
-                               
-                                <li><a href="contact.html">Contact</a></li>
+                                </li>                     
+                                <li class="{{ request()->routeIs('frontend.contact') ? 'current' : '' }}"><a href="{{ route('frontend.contact') }}">Contact Us</a></li>
                             </ul>
                         </div>
                     </nav>
                     <div class="mainmenu-right style2">                      
                         <div class="button">
-                            <a class="btn-one" href="#">lOGIN<span class="flaticon-next"></span></a>
+                            <a class="btn-one" href="{{ route('login') }}">lOGIN<span class="flaticon-next"></span></a>
                         </div>
                     </div>
                 </div>
@@ -141,16 +138,40 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                         <div class="single-footer-widget marbtm50">
                             <div class="title">
-                                <h3>Services</h3>
+                                <h3>Quick Links</h3>
                             </div>
                             <div class="services-links">
                                 <ul>
-                                    <li><a href="#">Concept Design</a></li>
-                                    <li><a href="#">Project Designs</a></li>
-                                    <li><a href="#">Make Overs</a></li>
-                                    <li><a href="#">Consulting</a></li>
-                                    <li><a href="#">Glass & Wrought</a></li>
-                                    <li><a href="#">Space Planning</a></li>
+                                    <li>
+                                        <a href="{{ route('frontend.home') }}">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('frontend.about') }}">
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('frontend.contact') }}">
+                                            Contact Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('frontend.privacy') }}">
+                                            Privacy Policy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('frontend.terms') }}">
+                                            Terms & Conditions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('frontend.disclaimer') }}">
+                                            Disclaimer
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

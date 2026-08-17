@@ -251,217 +251,101 @@
 
                                 </a>
                             @endcan
-
-
-                            <ul class="dropdown-menu">
-
-                                {{-- =====================================================
-                                PROPERTY CATEGORIES
-                                ====================================================== --}}
-
+                            <ul class="dropdown-menu">                               
                                 @can('view property')
                                     <li class="{{ request()->routeIs('property-categories.*') ? 'active' : '' }}">
-
                                         <a class="nav-link" href="{{ route('property-categories.index') }}">
-
                                             <i data-feather="layers"></i>
-
                                             <span>
                                                 Property Categories
                                             </span>
-
                                         </a>
-
                                     </li>
                                 @endcan
-
-
-                                {{-- =====================================================
-                                AMENITIES
-                                ====================================================== --}}
-
                                 @can('view amenities')
                                     <li class="{{ request()->routeIs('amenities.*') ? 'active' : '' }}">
-
                                         <a class="nav-link" href="{{ route('amenities.index') }}">
-
                                             <i data-feather="star"></i>
-
                                             <span>
                                                 Amenities
                                             </span>
-
                                         </a>
-
                                     </li>
                                 @endcan
-
-
-                                {{-- =====================================================
-                                COUNTRIES
-                                ====================================================== --}}
-
                                 @can('view countries')
                                     <li class="{{ request()->routeIs('countries.*') ? 'active' : '' }}">
-
                                         <a class="nav-link" href="{{ route('countries.index') }}">
-
                                             <i data-feather="globe"></i>
-
                                             <span>
                                                 Countries
                                             </span>
-
                                         </a>
-
                                     </li>
                                 @endcan
-
-
-                                {{-- =====================================================
-                                STATES
-                                ====================================================== --}}
-
                                 @can('view states')
                                     <li class="{{ request()->routeIs('states.*') ? 'active' : '' }}">
-
                                         <a class="nav-link" href="{{ route('states.index') }}">
-
                                             <i data-feather="map"></i>
-
                                             <span>
                                                 States
                                             </span>
-
                                         </a>
-
                                     </li>
                                 @endcan
-
-
-                                {{-- =====================================================
-                                CITIES
-                                ====================================================== --}}
-
                                 @can('view cities')
                                     <li class="{{ request()->routeIs('cities.*') ? 'active' : '' }}">
-
                                         <a class="nav-link" href="{{ route('cities.index') }}">
-
                                             <i data-feather="map-pin"></i>
-
                                             <span>
                                                 Cities
                                             </span>
-
                                         </a>
-
                                     </li>
                                 @endcan
-
-
-                                {{-- =====================================================
-                                AREAS
-                                ====================================================== --}}
-
                                 @can('view areas')
                                     <li class="{{ request()->routeIs('areas.*') ? 'active' : '' }}">
-
                                         <a class="nav-link" href="{{ route('areas.index') }}">
-
                                             <i data-feather="navigation"></i>
-
                                             <span>
                                                 Areas
                                             </span>
-
                                         </a>
-
                                     </li>
                                 @endcan
-
-
-                                {{-- =====================================================
-                                PROPERTIES - ADMIN
-                                ====================================================== --}}
-
                                 @can('view property')
-                                                            <li class="{{ request()->routeIs('properties.index')
+                                    <li class="{{ request()->routeIs('properties.index')
                                     || request()->routeIs('properties.create')
                                     || request()->routeIs('properties.edit')
                                     || request()->routeIs('properties.show')
                                     ? 'active'
                                     : '' }}">
 
-                                                                <a class="nav-link" href="{{ route('properties.index') }}">
-
-                                                                    <i data-feather="home"></i>
-
-                                                                    <span>
-                                                                        Properties
-                                                                    </span>
-
-                                                                </a>
-
-                                                            </li>
-                                @endcan
-
-
-                                {{-- =====================================================
-                                GET PROPERTIES - BUYER SEARCH
-                                ====================================================== --}}
+                                        <a class="nav-link" href="{{ route('properties.index') }}">
+                                            <i data-feather="home"></i>
+                                                <span>Properties</span>
+                                        </a>
+                                    </li>
+                                @endcan                               
                                 @can('get search properties')
                                     <li class="{{ request()->routeIs('properties.search') ? 'active' : '' }}">
-
                                         <a class="nav-link" href="{{ route('properties.search') }}">
-
                                             <i data-feather="search"></i>
-
                                             <span>
                                                 Get Properties
                                             </span>
-
                                         </a>
-
                                     </li>
-                                @endcan
-
-                            </ul>
-
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                                    data-feather="anchor"></i><span>Other
-                                    Pages</span></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="create-post.html">Create Post</a></li>
-                                <li><a class="nav-link" href="posts.html">Posts</a></li>
-                                <li><a class="nav-link" href="profile.html">Profile</a></li>
-                                <li><a class="nav-link" href="contact.html">Contact</a></li>
-                                <li><a class="nav-link" href="invoice.html">Invoice</a></li>
+                                @endcan                                
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                                    data-feather="chevrons-down"></i><span>Multilevel</span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Menu 1</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="has-dropdown">Menu 2</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Child Menu 1</a></li>
-                                        <li class="dropdown">
-                                            <a href="#" class="has-dropdown">Child Menu 2</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Child Menu 1</a></li>
-                                                <li><a href="#">Child Menu 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#"> Child Menu 3</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                         @can('contact submissions')
+                        <li class="{{ request()->routeIs('contacts.*') ? 'active' : '' }}">
+                            <a href="{{ route('contacts.index-list') }}" class="nav-link">
+                                <i data-feather="message-square"></i>
+                                <span>Contact Submissions</span>
+                            </a>
                         </li>
+                        @endcan
                     </ul>
                 </aside>
             </div>
@@ -471,10 +355,18 @@
             </main>
             <footer class="main-footer">
                 <div class="footer-left">
-                    <a href="templateshub.net">Templateshub</a></a>
+                    <div class="copyright-text">
+                        <p>
+                            © {{ date('Y') }} PropertyHub. All Rights Reserved.
+                            <span class="copyright-separator">|</span>
+                            Developed &amp; Marketed by
+                            <a href="https://eternalhightech.com/" target="_blank" rel="noopener noreferrer">
+                                Eternal HighTech
+                            </a>
+                        </p>
+                    </div>
                 </div>
-                <div class="footer-right">
-                </div>
+                <div class="footer-right"></div>
             </footer>
         </div>
     </div>
