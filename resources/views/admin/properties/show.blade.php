@@ -889,7 +889,7 @@
 
 .property-details {
     height: 100%;
-    padding: 26px 22px 20px 38px;
+    padding: 26px 10px 20px 10px;
 }
 
 
@@ -962,50 +962,18 @@
 
 .property-info-item {
     position: relative;
-
     height: 100%;
-
-    padding: 0 32px;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-
-
-/* Vertical divider */
-
-.property-info > div:not(:first-child)
-.property-info-item::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 2px;
-    bottom: 0;
-
-    width: 1px;
-
-    background: #e8edf4;
-}
-
-
-/* ================================
-   ICON
-================================ */
-
 .property-icon {
     width: 76px;
     height: 76px;
-
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin-bottom: 20px;
 }
 
@@ -1018,9 +986,7 @@
 
 .category-icon {
     color: #4058df;
-
     background: #e9edff;
-
     border: 1px solid #dce3ff;
 }
 
@@ -1029,9 +995,7 @@
 
 .purpose-icon {
     color: #ff7418;
-
     background: #fff0dc;
-
     border: 1px solid #ffe5c2;
 }
 
@@ -1040,9 +1004,7 @@
 
 .price-icon {
     color: #11a544;
-
     background: #dff9e7;
-
     border: 1px solid #c7efd2;
 }
 
@@ -1051,7 +1013,6 @@
 
 .status-icon {
     background: #ffffff;
-
     border: 2px solid #dff3e6;
 }
 
@@ -1063,9 +1024,7 @@
 .status-dot {
     width: 21px;
     height: 21px;
-
     background: #28b957;
-
     border-radius: 50%;
 }
 
@@ -1079,7 +1038,7 @@
 
     color: #59647a;
 
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 500;
 
     white-space: nowrap;
@@ -1093,8 +1052,7 @@
 .property-value {
     color: #111a30;
 
-    font-size: 24px;
-    font-weight: 700;
+     font-weight: 700;
 
     line-height: 1.2;
 
