@@ -12,6 +12,16 @@ class Property extends Model
 {
     use HasFactory;
 
+    /*
+    |--------------------------------------------------------------------------
+    | Status Constants
+    |--------------------------------------------------------------------------
+    */
+
+    const STATUS_INACTIVE = 0;
+    const STATUS_ACTIVE   = 1;
+    const STATUS_SOLD     = 2;
+
     protected $fillable = [
         'property_category_id',
         'approval',
@@ -90,7 +100,7 @@ class Property extends Model
     protected $casts = [
         'price' => 'decimal:2',
         'area' => 'decimal:2',
-        'status' => 'boolean',
+        'status' => 'integer',
     ];
 
     /*
@@ -138,6 +148,7 @@ class Property extends Model
             'area_id'
         );
     }
+
     public function propertyArea(): BelongsTo
     {
         return $this->belongsTo(
@@ -145,6 +156,7 @@ class Property extends Model
             'area_id'
         );
     }
+
     /*
     |--------------------------------------------------------------------------
     | Amenities
@@ -165,7 +177,6 @@ class Property extends Model
     |--------------------------------------------------------------------------
     */
 
-    
     public function images(): HasMany
     {
         return $this->hasMany(
@@ -173,6 +184,7 @@ class Property extends Model
             'property_id'
         );
     }
+
     /*
     |--------------------------------------------------------------------------
     | Property Documents
@@ -220,6 +232,20 @@ class Property extends Model
         return $this->belongsTo(
             User::class,
             'updated_by'
+        );
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Enquiries
+    |--------------------------------------------------------------------------
+    */
+
+    public function enquiries(): HasMany
+    {
+        return $this->hasMany(
+            PropertyEnquiry::class,
+            'property_id'
         );
     }
 }

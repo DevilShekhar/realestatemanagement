@@ -252,7 +252,7 @@
                                 </a>
                             @endcan
                             <ul class="dropdown-menu">                               
-                                @can('view property')
+                                @can('view categories property')
                                     <li class="{{ request()->routeIs('property-categories.*') ? 'active' : '' }}">
                                         <a class="nav-link" href="{{ route('property-categories.index') }}">
                                             <i data-feather="layers"></i>
@@ -335,9 +335,27 @@
                                             </span>
                                         </a>
                                     </li>
-                                @endcan                                
+                                @endcan        
+                                @can('sold out property')
+                                    <li class="{{ request()->routeIs('properties.sold-out-property') ? 'active' : '' }}">
+                                        <a class="nav-link" href="{{ route('properties.sold-out-property') }}">
+                                            <i data-feather="check-circle"></i>
+                                            <span>
+                                                Sold Out Property
+                                            </span>
+                                        </a>
+                                    </li>
+                                @endcan                        
                             </ul>
                         </li>
+                        @can('property enquiries listing')
+                        <li class="{{ request()->routeIs('property-enquiries.*') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('property-enquiries.index') }}">
+                                <i data-feather="message-circle"></i>
+                                <span>Property Enquiries</span>
+                            </a>
+                        </li>
+                        @endcan                    
                          @can('contact submissions')
                         <li class="{{ request()->routeIs('contacts.*') ? 'active' : '' }}">
                             <a href="{{ route('contacts.index-list') }}" class="nav-link">

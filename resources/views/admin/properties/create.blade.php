@@ -1765,97 +1765,47 @@
 
                                 </div>
 
-                            </div>
-
-
-                            {{-- =====================================================
-                                MAP LOCATION
-                            ====================================================== --}}
-
+                            </div>                           
+                            
+                            @can('property map location')
                             <div class="section-title">
                                 Map Location
                             </div>
-
-                            <div class="row">
-
-                                {{-- Latitude --}}
+                            <div class="row">                               
                                 <div class="col-md-6">
-
                                     <div class="form-group">
-
                                         <label for="latitude">
                                             Latitude
                                         </label>
-
-                                        <input
-                                            type="text"
-                                            name="latitude"
-                                            id="latitude"
-                                            class="form-control"
-                                            value="{{ old('latitude') }}"
-                                            placeholder="Example: 18.5204">
-
+                                        <input  type="text"  name="latitude" id="latitude" class="form-control"  value="{{ old('latitude') }}"  placeholder="Example: 18.5204">
                                     </div>
-
                                 </div>
-
-
-                                {{-- Longitude --}}
                                 <div class="col-md-6">
-
                                     <div class="form-group">
-
                                         <label for="longitude">
                                             Longitude
                                         </label>
-
-                                        <input
-                                            type="text"
-                                            name="longitude"
-                                            id="longitude"
-                                            class="form-control"
-                                            value="{{ old('longitude') }}"
-                                            placeholder="Example: 73.8567">
-
+                                        <input type="text" name="longitude"  id="longitude" class="form-control"   value="{{ old('longitude') }}" placeholder="Example: 73.8567">
                                     </div>
-
                                 </div>
-
                             </div>
-
+                            @endcan
                         </div>
-
-
-                        {{-- Card Footer --}}
                         <div class="card-footer d-flex justify-content-between">
-
-                            <a href="{{ route('properties.index') }}"
-                               class="btn btn-light">
-
+                            <a href="{{ route('properties.index') }}" class="btn btn-light">
                                 <i class="fas fa-arrow-left"></i>
                                 Cancel
-
                             </a>
-
-                            <button type="submit"
-                                    class="btn btn-primary">
-
+                            <button type="submit"  class="btn btn-primary">
                                 <i class="fas fa-save"></i>
                                 Save Property
-
                             </button>
-
                         </div>
-
                     </form>
-
                 </div>
-
             </div>
         </div>
-
     </div>
-
 </section>
 @endsection
 

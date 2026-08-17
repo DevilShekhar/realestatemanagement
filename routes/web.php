@@ -21,6 +21,7 @@ use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\LegalPagesController;
 use App\Http\Controllers\admin\ContactsController;
+use App\Http\Controllers\admin\PropertyEnquiryController;
 
 
 Route::get('/', [HomePageController::class, 'index'])->name('frontend.home');
@@ -64,4 +65,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/get-properties',[PropertySearchController::class, 'index'])->name('properties.search');
     Route::put('properties/{property}/images', [PropertyController::class, 'updateImages'])->name('properties.images.update');
     Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts.index-list');
+    Route::post('/properties/{property}/enquiry',[PropertyController::class, 'storeEnquiry'])->name('properties.enquiry.store');
+    Route::get('/property-enquiries',[PropertyEnquiryController::class, 'index'])->name('property-enquiries.index');
+    Route::get('/sold-out-property', [PropertyController::class, 'soldOutProperty'])->name('properties.sold-out-property');
 });
