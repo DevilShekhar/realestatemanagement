@@ -4,63 +4,71 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Auth;
+
+use App\Models\User;
+use App\Models\Property;
+use App\Models\PropertyCategory;
+use App\Models\Amenity;
+use App\Models\Country;
+use App\Models\State;
+use App\Models\City;
+use App\Models\Area;
+use App\Models\Contact;
+use App\Models\PropertyEnquiry;
 
 class DashboardController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Dashboard
      */
     public function index(Request $request)
-    {      
-        return view('admin.dashboard');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        $user = Auth::user();
+        $role = null;
+        if ($user->roles && $user->roles->count()) {
+            $role = strtolower($user->roles->first()->name);
+        }         
+        $totalUsers = User::count();
+        $propertyQuery = Property::query();
+        $totalProperties = (clone $propertyQuery)->count();
+        $activeProperties = (clone $propertyQuery)->where('status', 1)->count();
+        $inactiveProperties = (clone $propertyQuery)->where('status', 0)->count();
+        $soldProperties = (clone $propertyQuery)->where('status', 2)->count();
+        $totalCategories = PropertyCategory::count();
+        $totalAmenities = Amenity::count();
+        $totalCountries = Country::count();
+        $totalStates = State::count();
+        $totalCities = City::count();
+        $totalAreas = Area::count();
+        $totalContacts = Contact::count();
+        $recentContacts = Contact::latest()->take(5)->get();      
+        $totalPropertyEnquiries = 0;
+        $recentEnquiries = collect();
+        $totalPropertyEnquiries = PropertyEnquiry::count();
+        $recentEnquiries = PropertyEnquiry::with(['property','buyer',])->latest('created_at')->take(5)->get();
+        $recentPropertyQuery = Property::latest();
+        
+        $recentProperties = $recentPropertyQuery->take(5)->get();
+        return view('admin.dashboard', compact(
+            'user',
+            'role',
+            'totalUsers',
+            'totalProperties',
+            'activeProperties',
+            'inactiveProperties',
+            'soldProperties',
+            'totalCategories',
+            'totalAmenities',
+            'totalCountries',
+            'totalStates',
+            'totalCities',
+            'totalAreas',
+            'totalContacts',
+            'totalPropertyEnquiries',
+            'recentProperties',
+            'recentEnquiries',
+            'recentContacts'
+        ));
     }
 }
