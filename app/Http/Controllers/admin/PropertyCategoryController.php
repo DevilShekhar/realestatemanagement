@@ -120,7 +120,7 @@ class PropertyCategoryController extends Controller
                 );
         }
 
-        $propertyCategory->delete();
+        $propertyCategory->update(['status' => 0,]);
 
         return redirect()
             ->route('property-categories.index')

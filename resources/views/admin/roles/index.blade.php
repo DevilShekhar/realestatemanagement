@@ -36,13 +36,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Role Management</h4>
-                            <div class="card-header-action">
-                                <a href="{{ route('roles.create') }}" class="btn btn-primary">
-                                    <i class="fas fa-plus"></i>
-                                    Create Role
-                                </a>
-                            </div>
+                            <h4>Role Management</h4>                            
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -68,33 +62,10 @@
                                                     </strong>
                                                 </td>
                                                 <td>
-                                                    <div class="dropdown">
-                                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" >
-                                                            Action
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a href="{{ route('roles.permissions', $role->id) }}" class="dropdown-item">
-                                                                <i class="fas fa-key"></i>
-                                                                Assign Permission
-                                                            </a>
-                                                            <a href="{{ route('roles.show', $role->id) }}" class="dropdown-item">
-                                                                <i class="fas fa-eye"></i>
-                                                                View
-                                                            </a>
-                                                            <a href="{{ route('roles.edit', $role->id) }}" class="dropdown-item">
-                                                                <i class="fas fa-edit"></i>
-                                                                Edit
-                                                            </a>
-                                                            <form action="{{ route('roles.destroy', $role->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this role?')">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button type="submit" class="dropdown-item text-danger">
-                                                                    <i class="fas fa-trash"></i>
-                                                                    Delete
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
+                                                    <a href="{{ route('roles.permissions', $role->id) }}" class="btn btn-primary ml-2">
+                                                        <i class="fas fa-key"></i>
+                                                        Assign Permission
+                                                    </a>                                                      
                                                 </td>
                                             </tr>
                                         @empty

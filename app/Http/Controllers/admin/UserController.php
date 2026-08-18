@@ -129,19 +129,8 @@ class UserController extends Controller
     }
 
     public function destroy(User $user)
-    {
-        /*
-        |--------------------------------------------------------------------------
-        | Prevent deleting Super Admin
-        |--------------------------------------------------------------------------
-        */
-        if ($user->hasRole('super-admin')) {
-            return back()->with(
-                'error',
-                'Super Admin cannot be deleted.'
-            );
-        }
-        $user->delete();
-        return back()->with('success','User deleted successfully.');
+    {       
+        $user->update(['status' => 0,]);
+        return back()->with( 'success','User has been marked as inactive successfully.');
     }
 }

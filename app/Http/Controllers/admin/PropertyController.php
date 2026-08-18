@@ -1243,51 +1243,8 @@ class PropertyController extends Controller
      */
     public function destroy(Property $property)
     {
-
-        if ($property->amenities()->exists()) {
-            return redirect()
-                ->route('properties.index')
-                ->with(
-                    'error',
-                    'Property cannot be deleted because amenities are associated with it.'
-                );
-        }
-
-        if ($property->images()->exists()) {
-            return redirect()
-                ->route('properties.index')
-                ->with(
-                    'error',
-                    'Property cannot be deleted because images are associated with it.'
-                );
-        }
-
-        if ($property->documents()->exists()) {
-            return redirect()
-                ->route('properties.index')
-                ->with(
-                    'error',
-                    'Property cannot be deleted because documents are associated with it.'
-                );
-        }
-
-        if ($property->approvals()->exists()) {
-            return redirect()
-                ->route('properties.index')
-                ->with(
-                    'error',
-                    'Property cannot be deleted because approval records are associated with it.'
-                );
-        }
-
-        $property->delete();
-
-        return redirect()
-            ->route('properties.index')
-            ->with(
-                'success',
-                'Property deleted successfully.'
-            );
+        $property->update(['status' => 0,]);
+        return redirect()->route('properties.index')->with('success','Property deleted successfully.');
     }
 
     /**

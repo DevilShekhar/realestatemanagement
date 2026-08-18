@@ -138,15 +138,9 @@ class StateController extends Controller
     {
         // Prevent deleting state if cities exist
         if ($state->cities()->exists()) {
-            return redirect()
-                ->route('states.index')
-                ->with('error', 'State cannot be deleted because cities are associated with it.');
+            return redirect()->route('states.index')->with('error', 'State cannot be deleted because cities are associated with it.');
         }
-
-        $state->delete();
-
-        return redirect()
-            ->route('states.index')
-            ->with('success', 'State deleted successfully.');
+        $state->update(['status' => 0,]);
+        return redirect()->route('states.index')->with('success', 'State deleted successfully.');
     }
 }

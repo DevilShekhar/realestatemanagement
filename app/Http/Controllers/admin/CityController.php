@@ -145,7 +145,7 @@ class CityController extends Controller
                 );
         }
 
-        $city->delete();
+        $city->update(['status' => 0,]);
 
         return redirect()
             ->route('cities.index')
