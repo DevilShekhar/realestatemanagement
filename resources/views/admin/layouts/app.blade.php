@@ -165,25 +165,31 @@
                             </div>
                         </div>
                     </li>
-                    <li class="dropdown"><a href="#" data-toggle="dropdown"
-                            class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image"
-                                src="assets/img/user.png" class="user-img-radious-style"> <span
-                                class="d-sm-none d-lg-inline-block"></span></a>
+                    <li class="dropdown">
+                        <a href="#"  data-toggle="dropdown"  class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            @if(Auth::user()->profile_photo)
+                                <img  alt="Profile"  src="{{ asset('storage/' . Auth::user()->profile_photo) }}"  class="user-img-radious-style" >
+                            @else
+                                <img alt="Profile" src="{{ asset('assets/img/user.png') }}" class="user-img-radious-style"  >
+                            @endif
+                            <span class="d-sm-none d-lg-inline-block">
+                                {{ Auth::user()->name }}
+                            </span>
+                        </a>
                         <div class="dropdown-menu dropdown-menu-right pullDown">
-                            <div class="dropdown-title"> {{ Auth::user()->name }}</div>
-                            <a href="profile.html" class="dropdown-item has-icon"> <i class="far
-										fa-user"></i> Profile
-                            </a> <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
-                                Activities
-                            </a> <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
-                                Settings
-                            </a>
+                            <div class="dropdown-title">
+                                {{ Auth::user()->name }}
+                            </div>
+                            <a href="{{ route('profile.index') }}" class="dropdown-item has-icon">
+                                <i class="far fa-user"></i>
+                                Profile
+                            </a>                       
                             <div class="dropdown-divider"></div>
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <button type="submit"
-                                    class="dropdown-item has-icon text-danger border-0 bg-transparent w-100 text-start">
-                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                <button type="submit" class="dropdown-item has-icon text-danger border-0 bg-transparent w-100 text-start" >
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    Logout
                                 </button>
                             </form>
                         </div>
