@@ -36,12 +36,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h4>Permission Management</h4>
-                            <div class="card-header-action">
-                                <a href="{{ route('permissions.create') }}" class="btn btn-primary">
-                                    <i class="fas fa-plus"></i>
-                                    Create Permission
-                                </a>
-                            </div>
+                            
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -54,9 +49,7 @@
                                             <th>
                                                 Permission Name
                                             </th>
-                                            <th width="180">
-                                                Action
-                                            </th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -69,35 +62,7 @@
                                                     <strong>
                                                         {{ $permission->name }}
                                                     </strong>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                                                            Action
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a href="{{ route('permissions.show', $permission->id) }}" class="dropdown-item">
-                                                                <i class="fas fa-eye"></i>
-                                                                View
-                                                            </a>
-
-                                                            <a href="{{ route('permissions.edit', $permission->id) }}" class="dropdown-item">
-                                                                <i class="fas fa-edit"></i>
-                                                                Edit
-                                                            </a>
-
-                                                            <form action="{{ route('permissions.destroy', $permission->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this permission?')">
-                                                                @csrf
-                                                                @method('DELETE')
-
-                                                                <button type="submit" class="dropdown-item text-danger">
-                                                                    <i class="fas fa-trash"></i>
-                                                                    Delete
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </td>
+                                                </td>                                                
                                             </tr>
                                         @endforeach
                                     </tbody>

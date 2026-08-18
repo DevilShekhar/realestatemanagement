@@ -185,25 +185,11 @@
                                                 <td>
                                                     {{ $property->updated_at?->format('d M Y, h:i A') }}
                                                 </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button class="btn btn-primary dropdown-toggle"  type="button" data-toggle="dropdown"> Action </button>
-                                                        <div class="dropdown-menu">
-
-                                                            <a href="{{ route('properties.show', $property->id) }}"class="dropdown-item">
-                                                                <i class="fas fa-eye"></i>
-                                                                View
-                                                            </a>                                                           
-                                                            <form action="{{ route('properties.destroy', $property->id) }}" method="POST"  onsubmit="return confirm('Are you sure you want to delete this property?')">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button  type="submit"  class="dropdown-item text-danger">
-                                                                    <i class="fas fa-trash"></i>
-                                                                    Delete
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
+                                                <td>                                                   
+                                                    <a href="{{ route('properties.show', $property->id) }}"class="dropdown-item">
+                                                        <i class="fas fa-eye"></i>
+                                                        View
+                                                    </a>  
                                                 </td>
                                             </tr>
                                         @empty

@@ -87,21 +87,22 @@
                                                     <div class="dropdown">
                                                         <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Action</button>
                                                         <div class="dropdown-menu">
-                                                        <a href="{{ route('users.show', $user->id) }}" class="dropdown-item">
-                                                            <i class="fas fa-eye"></i>
-                                                            View
-                                                        </a>
-                                                        <a href="{{ route('users.edit', $user->id) }}" class="dropdown-item" >
-                                                            <i class="fas fa-edit"></i>
-                                                            Edit
-                                                        </a>
-                                                        <form action="{{ route('users.destroy', $user->id) }}"  method="POST" onsubmit="return confirm('Are you sure you want to delete this user?')">
-                                                            @csrf @method('DELETE')
-                                                            <button type="submit" class="dropdown-item text-danger" >
-                                                                <i class="fas fa-trash"></i>
-                                                                Delete
-                                                            </button>
-                                                        </form>
+                                                            <a href="{{ route('users.show', $user->id) }}" class="dropdown-item">
+                                                                <i class="fas fa-eye"></i>
+                                                                View
+                                                            </a>
+                                                            <a href="{{ route('users.edit', $user->id) }}" class="dropdown-item" >
+                                                                <i class="fas fa-edit"></i>
+                                                                Edit
+                                                            </a>
+                                                            <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="delete-user-form">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit" class="dropdown-item text-danger">
+                                                                    <i class="fas fa-trash"></i>
+                                                                    Delete
+                                                                </button>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -117,19 +118,66 @@
         </div>
     </section>
 @endsection
-@push('scripts')
-    <script>
-        $(document).ready(function () {
-            $('#table-1').DataTable({
-                pageLength: 10,
-                ordering: true,
-                searching: true,
-                lengthChange: true
+    @push('scripts')
+        <script>
+            $(document).ready(function () {
+                // DataTable
+                $('#table-1').DataTable({
+                    pageLength: 10,
+                    ordering: true,
+                    searching: true,
+                    lengthChange: true
+                });
+                // Delete Confirmation
+                $('.delete-user-form').on('submit', function (e) {
+                    e.preventDefault();
+                    let form = this;
+                    let userName = $(this)
+                        .closest('tr')
+                        .find('td:nth-child(2)')
+                        .text()
+                        .trim();
+                    Swal.fire({
+                        title: 'Are you sure?',
+                        html: 'You want to deactivate <strong>' + userName + '</strong>?',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#d33',
+                        cancelButtonColor: '#6c757d',
+                        confirmButtonText: '<i class="fas fa-trash"></i> Yes, deactivate',
+                        cancelButtonText: 'Cancel',
+                        reverseButtons: true
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            form.submit();
+                        }
+                    });
+                });
             });
-        });
-    </script>
-@endpush
-
+        </script>      
+        @if(session('success'))
+            <script>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'User Deactivated!',
+                    text: '{{ session('success') }}',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+                });
+            </script>
+        @endif
+        @if(session('error'))
+            <script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Action Failed',
+                    text: '{{ session('error') }}',
+                    confirmButtonColor: '#d33',
+                    confirmButtonText: 'OK'
+                });
+            </script>
+        @endif
+    @endpush
 @else
     @php
         abort(403);

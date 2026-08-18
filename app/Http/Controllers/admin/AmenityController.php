@@ -95,7 +95,7 @@ class AmenityController extends Controller
      */
     public function destroy(Amenity $amenity)
     {
-        $amenity->delete();
+        $amenity->update(['status' => 0,]);
         return redirect()->route('amenities.index')->with('success', 'Amenity deleted successfully.');
     }
 }

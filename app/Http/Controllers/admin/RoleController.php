@@ -22,172 +22,172 @@ class RoleController extends Controller
         );
     }
 
-    public function create()
-    {
-        $permissions = Permission::where(
-            'guard_name',
-            'web'
-        )
-        ->orderBy('name')
-        ->get();
+    // public function create()
+    // {
+    //     $permissions = Permission::where(
+    //         'guard_name',
+    //         'web'
+    //     )
+    //     ->orderBy('name')
+    //     ->get();
 
-        return view(
-            'admin.roles.create',
-            compact('permissions')
-        );
-    }
+    //     return view(
+    //         'admin.roles.create',
+    //         compact('permissions')
+    //     );
+    // }
 
-    public function store(Request $request)
-    {
-        $validated = $request->validate([
+    // public function store(Request $request)
+    // {
+    //     $validated = $request->validate([
 
-            'name' => [
-                'required',
-                'string',
-                'max:100',
-                'unique:roles,name',
-            ],
+    //         'name' => [
+    //             'required',
+    //             'string',
+    //             'max:100',
+    //             'unique:roles,name',
+    //         ],
 
-            'permissions' => [
-                'nullable',
-                'array',
-            ],
+    //         'permissions' => [
+    //             'nullable',
+    //             'array',
+    //         ],
 
-            'permissions.*' => [
-                'exists:permissions,id',
-            ],
-        ]);
+    //         'permissions.*' => [
+    //             'exists:permissions,id',
+    //         ],
+    //     ]);
 
-        $role = Role::create([
-            'name' => $validated['name'],
-            'guard_name' => 'web',
-        ]);
+    //     $role = Role::create([
+    //         'name' => $validated['name'],
+    //         'guard_name' => 'web',
+    //     ]);
 
-        if (!empty($validated['permissions'])) {
+    //     if (!empty($validated['permissions'])) {
 
-            $permissions = Permission::whereIn(
-                'id',
-                $validated['permissions']
-            )->get();
+    //         $permissions = Permission::whereIn(
+    //             'id',
+    //             $validated['permissions']
+    //         )->get();
 
-            $role->syncPermissions($permissions);
-        }
+    //         $role->syncPermissions($permissions);
+    //     }
 
-        return redirect()
-            ->route('roles.index')
-            ->with(
-                'success',
-                'Role created successfully.'
-            );
-    }
+    //     return redirect()
+    //         ->route('roles.index')
+    //         ->with(
+    //             'success',
+    //             'Role created successfully.'
+    //         );
+    // }
 
-    public function show(Role $role)
-    {
-        $role->load('permissions');
+    // public function show(Role $role)
+    // {
+    //     $role->load('permissions');
 
-        return view(
-            'admin.roles.show',
-            compact('role')
-        );
-    }
+    //     return view(
+    //         'admin.roles.show',
+    //         compact('role')
+    //     );
+    // }
 
-    public function edit(Role $role)
-    {
-        $permissions = Permission::where(
-            'guard_name',
-            'web'
-        )
-        ->orderBy('name')
-        ->get();
+    // public function edit(Role $role)
+    // {
+    //     $permissions = Permission::where(
+    //         'guard_name',
+    //         'web'
+    //     )
+    //     ->orderBy('name')
+    //     ->get();
 
-        $role->load('permissions');
+    //     $role->load('permissions');
 
-        return view(
-            'admin.roles.edit',
-            compact(
-                'role',
-                'permissions'
-            )
-        );
-    }
+    //     return view(
+    //         'admin.roles.edit',
+    //         compact(
+    //             'role',
+    //             'permissions'
+    //         )
+    //     );
+    // }
 
-    public function update(
-        Request $request,
-        Role $role
-    ) {
-        $validated = $request->validate([
+    // public function update(
+    //     Request $request,
+    //     Role $role
+    // ) {
+    //     $validated = $request->validate([
 
-            'name' => [
-                'required',
-                'string',
-                'max:100',
-                'unique:roles,name,' . $role->id,
-            ],
+    //         'name' => [
+    //             'required',
+    //             'string',
+    //             'max:100',
+    //             'unique:roles,name,' . $role->id,
+    //         ],
 
-            'permissions' => [
-                'nullable',
-                'array',
-            ],
+    //         'permissions' => [
+    //             'nullable',
+    //             'array',
+    //         ],
 
-            'permissions.*' => [
-                'exists:permissions,id',
-            ],
-        ]);
+    //         'permissions.*' => [
+    //             'exists:permissions,id',
+    //         ],
+    //     ]);
 
-        $role->update([
-            'name' => $validated['name'],
-        ]);
+    //     $role->update([
+    //         'name' => $validated['name'],
+    //     ]);
 
-        $permissions = Permission::whereIn(
-            'id',
-            $validated['permissions'] ?? []
-        )->get();
+    //     $permissions = Permission::whereIn(
+    //         'id',
+    //         $validated['permissions'] ?? []
+    //     )->get();
 
-        $role->syncPermissions($permissions);
+    //     $role->syncPermissions($permissions);
 
-        return redirect()
-            ->route('roles.index')
-            ->with(
-                'success',
-                'Role updated successfully.'
-            );
-    }
+    //     return redirect()
+    //         ->route('roles.index')
+    //         ->with(
+    //             'success',
+    //             'Role updated successfully.'
+    //         );
+    // }
 
-    public function destroy(Role $role)
-    {
-        /*
-        |--------------------------------------------------------------------------
-        | Prevent deleting system roles
-        |--------------------------------------------------------------------------
-        */
+    // public function destroy(Role $role)
+    // {
+    //     /*
+    //     |--------------------------------------------------------------------------
+    //     | Prevent deleting system roles
+    //     |--------------------------------------------------------------------------
+    //     */
 
-        if (
-            in_array(
-                $role->name,
-                [
-                    'super-admin',
-                    'admin',
-                    'agent',
-                    'buyer',
-                    'seller',
-                ]
-            )
-        ) {
-            return back()->with(
-                'error',
-                'System roles cannot be deleted.'
-            );
-        }
+    //     if (
+    //         in_array(
+    //             $role->name,
+    //             [
+    //                 'super-admin',
+    //                 'admin',
+    //                 'agent',
+    //                 'buyer',
+    //                 'seller',
+    //             ]
+    //         )
+    //     ) {
+    //         return back()->with(
+    //             'error',
+    //             'System roles cannot be deleted.'
+    //         );
+    //     }
 
-        $role->delete();
+    //     $role->delete();
 
-        return redirect()
-            ->route('roles.index')
-            ->with(
-                'success',
-                'Role deleted successfully.'
-            );
-    }
+    //     return redirect()
+    //         ->route('roles.index')
+    //         ->with(
+    //             'success',
+    //             'Role deleted successfully.'
+    //         );
+    // }
     public function permissions(Role $role)
     {
         $permissions = Permission::where('guard_name', 'web')
