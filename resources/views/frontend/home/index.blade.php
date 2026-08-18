@@ -2,7 +2,7 @@
 
 @section('content')
 
- <!--Main Slider-->
+        <!--Main Slider-->
         <section class="main-slider">
             <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
                 <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
@@ -18,7 +18,7 @@
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
                                     <div class="big-title">
-                                        Decorate ideas
+                                        Find Your Perfect Property
                                     </div>
                                 </div>
                             </div>
@@ -26,7 +26,7 @@
                                 data-hoffset="['15','15','15','15']" data-voffset="['-75','-10','-25','-30']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
                         {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
-                                    <div class="text">Our power of choice is untrammelled and when nothing prevents <br>our being able to do what we like best.</div>
+                                    <div class="text">Discover the right home, apartment, office, or commercial property for your next move.</div>
                                 </div>
                             </div>
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','500']" data-whitespace="normal"
@@ -54,7 +54,7 @@
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
                                     <div class="big-title">
-                                        Crafted better
+                                        Buy a Property
                                     </div>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
                                 data-hoffset="['15','15','15','15']" data-voffset="['-75','-10','-25','-30']" data-x="['right','right','right','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
                         {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
-                                    <div class="text">Our power of choice is untrammelled and when nothing prevents <br>our being able to do what we like best.</div>
+                                    <div class="text">Find properties available for sale in your preferred location.</div>
                                 </div>
                             </div>
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['700','800','700','500']" data-whitespace="normal"
@@ -87,7 +87,7 @@
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
                                     <div class="big-title">
-                                        Well invented
+                                       Rent a Property
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@
                                 data-hoffset="['15','15','15','15']" data-voffset="['-75','-10','-25','-30']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
                         {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
-                                    <div class="text">Our power of choice is untrammelled and when nothing prevents <br>our being able to do what we like best.</div>
+                                    <div class="text">Find comfortable residential and commercial properties available for rent.</div>
                                 </div>
                             </div>
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','500']" data-whitespace="normal"
@@ -114,10 +114,7 @@
                 </div>
             </div>
         </section>
-        <!--End Main Slider-->
-
-       
-
+        <!--End Main Slider-->      
         <!--Start about area-->
         <section class="about-area">
             <div class="container">
@@ -194,465 +191,875 @@
 
             </div>
         </section>
-        <!--End about Area-->
-
-        <!--Start Working Area-->
-        <section class="working-area" style="background-image: url('{{ asset('assets/frontend/images/parallax-background/working-bg.jpg') }}');">
-            <div class="container">
+         <section class="working-area"  style="background-image: url('{{ asset('assets/frontend/images/parallax-background/working-bg.jpg') }}');">
+            <div class="container map-content-box">
+                <!-- Section Title -->
                 <div class="sec-title with-text max-width text-center wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
-                    <p>Working Areas</p>
-                    <div class="title clr-white">Covered <span>Industries</span></div>
-                    <p class="bottom-text">We are an Interior Designer, Who believe in excellence, quality and honesty, yes we design beautiful home interiors.</p>
+                    <p>Popular Locations</p>
+                    <div class="title">Find Properties <span>In Popular Cities</span></div>
+                    <p class="bottom-text">
+                        Explore residential and commercial properties available
+                        for sale and rent across popular cities. Find the right
+                        property in the location that suits your needs.
+                    </p>
                 </div>
                 <div class="row">
-                    <!--Start Single Working Box-->
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="single-working-box wow fadeInDown" data-wow-delay="0ms">
-                            <div class="img-holder">
-                                <div class="inner">
-                                    <img src="{{ asset('assets/frontend/images/resources/working-1.jpg') }}" alt="Awesome Image">
-                                    <div class="overlay-style-one"></div>
-                                </div>
-                            </div>
-                            <div class="text-holder">
-                                <div class="plus-icon-box"><span class="icon-plus"></span></div>
-                                <div class="outer-box">
-                                    <div class="icon">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="services-style2-content">
+                            <!-- Existing Owl Carousel -->
+                            <div class="services-carousel owl-carousel owl-theme">
+                                <!-- Pune -->
+                                <div class="single-service-style2">
+                                    <div class="img-holder">
+                                        <img
+                                            src="{{ asset('assets/frontend/images/services/v2-1.jpg') }}"
+                                            alt="Properties in Pune">
+                                        <div class="overlay-style-two"></div>
+                                    </div>
+                                    <div class="text-holder">
+                                        <div class="icon-holder">
+                                            <span class="icon-concept"></span>
+                                        </div>
                                         <div class="inner">
-                                            <div class="box">
-                                                <span class="icon-architecture-and-city1"></span>
+                                            <h3>Pune</h3>
+                                            <div class="text">
+                                                <p>
+                                                    Explore apartments, flats, villas,
+                                                    plots and commercial properties
+                                                    available for sale and rent in Pune.
+                                                </p>
+                                            </div>
+                                            <div class="read-more">
+                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text">
-                                        <h3>Residential</h3>
-                                        <p>Indignation and dislike men who are so beguiled and our the charms moment.</p>
+                                </div>
+                                <!-- Mumbai -->
+                                <div class="single-service-style2">
+                                    <div class="img-holder">
+                                        <img
+                                           src="{{ asset('assets/frontend/images/services/v2-2.jpg') }}"
+                                            alt="Properties in Mumbai">
+                                        <div class="overlay-style-two"></div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Working Box-->
-                    <!--Start Single Working Box-->
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="single-working-box wow fadeInDown" data-wow-delay="400ms">
-                            <div class="img-holder">
-                                <div class="inner">
-                                    <img src="{{ asset('assets/frontend/images/resources/working-2.jpg') }}" alt="Awesome Image">
-                                    <div class="overlay-style-one"></div>
-                                </div>
-                            </div>
-                            <div class="text-holder">
-                                <div class="plus-icon-box"><span class="icon-plus"></span></div>
-                                <div class="outer-box">
-                                    <div class="icon">
+                                    <div class="text-holder">
+                                        <div class="icon-holder">
+                                           <span class="icon-scheme"></span>
+                                        </div>
                                         <div class="inner">
-                                            <div class="box">
-                                                <span class="icon-shop"></span>
+                                            <h3>Mumbai</h3>
+                                            <div class="text">
+                                                <p>
+                                                    Discover premium apartments,
+                                                    homes, offices, shops and commercial
+                                                    properties for sale and rent in Mumbai.
+                                                </p>
+                                            </div>
+                                            <div class="read-more">
+                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text">
-                                        <h3>Commercial</h3>
-                                        <p>Righteous indignation work are so beguiled demoralized the blinded by desire.</p>
+                                </div>
+                                <!-- Nashik -->
+                                <div class="single-service-style2">
+                                    <div class="img-holder">
+                                        <img
+                                            src="{{ asset('assets/frontend/images/services/v2-3.jpg') }}"
+                                            alt="Properties in Nashik">
+                                        <div class="overlay-style-two"></div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Working Box-->
-                    <!--Start Single Working Box-->
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="single-working-box wow fadeInDown" data-wow-delay="800ms">
-                            <div class="img-holder">
-                                <div class="inner">
-                                    <img src="{{ asset('assets/frontend/images/resources/working-3.jpg') }}" alt="Awesome Image">
-                                    <div class="overlay-style-one"></div>
-                                </div>
-                            </div>
-                            <div class="text-holder">
-                                <div class="plus-icon-box"><span class="icon-plus"></span></div>
-                                <div class="outer-box">
-                                    <div class="icon">
+                                    <div class="text-holder">
+                                        <div class="icon-holder">
+                                            <span class="icon-cupboard"></span>
+                                        </div>
                                         <div class="inner">
-                                            <div class="box">
-                                                <span class="icon-company"></span>
+                                            <h3>Nashik</h3>
+                                            <div class="text">
+                                                <p>
+                                                    Find residential properties, plots,
+                                                    apartments and commercial spaces
+                                                    available for sale and rent in Nashik.
+                                                </p>
+                                            </div>
+                                            <div class="read-more">
+                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text">
-                                        <h3>Industries</h3>
-                                        <p>Our power of choice is and when nothing prevents work every pleasure interior.</p>
+                                </div>
+                                <!-- Nagpur -->
+                                <div class="single-service-style2">
+                                    <div class="img-holder">
+                                        <img
+                                            src="{{ asset('assets/frontend/images/services/v2-1.jpg') }}"
+                                            alt="Properties in Nagpur">
+                                        <div class="overlay-style-two"></div>
+                                    </div>
+                                    <div class="text-holder">
+                                        <div class="icon-holder">
+                                            <span class="icon-concept"></span>
+                                        </div>
+                                        <div class="inner">
+                                            <h3>Nagpur</h3>
+                                            <div class="text">
+                                                <p>
+                                                    Browse flats, houses, plots and
+                                                    commercial properties available
+                                                    for sale and rent in Nagpur.
+                                                </p>
+                                            </div>
+                                            <div class="read-more">
+                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Thane -->
+                                <div class="single-service-style2">
+                                    <div class="img-holder">
+                                        <img
+                                            src="{{ asset('assets/frontend/images/services/v2-2.jpg') }}"
+                                            alt="Properties in Thane">
+                                        <div class="overlay-style-two"></div>
+                                    </div>
+                                    <div class="text-holder">
+                                        <div class="icon-holder">
+                                            <span class="icon-scheme"></span>
+                                        </div>
+                                        <div class="inner">
+                                            <h3>Thane</h3>
+                                            <div class="text">
+                                                <p>
+                                                    Explore flats, apartments, villas
+                                                    and commercial properties available
+                                                    for sale and rent in Thane.
+                                                </p>
+                                            </div>
+                                            <div class="read-more">
+                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Kolhapur -->
+                                <div class="single-service-style2">
+                                    <div class="img-holder">
+                                        <img
+                                            src="{{ asset('assets/frontend/images/services/v2-3.jpg') }}"
+                                            alt="Properties in Kolhapur">
+                                        <div class="overlay-style-two"></div>
+                                    </div>
+                                    <div class="text-holder">
+                                        <div class="icon-holder">
+                                            <span class="icon-cupboard"></span>
+                                        </div>
+                                        <div class="inner">
+                                            <h3>Kolhapur</h3>
+                                            <div class="text">
+                                                <p>
+                                                   Find homes, apartments, plots and
+                                                    commercial properties available
+                                                    for sale and rent in Kolhapur.
+                                                </p>
+                                            </div>
+                                            <div class="read-more">
+                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Aurangabad -->
+                                <div class="single-service-style2">
+                                    <div class="img-holder">
+                                        <img
+                                            src="{{ asset('assets/frontend/images/services/v2-1.jpg') }}"
+                                            alt="Properties in Aurangabad">
+
+                                        <div class="overlay-style-two"></div>
+                                    </div>
+                                    <div class="text-holder">
+                                        <div class="icon-holder">
+                                            <span class="icon-concept"></span>
+                                        </div>
+                                        <div class="inner">
+                                            <h3>Aurangabad</h3>
+                                            <div class="text">
+                                                <p>
+                                                    Discover residential homes, plots,
+                                                    apartments and commercial properties
+                                                    for sale and rent in Aurangabad.
+                                                </p>
+                                            </div>
+                                            <div class="read-more">
+                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Satara -->
+                                <div class="single-service-style2">
+                                    <div class="img-holder">
+                                        <img
+                                            src="{{ asset('assets/frontend/images/services/v2-2.jpg') }}"
+                                            alt="Properties in Satara">
+                                        <div class="overlay-style-two"></div>
+                                    </div>
+                                    <div class="text-holder">
+                                        <div class="icon-holder">
+                                            <span class="icon-scheme"></span>
+                                        </div>
+                                        <div class="inner">
+                                            <h3>Satara</h3>
+                                            <div class="text">
+                                                <p>
+                                                    Explore residential properties,
+                                                    plots and commercial spaces
+                                                    available for sale and rent in Satara.
+                                                </p>
+                                            </div>
+                                            <div class="read-more">
+                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Solapur -->
+                                <div class="single-service-style2">
+                                    <div class="img-holder">
+                                        <img
+                                            src="{{ asset('assets/frontend/images/services/v2-3.jpg') }}"
+                                            alt="Properties in Solapur">
+                                        <div class="overlay-style-two"></div>
+                                    </div>
+                                    <div class="text-holder">
+                                        <div class="icon-holder">
+                                            <span class="icon-cupboard"></span>
+                                        </div>
+                                        <div class="inner">
+                                            <h3>Solapur</h3>
+                                            <div class="text">
+                                                <p>
+                                                    Find houses, flats, plots and
+                                                    commercial properties available
+                                                    for sale and rent in Solapur.
+                                                </p>
+                                            </div>
+                                            <div class="read-more">
+                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- End Existing Owl Carousel -->
                         </div>
                     </div>
-                    <!--End Single Working Box-->
                 </div>
             </div>
         </section>
-        <!--End Working Area-->
-
+        <!--End about Area-->
+         <section class="about-area">
+             <div class="container">
+                 <div class="sec-title with-text max-width text-center wow fadeInDown"  data-wow-delay="100ms" data-wow-duration="1200ms">
+                    <p>Property Services</p>
+                    <div class="title ">
+                        We Help<span> You Find</span>
+                    </div>
+                    <p class="bottom-text">
+                        Discover the right property for your needs with our trusted
+                        residential and commercial property solutions for sale and rent.
+                    </p>
+                </div>
+                <div class="row fact-counter">
+                    <!--Start Single Fact Counter-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="single-fact-counter wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
+                            <div class="count-box">
+                                <h1>
+                                    <span class="timer" data-from="1" data-to="250" data-speed="5000" data-refresh-interval="50">250</span>
+                                </h1>
+                            </div>
+                            <div class="title">
+                                <h3>Properties Listed</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Single Fact Counter-->
+                    <!--Start Single Fact Counter-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="single-fact-counter wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                            <div class="count-box">
+                                <h1>
+                                    <span class="timer" data-from="1" data-to="150" data-speed="5000" data-refresh-interval="50">150</span>
+                                </h1>
+                            </div>
+                            <div class="title">
+                                <h3>Properties Sold</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Single Fact Counter-->
+                    <!--Start Single Fact Counter-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="single-fact-counter wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+                            <div class="count-box">
+                                <h1>
+                                    <span class="timer" data-from="1" data-to="100" data-speed="5000" data-refresh-interval="50">100</span>
+                                </h1>
+                            </div>
+                            <div class="title">
+                                <h3>Properties Rented</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Single Fact Counter-->
+                    <!--Start Single Fact Counter-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="single-fact-counter wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
+                            <div class="count-box">
+                                <h1>
+                                    <span class="timer" data-from="1" data-to="500" data-speed="5000" data-refresh-interval="50">500</span>
+                                </h1>
+                            </div>
+                            <div class="title">
+                                <h3>Happy Customers</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Single Fact Counter-->
+                </div>
+            </div>
+        </section>
         <!--Start Recently Project Area-->
         <section class="recently-project-area">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="sec-title float-left">
-                            <p>Projects</p>
-                            <div class="title">Recently Completed <span>Works</span></div>
+                            <p>Property Types</p>
+                            <div class="title">
+                                Explore <span>Properties</span>
+                            </div>
                         </div>
                         <div class="more-project-button float-right">
-                            <a class="btn-two" href="#">More Projects<span class="flaticon-next"></span></a>
+                            <a class="btn-two" href="#">
+                                More Properties
+                                <span class="flaticon-next"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="container-fluid">
                 <div class="project-carousel owl-carousel owl-theme">
-
-                    <!--Start single project style1-->
+                    <!-- Apartment -->
                     <div class="single-project-style1">
                         <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-1.jpg') }}" alt="Awesome Image">
+                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-1.jpg') }}" alt="Apartment">
                             <div class="overlay-content">
                                 <div class="inner-content">
                                     <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
+                                        <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
+                                <span>Residential</span>
+                                <h3>Apartment</h3>
                             </div>
                         </div>
                     </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
+                    <!-- Villa -->
                     <div class="single-project-style1">
                         <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-2.jpg') }}" alt="Awesome Image">
+                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-2.jpg') }}" alt="Villa">
                             <div class="overlay-content">
                                 <div class="inner-content">
                                     <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
+                                        <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
+                                <span>Residential</span>
+                                <h3>Villa</h3>
                             </div>
                         </div>
                     </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
+                    <!-- House -->
                     <div class="single-project-style1">
                         <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-3.jpg') }}" alt="Awesome Image">
+                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-3.jpg') }}" alt="House">
                             <div class="overlay-content">
                                 <div class="inner-content">
                                     <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
+                                        <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
+                                <span>Residential</span>
+                                <h3>House</h3>
                             </div>
                         </div>
                     </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
+                    <!-- Office -->
                     <div class="single-project-style1">
                         <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-4.jpg') }}" alt="Awesome Image">
+                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-4.jpg') }}" alt="Office">
                             <div class="overlay-content">
                                 <div class="inner-content">
                                     <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
+                                        <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
+                                <span>Commercial</span>
+                                <h3>Office</h3>
                             </div>
                         </div>
                     </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
+                    <!-- Shop -->
                     <div class="single-project-style1">
                         <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-5.jpg') }}" alt="Awesome Image">
+                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-5.jpg') }}" alt="Shop">
                             <div class="overlay-content">
                                 <div class="inner-content">
                                     <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
+                                        <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
+                                <span>Commercial</span>
+                                <h3>Shop</h3>
                             </div>
                         </div>
                     </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
+                    <!-- Land -->
                     <div class="single-project-style1">
                         <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-1.jpg') }}" alt="Awesome Image">
+                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-1.jpg') }}" alt="Land">
                             <div class="overlay-content">
                                 <div class="inner-content">
                                     <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
+                                        <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
+                                <span>Property</span>
+                                <h3>Land</h3>
                             </div>
                         </div>
                     </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
+                    <!-- Apartment -->
                     <div class="single-project-style1">
                         <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-2.jpg') }}" alt="Awesome Image">
+                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-2.jpg') }}" alt="Apartment">
                             <div class="overlay-content">
                                 <div class="inner-content">
                                     <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
+                                        <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
+                                <span>Residential</span>
+                                <h3>Apartment</h3>
                             </div>
                         </div>
                     </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
+                    <!-- Villa -->
                     <div class="single-project-style1">
                         <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-3.jpg') }}" alt="Awesome Image">
+                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-3.jpg') }}" alt="Villa">
                             <div class="overlay-content">
                                 <div class="inner-content">
                                     <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
+                                        <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
+                                <span>Residential</span>
+                                <h3>Villa</h3>
                             </div>
                         </div>
                     </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
+                    <!-- House -->
                     <div class="single-project-style1">
                         <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-4.jpg') }}" alt="Awesome Image">
+                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-4.jpg') }}" alt="House">
                             <div class="overlay-content">
                                 <div class="inner-content">
                                     <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
+                                        <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
+                                <span>Residential</span>
+                                <h3>House</h3>
                             </div>
                         </div>
                     </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
+                    <!-- Office -->
                     <div class="single-project-style1">
                         <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-5.jpg') }}" alt="Awesome Image">
+                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-5.jpg') }}" alt="Office">
                             <div class="overlay-content">
                                 <div class="inner-content">
                                     <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
+                                        <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
+                                <span>Commercial</span>
+                                <h3>Office</h3>
                             </div>
                         </div>
                     </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
+                    <!-- Shop -->
                     <div class="single-project-style1">
                         <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-1.jpg') }}" alt="Awesome Image">
+                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-1.jpg') }}" alt="Shop">
                             <div class="overlay-content">
                                 <div class="inner-content">
                                     <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
+                                        <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
+                                <span>Commercial</span>
+                                <h3>Shop</h3>
                             </div>
                         </div>
                     </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
+                    <!-- Land -->
                     <div class="single-project-style1">
                         <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-2.jpg') }}" alt="Awesome Image">
+                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-2.jpg') }}" alt="Land">
                             <div class="overlay-content">
                                 <div class="inner-content">
                                     <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
+                                        <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
+                                <span>Property</span>
+                                <h3>Land</h3>
                             </div>
                         </div>
                     </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
-                    <div class="single-project-style1">
-                        <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-3.jpg') }}" alt="Awesome Image">
-                            <div class="overlay-content">
-                                <div class="inner-content">
-                                    <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
-                    <div class="single-project-style1">
-                        <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-4.jpg') }}" alt="Awesome Image">
-                            <div class="overlay-content">
-                                <div class="inner-content">
-                                    <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single project style1-->
-
-                    <!--Start single project style1-->
-                    <div class="single-project-style1">
-                        <div class="img-holder">
-                            <img src="{{ asset('assets/frontend/images/projects/lat-pro-5.jpg') }}" alt="Awesome Image">
-                            <div class="overlay-content">
-                                <div class="inner-content">
-                                    <div class="link-box">
-                                        <a class="btn-one" href="#">Case Study<span class="flaticon-next"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="title-box">
-                                <span>Modern Design</span>
-                                <h3>Office Partition Walls</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single project style1-->
-
                 </div>
             </div>
         </section>
         <!--End Recently Project Area-->
-
+        <section class="working-style2-area" style="background-image:url('{{ asset('assets/frontend/images/parallax-background/working-style2-bg.jpg') }}');">
+            <div class="container">              
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="working-style2-content clearfix">
+                            <!-- Start Single Working Box Style2 -->
+                            <div class="single-working-box-style2">
+                                <div class="img-holder">
+                                    <img src="{{ asset('assets/frontend/images/resources/working-v2-1.jpg') }}"  alt="Easy to Search">
+                                    <div class="static-content">
+                                        <div class="box">
+                                            <div class="inner">
+                                                <div class="icon-holder">
+                                                    <span class="icon-architecture-and-city"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="title">
+                                                        <h3>
+                                                            Easy to Search
+                                                        </h3>
+                                                        <div class="count">
+                                                            01
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overlay-content">
+                                        <div class="box">
+                                            <div class="inner">
+                                                <div class="icon-holder">
+                                                    <span class="icon-architecture-and-city"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="title">
+                                                        <h3>
+                                                            Easy to Search
+                                                        </h3>
+                                                        <div class="count">
+                                                            01
+                                                        </div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p>
+                                                            Find properties easily with our
+                                                            simple and convenient property
+                                                            search.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="read-more">
+                                    <a href="#">
+                                        <span class="icon-next"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- End Single Working Box Style2 -->
+                            <!-- Start Single Working Box Style2 -->
+                            <div class="single-working-box-style2">
+                                <div class="img-holder">
+                                    <img src="{{ asset('assets/frontend/images/resources/working-v2-2.jpg') }}"  alt="Trusted by Thousands">
+                                    <div class="static-content">
+                                        <div class="box">
+                                            <div class="inner">
+                                                <div class="icon-holder">
+                                                    <span class="icon-sheriff"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="title">
+                                                        <h3>
+                                                            Trusted by Thousands
+                                                        </h3>
+                                                        <div class="count">
+                                                            02
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overlay-content">
+                                        <div class="box">
+                                            <div class="inner">
+                                                <div class="icon-holder">
+                                                    <span class="icon-sheriff"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="title">
+                                                        <h3>
+                                                           Trusted by Thousands
+                                                        </h3>
+                                                        <div class="count">
+                                                            02
+                                                        </div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p>
+                                                            Thousands of customers trust us
+                                                            to help them find the right
+                                                            property with confidence.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="read-more">
+                                    <a href="#">
+                                        <span class="icon-next"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- End Single Working Box Style2 -->
+                            <!-- Start Single Working Box Style2 -->
+                            <div class="single-working-box-style2">
+                                <div class="img-holder">                                   
+                                    <img src="{{ asset('assets/frontend/images/resources/working-v2-3.jpg') }}"  alt="Wide Range of Properties">
+                                    <div class="static-content">
+                                        <div class="box">
+                                            <div class="inner">
+                                                <div class="icon-holder">
+                                                    <span class="icon-cross"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="title">
+                                                        <h3>
+                                                            Wide Range of Properties
+                                                        </h3>
+                                                        <div class="count">
+                                                            03
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overlay-content">
+                                        <div class="box">
+                                            <div class="inner">
+                                                <div class="icon-holder">
+                                                    <span class="icon-cross"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="title">
+                                                        <h3>
+                                                            Wide Range of Properties
+                                                        </h3>
+                                                        <div class="count">
+                                                            03
+                                                        </div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p>
+                                                            Explore apartments, villas,
+                                                            houses, offices, shops and land
+                                                            in different locations.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="read-more">
+                                    <a href="#">
+                                        <span class="icon-next"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- End Single Working Box Style2 -->
+                            <!-- Start Single Working Box Style2 -->
+                            <div class="single-working-box-style2">
+                                <div class="img-holder">
+                                    <img src="{{ asset('assets/frontend/images/resources/working-v2-4.jpg') }}" alt="Fast and Easy Process">
+                                    <div class="static-content">
+                                        <div class="box">
+                                            <div class="inner">
+                                                <div class="icon-holder">
+                                                    <span class="flaticon-architecture-and-city"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="title">
+                                                        <h3>
+                                                            Fast & Easy Process
+                                                        </h3>
+                                                        <div class="count">
+                                                            04
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overlay-content">
+                                        <div class="box">
+                                            <div class="inner">
+                                                <div class="icon-holder">
+                                                    <span class="flaticon-architecture-and-city"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="title">
+                                                        <h3>
+                                                            Fast & Easy Process
+                                                        </h3>
+                                                        <div class="count">
+                                                            04
+                                                        </div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p>
+                                                            Our simple and hassle-free
+                                                            process makes buying, selling
+                                                            or renting property easier.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="read-more">
+                                    <a href="#">
+                                        <span class="icon-next"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- End Single Working Box Style2 -->
+                        </div>
+                        <div class="working-style-bottom text-center">
+                            <p>
+                                Looking for your perfect property? Let our experienced
+                                team help you find the right one.
+                            </p>
+                            <div class="button">
+                                <a class="btn-one" href="{{ route('frontend.contact') }}">
+                                    Contact Us
+                                    <span class="flaticon-next"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!--Start Working Process Area-->
         <section class="working-process-area">
             <div class="container">
                 <div class="sec-title text-center">
-                    <p>To Do good design</p>
-                    <div class="title">Our Working <span>process</span></div>
+                    <p>HOW IT WORKS</p>
+                    <div class="title">Simple Steps To Find Your Home</div>
                 </div>
                 <div class="row">
-                    <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+                    <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>01</span></div>
                             <div class="inner">
-                                <h3>Idea & Design</h3>
-                                <p>With righteous indignation and works off beguiled demoralized charm.</p>
-                                <div class="icon-holder">
-                                    <span class="icon-productive"></span>
-                                </div>
+                                <h3>Search Property</h3>
+                                <p>Search from thousands of properties available for sale and rent.</p>
+                                <div class="icon-holder"><span class="icon-productive"></span></div>
                             </div>
                         </div>
                     </div>
-                    <!--End Single Working Process-->
-                    <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                    <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>02</span></div>
                             <div class="inner">
-                                <h3>Specification</h3>
-                                <p>Our power of choice is untrammelled and when nothing prevents.</p>
-                                <div class="icon-holder">
-                                    <span class="icon-document"></span>
-                                </div>
+                                <h3>View Property</h3>
+                                <p>Explore property details, photos, amenities, location and pricing.</p>
+                                <div class="icon-holder"><span class="icon-document"></span></div>
                             </div>
                         </div>
                     </div>
-                    <!--End Single Working Process-->
-                    <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
+                    <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>03</span></div>
                             <div class="inner">
-                                <h3>Execution</h3>
-                                <p>Wing to the claims of duty the obligations will frequently occur.</p>
-                                <div class="icon-holder">
-                                    <span class="icon-kitchen"></span>
-                                </div>
+                                <h3>Contact Agent</h3>
+                                <p>Connect with our property agent for enquiries, visits and assistance.</p>
+                                <div class="icon-holder"><span class="icon-kitchen"></span></div>
                             </div>
                         </div>
                     </div>
-                    <!--End Single Working Process-->
+                    <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1500ms">
+                        <div class="single-working-process text-center">
+                            <div class="top-box"><span>04</span></div>
+                            <div class="inner">
+                                <h3>Buy or Rent</h3>
+                                <p>Finalize your preferred property and move forward with confidence.</p>
+                                <div class="icon-holder"><span class="icon-kitchen"></span></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -665,10 +1072,10 @@
                     <div class="col-xl-12">
                         <div class="inner-content flex-box-two fix">
                             <div class="title float-left">
-                                <h3>Wanna Work With Our Profesional Team? Make an Appointment.</h3>
+                                <h3>Looking for Your Dream Property? Let Our Experts Help You Find the Right One.</h3>
                             </div>
                             <div class="button float-right">
-                                <a class="btn-one" href="#">Make an Appointment<span class="flaticon-next"></span></a>
+                                <a class="btn-one" href="{{ route('frontend.contact') }}">Contact Us<span class="flaticon-next"></span></a>
                             </div>
                         </div>
                     </div>
@@ -796,113 +1203,166 @@
         <!--End Testimonial Area-->
 
         <!--Start appointment Area-->
-        <section class="appointment-area" style="background-image:url('{{ asset('assets/frontend/images/resources/appointment-bg.jpg') }}');">
+        <section class="appointment-area" style="background-image:url('{{ asset('assets/frontend/images/resources/newsletter.png') }}');">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-6">
                         <div class="map-content-box">
                             <div class="sec-title">
-                                <p>Contact Details</p>
-                                <div class="title">How Can We <span>Help You?</span></div>
-                            </div>
-                            <div class="inner paroller">
-                                <img src="images/resources/map.png" alt="Map">
-                                <div class="overlay">
-                                    <div class="single-location-box one wow zoomIn" data-wow-delay="100ms" data-wow-duration="1500ms">
-                                        <div class="marker-box">
-                                            <span class="icon-pin"></span>
-                                        </div>
-                                        <div class="location-info">
-                                            <h3>Brooklyn</h3>
-                                            <p>P. B: 222. Mid Corner Street<br> Brooklyn - 11223.<br> +224 620 63 09 00<br> example@example.com</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-location-box two wow zoomIn" data-wow-delay="300ms" data-wow-duration="1500ms">
-                                        <div class="marker-box">
-                                            <span class="icon-pin"></span>
-                                        </div>
-                                        <div class="location-info">
-                                            <h3>Brooklyn</h3>
-                                            <p>P. B: 222. Mid Corner Street<br> Brooklyn - 11223.<br> +224 620 63 09 00<br> example@example.com</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-location-box three wow zoomIn" data-wow-delay="500ms" data-wow-duration="1500ms">
-                                        <div class="marker-box">
-                                            <span class="icon-pin"></span>
-                                        </div>
-                                        <div class="location-info">
-                                            <h3>Brooklyn</h3>
-                                            <p>P. B: 222. Mid Corner Street<br> Brooklyn - 11223.<br> +224 620 63 09 00<br> example@example.com</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-location-box four wow zoomIn" data-wow-delay="700ms" data-wow-duration="1500ms">
-                                        <div class="marker-box">
-                                            <span class="icon-pin"></span>
-                                        </div>
-                                        <div class="location-info">
-                                            <h3>Brooklyn</h3>
-                                            <p>P. B: 222. Mid Corner Street<br> Brooklyn - 11223.<br> +224 620 63 09 00<br> example@example.com</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="appointment-box wow slideInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="title-box">
-                                <h2>Make Appointment</h2>
-                                <span>Leave your information here and get reply from our expert in 24 hours, don’t hesitate to ask.</span>
+                                <p>NEWSLETTER</p>
+                                <div class="title">Subscribe Our Newsletter</div>
                             </div>
                             <div class="appointment">
-                                <form class="appointment-form">
+                                <form class="appointment-form" action="#" method="POST">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-xl-12">
                                             <div class="single-box">
-                                                <input type="text" name="form_name" value="" placeholder="Name" required="">
+                                                <input type="email" name="email" value="{{ old('email') }}" placeholder="Enter your email" required>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xl-12">
                                             <div class="single-box">
-                                                <input type="email" name="form_email" value="" placeholder="Email" required="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xl-12">
-                                            <div class="single-box">
-                                                <select class="selectpicker" data-width="100%">
-                                                <option selected="selected">Interested In</option>
-                                                <option>Concept Designs</option>
-                                                <option>Project Designs</option>
-                                                <option>Make Overs</option>
-                                                <option>Consulting</option>
-                                                <option>Glass & Wrought</option>
-                                                <option>Space Planning</option>
-                                            </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xl-12">
-                                            <div class="single-box">
-                                                <button class="btn-one" type="submit">Submit Here<span class="flaticon-next"></span></button>
+                                                <button class="btn-one" type="submit">Subscribe<span class="flaticon-next"></span></button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
+                            <div class="inner">
+                                <p class="text-white">Get latest updates and properties in your inbox.</p>
+                            </div>
+
                         </div>
                     </div>
-
-
+                    
                 </div>
             </div>
         </section>
         <!--End appointment Area-->
+        <section class="working-process-area">
+            <div class="container">
+                <div class="sec-title with-text max-width text-center wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
+                    <p>FOR PROPERTY BUYERS</p>
+                    <div class="title">Find Your <span>Perfect Property</span></div>
+                    <p class="bottom-text">Discover properties for sale and rent, compare your options and connect with property owners.</p>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="sec-title">
+                            <p>BUY WITH CONFIDENCE</p>
+                            <div class="title">Your Search For The Right <span>Property Starts Here</span></div>
+                        </div>
+                        <div class="text">
+                            <p>Explore homes, apartments, villas, plots and commercial properties available for sale and rent in your preferred locations.</p>
+                            <p>Create your buyer account to save your property interests, submit enquiries and connect with property owners.</p>
+                        </div>
+                        <div class="button">
+                            <a class="btn-one" href="{{ route('buyer.register') }}">
+                                Register As Buyer
+                                <span class="flaticon-next"></span>
+                            </a>
+                            <a class="btn-one" href="{{ route('login') }}">
+                                Buyer Login
+                                <span class="flaticon-next"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="single-working-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
+                            <div class="img-holder">
+                                <div class="inner">
+                                    <img src="{{ asset('assets/frontend/images/resources/working-2.jpg') }}" alt="Find Your Property">
+                                    <div class="overlay-style-one"></div>
+                                </div>
+                            </div>
+                            <div class="text-holder">
+                                <div class="plus-icon-box">
+                                    <span class="icon-plus"></span>
+                                </div>
+                                <div class="outer-box">
+                                    <div class="icon">
+                                        <div class="inner">
+                                            <div class="box">
+                                                <span class="icon-architecture-and-city1"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text">
+                                        <h3>Find Your Property</h3>
+                                        <p>Browse properties for sale and rent and connect with the right property owner.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="working-area" style="background-image:url('{{ asset('assets/frontend/images/parallax-background/working-bg.jpg') }}');">
+            <div class="container map-content-box">
+                <div class="sec-title with-text max-width text-center wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
+                    <p>FOR PROPERTY SELLERS</p>
+                    <div class="title">Sell Your <span>Property With Confidence</span></div>
+                    <p class="bottom-text">List your property, reach genuine buyers and connect with interested customers easily.</p>
+                </div>
 
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="single-working-box wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
+                            <div class="img-holder">
+                                <div class="inner">
+                                    <img src="{{ asset('assets/frontend/images/resources/working-2.jpg') }}" alt="Sell Your Property">
+                                    <div class="overlay-style-one"></div>
+                                </div>
+                            </div>
+                            <div class="text-holder">
+                                <div class="plus-icon-box">
+                                    <span class="icon-plus"></span>
+                                </div>
+                                <div class="outer-box">
+                                    <div class="icon">
+                                        <div class="inner">
+                                            <div class="box">
+                                                <span class="icon-company"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text mt-4">
+                                        <h3>Sell Your Property</h3>
+                                        <p>List your property for sale or rent and connect with genuine buyers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="sec-title">
+                            <p>FOR PROPERTY SELLERS</p>
+                            <div class="title">List Your Property And <span>Reach More Buyers</span></div>
+                        </div>
+                        <div class="text">
+                            <p class="text-white">Showcase your residential or commercial property to potential buyers and tenants looking for properties in your preferred location.</p>
+                            <p class="text-white">Create your seller account to add properties, manage enquiries and connect with interested buyers.</p>
+                        </div>
+                        <div class="button">
+                            <a class="btn-one" href="{{ route('seller.register') }}">
+                                Register As Seller
+                                <span class="flaticon-next"></span>
+                            </a>
+                            <a class="btn-one" href="{{ route('login') }}">
+                                Seller Login
+                                <span class="flaticon-next"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!--Start latest blog area-->
         <section class="latest-blog-area">
             <div class="container inner-content">

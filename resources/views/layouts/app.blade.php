@@ -57,7 +57,7 @@
             <div class="inner-container clearfix">
                 <div class="logo-box-style2 float-left">
                     <a href="{{ route('frontend.home') }}">
-                        <img src="{{ asset('assets/frontend/images/resources/logo.png') }}" alt="Awesome Logo">
+                        <img src="{{ asset('assets/frontend/images/logo-1.png') }}" alt="Awesome Logo"  style="height: 51px;">
                     </a>
                 </div>
                 <div class="main-menu-box float-right">
@@ -99,7 +99,7 @@
         <!--End Main Header-->
         <!--End Main Header-->
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
          <!--Start footer area-->
@@ -113,7 +113,7 @@
                             <div class="contact-info-box">
                                 <div class="footer-logo">
                                     <a href="index-2.html">
-                                        <img src="{{ asset('assets/frontend/images/footer/footer-logo.png') }}" alt="Awesome Logo">
+                                        <img src="{{ asset('assets/frontend/images/logo-1.png') }}" alt="Awesome Logo">
                                     </a>
                                 </div>
                                 <ul>
