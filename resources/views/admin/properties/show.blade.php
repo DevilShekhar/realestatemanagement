@@ -2648,15 +2648,13 @@
                             Media Gallery
                         </h4>
                         <div class="ml-auto d-flex gap-2">
-                            @if($property->status != 2)
-                                @if($property->approval == 0)
+                            @if($property->status != 2 && $property->approval == 0)
                                 @can('add media gallery')
                                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#uploadImagesModal" >
                                     <i data-feather="plus"></i>
                                     Add Images
                                 </button>
                                 @endcan
-                                @endif
                                 @can('media gallery')
                                 <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editImagesModal" style="margin-left: 1rem;">
                                     <i data-feather="edit-2"></i>
