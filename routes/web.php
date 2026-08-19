@@ -23,20 +23,28 @@ use App\Http\Controllers\frontend\LegalPagesController;
 use App\Http\Controllers\admin\ContactsController;
 use App\Http\Controllers\admin\PropertyEnquiryController;
 use App\Http\Controllers\admin\ProfileController;
-
+use App\Http\Controllers\frontend\BuyerLoginController;
+use App\Http\Controllers\frontend\SellerLoginController;
 
 Route::get('/', [HomePageController::class, 'index'])->name('frontend.home');
 Route::get('/about', [AboutController::class, 'index'])->name('frontend.about');
 Route::post('/contact', [ContactController::class, 'store'])->name('frontend.contact.store');
 Route::get('/contact', [ContactController::class, 'index'])->name('frontend.contact');
+
 Route::prefix('seller')->name('seller.')->group(function () {
     Route::get('/register', [SellerRegistrationController::class, 'create'])->name('register');
     Route::post('/register', [SellerRegistrationController::class, 'store'])->name('register.store');
+    Route::get('/login', [SellerLoginController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [SellerLoginController::class, 'login'])->name('login.submit');
+    Route::post('/logout', [SellerLoginController::class, 'logout'])->name('logout');
 });
 
 Route::prefix('buyer')->name('buyer.')->group(function () {
     Route::get('/register', [BuyerRegistrationController::class, 'create'])->name('register');
     Route::post('/register', [BuyerRegistrationController::class, 'store'])->name('register.store');
+    Route::get('/login', [BuyerLoginController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [BuyerLoginController::class, 'login'])->name('login.submit');
+    Route::post('/logout', [BuyerLoginController::class, 'logout'])->name('logout');
 });
 Route::name('frontend.')->group(function () {
     Route::get('/privacy-policy', [LegalPagesController::class, 'privacyPolicy'])->name('privacy');

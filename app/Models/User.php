@@ -31,6 +31,7 @@ class User extends Authenticatable
         'pincode',
         'profile_photo',
         'status',
+        'user_type',
     ];
 
     /**
