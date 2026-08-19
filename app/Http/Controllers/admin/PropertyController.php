@@ -35,6 +35,7 @@ class PropertyController extends Controller
             'area',
             'creator',
             'updater',
+            'propertyArea'
         ]);
 
         // Only Active (1) and Inactive (0) properties
@@ -354,6 +355,17 @@ class PropertyController extends Controller
             'string',
             'max:100',
         ],
+        'car_parking' => [
+            'nullable',
+            'integer',
+            'min:0',
+        ],
+
+        'bike_parking' => [
+            'nullable',
+            'integer',
+            'min:0',
+        ],
 
             'facing' => [
             'nullable',
@@ -516,6 +528,7 @@ class PropertyController extends Controller
             'string',
             'max:100',
         ],
+        'commercial_budget' => 'nullable|numeric|min:0',
 
             'business_type' => [
             'nullable',
@@ -940,6 +953,17 @@ class PropertyController extends Controller
                 'integer',
                 'min:0',
             ],
+            'car_parking' => [
+                'nullable',
+                'integer',
+                'min:0',
+            ],
+
+            'bike_parking' => [
+                'nullable',
+                'integer',
+                'min:0',
+            ],
 
             /*
             |--------------------------------------------------------------------------
@@ -1013,6 +1037,7 @@ class PropertyController extends Controller
                 'string',
                 'max:100',
             ],
+            'commercial_budget' => 'nullable|numeric|min:0',
 
             'business_type' => [
                 'nullable',

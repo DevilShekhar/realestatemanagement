@@ -89,7 +89,7 @@
                                                     <td>{{ $property->country?->name ?? 'N/A' }}</td>
                                                     <td>{{ $property->state?->name ?? 'N/A' }}</td>
                                                     <td>{{ $property->city?->name ?? 'N/A' }}</td>
-                                                    <td>{{ $property->area?->name ?? 'N/A' }}</td>
+                                                    <td>{{ $property->propertyArea?->name ?? 'N/A' }}</td>
                                                     <td>
                                                         @if($property->price !== null)
                                                             ₹{{ number_format($property->price, 2) }}

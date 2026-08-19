@@ -2278,8 +2278,12 @@
                                         </strong>
                                     </div>
                                     <div class="property-detail-item">
-                                        <span>Parking </span>
-                                        <strong> {{ $property->parking ?? '-' }} </strong>
+                                        <span>Parking</span>
+                                        <strong>
+                                            Car: {{ $property->car_parking ?? 0 }}
+                                            &nbsp; | &nbsp;
+                                            Bike: {{ $property->bike_parking ?? 0 }}
+                                        </strong>
                                     </div>
                                     <div class="property-detail-item">
                                         <span> Facing</span>
@@ -2354,8 +2358,12 @@
                                         <strong>{{ $property->washrooms ?? '-' }}</strong>
                                     </div>
                                     <div class="property-detail-item">
-                                        <span> Parking </span>
-                                        <strong>  {{ $property->parking ?? '-' }}</strong>
+                                        <span>Parking</span>
+                                        <strong>
+                                            Car: {{ $property->car_parking ?? 0 }}
+                                            &nbsp; | &nbsp;
+                                            Bike: {{ $property->bike_parking ?? 0 }}
+                                        </strong>
                                     </div>
                                     <div class="property-detail-item">
                                         <span> Furnished Status </span>
@@ -2540,45 +2548,45 @@
                         <div class="property-detail-card price-card">
                             <div class="property-card-header">
                                 <div class="property-card-icon property-icon-yellow">
-                                    <i data-feather="dollar-sign"></i>
+                                    <span>₹</span>
                                 </div>
                                 <h4>Price Information </h4>
                             </div>
                             <div class="price-information-list">
-                                <div class="price-item">
-                                    <span>  Price </span>
-                                    <strong class="main-price">
-                                        @if($property->price !== null)
-                                            ₹{{ number_format((float) $property->price, 2) }}
-                                        @else
-                                            -
-                                        @endif
-                                    </strong>
-                                </div>
-                                <div class="price-item">
-                                    <span> Price per {{ $property->area_unit ?? 'Sq Ft' }} </span>
-                                    @php
-                                        $pricePerSqFt = null;
-                                        if (
-                                            $property->price !== null &&
-                                            $property->area !== null &&
-                                            (float) $property->area > 0
-                                        ) {
-
+                                @if($property->price !== null)
+                                    <div class="price-item">
+                                        <span>  Amount </span>
+                                        <strong class="main-price">
+                                        
+                                                ₹{{ number_format((float) $property->price, 2) }}
+                                        
+                                        </strong>
+                                    </div>
+                                @endif
+                                @if( $property->price !== null && $property->area !== null && (float) $property->area > 0 )
+                                    <div class="price-item">
+                                        <span>
+                                            Price per {{ $property->area_unit ?? 'Sq Ft' }}
+                                        </span>
+                                        @php
                                             $pricePerSqFt =
                                                 (float) $property->price /
                                                 (float) $property->area;
+                                        @endphp
 
-                                        }
-                                    @endphp
-                                    <strong>
-                                        @if($pricePerSqFt !== null)
+                                        <strong>
                                             ₹{{ number_format($pricePerSqFt, 2) }}
-                                        @else
-                                            -
-                                        @endif
-                                    </strong>
-                                </div>
+                                        </strong>
+                                    </div>
+                                @endif
+                                @if($property->commercial_budget !== null)
+                                    <div class="price-item">
+                                        <span>Commercial Budget</span>
+                                        <strong>
+                                            ₹{{ number_format((float) $property->commercial_budget, 2) }}
+                                        </strong>
+                                    </div>
+                                @endif
                                 @if($property->monthly_rent !== null)
                                     <div class="price-item">
                                         <span> Monthly Rent </span>

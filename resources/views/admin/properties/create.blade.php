@@ -450,41 +450,13 @@
                                 Property Details
                             </div>
 
-                            <div class="row">
-
-                                {{-- Price --}}
-                                <div class="col-md-4">
-
-                                    <div class="form-group">
-
-                                        <label for="price">
-                                            Price
-                                        </label>
-
-                                        <input
-                                            type="number"
-                                            name="price"
-                                            id="price"
-                                            step="0.01"
-                                            min="0"
-                                            class="form-control"
-                                            value="{{ old('price') }}"
-                                            placeholder="Enter price">
-
-                                    </div>
-
-                                </div>
-
-
+                            <div class="row">                             
                                 {{-- Property Area --}}
                                 <div class="col-md-4">
-
                                     <div class="form-group">
-
                                         <label for="area">
                                             Property Area
                                         </label>
-
                                         <input
                                             type="number"
                                             name="area"
@@ -494,15 +466,10 @@
                                             class="form-control"
                                             value="{{ old('area') }}"
                                             placeholder="Enter area">
-
                                     </div>
-
                                 </div>
-
-
                                 {{-- Area Unit --}}
                                 <div class="col-md-4">
-
                                     <div class="form-group">
 
                                         <label for="area_unit">
@@ -596,29 +563,53 @@
                                     </div>
 
                                 </div>
+                                {{-- Four Wheeler Parking --}}
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="car_parking">
+                                                Four Wheeler Parking
+                                            </label>
 
+                                            <input
+                                                type="number"
+                                                name="car_parking"
+                                                id="car_parking"
+                                                min="0"
+                                                class="form-control @error('car_parking') is-invalid @enderror"
+                                                value="{{ old('car_parking') }}"
+                                                placeholder="Number of car parking spaces">
 
-                                {{-- Parking --}}
-                                <div class="col-md-4">
-
-                                    <div class="form-group">
-
-                                        <label for="parking">
-                                            Parking
-                                        </label>
-
-                                        <input
-                                            type="number"
-                                            name="parking"
-                                            id="parking"
-                                            min="0"
-                                            class="form-control"
-                                            value="{{ old('parking') }}"
-                                            placeholder="Number of parking spaces">
-
+                                            @error('car_parking')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
+                                        </div>
                                     </div>
 
-                                </div>
+                                    {{-- Two Wheeler Parking --}}
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="bike_parking">
+                                                Two Wheeler Parking
+                                            </label>
+
+                                            <input
+                                                type="number"
+                                                name="bike_parking"
+                                                id="bike_parking"
+                                                min="0"
+                                                class="form-control @error('bike_parking') is-invalid @enderror"
+                                                value="{{ old('bike_parking') }}"
+                                                placeholder="Number of bike parking spaces">
+
+                                            @error('bike_parking')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
+                                        </div>
+                                    </div>
 
                             </div>
 
@@ -1008,6 +999,24 @@
                                         </div>
 
                                     </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="commercial_budget">Commercial Budget</label>
+                                            <input
+                                                type="number"
+                                                name="commercial_budget"
+                                                id="commercial_budget"
+                                                class="form-control"
+                                                value="{{ old('commercial_budget', $property->commercial_budget ?? '') }}"
+                                                placeholder="Enter commercial budget"
+                                                min="0"
+                                                step="0.01"
+                                            >
+                                            @error('commercial_budget')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
 
 
                                     {{-- Washrooms --}}
@@ -1148,6 +1157,28 @@
                                                 class="form-control"
                                                 value="{{ old('plot_area') }}"
                                                 placeholder="Plot area">
+
+                                        </div>
+
+                                    </div>
+                                     {{-- Price --}}
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+
+                                            <label for="price">
+                                                Amount
+                                            </label>
+
+                                            <input
+                                                type="number"
+                                                name="price"
+                                                id="price"
+                                                step="0.01"
+                                                min="0"
+                                                class="form-control"
+                                                value="{{ old('price') }}"
+                                                placeholder="Enter price">
 
                                         </div>
 

@@ -55,6 +55,8 @@ class Property extends Model
         'bhk',
         'balconies',
         'parking',
+        'car_parking',
+        'bike_parking',
 
         'facing',
         'floor_number',
@@ -65,6 +67,7 @@ class Property extends Model
 
         'washrooms',
         'commercial_type',
+        'commercial_budget',
         'business_type',
 
         'road_width',
@@ -101,6 +104,7 @@ class Property extends Model
         'price' => 'decimal:2',
         'area' => 'decimal:2',
         'status' => 'integer',
+        'commercial_budget' => 'decimal:2',
     ];
 
     /*
