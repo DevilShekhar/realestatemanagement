@@ -50,24 +50,26 @@ class PropertySearchController extends Controller
                     'id',
                     'name'
                 ]);
-
             $states = State::orderBy('name')
-                ->get([
-                    'id',
-                    'name'
-                ]);
+                    ->get([
+                        'id',
+                        'name',
+                        'country_id'
+                    ]);
 
-            $cities = City::orderBy('name')
-                ->get([
-                    'id',
-                    'name'
-                ]);
+                $cities = City::orderBy('name')
+                    ->get([
+                        'id',
+                        'name',
+                        'state_id'
+                    ]);
 
-            $areas = Area::orderBy('name')
-                ->get([
-                    'id',
-                    'name'
-                ]);
+                $areas = Area::orderBy('name')
+                    ->get([
+                        'id',
+                        'name',
+                        'city_id'
+                    ]);
 
 
             /*

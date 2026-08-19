@@ -2,6 +2,74 @@
 @section('content')
 <section class="section">   
   <div class="row">
+    @if(in_array($role, ['super-admin', 'admin', 'agent','buyer']))
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-statistic-4">
+                    <div class="align-items-center justify-content-between">
+                        <div class="row">
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 pr-0 pt-3">
+                                <div class="card-content">
+                                    <h5 class="font-15">Find Property</h5>
+
+                                    <h2 class="mb-3 font-18">
+                                        Properties
+                                    </h2>
+
+                                    <p class="mb-0">
+                                        <a href="{{ url('get-properties') }}" class="btn btn-primary btn-sm">
+                                            <i class="fas fa-search"></i>
+                                            Find Property
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 pl-0">
+                                <div class="banner-img">
+                                    <img src="{{ asset('assets/img/banner/1.png') }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+     @if(in_array($role, ['super-admin', 'admin', 'agent','seller']))
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-statistic-4">
+                <div class="align-items-center justify-content-between">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 pr-0 pt-3">
+                            <div class="card-content">
+                                <h5 class="font-15">Create Property</h5>
+
+                                <h2 class="mb-3 font-18">
+                                    Property
+                                </h2>
+
+                                <p class="mb-0">
+                                    <a href="{{ route('property.create') }}" class="btn btn-primary btn-sm">
+                                        <i class="fas fa-plus"></i>
+                                        Add Property
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 pl-0">
+                            <div class="banner-img">
+                                <img src="{{ asset('assets/img/banner/1.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
     @if(in_array($role, ['super-admin', 'admin', 'agent']))
       <div class="col-lg-4">
         <div class="card">
