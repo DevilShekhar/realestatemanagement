@@ -86,11 +86,7 @@
                                                 <td>
                                                     <div class="dropdown">
                                                         <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Action</button>
-                                                        <div class="dropdown-menu">
-                                                            <a href="{{ route('users.show', $user->id) }}" class="dropdown-item">
-                                                                <i class="fas fa-eye"></i>
-                                                                View
-                                                            </a>
+                                                        <div class="dropdown-menu">                                                            
                                                             <a href="{{ route('users.edit', $user->id) }}" class="dropdown-item" >
                                                                 <i class="fas fa-edit"></i>
                                                                 Edit

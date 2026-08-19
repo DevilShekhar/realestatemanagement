@@ -585,29 +585,7 @@
 
                             <div class="row">
 
-                                {{-- Price --}}
-                                <div class="col-md-4">
-
-                                    <div class="form-group">
-
-                                        <label for="price">
-                                            Price
-                                        </label>
-
-
-                                        <input
-                                            type="number"
-                                            name="price"
-                                            id="price"
-                                            step="0.01"
-                                            min="0"
-                                            class="form-control"
-                                            value="{{ old('price', $property->price) }}"
-                                            placeholder="Enter price">
-
-                                    </div>
-
-                                </div>
+                               
 
 
                                 {{-- Property Area --}}
@@ -751,27 +729,46 @@
                                 </div>
 
 
-                                {{-- Parking --}}
+                                {{-- Car Parking --}}
                                 <div class="col-md-4">
-
                                     <div class="form-group">
-
-                                        <label for="parking">
-                                            Parking
-                                        </label>
-
+                                        <label for="car_parking">Car Parking</label>
 
                                         <input
                                             type="number"
-                                            name="parking"
-                                            id="parking"
-                                            min="0"
+                                            name="car_parking"
+                                            id="car_parking"
                                             class="form-control"
-                                            value="{{ old('parking', $property->parking) }}"
-                                            placeholder="Parking spaces">
+                                            min="0"
+                                            value="{{ old('car_parking', $property->car_parking ?? '') }}"
+                                            placeholder="Enter car parking"
+                                        >
 
+                                        @error('car_parking')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
+                                </div>
 
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="bike_parking">Bike Parking</label>
+
+                                        <input
+                                            type="number"
+                                            name="bike_parking"
+                                            id="bike_parking"
+                                            class="form-control"
+                                            min="0"
+                                            value="{{ old('bike_parking', $property->bike_parking ?? '') }}"
+                                            placeholder="Enter bike parking"
+                                        >
+
+                                        @error('bike_parking')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
                                 </div>
 
                             </div>
@@ -1198,6 +1195,29 @@
                                         </div>
 
                                     </div>
+                                    {{-- Commercial Budget --}}
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="commercial_budget">
+                                                Commercial Budget
+                                            </label>
+
+                                            <input
+                                                type="number"
+                                                name="commercial_budget"
+                                                id="commercial_budget"
+                                                min="0"
+                                                step="0.01"
+                                                class="form-control"
+                                                value="{{ old('commercial_budget', $property->commercial_budget ?? '') }}"
+                                                placeholder="Enter commercial budget"
+                                            >
+
+                                            @error('commercial_budget')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
 
 
                                     {{-- Washrooms --}}
@@ -1268,29 +1288,51 @@
                                         </div>
 
                                     </div>
+                                    {{-- Car Parking --}}
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="car_parking">Car Parking</label>
 
+                                                <input
+                                                    type="number"
+                                                    name="car_parking"
+                                                    id="car_parking"
+                                                    class="form-control"
+                                                    min="0"
+                                                    value="{{ old('car_parking', $property->car_parking ?? '') }}"
+                                                    placeholder="Enter car parking"
+                                                >
 
-                                    {{-- Commercial Parking --}}
-                                    <div class="col-md-4">
-
-                                        <div class="form-group">
-
-                                            <label>
-                                                Parking
-                                            </label>
-
-
-                                            <input
-                                                type="number"
-                                                name="parking"
-                                                min="0"
-                                                class="form-control"
-                                                value="{{ old('parking', $property->parking) }}"
-                                                placeholder="Parking spaces">
-
+                                                @error('car_parking')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
                                         </div>
 
-                                    </div>
+                                        {{-- Bike / Two-Wheeler Parking --}}
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="bike_parking">Bike / Two-Wheeler Parking</label>
+
+                                                <input
+                                                    type="number"
+                                                    name="bike_parking"
+                                                    id="bike_parking"
+                                                    class="form-control"
+                                                    min="0"
+                                                    value="{{ old('bike_parking', $property->bike_parking ?? '') }}"
+                                                    placeholder="Enter bike parking"
+                                                >
+
+                                                @error('bike_parking')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                        </div>
+
+
+                                    
+                                    
 
                                 </div>
 
@@ -1334,6 +1376,29 @@
                                         </div>
 
                                     </div>
+                                     {{-- Price --}}
+                                <div class="col-md-4">
+
+                                    <div class="form-group">
+
+                                        <label for="price">
+                                            Amount
+                                        </label>
+
+
+                                        <input
+                                            type="number"
+                                            name="price"
+                                            id="price"
+                                            step="0.01"
+                                            min="0"
+                                            class="form-control"
+                                            value="{{ old('price', $property->price) }}"
+                                            placeholder="Enter price">
+
+                                    </div>
+
+                                </div>
 
 
                                     {{-- Road Width --}}
