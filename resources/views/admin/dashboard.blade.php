@@ -51,7 +51,7 @@
                                 </h2>
 
                                 <p class="mb-0">
-                                    <a href="{{ route('property.create') }}" class="btn btn-primary btn-sm">
+                                    <a href="{{ route('properties.create') }}" class="btn btn-primary btn-sm">
                                         <i class="fas fa-plus"></i>
                                         Add Property
                                     </a>
