@@ -34,8 +34,8 @@
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
                                     <div class="btn-box">
-                                        <a class="btn-one" href="#">About Company<span class="flaticon-next"></span></a>
-                                        <a class="project-view-button" href="#">Project 360<span style="font-size: 20px;">&deg</span>View</a>
+                                        <a class="btn-one" href="{{ route('buyer.login') }}">Login<span class="flaticon-next"></span></a>
+                                        <a class="project-view-button" href="{{ route('buyer.register') }}">Register</a>
                                     </div>
                                 </div>
                             </div>
@@ -70,8 +70,8 @@
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
                                     <div class="btn-box">
-                                        <a class="btn-one" href="#">Our Services<span class="flaticon-next"></span></a>
-                                        <a class="project-view-button" href="#">Project 360<span style="font-size: 20px;">&deg</span>View</a>
+                                        <a class="btn-one" href="{{ route('buyer.login') }}">Login<span class="flaticon-next"></span></a>
+                                        <a class="project-view-button" href="{{ route('buyer.register') }}">Register</a>
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
                                     <div class="big-title">
-                                       Rent a Property
+                                       Upload Your Property
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@
                                 data-hoffset="['15','15','15','15']" data-voffset="['-75','-10','-25','-30']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
                         {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
-                                    <div class="text">Find comfortable residential and commercial properties available for rent.</div>
+                                    <div class="text"> List your property for sale or rent and reach the right buyers and tenants.</div>
                                 </div>
                             </div>
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','500']" data-whitespace="normal"
@@ -103,8 +103,8 @@
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
                                     <div class="btn-box">
-                                        <a class="btn-one" href="#">About Company<span class="flaticon-next"></span></a>
-                                        <a class="project-view-button" href="#">Project 360<span style="font-size: 20px;">&deg</span>View</a>
+                                         <a class="btn-one" href="{{ route('seller.login') }}">Login<span class="flaticon-next"></span></a>
+                                        <a class="project-view-button" href="{{ route('seller.register') }}">Register</a>
                                     </div>
                                 </div>
                             </div>
@@ -195,7 +195,7 @@
             <div class="container map-content-box">
                 <!-- Section Title -->
                 <div class="sec-title with-text max-width text-center wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
-                    <p>Popular Locations</p>
+                    <p class="text-white">Popular Locations</p>
                     <div class="title">Find Properties <span>In Popular Cities</span></div>
                     <p class="bottom-text">
                         Explore residential and commercial properties available
@@ -230,7 +230,7 @@
                                                 </p>
                                             </div>
                                             <div class="read-more">
-                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                                <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
                                             </div>
                                         </div>
                                     </div>
@@ -257,7 +257,7 @@
                                                 </p>
                                             </div>
                                             <div class="read-more">
-                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
                                             </div>
                                         </div>
                                     </div>
@@ -284,7 +284,7 @@
                                                 </p>
                                             </div>
                                             <div class="read-more">
-                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
                                             </div>
                                         </div>
                                     </div>
@@ -311,7 +311,7 @@
                                                 </p>
                                             </div>
                                             <div class="read-more">
-                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
                                             </div>
                                         </div>
                                     </div>
@@ -338,7 +338,7 @@
                                                 </p>
                                             </div>
                                             <div class="read-more">
-                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
                                             </div>
                                         </div>
                                     </div>
@@ -365,7 +365,7 @@
                                                 </p>
                                             </div>
                                             <div class="read-more">
-                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
                                             </div>
                                         </div>
                                     </div>
@@ -393,7 +393,7 @@
                                                 </p>
                                             </div>
                                             <div class="read-more">
-                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
                                             </div>
                                         </div>
                                     </div>
@@ -420,7 +420,7 @@
                                                 </p>
                                             </div>
                                             <div class="read-more">
-                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
                                             </div>
                                         </div>
                                     </div>
@@ -447,7 +447,7 @@
                                                 </p>
                                             </div>
                                             <div class="read-more">
-                                                <a class="btn-one" href="{{ route('login') }}"> View Properties<span class="flaticon-next"></span>  </a>
+                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
                                             </div>
                                         </div>
                                     </div>
@@ -1304,7 +1304,7 @@
         <section class="working-area" style="background-image:url('{{ asset('assets/frontend/images/parallax-background/working-bg.jpg') }}');">
             <div class="container map-content-box">
                 <div class="sec-title with-text max-width text-center wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
-                    <p>FOR PROPERTY SELLERS</p>
+                    <p class="bottom-text">FOR PROPERTY SELLERS</p>
                     <div class="title">Sell Your <span>Property With Confidence</span></div>
                     <p class="bottom-text">List your property, reach genuine buyers and connect with interested customers easily.</p>
                 </div>
@@ -1341,7 +1341,7 @@
 
                     <div class="col-xl-6 col-lg-6 col-md-12">
                         <div class="sec-title">
-                            <p>FOR PROPERTY SELLERS</p>
+                            <p class="text-white">FOR PROPERTY SELLERS</p>
                             <div class="title">List Your Property And <span>Reach More Buyers</span></div>
                         </div>
                         <div class="text">
