@@ -88,11 +88,7 @@
                             </ul>
                         </div>
                     </nav>
-                    <div class="mainmenu-right style2">                      
-                        <div class="button">
-                            <a class="btn-one" href="{{ route('login') }}">lOGIN<span class="flaticon-next"></span></a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </header>
