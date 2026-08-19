@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rule;
 
 class BuyerRegistrationController extends Controller
 {
@@ -23,12 +24,22 @@ class BuyerRegistrationController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => [
+                'required',
+                'string',
+                'max:255',
+            ],
 
             'email' => [
                 'required',
                 'email',
-                'unique:users,email',
+                'max:255',
+
+                // Email must be unique only among buyers.
+                Rule::unique('users', 'email')
+                    ->where(function ($query) {
+                        return $query->where('user_type', 'buyer');
+                    }),
             ],
 
             'mobile' => [
@@ -49,19 +60,26 @@ class BuyerRegistrationController extends Controller
                 'confirmed',
                 'min:8',
             ],
+        ], [
+            'email.unique' => 'This email is already registered as a buyer.',
+            'mobile.unique' => 'This mobile number is already registered.',
         ]);
 
         $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
+            'user_type' => 'buyer',
             'mobile' => $validated['mobile'],
             'gender' => $validated['gender'],
             'status' => 1,
             'password' => Hash::make($validated['password']),
         ]);
 
+        // Spatie role
         $user->assignRole('buyer');
 
-        return redirect()->route('login')->with('success', 'Buyer registration completed successfully.');
+        return redirect()
+            ->route('buyer.login')
+            ->with('success', 'Buyer registration completed successfully. Please login.');
     }
 }

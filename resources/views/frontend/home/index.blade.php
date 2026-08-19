@@ -1264,7 +1264,7 @@
                                 Register As Buyer
                                 <span class="flaticon-next"></span>
                             </a>
-                            <a class="btn-one" href="{{ route('login') }}">
+                            <a class="btn-one" href="{{ route('buyer.login') }}">
                                 Buyer Login
                                 <span class="flaticon-next"></span>
                             </a>
@@ -1353,7 +1353,7 @@
                                 Register As Seller
                                 <span class="flaticon-next"></span>
                             </a>
-                            <a class="btn-one" href="{{ route('login') }}">
+                            <a class="btn-one" href="{{ route('seller.login') }}">
                                 Seller Login
                                 <span class="flaticon-next"></span>
                             </a>
