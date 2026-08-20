@@ -14,23 +14,25 @@
                             <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{{ asset('assets/frontend/images/slides/v1-1.jpg') }}">
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','500']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['-160','-100','-110','-105']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                                data-hoffset="['15','15','15','15']" data-voffset="['-150','-110','-100','-90']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
                                     <div class="big-title">
-                                        Find Your Perfect Property
+                                       Find the Right Property in Pune & Mumbai
                                     </div>
                                 </div>
                             </div>
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','500']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['-75','-10','-25','-30']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
+                                data-hoffset="['15','15','15','15']" data-voffset="['30','25','20','15']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
                         {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
-                                    <div class="text">Discover the right home, apartment, office, or commercial property for your next move.</div>
+                                    <div class="text">Looking to buy, sell, rent or list a property?</div>
+                                    <div class="text">Kalp Realty brings together residential, commercial, industrial and land properties—all in one easy-to-use platform.</div>
+                                    <div class="text">Whether you're looking for a home for your family, a space for your business or a property for investment, start your search with Kalp Realty.</div>
                                 </div>
                             </div>
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','500']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['25','90','100','85']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                                data-hoffset="['15','15','15','15']" data-voffset="['155','125','120','110']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
                                     <div class="btn-box">
@@ -114,351 +116,981 @@
                 </div>
             </div>
         </section>
-        <!--End Main Slider-->      
-        <!--Start about area-->
-        <section class="about-area">
+        <!--End Main Slider-->  
+        <section class="pune-properties-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-5 col-lg-5">
-                        <div class="about-image-box">
-                            <div class="inner-box">
-                                <img src="{{ asset('assets/frontend/images/resources/about-image.jpg') }}" alt="Awesome Image">
-                                <div class="overlay">
-                                    <div class="box">
-                                        <div class="icon wow zoomIn" data-wow-delay="300ms" data-wow-duration="1500ms">
-                                            <img src="{{ asset('assets/frontend/images/icon/home.png') }}" alt="Home Icon">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-box">
-                                <p>Experiencd & Well knowledgeable Interior designers.</p>
-                                <h3>Shelly Johnson, <span>CEO & Founder</span></h3>
-                            </div>
+                <div class="pune-properties-wrapper">
+                    <div class="pune-properties-content">
+                        <div class="list-property-label">
+                            <span class="label-line"></span>
+                            <i class="fa fa-home"></i>
+                            <span>PROPERTY DESTINATION</span>
+                            <span class="label-line"></span>
                         </div>
-                    </div>
-                    <div class="col-xl-7 col-lg-7">
-                        <div class="about-text">
-                            <div class="sec-title">
-                                <p>About Company</p>
-                                <div class="title">A small efficient<br> interior <span>designing team</span></div>
-                            </div>
-                            <div class="inner-content">
-                                <div class="text">
-                                    <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound.</p>
-                                    <p>Indignation and dislike men who are so beguiled and demoralized by the charms pleasure of the moment, so blinded by desire, that they cannot foresee.</p>
-                                </div>
-                                <div class="about-carousel-box owl-carousel owl-theme">
-                                    <!--Start Single Box-->
-                                    <div class="single-box">
-                                        <div class="icon-holder">
-                                            <span class="icon-target"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h3>Mission Statement</h3>
-                                            <p>Same as saying through shrinking from pain these perfectly simple and easy to distinguish.</p>
-                                        </div>
-                                    </div>
-                                    <!--End Single Box-->
-                                    <!--Start Single Box-->
-                                    <div class="single-box">
-                                        <div class="icon-holder">
-                                            <span class="icon-target"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h3>Mission Statement</h3>
-                                            <p>Same as saying through shrinking from pain these perfectly simple and easy to distinguish.</p>
-                                        </div>
-                                    </div>
-                                    <!--End Single Box-->
-                                    <!--Start Single Box-->
-                                    <div class="single-box">
-                                        <div class="icon-holder">
-                                            <span class="icon-target"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h3>Mission Statement</h3>
-                                            <p>Same as saying through shrinking from pain these perfectly simple and easy to distinguish.</p>
-                                        </div>
-                                    </div>
-                                    <!--End Single Box-->
-                                </div>
-
-                            </div>
+                        
+                        <h2>Explore Properties</h2>
+                        <h3>Across Pune</h3>
+                        <div class="pune-title-line"></div>
+                        <p class="pune-properties-intro">Find properties in locations that suit your lifestyle, business and investment needs.</p>
+                        <div class="pune-location-badge">
+                            <i class="fa fa-map-marker"></i>
+                            <span>Pune</span>
                         </div>
+                        <h4>Explore properties across:</h4>
+                        <div class="pune-location-list">
+                            <span>Hinjawadi</span>
+                            <span>Wakad</span>
+                            <span>Baner</span>
+                            <span>Balewadi</span>
+                            <span>Kharadi</span>
+                            <span>Viman Nagar</span>
+                            <span>Hadapsar</span>
+                            <span>Wagholi</span>
+                            <span>Tathawade</span>
+                            <span>Punawale</span>
+                            <span>Ravet</span>
+                            <span>Moshi</span>
+                            <span>Pimpri-Chinchwad</span>
+                            <span>Chakan and more</span>
+                        </div>
+                        <a href="{{ route('properties.index') }}" class="pune-properties-button">
+                            <span>
+                                <i class="fa fa-map-marker"></i>
+                                Explore Pune Properties
+                            </span>
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
-
             </div>
         </section>
-         <section class="working-area"  style="background-image: url('{{ asset('assets/frontend/images/parallax-background/working-bg.jpg') }}');">
-            <div class="container map-content-box">
-                <!-- Section Title -->
-                <div class="sec-title with-text max-width text-center wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
-                    <p class="text-white">Popular Locations</p>
-                    <div class="title">Find Properties <span>In Popular Cities</span></div>
-                    <p class="bottom-text">
-                        Explore residential and commercial properties available
-                        for sale and rent across popular cities. Find the right
-                        property in the location that suits your needs.
+        <section class="pune-properties-section">
+            <div class="container">
+                <div class="mumbai-properties-wrapper">
+                    <div class="pune-properties-content">
+                        <div class="list-property-label">
+                            <span class="label-line"></span>
+                            <i class="fa fa-home"></i>
+                            <span>PROPERTY DESTINATION</span>
+                            <span class="label-line"></span>
+                        </div>
+                        <h2>Explore Properties</h2>
+                        <h3>Across Mumbai</h3>
+                        <div class="pune-title-line"></div>
+                        <p class="pune-properties-intro">Find properties in locations that suit your lifestyle, business and investment needs.</p>
+                        <div class="pune-location-badge">
+                            <i class="fa fa-map-marker"></i>
+                            <span>Mumbai</span>
+                        </div>
+                        <h4>Explore properties across:</h4>
+                        <div class="pune-location-list">
+                            <span>Andheri</span>
+                            <span>Powai</span>
+                            <span>Sakinaka</span>
+                            <span>Bandra</span>
+                            <span>Goregaon</span>
+                            <span>Malad</span>
+                            <span>Borivali</span>
+                            <span>Mulund</span>
+                            <span>Bhandup</span>
+                            <span>Thane</span>
+                            <span>Navi Mumbai</span>
+                            <span>Lower Parel</span>
+                            <span>Dadar</span>
+                            <span>Panvel and more</span>
+                        </div>
+                        <a href="{{ route('properties.index') }}" class="pune-properties-button">
+                            <span>
+                                <i class="fa fa-map-marker"></i>
+                                Explore Mumbai Properties
+                            </span>
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+         
+        
+        <section class="property-categories-section">
+            <div class="container">
+                <div class="property-categories-header text-center">
+                    <span class="property-eyebrow">
+                        PROPERTY CATEGORIES
+                    </span>
+                    <h2>
+                        Find the Property
+                        <span>That's Right for You</span>
+                    </h2>
+                    <div class="property-title-line">
+                        <span></span>
+                        <i></i>
+                        <span></span>
+                    </div>
+                    <p>
+                        From your dream home to your next business location,<br>
+                        Kalp Realty helps you explore different types of properties.
                     </p>
                 </div>
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                        <div class="services-style2-content">
-                            <!-- Existing Owl Carousel -->
-                            <div class="services-carousel owl-carousel owl-theme">
-                                <!-- Pune -->
-                                <div class="single-service-style2">
-                                    <div class="img-holder">
-                                        <img
-                                            src="{{ asset('assets/frontend/images/services/v2-1.jpg') }}"
-                                            alt="Properties in Pune">
-                                        <div class="overlay-style-two"></div>
-                                    </div>
-                                    <div class="text-holder">
-                                        <div class="icon-holder">
-                                            <span class="icon-concept"></span>
-                                        </div>
-                                        <div class="inner">
-                                            <h3>Pune</h3>
-                                            <div class="text">
-                                                <p>
-                                                    Explore apartments, flats, villas,
-                                                    plots and commercial properties
-                                                    available for sale and rent in Pune.
-                                                </p>
-                                            </div>
-                                            <div class="read-more">
-                                                <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Mumbai -->
-                                <div class="single-service-style2">
-                                    <div class="img-holder">
-                                        <img
-                                           src="{{ asset('assets/frontend/images/services/v2-2.jpg') }}"
-                                            alt="Properties in Mumbai">
-                                        <div class="overlay-style-two"></div>
-                                    </div>
-                                    <div class="text-holder">
-                                        <div class="icon-holder">
-                                           <span class="icon-scheme"></span>
-                                        </div>
-                                        <div class="inner">
-                                            <h3>Mumbai</h3>
-                                            <div class="text">
-                                                <p>
-                                                    Discover premium apartments,
-                                                    homes, offices, shops and commercial
-                                                    properties for sale and rent in Mumbai.
-                                                </p>
-                                            </div>
-                                            <div class="read-more">
-                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Nashik -->
-                                <div class="single-service-style2">
-                                    <div class="img-holder">
-                                        <img
-                                            src="{{ asset('assets/frontend/images/services/v2-3.jpg') }}"
-                                            alt="Properties in Nashik">
-                                        <div class="overlay-style-two"></div>
-                                    </div>
-                                    <div class="text-holder">
-                                        <div class="icon-holder">
-                                            <span class="icon-cupboard"></span>
-                                        </div>
-                                        <div class="inner">
-                                            <h3>Nashik</h3>
-                                            <div class="text">
-                                                <p>
-                                                    Find residential properties, plots,
-                                                    apartments and commercial spaces
-                                                    available for sale and rent in Nashik.
-                                                </p>
-                                            </div>
-                                            <div class="read-more">
-                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Nagpur -->
-                                <div class="single-service-style2">
-                                    <div class="img-holder">
-                                        <img
-                                            src="{{ asset('assets/frontend/images/services/v2-1.jpg') }}"
-                                            alt="Properties in Nagpur">
-                                        <div class="overlay-style-two"></div>
-                                    </div>
-                                    <div class="text-holder">
-                                        <div class="icon-holder">
-                                            <span class="icon-concept"></span>
-                                        </div>
-                                        <div class="inner">
-                                            <h3>Nagpur</h3>
-                                            <div class="text">
-                                                <p>
-                                                    Browse flats, houses, plots and
-                                                    commercial properties available
-                                                    for sale and rent in Nagpur.
-                                                </p>
-                                            </div>
-                                            <div class="read-more">
-                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Thane -->
-                                <div class="single-service-style2">
-                                    <div class="img-holder">
-                                        <img
-                                            src="{{ asset('assets/frontend/images/services/v2-2.jpg') }}"
-                                            alt="Properties in Thane">
-                                        <div class="overlay-style-two"></div>
-                                    </div>
-                                    <div class="text-holder">
-                                        <div class="icon-holder">
-                                            <span class="icon-scheme"></span>
-                                        </div>
-                                        <div class="inner">
-                                            <h3>Thane</h3>
-                                            <div class="text">
-                                                <p>
-                                                    Explore flats, apartments, villas
-                                                    and commercial properties available
-                                                    for sale and rent in Thane.
-                                                </p>
-                                            </div>
-                                            <div class="read-more">
-                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Kolhapur -->
-                                <div class="single-service-style2">
-                                    <div class="img-holder">
-                                        <img
-                                            src="{{ asset('assets/frontend/images/services/v2-3.jpg') }}"
-                                            alt="Properties in Kolhapur">
-                                        <div class="overlay-style-two"></div>
-                                    </div>
-                                    <div class="text-holder">
-                                        <div class="icon-holder">
-                                            <span class="icon-cupboard"></span>
-                                        </div>
-                                        <div class="inner">
-                                            <h3>Kolhapur</h3>
-                                            <div class="text">
-                                                <p>
-                                                   Find homes, apartments, plots and
-                                                    commercial properties available
-                                                    for sale and rent in Kolhapur.
-                                                </p>
-                                            </div>
-                                            <div class="read-more">
-                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Aurangabad -->
-                                <div class="single-service-style2">
-                                    <div class="img-holder">
-                                        <img
-                                            src="{{ asset('assets/frontend/images/services/v2-1.jpg') }}"
-                                            alt="Properties in Aurangabad">
-
-                                        <div class="overlay-style-two"></div>
-                                    </div>
-                                    <div class="text-holder">
-                                        <div class="icon-holder">
-                                            <span class="icon-concept"></span>
-                                        </div>
-                                        <div class="inner">
-                                            <h3>Aurangabad</h3>
-                                            <div class="text">
-                                                <p>
-                                                    Discover residential homes, plots,
-                                                    apartments and commercial properties
-                                                    for sale and rent in Aurangabad.
-                                                </p>
-                                            </div>
-                                            <div class="read-more">
-                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Satara -->
-                                <div class="single-service-style2">
-                                    <div class="img-holder">
-                                        <img
-                                            src="{{ asset('assets/frontend/images/services/v2-2.jpg') }}"
-                                            alt="Properties in Satara">
-                                        <div class="overlay-style-two"></div>
-                                    </div>
-                                    <div class="text-holder">
-                                        <div class="icon-holder">
-                                            <span class="icon-scheme"></span>
-                                        </div>
-                                        <div class="inner">
-                                            <h3>Satara</h3>
-                                            <div class="text">
-                                                <p>
-                                                    Explore residential properties,
-                                                    plots and commercial spaces
-                                                    available for sale and rent in Satara.
-                                                </p>
-                                            </div>
-                                            <div class="read-more">
-                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Solapur -->
-                                <div class="single-service-style2">
-                                    <div class="img-holder">
-                                        <img
-                                            src="{{ asset('assets/frontend/images/services/v2-3.jpg') }}"
-                                            alt="Properties in Solapur">
-                                        <div class="overlay-style-two"></div>
-                                    </div>
-                                    <div class="text-holder">
-                                        <div class="icon-holder">
-                                            <span class="icon-cupboard"></span>
-                                        </div>
-                                        <div class="inner">
-                                            <h3>Solapur</h3>
-                                            <div class="text">
-                                                <p>
-                                                    Find houses, flats, plots and
-                                                    commercial properties available
-                                                    for sale and rent in Solapur.
-                                                </p>
-                                            </div>
-                                            <div class="read-more">
-                                               <a class="btn-one" href="{{ route('buyer.login') }}"> View Properties<span class="flaticon-next"></span>  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="property-category-row row-residential">
+                    <!-- IMAGE -->
+                    <div class="property-category-image">
+                        <img src="{{ asset('assets/frontend/images/resources/residential.png') }}"
+                            alt="Residential Properties">
+                        <div class="property-image-shape"></div>
+                        <div class="property-category-icon">
+                            <span class="icon-architecture-and-city"></span>
+                        </div>
+                    </div>
+                    <div class="property-category-content">             
+                        <div class="property-content-wrapper">
+                            <div class="property-number">
+                                01
                             </div>
-                            <!-- End Existing Owl Carousel -->
+                            <div class="property-main-content">
+                                <h3>
+                                    Residential Properties
+                                </h3>
+                                <p class="property-short-description">
+                                    Find a place to call home.
+                                </p>
+                                <div class="property-items residential-items">
+                                    <span>
+                                        Apartments &amp; Flats
+                                    </span>
+                                    <span>
+                                        Villas &amp; Bungalows
+                                    </span>
+                                    <span>
+                                        Independent Houses
+                                    </span>
+
+                                    <span>
+                                        Builder Floors
+                                    </span>
+
+                                    <span>
+                                        Resale Homes
+                                    </span>
+
+                                    <span>
+                                        New Residential Projects
+                                    </span>
+
+                                </div>
+
+                                <a href="#"
+                                class="property-category-btn">
+
+                                    <span>
+                                        Explore Residential Properties
+                                    </span>
+
+                                    <i class="flaticon-next"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="property-decoration">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-category-row row-commercial">
+                    <!-- CONTENT -->
+                    <div class="property-category-content">              
+                                    <div class="property-content-wrapper">
+                            <div class="property-number">
+                                02
+                            </div>
+                            <div class="property-main-content">
+                                <h3>
+                                    Commercial Properties
+                                </h3>
+                                <p class="property-short-description">
+                                    Find the right space for your business.
+                                </p>
+                                <div class="property-items commercial-items">
+                                    <span>
+                                        Office Spaces
+                                    </span>
+
+                                    <span>
+                                        Shops
+                                    </span>
+
+                                    <span>
+                                        Showrooms
+                                    </span>
+
+                                    <span>
+                                        Commercial Spaces
+                                    </span>
+                                </div>
+                                <a href="#"
+                                class="property-category-btn">
+                                    <span>
+                                        Explore Commercial Properties
+                                    </span>
+                                    <i class="flaticon-next"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="property-decoration commercial-decoration">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="property-category-image">
+                        <img src="{{ asset('assets/frontend/images/resources/commercial.png') }}"
+                            alt="Commercial Properties">
+                        <div class="property-image-shape"></div>
+                        <div class="property-category-icon">
+                            <span class="icon-scheme"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="property-category-row row-industrial">
+                    <div class="property-category-image">
+                        <img src="{{ asset('assets/frontend/images/resources/industrial.png') }}"
+                            alt="Industrial Properties">
+                        <div class="property-image-shape"></div>
+                        <div class="property-category-icon">
+                            <span class="icon-cupboard"></span>
+                        </div>
+                    </div>
+                    <div class="property-category-content">            
+                        <div class="property-content-wrapper">
+                            <div class="property-number">
+                                03
+                            </div>
+                            <div class="property-main-content">
+                                <h3>
+                                    Industrial Properties
+                                </h3>
+                                <p class="property-short-description">
+                                    Find properties for business operations and storage.
+                                </p>
+                                <div class="property-items industrial-items">
+                                    <span>
+                                        Industrial Units
+                                    </span>
+                                    <span>
+                                        Warehouses
+                                    </span>
+                                    <span>
+                                        Factories
+                                    </span>
+                                    <span>
+                                        Godowns
+                                    </span>
+                                </div>
+                                <a href="#"
+                                class="property-category-btn">
+                                    <span>
+                                        Explore Industrial Properties
+                                    </span>
+                                    <i class="flaticon-next"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="property-decoration">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="property-category-row row-land">
+                    <!-- CONTENT -->
+                    <div class="property-category-content">              
+                        <div class="property-content-wrapper">
+                            <div class="property-number">
+                                04
+                            </div>
+                            <div class="property-main-content">
+                                <h3>
+                                    Land &amp; Plots
+                                </h3>
+                                <p class="property-short-description">
+                                    Explore land for your future plans.
+                                </p>
+                                <div class="property-items land-items">
+                                    <span>
+                                        Residential Plots
+                                    </span>
+                                    <span>
+                                        Industrial Land
+                                    </span>
+                                    <span>
+                                        Open Plots
+                                    </span>
+                                    <span>
+                                        Agricultural Land
+                                    </span>
+                                    <span>
+                                        Commercial Land
+                                    </span>
+                                    <span>
+                                        Farm Land
+                                    </span>
+                                </div>
+                                <a href="#"
+                                class="property-category-btn">
+                                    <span>
+                                        Explore Land &amp; Plots
+                                    </span>
+                                    <i class="flaticon-next"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="property-decoration land-decoration">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <!-- IMAGE -->
+                    <div class="property-category-image">
+                        <img src="{{ asset('assets/frontend/images/resources/land.png') }}"
+                            alt="Land & Plots">
+                        <div class="property-image-shape"></div>
+                        <div class="property-category-icon">
+                            <span class="icon-concept"></span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+       
+        <section class="buy-property-section">
+            <div class="container">
+                <div class="property-categories-header text-center">
+                    <span class="property-eyebrow">
+                      FOR PROPERTY BUYERS
+                    </span>
+                    <h2>  Looking to  <span>Buy a Property?</span>
+                    </h2>
+                    <div class="property-title-line">
+                        <span></span>
+                        <i></i>
+                        <span></span>
+                    </div>
+                    <p > Buying a property is an important decision. Kalp Realty makes it easier to explore different property options based on your needs. </p>
+                </div>
+                <div class="buy-property-wrapper">
+                    <div class="buy-property-image">
+                        <img src="{{ asset('assets/frontend/images/resources/buy-a-property.png') }}" alt="Buy Property">
+                        <div class="buy-image-overlay"></div>
+                        <div class="buy-image-message">
+                            <div class="buy-message-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                            <div class="buy-message-text">
+                                <span>Your Next Property Could Be</span>
+                                <strong>Just a Search Away.</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buy-property-content">
+                        <div class="buy-property-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p class="buy-property-description"> Buying a property is an important decision. Kalp Realty makes it easier to explore different property options based on your needs. </p>
+                        <div class="buy-property-line"></div>
+                        <!-- Find heading -->
+                        <div class="buy-find-title">
+                            Find:
+                        </div>
+                        <div class="buy-property-types">
+                            <a href="#" class="buy-property-type">
+                                <i class="fa fa-building"></i>
+                                <span>Flats</span>
+                            </a>
+                            <a href="#" class="buy-property-type">
+                                <i class="fa fa-building"></i>
+                                <span>Apartments</span>
+                            </a>
+                            <a href="#" class="buy-property-type">
+                                <i class="fa fa-home"></i>
+                                <span>Villas</span>
+                            </a>
+                            <a href="#" class="buy-property-type">
+                                <i class="fa fa-home"></i>
+                                <span>Houses</span>
+                            </a>
+                            <a href="#" class="buy-property-type">
+                                <i class="fa fa-building"></i>
+                                <span>Offices</span>
+                            </a>
+                            <a href="#" class="buy-property-type">
+                                <i class="fa fa-shopping-bag"></i>
+                                <span>Shops</span>
+                            </a>
+                            <a href="#" class="buy-property-type">
+                                <i class="fa fa-map-marker"></i>
+                                <span>Plots</span>
+                            </a>
+                            <a href="#" class="buy-property-type">
+                                <i class="fa fa-tree"></i>
+                                <span>Land</span>
+                            </a>
+                            <a href="#" class="buy-property-type">
+                                <i class="fa fa-home"></i>
+                                <span>Warehouses</span>
+                            </a>
+                            <a href="#" class="buy-property-type">
+                                <i class="fa fa-industry"></i>
+                                <span>Factories</span>
+                            </a>
+                        </div>
+                        <div class="buy-search-text">
+                            Search by <strong>location</strong>, <strong>property type</strong> and <strong>budget.</strong>
+                        </div>
+                        <a href="{{ route('properties.index') }}" class="buy-property-cta">
+                            <span>
+                                Explore Properties for Sale
+                            </span>
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="rent-property-section">
+            <div class="container">
+                <div class="property-categories-header text-center">
+                    <span class="property-eyebrow">
+                      FOR PROPERTY RENTERS
+                    </span>
+                    <h2>Find a Property<span> for Rent </span>
+                    </h2>
+                    <div class="property-title-line">
+                        <span></span>
+                        <i></i>
+                        <span></span>
+                    </div>
+                    <p class="rent-property-description">  Looking for a home or business space?<br>   Explore rental properties across <strong>Pune</strong> and <strong>Mumbai.</strong>  </p>
+                </div>
+                <div class="rent-property-wrapper">
+                    <div class="rent-property-image">
+                        <img src="{{ asset('assets/frontend/images/resources/find-property.png') }}" alt="Find a Property for Rent">
+                        <div class="rent-image-overlay"></div>
+                        <div class="rent-image-content">
+                            <div class="rent-image-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                            <div class="rent-image-text">
+                                <span>FIND A SPACE THAT</span>
+                                <strong>FITS YOUR NEEDS.</strong>
+                            </div>                     
+                        </div>
+                    </div>
+                    <div class="rent-property-content">
+                        <div class="rent-property-decoration">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        
+                        <p class="rent-property-description">
+                            Looking for a home or business space?<br>
+                            Explore rental properties across <strong>Pune</strong> and <strong>Mumbai.</strong>
+                        </p>
+                        <div class="rent-property-divider">
+                            <span></span>
+                            <i></i>
+                            <span></span>
+                        </div>
+                        <h3 class="rent-find-title">Find:</h3>
+                        <div class="rent-property-types">
+                            <a href="#" class="rent-property-type">
+                                <div class="rent-type-icon">
+                                    <i class="fa fa-building"></i>
+                                </div>
+                                <span>Flats &amp;<br>Apartments</span>
+                            </a>
+                            <a href="#" class="rent-property-type">
+                                <div class="rent-type-icon">
+                                    <i class="fa fa-home"></i>
+                                </div>
+                                <span>Independent<br>Houses</span>
+                            </a>
+                            <a href="#" class="rent-property-type">
+                                <div class="rent-type-icon">
+                                    <i class="fa fa-building"></i>
+                                </div>
+                                <span>Office<br>Spaces</span>
+                            </a>
+                            <a href="#" class="rent-property-type">
+                                <div class="rent-type-icon">
+                                    <i class="fa fa-shopping-bag"></i>
+                                </div>
+                                <span>Shops &amp;<br>Showrooms</span>
+                            </a>
+                            <a href="#" class="rent-property-type">
+                                <div class="rent-type-icon">
+                                    <i class="fa fa-building"></i>
+                                </div>
+                                <span>Commercial<br>Spaces</span>
+                            </a>
+                            <a href="#" class="rent-property-type">
+                                <div class="rent-type-icon">
+                                    <i class="fa fa-home"></i>
+                                </div>
+                                <span>Warehouses &amp;<br>Godowns</span>
+                            </a>
+                        </div>
+                        <div class="rent-property-message">
+                            <div class="rent-message-icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <div class="rent-message-text">
+                                Find a Space That Fits <strong>Your Needs.</strong>
+                            </div>
+                            <div class="rent-message-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <a href="{{ route('properties.index') }}" class="rent-property-button">
+                            <div class="rent-button-icon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <span>Explore Rental Properties</span>
+                            <div class="rent-button-arrow">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="list-property-section">
+            <div class="container">
+                <div class="list-property-header">
+                    <div class="list-property-label">
+                        <span class="label-line"></span>
+                        <i class="fa fa-home"></i>
+                        <span>LIST YOUR PROPERTY</span>
+                        <span class="label-line"></span>
+                    </div>
+                    <h2>Have a Property to Sell or Rent?</h2>
+                    <h3>List It on Kalp Realty.</h3>
+                    <p>Whether you're a property owner, seller, agent or builder, Kalp Realty gives you a platform to showcase your property to interested users.</p>
+                    <p>Add your property details, upload photos and manage your listings from your account.</p>
+                </div>
+                <div class="list-property-steps-title">
+                    <span>List Your Property in</span>
+                    <strong>3 Simple Steps</strong>
+                </div>
+                <div class="list-property-steps">
+                    <div class="list-property-line"></div>
+                    <div class="list-property-step">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">
+                            <i class="fa fa-user"></i>
+                            <span class="step-check"><i class="fa fa-check"></i></span>
+                        </div>
+                        <h4>Create Your Account</h4>
+                        <div class="step-divider"></div>
+                        <p>Register with Kalp Realty and access your property dashboard.</p>
+                    </div>
+                    <div class="list-property-step">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">
+                            <i class="fa fa-home"></i>
+                        </div>
+                        <h4>Add Your Property</h4>
+                        <div class="step-divider"></div>
+                        <p>Enter your property details including location, property type, area, price and other important information.</p>
+                    </div>
+                    <div class="list-property-step">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">
+                            <i class="fa fa-comments"></i>
+                        </div>
+                        <h4>Receive Enquiries</h4>
+                        <div class="step-divider"></div>
+                        <p>Interested buyers or tenants can enquire about your property.</p>
+                    </div>
+                </div>
+                <div class="list-property-bottom">
+                    <div class="list-property-bottom-icon">
+                        <i class="fa fa-bullhorn"></i>
+                    </div>
+                    <div class="list-property-bottom-text">
+                        <span>Your Property Deserves</span>
+                        <strong>the Right Visibility.</strong>
+                    </div>
+                    <div class="list-property-bottom-divider"></div>
+                    <a href="{{ route('properties.create') }}" class="list-property-button">
+                        <span class="list-button-icon">
+                            <i class="fa fa-home"></i>
+                        </span>
+                        <span class="list-button-text">List My Property</span>
+                        <span class="list-button-arrow">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="list-property-dots list-dots-left">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="list-property-dots list-dots-right">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>             
+        </section>
+        <section class="new-projects-section">
+            <div class="container">
+                <div class="new-projects-wrapper">
+                    <div class="new-projects-content">
+                        <div class="list-property-label">
+                            <span class="label-line"></span>
+                            <i class="fa fa-building"></i>
+                            <span>NEW PROJECTS</span>
+                            <span class="label-line"></span>
+                        </div>                         
+                        <h2>Discover New Projects</h2>
+                        <h3>in Pune &amp; Mumbai</h3>
+                        <p class="new-projects-intro">Explore new and upcoming residential and commercial projects.</p>
+                        <div class="new-projects-location">
+                            <span class="location-item"><i class="fa fa-map-marker"></i> Pune</span>
+                            <span class="location-divider"></span>
+                            <span class="location-item"><i class="fa fa-map-marker"></i> Mumbai</span>
+                        </div>
+                        <h4>Find:</h4>
+                        <div class="new-projects-types">
+                            <div class="new-project-type">
+                                
+                                <div class="new-type-icon">
+                                    <i class="fa fa-building"></i>
+                                </div>
+                                <span>New Apartments</span>
+                            </div>
+                            <div class="new-project-type">                                
+                                <div class="new-type-icon">
+                                    <i class="fa fa-home"></i>
+                                </div>
+                                <span>Premium Homes</span>
+                            </div>
+                            <div class="new-project-type">                                
+                                <div class="new-type-icon">
+                                    <i class="fa fa-hospital-o"></i>
+                                </div>
+                                <span>Villas</span>
+                            </div>
+                            <div class="new-project-type">                                 
+                                <div class="new-type-icon">
+                                    <i class="fa fa-industry"></i>
+                                </div>
+                                <span>Commercial Projects</span>
+                            </div>
+                            <div class="new-project-type">                                
+                                <div class="new-type-icon">
+                                    <i class="fa fa-briefcase"></i>
+                                </div>
+                                <span>Office Spaces</span>
+                            </div>
+                        </div>
+                        <div class="new-projects-bottom">
+                            <div class="new-projects-message">
+                                <span>Explore Today's Opportunities.</span>
+                                <strong>Plan for Tomorrow.</strong>
+                            </div>
+                            <a href="{{ route('properties.index') }}" class="new-projects-button">
+                                <span>Explore New Projects</span>
+                                <i class="fa fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+        <section class="owner-account-section">
+            <div class="container">
+                <div class="owner-account-wrapper">
+                    <div class="owner-account-content">
+                        <div class="owner-account-label">
+                            <span></span>
+                            <i class="fa fa-users"></i>
+                            <span>FOR PROPERTY OWNERS, AGENTS &amp; BUILDERS</span>
+                        </div>
+                        <h2>Are You a Property Owner,</h2>
+                        <h3>Agent or Builder?</h3>
+                        <p class="owner-account-intro">Kalp Realty helps you showcase your properties to people looking for homes, commercial spaces and investment opportunities.</p>
+                        <div class="owner-account-highlight">
+                            <i class="fa fa-check-circle"></i>
+                            <span>With your Kalp Realty account, you can:</span>
+                        </div>
+                        <a href="{{ route('register') }}" class="owner-account-button">
+                            <span>Create Your Account</span>
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="owner-account-features">
+                        <div class="owner-feature-card"> 
+                            <div class="owner-feature-icon">
+                                <i class="fa fa-plus"></i>
+                            </div>
+                            <div class="owner-feature-text">
+                                <h4>Add Property Listings</h4>
+                                <p>Showcase your properties to interested users.</p>
+                            </div>
+                        </div>
+                        <div class="owner-feature-card"> 
+                            <div class="owner-feature-icon">
+                                <i class="fa fa-camera"></i>
+                            </div>
+                            <div class="owner-feature-text">
+                                <h4>Upload Property Photos</h4>
+                                <p>Present your property with quality images.</p>
+                            </div>
+                        </div>
+                        <div class="owner-feature-card"> 
+                            <div class="owner-feature-icon">
+                                <i class="fa fa-pencil"></i>
+                            </div>
+                            <div class="owner-feature-text">
+                                <h4>Edit Property Details</h4>
+                                <p>Keep your property information updated.</p>
+                            </div>
+                        </div>
+                        <div class="owner-feature-card"> 
+                            <div class="owner-feature-icon">
+                                <i class="fa fa-th-large"></i>
+                            </div>
+                            <div class="owner-feature-text">
+                                <h4>Manage Your Listings</h4>
+                                <p>Manage your properties from one account.</p>
+                            </div>
+                        </div>
+                        <div class="owner-feature-card"> 
+                            <div class="owner-feature-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="owner-feature-text">
+                                <h4>Track Property Enquiries</h4>
+                                <p>Stay informed when users show interest.</p>
+                            </div>
+                        </div>
+                        <div class="owner-feature-card"> 
+                            <div class="owner-feature-icon">
+                                <i class="fa fa-refresh"></i>
+                            </div>
+                            <div class="owner-feature-text">
+                                <h4>Update Property Availability</h4>
+                                <p>Keep listing availability up to date.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="why-kalp-section">
+            <div class="container">
+                <div class="why-kalp-header">
+                    <div class="list-property-label">
+                        <span class="label-line"></span>
+                        <i class="fa fa-building"></i>
+                        <span>WHY KALP REALTY</span>
+                        <span class="label-line"></span>
+                    </div>                    
+                    <h2>Why Choose <span>Kalp Realty?</span></h2>
+                    <h3>Property Search Made Simple.</h3>
+                    <p>Whether you want to find a property or list one, Kalp Realty helps bring everything together in one place.</p>
+                </div>
+                <div class="why-kalp-features">
+                    <div class="why-kalp-card"> 
+                        <div class="why-kalp-icon"><i class="fa fa-search"></i></div>
+                        <div class="why-kalp-content">
+                            <h4>Easy to Search</h4>
+                            <p>Find properties based on location, budget and property type.</p>
+                        </div>
+                    </div>
+                    <div class="why-kalp-card"> 
+                        <div class="why-kalp-icon"><i class="fa fa-map-marker"></i></div>
+                        <div class="why-kalp-content">
+                            <h4>Pune &amp; Mumbai Focused</h4>
+                            <p>Explore property opportunities across two of Maharashtra's major real estate markets.</p>
+                        </div>
+                    </div>
+                    <div class="why-kalp-card"> 
+                        <div class="why-kalp-icon"><i class="fa fa-building"></i></div>
+                        <div class="why-kalp-content">
+                            <h4>Multiple Property Categories</h4>
+                            <p>From flats and villas to offices, plots, warehouses and factories.</p>
+                        </div>
+                    </div>
+                    <div class="why-kalp-card"> 
+                        <div class="why-kalp-icon"><i class="fa fa-list-alt"></i></div>
+                        <div class="why-kalp-content">
+                            <h4>Easy Property Listing</h4>
+                            <p>Property owners can create an account and manage their listings easily.</p>
+                        </div>
+                    </div>
+                    <div class="why-kalp-card"> 
+                        <div class="why-kalp-icon"><i class="fa fa-users"></i></div>
+                        <div class="why-kalp-content">
+                            <h4>For Every Property Need</h4>
+                            <p>Whether you're a buyer, seller, tenant, owner, investor, agent or business owner.</p>
+                        </div>
+                    </div>
+                    <div class="why-kalp-card"> 
+                        <div class="why-kalp-icon"><i class="fa fa-home"></i></div>
+                        <div class="why-kalp-content">
+                            <h4>Everything in One Place</h4>
+                            <p>Search, explore, shortlist and enquire with ease.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="how-kalp-works-section">
+            <div class="container">
+                <div class="how-kalp-header">
+                     <div class="list-property-label">
+                        <span class="label-line"></span>
+                        <i class="fa fa-building"></i>
+                        <span>HOW KALP REALTY WORKS</span>
+                        <span class="label-line"></span>
+                    </div>                     
+                    <h2>Finding a Property <span>is Simple</span></h2>
+                    <p>From searching for the right property to taking the next step, Kalp Realty keeps the process simple and convenient.</p>
+                </div>
+                <div class="how-kalp-steps">
+                    <div class="how-kalp-line"></div>
+                    <div class="how-kalp-step">
+                        <div class="how-step-number">01</div>
+                        <div class="how-step-icon">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="how-step-content">
+                            <h3>Search</h3>
+                            <span class="how-step-title">Select what you're looking for</span>
+                            <p>Select what you're looking for and choose your preferred location.</p>
+                        </div>
+                    </div>
+                    <div class="how-kalp-step">
+                        <div class="how-step-number">02</div>
+                        <div class="how-step-icon">
+                            <i class="fa fa-compass"></i>
+                        </div>
+                        <div class="how-step-content">
+                            <h3>Explore</h3>
+                            <span class="how-step-title">Browse your options</span>
+                            <p>Browse properties based on your requirements and budget.</p>
+                        </div>
+                    </div>
+                    <div class="how-kalp-step">
+                        <div class="how-step-number">03</div>
+                        <div class="how-step-icon">
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <div class="how-step-content">
+                            <h3>Shortlist</h3>
+                            <span class="how-step-title">Save your favourites</span>
+                            <p>Save properties that you are interested in.</p>
+                        </div>
+                    </div>
+                    <div class="how-kalp-step">
+                        <div class="how-step-number">04</div>
+                        <div class="how-step-icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="how-step-content">
+                            <h3>Enquire</h3>
+                            <span class="how-step-title">Connect with the property</span>
+                            <p>Send an enquiry for the property you want to know more about.</p>
+                        </div>
+                    </div>
+                    <div class="how-kalp-step">
+                        <div class="how-step-number">05</div>
+                        <div class="how-step-icon">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                        <div class="how-step-content">
+                            <h3>Take the Next Step</h3>
+                            <span class="how-step-title">Move forward with confidence</span>
+                            <p>Connect, visit and move forward with the property that suits your needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>      
+          
         <!--End about Area-->
          <section class="about-area">
              <div class="container">
@@ -760,312 +1392,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!--End Recently Project Area-->
-        <section class="working-style2-area" style="background-image:url('{{ asset('assets/frontend/images/parallax-background/working-style2-bg.jpg') }}');">
-            <div class="container">              
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="working-style2-content clearfix">
-                            <!-- Start Single Working Box Style2 -->
-                            <div class="single-working-box-style2">
-                                <div class="img-holder">
-                                    <img src="{{ asset('assets/frontend/images/resources/working-v2-1.jpg') }}"  alt="Easy to Search">
-                                    <div class="static-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="icon-architecture-and-city"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>
-                                                            Easy to Search
-                                                        </h3>
-                                                        <div class="count">
-                                                            01
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="overlay-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="icon-architecture-and-city"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>
-                                                            Easy to Search
-                                                        </h3>
-                                                        <div class="count">
-                                                            01
-                                                        </div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>
-                                                            Find properties easily with our
-                                                            simple and convenient property
-                                                            search.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="read-more">
-                                    <a href="#">
-                                        <span class="icon-next"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- End Single Working Box Style2 -->
-                            <!-- Start Single Working Box Style2 -->
-                            <div class="single-working-box-style2">
-                                <div class="img-holder">
-                                    <img src="{{ asset('assets/frontend/images/resources/working-v2-2.jpg') }}"  alt="Trusted by Thousands">
-                                    <div class="static-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="icon-sheriff"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>
-                                                            Trusted by Thousands
-                                                        </h3>
-                                                        <div class="count">
-                                                            02
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="overlay-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="icon-sheriff"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>
-                                                           Trusted by Thousands
-                                                        </h3>
-                                                        <div class="count">
-                                                            02
-                                                        </div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>
-                                                            Thousands of customers trust us
-                                                            to help them find the right
-                                                            property with confidence.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="read-more">
-                                    <a href="#">
-                                        <span class="icon-next"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- End Single Working Box Style2 -->
-                            <!-- Start Single Working Box Style2 -->
-                            <div class="single-working-box-style2">
-                                <div class="img-holder">                                   
-                                    <img src="{{ asset('assets/frontend/images/resources/working-v2-3.jpg') }}"  alt="Wide Range of Properties">
-                                    <div class="static-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="icon-cross"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>
-                                                            Wide Range of Properties
-                                                        </h3>
-                                                        <div class="count">
-                                                            03
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="overlay-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="icon-cross"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>
-                                                            Wide Range of Properties
-                                                        </h3>
-                                                        <div class="count">
-                                                            03
-                                                        </div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>
-                                                            Explore apartments, villas,
-                                                            houses, offices, shops and land
-                                                            in different locations.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="read-more">
-                                    <a href="#">
-                                        <span class="icon-next"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- End Single Working Box Style2 -->
-                            <!-- Start Single Working Box Style2 -->
-                            <div class="single-working-box-style2">
-                                <div class="img-holder">
-                                    <img src="{{ asset('assets/frontend/images/resources/working-v2-4.jpg') }}" alt="Fast and Easy Process">
-                                    <div class="static-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="flaticon-architecture-and-city"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>
-                                                            Fast & Easy Process
-                                                        </h3>
-                                                        <div class="count">
-                                                            04
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="overlay-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="flaticon-architecture-and-city"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>
-                                                            Fast & Easy Process
-                                                        </h3>
-                                                        <div class="count">
-                                                            04
-                                                        </div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>
-                                                            Our simple and hassle-free
-                                                            process makes buying, selling
-                                                            or renting property easier.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="read-more">
-                                    <a href="#">
-                                        <span class="icon-next"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- End Single Working Box Style2 -->
-                        </div>
-                        <div class="working-style-bottom text-center">
-                            <p>
-                                Looking for your perfect property? Let our experienced
-                                team help you find the right one.
-                            </p>
-                            <div class="button">
-                                <a class="btn-one" href="{{ route('frontend.contact') }}">
-                                    Contact Us
-                                    <span class="flaticon-next"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Start Working Process Area-->
-        <section class="working-process-area">
-            <div class="container">
-                <div class="sec-title text-center">
-                    <p>HOW IT WORKS</p>
-                    <div class="title">Simple Steps To Find Your Home</div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
-                        <div class="single-working-process text-center">
-                            <div class="top-box"><span>01</span></div>
-                            <div class="inner">
-                                <h3>Search Property</h3>
-                                <p>Search from thousands of properties available for sale and rent.</p>
-                                <div class="icon-holder"><span class="icon-productive"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <div class="single-working-process text-center">
-                            <div class="top-box"><span>02</span></div>
-                            <div class="inner">
-                                <h3>View Property</h3>
-                                <p>Explore property details, photos, amenities, location and pricing.</p>
-                                <div class="icon-holder"><span class="icon-document"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
-                        <div class="single-working-process text-center">
-                            <div class="top-box"><span>03</span></div>
-                            <div class="inner">
-                                <h3>Contact Agent</h3>
-                                <p>Connect with our property agent for enquiries, visits and assistance.</p>
-                                <div class="icon-holder"><span class="icon-kitchen"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1500ms">
-                        <div class="single-working-process text-center">
-                            <div class="top-box"><span>04</span></div>
-                            <div class="inner">
-                                <h3>Buy or Rent</h3>
-                                <p>Finalize your preferred property and move forward with confidence.</p>
-                                <div class="icon-holder"><span class="icon-kitchen"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End Working Process Area-->
-
-        <!--Start slogan area-->
+        </section>        
         <section class="slogan-area">
             <div class="container">
                 <div class="row">
@@ -1363,197 +1690,7 @@
             </div>
         </section>
         
-        <!--Start latest blog area-->
-        <section class="latest-blog-area">
-            <div class="container inner-content">
-                <div class="sec-title text-center">
-                    <p>News & Updates</p>
-                    <div class="title">Latest From <span>Blog</span></div>
-                </div>
-
-                <div class="row">
-
-                    <!--Start single blog post-->
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                        <div class="single-blog-post wow fadeInLeft"
-                            data-wow-delay="0ms"
-                            data-wow-duration="1500ms">
-
-                            <div class="img-holder">
-                                <img
-                                    src="{{ asset('assets/frontend/images/blog/latest-b-v1-1.jpg') }}"
-                                    alt="Awesome Image"
-                                >
-
-                                <div class="overlay-style-two"></div>
-
-                                <div class="overlay">
-                                    <div class="box">
-                                        <div class="link-icon">
-                                            <a href="#">
-                                                <span class="flaticon-zoom"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="text-holder">
-                                <div class="post-date">
-                                    <h3>02 <span>Mar 2019</span></h3>
-                                </div>
-
-                                <div class="meta-box">
-                                    <ul class="meta-info">
-                                        <li>By <a href="#">Rubin Santro</a></li>
-                                        <li>In <a href="#">Contemporary</a></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="blog-title">
-                                    <a href="blog-single.html">
-                                        Low cost interior designing ideas
-                                    </a>
-                                </h3>
-
-                                <div class="text">
-                                    <p>
-                                        Same as saying through shrinkings from toil & our pain
-                                        these cases perfectly simple.
-                                    </p>
-
-                                    <a class="btn-two" href="#">
-                                        Read More<span class="flaticon-next"></span>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-
-                    <!--Start single blog post-->
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                        <div class="single-blog-post wow fadeInLeft"
-                            data-wow-delay="200ms"
-                            data-wow-duration="1500ms">
-
-                            <div class="img-holder">
-                                <img
-                                    src="{{ asset('assets/frontend/images/blog/latest-b-v1-2.jpg') }}"
-                                    alt="Awesome Image"
-                                >
-
-                                <div class="overlay-style-two"></div>
-
-                                <div class="overlay">
-                                    <div class="box">
-                                        <div class="link-icon">
-                                            <a href="#">
-                                                <span class="flaticon-zoom"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="text-holder">
-                                <div class="post-date">
-                                    <h3>24 <span>Feb 2019</span></h3>
-                                </div>
-
-                                <div class="meta-box">
-                                    <ul class="meta-info">
-                                        <li>By <a href="#">Mark Richrdson</a></li>
-                                        <li>In <a href="#">Modern Paint</a></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="blog-title">
-                                    <a href="blog-single.html">
-                                        Commercial design for project
-                                    </a>
-                                </h3>
-
-                                <div class="text">
-                                    <p>
-                                        Which is the same as saying through shrinking from toil
-                                        and pain. These cases are perfectly.
-                                    </p>
-
-                                    <a class="btn-two" href="#">
-                                        Read More<span class="flaticon-next"></span>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-
-                    <!--Start single blog post-->
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                        <div class="single-blog-post wow fadeInLeft"
-                            data-wow-delay="400ms"
-                            data-wow-duration="1500ms">
-
-                            <div class="img-holder">
-                                <img
-                                    src="{{ asset('assets/frontend/images/blog/latest-b-v1-3.jpg') }}"
-                                    alt="Awesome Image"
-                                >
-
-                                <div class="overlay-style-two"></div>
-
-                                <div class="overlay">
-                                    <div class="box">
-                                        <div class="link-icon">
-                                            <a href="#">
-                                                <span class="flaticon-zoom"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="text-holder">
-                                <div class="post-date">
-                                    <h3>18 <span>Jan 2019</span></h3>
-                                </div>
-
-                                <div class="meta-box">
-                                    <ul class="meta-info">
-                                        <li>By <a href="#">Rubin Santro</a></li>
-                                        <li>In <a href="#">Contemporary</a></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="blog-title">
-                                    <a href="blog-single.html">
-                                        Our interior design prediction 2019
-                                    </a>
-                                </h3>
-
-                                <div class="text">
-                                    <p>
-                                        Every pleasure is to be welcomed every pain avoided.
-                                        in certain circumstances obligations.
-                                    </p>
-
-                                    <a class="btn-two" href="#">
-                                        Read More<span class="flaticon-next"></span>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-
-                </div>
-            </div>
-        </section>
-        <!--End latest blog area-->
+       
 
         <!--Start Brand area-->
        <section class="brand-area">
