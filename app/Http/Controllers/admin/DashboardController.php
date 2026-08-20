@@ -48,7 +48,19 @@ class DashboardController extends Controller
         $totalPropertyEnquiries = PropertyEnquiry::count();
         $recentEnquiries = PropertyEnquiry::with(['property','buyer',])->latest('created_at')->take(5)->get();
         $recentPropertyQuery = Property::latest();
-        
+        $sellerProperties = 0;
+        $sellerActiveProperties = 0;
+        $sellerInactiveProperties = 0;
+        $sellerSoldProperties = 0;
+
+        if ($role === 'seller') {
+            $sellerPropertyQuery = Property::where('created_by', $user->id);
+
+            $sellerProperties = (clone $sellerPropertyQuery)->count();
+            $sellerActiveProperties = (clone $sellerPropertyQuery)->where('status', 1)->count();
+            $sellerInactiveProperties = (clone $sellerPropertyQuery)->where('status', 0)->count();
+            $sellerSoldProperties = (clone $sellerPropertyQuery)->where('status', 2)->count();
+        }      
         $recentProperties = $recentPropertyQuery->take(5)->get();
         return view('admin.dashboard', compact(
             'user',
@@ -68,7 +80,11 @@ class DashboardController extends Controller
             'totalPropertyEnquiries',
             'recentProperties',
             'recentEnquiries',
-            'recentContacts'
+            'recentContacts',
+            'sellerProperties',
+            'sellerActiveProperties',
+            'sellerInactiveProperties',
+            'sellerSoldProperties',
         ));
     }
 }
