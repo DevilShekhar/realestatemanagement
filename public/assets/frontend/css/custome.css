@@ -2176,7 +2176,7 @@
 .list-property-header h2 {
     margin: 0;
     color: #102b52;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 54px;
     line-height: 1.1;
     font-weight: 700;
@@ -2184,7 +2184,7 @@
 .list-property-header h3 {
     margin: 0 0 20px;
     color: #d99a32;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 54px;
     line-height: 1.1;
     font-weight: 600;
@@ -2286,7 +2286,7 @@
     background: #102b52;
     box-shadow: 0 0 0 2px #d99a32;
     color: #ffffff;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 25px;
     line-height: 30px;
     font-weight: 700;
@@ -2379,14 +2379,14 @@
 }
 .list-property-bottom-text span {
     color: #102b52;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 30px;
     line-height: 36px;
     font-weight: 600;
 }
 .list-property-bottom-text strong {
     color: #d99a32;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 30px;
     line-height: 36px;
     font-weight: 600;
@@ -2771,7 +2771,7 @@
 .new-projects-content h2 {
     margin: 0;
     color: #102b52;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 52px;
     line-height: 1.1;
     font-weight: 700;
@@ -2780,7 +2780,7 @@
 .new-projects-content h3 {
     margin: 0 0 15px;
     color: #d99a32;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 52px;
     line-height: 1.1;
     font-weight: 600;
@@ -2937,14 +2937,14 @@
 }
 .new-projects-message span {
     color: #ffffff;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 23px;
     line-height: 30px;
     font-weight: 600;
 }
 .new-projects-message strong {
     color: #e0a13b;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 23px;
     line-height: 30px;
     font-weight: 600;
@@ -3144,7 +3144,7 @@
 .owner-account-content h2 {
     margin: 0;
     color: #ffffff;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 48px;
     line-height: 1.12;
     font-weight: 600;
@@ -3152,7 +3152,7 @@
 .owner-account-content h3 {
     margin: 0 0 22px;
     color: #d99a32;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 48px;
     line-height: 1.12;
     font-weight: 600;
@@ -3437,7 +3437,7 @@
 .why-kalp-header h2 {
     margin: 0;
     color: #102b52;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 56px;
     line-height: 1.1;
     font-weight: 600;
@@ -3451,7 +3451,7 @@
     margin: 15px 0 25px;
     padding-bottom: 14px;
     color: #d99a32;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 31px;
     line-height: 40px;
     font-weight: 600;
@@ -3828,7 +3828,7 @@
 .how-kalp-header h2 {
     margin: 0 0 18px;
     color: #102b52;
-    font-family: Georgia, "Times New Roman", serif;
+   
     font-size: 52px;
     line-height: 1.12;
     font-weight: 600;
@@ -4142,7 +4142,7 @@
 .pune-properties-content h2 {
     margin: 0;
     color: #102b52;
-    font-family: Georgia,"Times New Roman",serif;
+    
     font-size: 55px;
     line-height: 1.02;
     font-weight: 600;
@@ -4150,7 +4150,7 @@
 .pune-properties-content h3 {
     margin: 0;
     color: #d99a32;
-    font-family: Georgia,"Times New Roman",serif;
+    
     font-size: 55px;
     line-height: 1.05;
     font-weight: 600;
@@ -4190,7 +4190,7 @@
     padding-left: 18px;
     border-left: 1px solid rgba(255,255,255,0.25);
     color: #fff;
-    font-family: Georgia,"Times New Roman",serif;
+    
     font-size: 34px;
     line-height: 40px;
     font-weight: 600;
@@ -4356,5 +4356,1303 @@
     }
     .pune-location-badge {
         width: 220px;
+    }
+}
+.about-kalp-section {
+    position: relative;
+    padding: 90px 0;
+    overflow: hidden;
+    background: #f6f7f9;
+}
+
+.about-kalp-section .container,
+.about-kalp-vision-section .container {
+    max-width: 1240px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-kalp-header {
+    max-width: 900px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.about-kalp-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: #d89b32;
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.about-kalp-label-line {
+    width: 40px;
+    height: 1px;
+    background: #d89b32;
+}
+
+.about-kalp-label i {
+    color: #d89b32;
+    font-size: 14px;
+}
+
+.about-kalp-header h2 {
+    margin: 0 0 20px;
+    color: #102b52;
+    
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 600;
+}
+
+.about-kalp-header h2 span {
+    color: #d89b32;
+}
+
+.about-kalp-header p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #566477;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.about-kalp-header p strong {
+    color: #102b52;
+    font-weight: 700;
+}
+
+.about-kalp-intro {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 320px;
+    overflow: hidden;
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: 0 18px 50px rgba(16,43,82,0.08);
+}
+
+.about-kalp-intro-number {
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    color: rgba(216,155,50,0.18);
+    
+    font-size: 105px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.about-kalp-intro-content {
+    position: relative;
+    z-index: 2;
+    width: 72%;
+    padding: 65px 70px 60px 90px;
+}
+
+.about-kalp-intro-content h3 {
+    margin: 0 0 18px;
+    color: #102b52;
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+.about-kalp-intro-content p {
+    max-width: 760px;
+    margin: 0 0 15px;
+    color: #596678;
+    font-size: 15px;
+    line-height: 27px;
+}
+
+.about-kalp-intro-content p:last-child {
+    margin-bottom: 0;
+}
+
+.about-kalp-intro-mark {
+    position: absolute;
+    right: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #d89b32;
+    border-radius: 50%;
+    background: #102b52;
+    color: #d89b32;
+    font-size: 55px;
+}
+
+.about-kalp-intro-mark::before {
+    position: absolute;
+    content: "";
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(216,155,50,0.25);
+    border-radius: 50%;
+}
+
+.about-kalp-vision-section {
+    padding: 90px 0;
+    background: #fff;
+}
+
+.about-kalp-vision-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 350px;
+    overflow: hidden;
+    border-radius: 26px;
+    background: #102b52;
+}
+
+.about-kalp-vision-number {
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    color: rgba(216,155,50,0.16);
+    
+    font-size: 105px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.about-kalp-vision-content {
+    position: relative;
+    z-index: 2;
+    width: 72%;
+    padding: 65px 60px 65px 90px;
+}
+
+.about-kalp-label-left {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.about-kalp-vision-content h2 {
+    max-width: 760px;
+    margin: 0 0 20px;
+    color: #fff;
+    
+    font-size: 42px;
+    line-height: 1.18;
+    font-weight: 600;
+}
+
+.about-kalp-vision-content h2 span {
+    color: #d89b32;
+}
+
+.about-kalp-vision-content p {
+    max-width: 760px;
+    margin: 0;
+    color: rgba(255,255,255,0.75);
+    font-size: 15px;
+    line-height: 27px;
+}
+
+.about-kalp-vision-icon {
+    position: absolute;
+    right: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 145px;
+    height: 145px;
+    border: 2px solid #d89b32;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    color: #d89b32;
+    font-size: 52px;
+}
+
+.about-kalp-vision-icon::before {
+    position: absolute;
+    content: "";
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(216,155,50,0.25);
+    border-radius: 50%;
+}
+
+@media (max-width:991px) {
+    .about-kalp-header h2 {
+        font-size: 40px;
+    }
+
+    .about-kalp-intro-content {
+        width: 75%;
+        padding: 55px 40px 55px 70px;
+    }
+
+    .about-kalp-intro-mark {
+        right: 35px;
+        width: 120px;
+        height: 120px;
+        font-size: 42px;
+    }
+
+    .about-kalp-vision-content {
+        width: 75%;
+        padding: 55px 35px 55px 70px;
+    }
+
+    .about-kalp-vision-content h2 {
+        font-size: 36px;
+    }
+
+    .about-kalp-vision-icon {
+        right: 35px;
+        width: 115px;
+        height: 115px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width:767px) {
+    .about-kalp-section,
+    .about-kalp-vision-section {
+        padding: 60px 0;
+    }
+
+    .about-kalp-header {
+        margin-bottom: 40px;
+    }
+
+    .about-kalp-header h2 {
+        font-size: 34px;
+    }
+
+    .about-kalp-header p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .about-kalp-intro {
+        display: block;
+        min-height: auto;
+    }
+
+    .about-kalp-intro-content {
+        width: 100%;
+        padding: 55px 30px 45px;
+    }
+
+    .about-kalp-intro-number {
+        left: 20px;
+        font-size: 80px;
+    }
+
+    .about-kalp-intro-mark {
+        position: relative;
+        right: auto;
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 35px;
+        font-size: 30px;
+    }
+
+    .about-kalp-intro-mark::before {
+        width: 115px;
+        height: 115px;
+    }
+
+    .about-kalp-vision-wrapper {
+        display: block;
+        min-height: auto;
+    }
+
+    .about-kalp-vision-content {
+        width: 100%;
+        padding: 55px 30px 35px;
+    }
+
+    .about-kalp-vision-content h2 {
+        font-size: 32px;
+    }
+
+    .about-kalp-vision-icon {
+        position: relative;
+        right: auto;
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 40px;
+        font-size: 30px;
+    }
+
+    .about-kalp-vision-icon::before {
+        width: 115px;
+        height: 115px;
+    }
+}
+
+@media (max-width:480px) {
+    .about-kalp-header h2 {
+        font-size: 29px;
+    }
+
+    .about-kalp-label {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .about-kalp-intro-content h3 {
+        font-size: 22px;
+    }
+
+    .about-kalp-intro-content p,
+    .about-kalp-vision-content p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .about-kalp-vision-content h2 {
+        font-size: 28px;
+    }
+}
+.kalp-focus-section {
+    position: relative;
+    padding: 90px 0;
+    overflow: hidden;
+    background: #f5f7fa;
+}
+
+.kalp-focus-section .container {
+    max-width: 1240px;
+}
+
+.kalp-focus-wrapper {
+    display: flex;
+    align-items: stretch;
+    min-height: 500px;
+    overflow: hidden;
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: 0 20px 55px rgba(16,43,82,0.10);
+}
+
+.kalp-focus-image {
+    position: relative;
+    width: 50%;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.kalp-focus-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.kalp-focus-wrapper:hover .kalp-focus-image img {
+    transform: scale(1.04);
+}
+
+.kalp-focus-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(16,43,82,0.05), rgba(16,43,82,0.45));
+}
+
+.kalp-focus-location {
+    position: absolute;
+    right: 35px;
+    bottom: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #d89b32;
+    border-radius: 50%;
+    background: #102b52;
+    color: #d89b32;
+    font-size: 27px;
+    box-shadow: 0 10px 30px rgba(16,43,82,0.25);
+}
+
+.kalp-focus-content {
+    position: relative;
+    width: 50%;
+    padding: 65px 65px 60px;
+    background: #fff;
+}
+
+.kalp-focus-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: #d89b32;
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.kalp-focus-label span:first-child {
+    width: 40px;
+    height: 1px;
+    background: #d89b32;
+}
+
+.kalp-focus-label i {
+    font-size: 14px;
+}
+
+.kalp-focus-content h2 {
+    margin: 0;
+    color: #102b52;
+    font-family: Georgia,"Times New Roman",serif;
+    font-size: 52px;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+.kalp-focus-content h2 span {
+    color: #d89b32;
+}
+
+.kalp-focus-line {
+    width: 65px;
+    height: 3px;
+    margin: 22px 0 25px;
+    background: #d89b32;
+}
+
+.kalp-focus-content p {
+    max-width: 500px;
+    margin: 0 0 17px;
+    color: #596678;
+    font-size: 15px;
+    line-height: 27px;
+}
+
+.kalp-focus-cities {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-top: 30px;
+    padding: 14px 20px;
+    border: 1px solid #e2e6eb;
+    border-radius: 8px;
+    background: #f8f9fb;
+}
+
+.kalp-focus-city {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #102b52;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.kalp-focus-city i {
+    color: #d89b32;
+    font-size: 16px;
+}
+
+.kalp-focus-city-divider {
+    width: 1px;
+    height: 25px;
+    margin: 0 20px;
+    background: #d8dde4;
+}
+
+@media (max-width:991px) {
+    .kalp-focus-wrapper {
+        min-height: 450px;
+    }
+
+    .kalp-focus-image {
+        min-height: 450px;
+    }
+
+    .kalp-focus-content {
+        padding: 50px 35px;
+    }
+
+    .kalp-focus-content h2 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width:767px) {
+    .kalp-focus-section {
+        padding: 60px 0;
+    }
+
+    .kalp-focus-wrapper {
+        display: block;
+        min-height: auto;
+    }
+
+    .kalp-focus-image {
+        width: 100%;
+        height: 320px;
+        min-height: 320px;
+    }
+
+    .kalp-focus-content {
+        width: 100%;
+        padding: 45px 30px;
+    }
+
+    .kalp-focus-content h2 {
+        font-size: 38px;
+    }
+
+    .kalp-focus-cities {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width:480px) {
+    .kalp-focus-image {
+        height: 260px;
+        min-height: 260px;
+    }
+
+    .kalp-focus-content {
+        padding: 40px 22px;
+    }
+
+    .kalp-focus-content h2 {
+        font-size: 33px;
+    }
+
+    .kalp-focus-content p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .kalp-focus-label {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .kalp-focus-cities {
+        padding: 12px 14px;
+    }
+
+    .kalp-focus-city-divider {
+        margin: 0 12px;
+    }
+}
+.mission-vision-section {
+    width: 100%;
+    padding: 50px 0;
+    background: #f3f5f8;
+    overflow: hidden;
+}
+.mission-vision-wrapper {
+    width: 100%;
+    max-width: 1500px;
+    min-height: 700px;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 20px 50px rgba(15,39,72,0.12);
+}
+.mission-panel {
+    position: relative;
+    width: 50%;
+    min-height: 700px;
+    overflow: hidden;
+    background-color: #061b35;
+    background-image: linear-gradient(90deg,rgba(3,20,40,0.98) 0%,rgba(4,24,46,0.94) 42%,rgba(4,24,46,0.40) 72%,rgba(4,24,46,0.05) 100%),url("../images/resources/mission-property.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.mission-panel::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(0deg,rgba(3,19,38,0.95),transparent);
+    pointer-events: none;
+}
+.mission-content {
+    position: relative;
+    z-index: 2;
+    width: 64%;
+    min-height: 700px;
+    padding: 65px 40px 55px 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mission-icon {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #d99a32;
+    border-radius: 50%;
+    color: #d99a32;
+    font-size: 42px;
+}
+.mission-heading-line {
+    width: 135px;
+    height: 1px;
+    margin: 0 auto 24px;
+    background: #d99a32;
+}
+.mission-content h3 {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.mission-small-line {
+    width: 75px;
+    height: 2px;
+    margin: 18px auto 35px;
+    background: #d99a32;
+}
+.mission-content h2 {
+    margin: 0;
+    color: #fff;
+    font-family: Georgia,"Times New Roman",serif;
+    font-size: 30px;
+    line-height: 1.18;
+    font-weight: 600;
+}
+.mission-content h2 span {
+    color: #d99a32;
+}
+.mission-divider {
+    width: 100%;
+    height: 1px;
+    margin: 30px 0 25px;
+    background: linear-gradient(90deg,#d99a32 0%,rgba(217,154,50,0.15) 100%);
+}
+.mission-content p {
+    max-width: 510px;
+    margin: 0;
+    color: rgba(255,255,255,0.92);
+    font-size: 17px;
+    line-height: 1.75;
+    font-weight: 400;
+}
+.mission-features {
+    display: flex;
+    align-items: stretch;
+    margin-top: 45px;
+}
+.mission-feature {
+    flex: 1;
+    min-height: 85px;
+    padding: 0 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(217,154,50,0.65);
+}
+.mission-feature:first-child {
+    padding-left: 0;
+}
+.mission-feature:last-child {
+    padding-right: 0;
+    border-right: 0;
+}
+.mission-feature i {
+    margin-bottom: 12px;
+    color: #d99a32;
+    font-size: 31px;
+}
+.mission-feature span {
+    color: #d99a32;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.vision-panel {
+    position: relative;
+    width: 50%;
+    min-height: 700px;
+    overflow: hidden;
+    background-color: #f9f7f1;
+    background-image: linear-gradient(180deg,rgba(255,255,255,0.96) 0%,rgba(255,255,255,0.82) 38%,rgba(255,255,255,0.05) 72%),url("../images/resources/vision-property.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.vision-panel::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 35%;
+    background: linear-gradient(0deg,#061d38 0%,rgba(6,29,56,0.88) 45%,transparent 100%);
+    clip-path: ellipse(78% 75% at 68% 100%);
+}
+.vision-content {
+    position: relative;
+    z-index: 3;
+    width: 78%;
+    margin: 0 auto;
+    padding: 65px 25px 0;
+    text-align: center;
+}
+.vision-icon {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #c9912d;
+    border-radius: 50%;
+    color: #c9912d;
+    font-size: 40px;
+}
+.vision-heading-line {
+    width: 135px;
+    height: 1px;
+    margin: 0 auto 24px;
+    background: #c9912d;
+}
+.vision-content h3 {
+    margin: 0;
+    color: #102b52;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.vision-small-line {
+    width: 75px;
+    height: 2px;
+    margin: 18px auto 11px;
+    background: #c9912d;
+}
+.vision-content p {
+    max-width: 428px;
+    margin: 0 auto;
+    color: #102b52;
+    font-family: Georgia,"Times New Roman",serif;
+    font-size: 22px;
+    line-height: 1.45;
+    font-weight: 600;
+}
+.vision-brand {
+    position: absolute;
+    
+    bottom: 45px;
+    width: 770px;
+    
+    color: #fff;
+    text-align: center;
+}
+.vision-brand-logo {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d99a32;
+    font-size: 38px;
+}
+.vision-brand-name {
+    color: #fff;
+    font-family: Georgia,"Times New Roman",serif;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+.vision-brand-subtitle {
+    margin-top: 5px;
+    color: #fff;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 5px;
+}
+.vision-brand-tagline {
+    margin-top: 14px;
+    color: #d99a32;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+@media (max-width:1199px) {
+    .mission-vision-wrapper {
+        min-height: 650px;
+    }
+    .mission-panel,
+    .vision-panel,
+    .mission-content {
+        min-height: 650px;
+    }
+    .mission-content {
+        width: 72%;
+        padding-left: 45px;
+    }
+    .mission-content h2 {
+        font-size: 36px;
+    }
+    .vision-content p {
+        font-size: 25px;
+    }
+}
+@media (max-width:991px) {
+    .mission-vision-section {
+        padding: 30px 15px;
+    }
+    .mission-vision-wrapper {
+        min-height: auto;
+        flex-direction: column;
+    }
+    .mission-panel,
+    .vision-panel {
+        width: 100%;
+        min-height: 650px;
+    }
+    .mission-content {
+        width: 75%;
+        min-height: 650px;
+        padding: 55px 35px;
+    }
+    .mission-content h2 {
+        font-size: 38px;
+    }
+    .vision-content {
+        width: 80%;
+    }
+    .vision-content p {
+        font-size: 26px;
+    }
+}
+@media (max-width:767px) {
+    .mission-vision-section {
+        padding: 20px 10px;
+    }
+    .mission-panel,
+    .vision-panel,
+    .mission-content {
+        min-height: 620px;
+    }
+    .mission-content {
+        width: 100%;
+        padding: 45px 25px;
+    }
+    .mission-content h3,
+    .vision-content h3 {
+        font-size: 24px;
+    }
+    .mission-content h2 {
+        font-size: 31px;
+        line-height: 1.2;
+    }
+    .mission-content p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    .mission-features {
+        margin-top: 30px;
+    }
+    .mission-feature {
+        padding: 0 8px;
+    }
+    .mission-feature i {
+        font-size: 25px;
+    }
+    .mission-feature span {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+    .vision-content {
+        width: 100%;
+        padding: 45px 25px 0;
+    }
+    .vision-content p {
+        font-size: 22px;
+        line-height: 1.45;
+    }
+    .vision-brand {
+        right: 50%;
+        bottom: 30px;
+        width: 300px;
+        transform: translateX(50%);
+    }
+}
+@media (max-width:480px) {
+    .mission-panel,
+    .vision-panel,
+    .mission-content {
+        min-height: 580px;
+    }
+    .mission-content {
+        padding: 35px 20px;
+    }
+    .mission-icon,
+    .vision-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+    }
+    .mission-content h3,
+    .vision-content h3 {
+        font-size: 21px;
+        letter-spacing: 1.5px;
+    }
+    .mission-content h2 {
+        font-size: 27px;
+    }
+    .vision-content p {
+        font-size: 19px;
+    }
+    .mission-features {
+        margin-top: 25px;
+    }
+    .mission-feature i {
+        font-size: 21px;
+    }
+    .mission-feature span {
+        font-size: 9px;
+    }
+    .vision-brand {
+        bottom: 20px;
+        width: 270px;
+    }
+    .vision-brand-name {
+        font-size: 32px;
+    }
+    .vision-brand-subtitle {
+        font-size: 14px;
+    }
+}
+.kalp-find-section {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+    background: #f7f8fa;
+}
+
+.kalp-find-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1240px;
+}
+
+.kalp-find-header {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.kalp-find-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: #d89b32;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.kalp-find-label span {
+    width: 45px;
+    height: 1px;
+    background: #d89b32;
+}
+
+.kalp-find-label i {
+    color: #d89b32;
+    font-size: 15px;
+}
+
+.kalp-find-header h2 {
+    margin: 0;
+    color: #102b52;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 600;
+}
+
+.kalp-find-header h2 span {
+    color: #d89b32;
+}
+
+.kalp-find-header > p {
+    margin: 15px 0 0;
+    color: #5b6675;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.kalp-find-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.kalp-find-card {
+    position: relative;
+    min-height: 235px;
+    padding: 32px 25px 28px;
+    overflow: hidden;
+    border: 1px solid #e5e8ed;
+    border-radius: 16px;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(16, 43, 82, 0.06);
+    transition: all 0.35s ease;
+}
+
+.kalp-find-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #d89b32;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+}
+
+.kalp-find-card:hover {
+    border-color: #d89b32;
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(16, 43, 82, 0.12);
+}
+
+.kalp-find-card:hover::before {
+    transform: scaleX(1);
+}
+
+.kalp-find-number {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    color: #e9edf2;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 600;
+    transition: color 0.35s ease;
+}
+
+.kalp-find-card:hover .kalp-find-number {
+    color: #f1dfbe;
+}
+
+.kalp-find-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin: 8px auto 22px;
+    border-radius: 12px;
+    background: #102b52;
+    color: #d89b32;
+    font-size: 22px;
+    line-height: 1;
+    box-shadow: 0 8px 18px rgba(16, 43, 82, 0.12);
+    transition: all 0.35s ease;
+}
+
+.kalp-find-icon i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+}
+
+.kalp-find-card:hover .kalp-find-icon {
+    background: #d89b32;
+    color: #102b52;
+    border-radius: 50%;
+    transform: translateY(-3px);
+}
+
+.kalp-find-card h3 {
+    margin: 0 0 9px;
+    color: #102b52;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.kalp-find-card p {
+    margin: 0;
+    color: #687486;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 500;
+}
+
+@media (max-width: 1199px) {
+    .kalp-find-section {
+        padding: 70px 0;
+    }
+
+    .kalp-find-section .container {
+        max-width: 1140px;
+    }
+
+    .kalp-find-header h2 {
+        font-size: 43px;
+    }
+
+    .kalp-find-grid {
+        gap: 18px;
+    }
+
+    .kalp-find-card {
+        min-height: 225px;
+        padding: 30px 20px 25px;
+    }
+}
+
+@media (max-width: 991px) {
+    .kalp-find-section {
+        padding: 60px 0;
+    }
+
+    .kalp-find-header {
+        margin-bottom: 35px;
+    }
+
+    .kalp-find-header h2 {
+        font-size: 38px;
+    }
+
+    .kalp-find-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .kalp-find-card {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 767px) {
+    .kalp-find-section {
+        padding: 50px 0;
+    }
+
+    .kalp-find-header {
+        margin-bottom: 30px;
+    }
+
+    .kalp-find-label {
+        font-size: 9px;
+        letter-spacing: 1.8px;
+    }
+
+    .kalp-find-label span {
+        width: 30px;
+    }
+
+    .kalp-find-header h2 {
+        font-size: 32px;
+    }
+
+    .kalp-find-header > p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .kalp-find-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .kalp-find-card {
+        min-height: 210px;
+        padding: 28px 15px 22px;
+    }
+
+    .kalp-find-icon {
+        width: 54px;
+        height: 54px;
+        margin-bottom: 18px;
+        font-size: 20px;
+    }
+
+    .kalp-find-card h3 {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    .kalp-find-card p {
+        font-size: 12px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kalp-find-section {
+        padding: 40px 0;
+    }
+
+    .kalp-find-header h2 {
+        font-size: 28px;
+    }
+
+    .kalp-find-label {
+        gap: 7px;
+        font-size: 8px;
+    }
+
+    .kalp-find-label span {
+        width: 22px;
+    }
+
+    .kalp-find-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .kalp-find-card {
+        min-height: auto;
+        padding: 30px 20px;
+    }
+
+    .kalp-find-number {
+        top: 13px;
+        right: 15px;
+        font-size: 26px;
     }
 }
