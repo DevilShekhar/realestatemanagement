@@ -25,6 +25,7 @@ use App\Http\Controllers\admin\PropertyEnquiryController;
 use App\Http\Controllers\admin\ProfileController;
 use App\Http\Controllers\frontend\BuyerLoginController;
 use App\Http\Controllers\frontend\SellerLoginController;
+use App\Http\Controllers\frontend\ServiceController;
 
 Route::get('/', [HomePageController::class, 'index'])->name('frontend.home');
 Route::get('/about', [AboutController::class, 'index'])->name('frontend.about');
@@ -51,6 +52,7 @@ Route::name('frontend.')->group(function () {
     Route::get('/terms-and-conditions', [LegalPagesController::class, 'termsConditions'])->name('terms');
     Route::get('/disclaimer', [LegalPagesController::class, 'disclaimer'])->name('disclaimer');
 });
+Route::get('/services', [ServiceController::class, 'index'])->name('frontend.services');
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
