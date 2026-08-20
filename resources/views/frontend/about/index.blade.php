@@ -68,12 +68,12 @@
         <section class="kalp-find-section">
             <div class="container">
                 <div class="kalp-find-header">
-                    <div class="kalp-find-label">
-                        <span></span>
+                    <div class="about-kalp-label">
+                        <span class="about-kalp-label-line"></span>
                         <i class="fa fa-th-large"></i>
                         <span>PROPERTY CATEGORIES</span>
-                        <span></span>
-                    </div>
+                        <span class="about-kalp-label-line"></span>
+                    </div>                     
                     <h2>What Can You Find on <span>Kalp Realty?</span></h2>
                     <p>You can explore:</p>
                 </div>
