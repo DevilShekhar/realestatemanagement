@@ -73,18 +73,8 @@
                         <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation clearfix">
                                 <li class="{{ request()->routeIs('frontend.home') ? 'current' : '' }}"> <a href="{{ route('frontend.home') }}">Home</a>  </li>
-                               <li class="{{ request()->routeIs('frontend.about') ? 'current' : '' }}"> <a href="{{ route('frontend.about') }}">About Us</a> </li>
-                                <li class=" "><a href="services.html">Services</a>
-                                    <ul>
-                                        <li><a href="services.html">View All Services</a></li>
-                                        <li><a href="ser-concept-designs.html">Concept Designs</a></li>
-                                        <li><a href="ser-project-designs.html">Project Designs</a></li>
-                                        <li><a href="ser-make-overs.html">Make Overs</a></li>
-                                        <li><a href="ser-consulting.html">Consulting</a></li>
-                                        <li><a href="ser-glass-wrought.html">Glass & Wrought</a></li>
-                                        <li><a href="ser-space-planning.html">Space Planning</a></li>
-                                    </ul>
-                                </li>                     
+                                <li class="{{ request()->routeIs('frontend.about') ? 'current' : '' }}"> <a href="{{ route('frontend.about') }}">About Us</a> </li>
+                                <li class="{{ request()->routeIs('frontend.services') ? 'active' : '' }}"><a href="{{ route('frontend.services') }}">Services</a>  </li>                     
                                 <li class="{{ request()->routeIs('frontend.contact') ? 'current' : '' }}"><a href="{{ route('frontend.contact') }}">Contact Us</a></li>
                             </ul>
                         </div>
