@@ -2,6 +2,85 @@
 @section('content')
 <section class="section">   
   <div class="row">
+   @if($role === 'seller')
+
+    {{-- Total Properties --}}
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-statistic-1">
+            <div class="card-icon bg-primary">
+                <i class="fas fa-building"></i>
+            </div>
+
+            <div class="card-wrap">
+                <div class="card-header">
+                    <h4>My Properties</h4>
+                </div>
+
+                <div class="card-body">
+                    {{ $sellerProperties }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Active Properties --}}
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-statistic-1">
+            <div class="card-icon bg-success">
+                <i class="fas fa-check-circle"></i>
+            </div>
+
+            <div class="card-wrap">
+                <div class="card-header">
+                    <h4>Active</h4>
+                </div>
+
+                <div class="card-body">
+                    {{ $sellerActiveProperties }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Inactive Properties --}}
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-statistic-1">
+            <div class="card-icon bg-danger">
+                <i class="fas fa-times-circle"></i>
+            </div>
+
+            <div class="card-wrap">
+                <div class="card-header">
+                    <h4>Inactive</h4>
+                </div>
+
+                <div class="card-body">
+                    {{ $sellerInactiveProperties }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Sold Properties --}}
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-statistic-1">
+            <div class="card-icon bg-warning">
+                <i class="fas fa-home"></i>
+            </div>
+
+            <div class="card-wrap">
+                <div class="card-header">
+                    <h4>Sold Out</h4>
+                </div>
+
+                <div class="card-body">
+                    {{ $sellerSoldProperties }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+@endif
     @if(in_array($role, ['super-admin', 'admin', 'agent','buyer']))
         <div class="col-lg-4">
             <div class="card">
@@ -151,8 +230,7 @@
             </div>
           </div>
         </div>
-      </div>
-    @endif
+      </div>    
     <div class="col-lg-4">
       <div class="card">
         <div class="card-statistic-4">
@@ -179,7 +257,8 @@
           </div>
         </div>
       </div>
-    </div>      
+    </div>
+    @endif      
     @if(in_array($role, ['super-admin', 'admin', 'agent']))
       <div class="col-lg-4">
         <div class="card">
@@ -219,69 +298,68 @@
       </div>
     @endif
   </div>   
-  <div class="row">
-    @if(in_array($role, ['super-admin', 'admin', 'agent']))
-      <div class="col-lg-3 col-md-6 col-sm-6">
-        <div class="card card-statistic-1">
-          <div class="card-icon bg-primary">
-            <i class="fas fa-list"></i>
-          </div>
-          <div class="card-wrap">
-            <div class="card-header">
-              <h4>Categories</h4>
-            </div>
-            <div class="card-body">
-              {{ $totalCategories }}
-            </div>
-          </div>
-        </div>
-      </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="card card-statistic-1">
-                  <div class="card-icon bg-success">
-                      <i class="fas fa-star"></i>
-                  </div>
-                  <div class="card-wrap">
-                      <div class="card-header">
-                          <h4>Amenities</h4>
-                      </div>
-                      <div class="card-body">
-                          {{ $totalAmenities }}
-                      </div>
-                  </div>
-              </div>
-          </div>
-        @endif
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-statistic-1">
-                <div class="card-icon bg-info">
-                    <i class="fas fa-city"></i>
+    <div class="row">
+        @if(in_array($role, ['super-admin', 'admin', 'agent']))
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-statistic-1">
+                <div class="card-icon bg-primary">
+                    <i class="fas fa-list"></i>
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>Cities</h4>
+                    <h4>Categories</h4>
                     </div>
                     <div class="card-body">
-                        {{ $totalCities }}
+                    {{ $totalCategories }}
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-success">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Amenities</h4>
+                        </div>
+                        <div class="card-body">
+                            {{ $totalAmenities }}
+                        </div>
+                    </div>
+                </div>
+            </div>       
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-info">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Cities</h4>
+                        </div>
+                        <div class="card-body">
+                            {{ $totalCities }}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-statistic-1">
-                <div class="card-icon bg-warning">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="card-wrap">
-                    <div class="card-header">
-                        <h4>Areas</h4>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-warning">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <div class="card-body">
-                        {{ $totalAreas }}
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Areas</h4>
+                        </div>
+                        <div class="card-body">
+                            {{ $totalAreas }}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div>        
     </div>
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-6">
@@ -323,6 +401,7 @@
             </div>
         </div>
     </div>
+    @endif
     @if(in_array($role, ['super-admin', 'admin', 'agent']))
     <div class="row">
         <div class="col-12">
