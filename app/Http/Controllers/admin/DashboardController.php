@@ -60,7 +60,11 @@ class DashboardController extends Controller
             $sellerActiveProperties = (clone $sellerPropertyQuery)->where('status', 1)->count();
             $sellerInactiveProperties = (clone $sellerPropertyQuery)->where('status', 0)->count();
             $sellerSoldProperties = (clone $sellerPropertyQuery)->where('status', 2)->count();
-        }      
+        }   
+        $buyerEnquiries = 0;
+        if ($role === 'buyer') {
+            $buyerEnquiries = PropertyEnquiry::where('buyer_id', $user->id)->count();
+        }   
         $recentProperties = $recentPropertyQuery->take(5)->get();
         return view('admin.dashboard', compact(
             'user',
@@ -85,6 +89,7 @@ class DashboardController extends Controller
             'sellerActiveProperties',
             'sellerInactiveProperties',
             'sellerSoldProperties',
+            'buyerEnquiries'
         ));
     }
 }
