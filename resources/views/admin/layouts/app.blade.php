@@ -341,7 +341,17 @@
                                             </span>
                                         </a>
                                     </li>
-                                @endcan        
+                                @endcan     
+                                @can('my enquiry')
+                                    <li class="{{ request()->routeIs('my-enquiry') ? 'active' : '' }}">
+                                        <a class="nav-link" href="{{ route('my-enquiry') }}">
+                                            <i data-feather="mail"></i>
+                                            <span>
+                                                My Enquiries
+                                            </span>
+                                        </a>
+                                    </li>
+                                @endcan   
                                 @can('sold out property')
                                     <li class="{{ request()->routeIs('properties.sold-out-property') ? 'active' : '' }}">
                                         <a class="nav-link" href="{{ route('properties.sold-out-property') }}">
