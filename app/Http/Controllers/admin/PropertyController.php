@@ -331,6 +331,11 @@ class PropertyController extends Controller
             'integer',
             'min:0',
         ],
+        'residential_type' => [
+            'nullable',
+            'string',
+            'max:100',
+        ],
 
             'bhk' => [
             'nullable',
@@ -970,6 +975,11 @@ class PropertyController extends Controller
             | Residential Fields
             |--------------------------------------------------------------------------
             */
+            'residential_type' => [
+                'nullable',
+                'string',
+                'max:100',
+            ],
 
             'bhk' => [
                 'nullable',
