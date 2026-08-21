@@ -965,46 +965,40 @@
 
                                     {{-- Commercial Type --}}
                                     <div class="col-md-4">
-
                                         <div class="form-group">
-
                                             <label for="commercial_type">
                                                 Commercial Type
                                             </label>
-
-                                            <select
-                                                name="commercial_type"
-                                                id="commercial_type"
-                                                class="form-control">
-
+                                            <select name="commercial_type" id="commercial_type"  class="form-control">
                                                 <option value="">
-                                                    Select Type
+                                                    Select Commercial Type
                                                 </option>
-
-                                                <option value="Office"
-                                                    {{ old('commercial_type') == 'Office' ? 'selected' : '' }}>
-                                                    Office
+                                                <option value="Office Spaces"
+                                                    {{ old('commercial_type') == 'Office Spaces' ? 'selected' : '' }}>
+                                                    Office Spaces
                                                 </option>
-
-                                                <option value="Shop"
-                                                    {{ old('commercial_type') == 'Shop' ? 'selected' : '' }}>
-                                                    Shop
+                                                <option value="Shops"
+                                                    {{ old('commercial_type') == 'Shops' ? 'selected' : '' }}>
+                                                    Shops
                                                 </option>
-
-                                                <option value="Warehouse"
-                                                    {{ old('commercial_type') == 'Warehouse' ? 'selected' : '' }}>
-                                                    Warehouse
+                                                <option value="Showrooms"
+                                                    {{ old('commercial_type') == 'Showrooms' ? 'selected' : '' }}>
+                                                    Showrooms
                                                 </option>
-
-                                                <option value="Showroom"
-                                                    {{ old('commercial_type') == 'Showroom' ? 'selected' : '' }}>
-                                                    Showroom
+                                                <option value="Retail Spaces"
+                                                    {{ old('commercial_type') == 'Retail Spaces' ? 'selected' : '' }}>
+                                                    Retail Spaces
                                                 </option>
-
+                                                <option value="Commercial Buildings"
+                                                    {{ old('commercial_type') == 'Commercial Buildings' ? 'selected' : '' }}>
+                                                    Commercial Buildings
+                                                </option>
+                                                <option value="Business Spaces"
+                                                    {{ old('commercial_type') == 'Business Spaces' ? 'selected' : '' }}>
+                                                    Business Spaces
+                                                </option>
                                             </select>
-
                                         </div>
-
                                     </div>
 
 
@@ -1306,25 +1300,44 @@
 
                                     {{-- Land Type --}}
                                     <div class="col-md-4">
-
                                         <div class="form-group">
-
                                             <label for="land_type">
                                                 Land Type
                                             </label>
-
-                                            <input
-                                                type="text"
+                                            <select
                                                 name="land_type"
                                                 id="land_type"
-                                                class="form-control"
-                                                value="{{ old('land_type') }}"
-                                                placeholder="Land type">
-
+                                                class="form-control">
+                                                <option value="">
+                                                    Select Land Type
+                                                </option>
+                                                <option value="Residential Plot"
+                                                    {{ old('land_type') == 'Residential Plot' ? 'selected' : '' }}>
+                                                    Residential Plot
+                                                </option>
+                                                <option value="Open Plot"
+                                                    {{ old('land_type') == 'Open Plot' ? 'selected' : '' }}>
+                                                    Open Plot
+                                                </option>
+                                                <option value="Commercial Land"
+                                                    {{ old('land_type') == 'Commercial Land' ? 'selected' : '' }}>
+                                                    Commercial Land
+                                                </option>
+                                                <option value="Industrial Land"
+                                                    {{ old('land_type') == 'Industrial Land' ? 'selected' : '' }}>
+                                                    Industrial Land
+                                                </option>
+                                                <option value="Agricultural Land"
+                                                    {{ old('land_type') == 'Agricultural Land' ? 'selected' : '' }}>
+                                                    Agricultural Land
+                                                </option>
+                                                <option value="Farm Land"
+                                                    {{ old('land_type') == 'Farm Land' ? 'selected' : '' }}>
+                                                    Farm Land
+                                                </option>
+                                            </select>
                                         </div>
-
                                     </div>
-
 
                                     {{-- Facing --}}
                                     <div class="col-md-4">
@@ -1540,6 +1553,361 @@
                                 </div>
 
                                 <div class="row">
+
+                                    {{-- Resale Type --}}
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+
+                                            <label for="resale_type">
+                                                Resale Type
+                                            </label>
+
+                                            <select
+                                                name="resale_type"
+                                                id="resale_type"
+                                                class="form-control">
+
+                                                <option value="">
+                                                    Select Resale Type
+                                                </option>
+
+                                                <option value="Resale Flats"
+                                                    {{ old('resale_type') == 'Resale Flats' ? 'selected' : '' }}>
+                                                    Resale Flats
+                                                </option>
+
+                                                <option value="Resale Apartments"
+                                                    {{ old('resale_type') == 'Resale Apartments' ? 'selected' : '' }}>
+                                                    Resale Apartments
+                                                </option>
+
+                                                <option value="Resale Houses"
+                                                    {{ old('resale_type') == 'Resale Houses' ? 'selected' : '' }}>
+                                                    Resale Houses
+                                                </option>
+
+                                                <option value="Resale Villas"
+                                                    {{ old('resale_type') == 'Resale Villas' ? 'selected' : '' }}>
+                                                    Resale Villas
+                                                </option>
+
+                                                <option value="Resale Office Spaces"
+                                                    {{ old('resale_type') == 'Resale Office Spaces' ? 'selected' : '' }}>
+                                                    Resale Office Spaces
+                                                </option>
+
+                                                <option value="Resale Shops"
+                                                    {{ old('resale_type') == 'Resale Shops' ? 'selected' : '' }}>
+                                                    Resale Shops
+                                                </option>
+
+                                                <option value="Other Resale Properties"
+                                                    {{ old('resale_type') == 'Other Resale Properties' ? 'selected' : '' }}>
+                                                    Other Resale Properties
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+                                    {{-- Price --}}
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+
+                                            <label for="price">
+                                                Price
+                                            </label>
+
+                                            <input
+                                                type="number"
+                                                name="price"
+                                                id="price"
+                                                min="0"
+                                                step="0.01"
+                                                class="form-control"
+                                                value="{{ old('price') }}"
+                                                placeholder="Enter price">
+
+                                        </div>
+                                    </div>
+
+
+                                    {{-- BHK --}}
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+
+                                            <label for="resale_bhk">
+                                                BHK
+                                            </label>
+
+                                            <select
+                                                name="bhk"
+                                                id="resale_bhk"
+                                                class="form-control">
+
+                                                <option value="">
+                                                    Select BHK
+                                                </option>
+
+                                                <option value="1"
+                                                    {{ old('bhk') == '1' ? 'selected' : '' }}>
+                                                    1 BHK
+                                                </option>
+
+                                                <option value="2"
+                                                    {{ old('bhk') == '2' ? 'selected' : '' }}>
+                                                    2 BHK
+                                                </option>
+
+                                                <option value="3"
+                                                    {{ old('bhk') == '3' ? 'selected' : '' }}>
+                                                    3 BHK
+                                                </option>
+
+                                                <option value="4"
+                                                    {{ old('bhk') == '4' ? 'selected' : '' }}>
+                                                    4 BHK
+                                                </option>
+
+                                                <option value="5"
+                                                    {{ old('bhk') == '5' ? 'selected' : '' }}>
+                                                    5 BHK
+                                                </option>
+
+                                                <option value="6"
+                                                    {{ old('bhk') == '6' ? 'selected' : '' }}>
+                                                    6+ BHK
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    {{-- Bedrooms --}}
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+
+                                            <label for="resale_bedrooms">
+                                                Bedrooms
+                                            </label>
+
+                                            <input
+                                                type="number"
+                                                name="bedrooms"
+                                                id="resale_bedrooms"
+                                                min="0"
+                                                class="form-control"
+                                                value="{{ old('bedrooms') }}"
+                                                placeholder="Bedrooms">
+
+                                        </div>
+
+                                    </div>
+
+
+                                    {{-- Bathrooms --}}
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+
+                                            <label for="resale_bathrooms">
+                                                Bathrooms
+                                            </label>
+
+                                            <input
+                                                type="number"
+                                                name="bathrooms"
+                                                id="resale_bathrooms"
+                                                min="0"
+                                                class="form-control"
+                                                value="{{ old('bathrooms') }}"
+                                                placeholder="Bathrooms">
+
+                                        </div>
+
+                                    </div>
+
+
+                                    {{-- Balconies --}}
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+
+                                            <label for="resale_balconies">
+                                                Balconies
+                                            </label>
+
+                                            <input
+                                                type="number"
+                                                name="balconies"
+                                                id="resale_balconies"
+                                                min="0"
+                                                class="form-control"
+                                                value="{{ old('balconies') }}"
+                                                placeholder="Balconies">
+
+                                        </div>
+
+                                    </div>
+
+
+                                    {{-- Facing --}}
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+
+                                            <label for="resale_facing">
+                                                Facing
+                                            </label>
+
+                                            <select
+                                                name="facing"
+                                                id="resale_facing"
+                                                class="form-control">
+
+                                                <option value="">
+                                                    Select Facing
+                                                </option>
+
+                                                <option value="North"
+                                                    {{ old('facing') == 'North' ? 'selected' : '' }}>
+                                                    North
+                                                </option>
+
+                                                <option value="South"
+                                                    {{ old('facing') == 'South' ? 'selected' : '' }}>
+                                                    South
+                                                </option>
+
+                                                <option value="East"
+                                                    {{ old('facing') == 'East' ? 'selected' : '' }}>
+                                                    East
+                                                </option>
+
+                                                <option value="West"
+                                                    {{ old('facing') == 'West' ? 'selected' : '' }}>
+                                                    West
+                                                </option>
+
+                                                <option value="North-East"
+                                                    {{ old('facing') == 'North-East' ? 'selected' : '' }}>
+                                                    North-East
+                                                </option>
+
+                                                <option value="North-West"
+                                                    {{ old('facing') == 'North-West' ? 'selected' : '' }}>
+                                                    North-West
+                                                </option>
+
+                                                <option value="South-East"
+                                                    {{ old('facing') == 'South-East' ? 'selected' : '' }}>
+                                                    South-East
+                                                </option>
+
+                                                <option value="South-West"
+                                                    {{ old('facing') == 'South-West' ? 'selected' : '' }}>
+                                                    South-West
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    {{-- Floor Number --}}
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+
+                                            <label for="resale_floor_number">
+                                                Floor Number
+                                            </label>
+
+                                            <input
+                                                type="number"
+                                                name="floor_number"
+                                                id="resale_floor_number"
+                                                min="0"
+                                                class="form-control"
+                                                value="{{ old('floor_number') }}"
+                                                placeholder="Floor number">
+
+                                        </div>
+
+                                    </div>
+
+
+                                    {{-- Total Floors --}}
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+
+                                            <label for="resale_total_floors">
+                                                Total Floors
+                                            </label>
+
+                                            <input
+                                                type="number"
+                                                name="total_floors"
+                                                id="resale_total_floors"
+                                                min="0"
+                                                class="form-control"
+                                                value="{{ old('total_floors') }}"
+                                                placeholder="Total floors">
+
+                                        </div>
+
+                                    </div>
+
+
+                                    {{-- Furnishing --}}
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+
+                                            <label for="resale_furnishing">
+                                                Furnishing
+                                            </label>
+
+                                            <select
+                                                name="furnishing"
+                                                id="resale_furnishing"
+                                                class="form-control">
+
+                                                <option value="">
+                                                    Select Furnishing
+                                                </option>
+
+                                                <option value="Unfurnished"
+                                                    {{ old('furnishing') == 'Unfurnished' ? 'selected' : '' }}>
+                                                    Unfurnished
+                                                </option>
+
+                                                <option value="Semi Furnished"
+                                                    {{ old('furnishing') == 'Semi Furnished' ? 'selected' : '' }}>
+                                                    Semi Furnished
+                                                </option>
+
+                                                <option value="Fully Furnished"
+                                                    {{ old('furnishing') == 'Fully Furnished' ? 'selected' : '' }}>
+                                                    Fully Furnished
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
 
                                     {{-- Purchase Year --}}
                                     <div class="col-md-4">

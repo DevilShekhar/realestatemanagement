@@ -2241,6 +2241,62 @@
                                         <div class="row property-filter-grid">
                                             <div class="col-xl-3 col-lg-4 col-md-6">
                                                 <div class="property-filter-field">
+
+                                                    <label for="residential_type">
+                                                        Residential Type
+                                                    </label>
+
+                                                    <div class="property-input-wrapper">
+
+                                                        <select
+                                                            id="residential_type"
+                                                            name="residential_type"
+                                                            class="form-control category-data-filter">
+
+                                                            <option value="">
+                                                                Any Residential Type
+                                                            </option>
+
+                                                            <option value="Apartment / Flat">
+                                                                Apartment / Flat
+                                                            </option>
+
+                                                            <option value="Villa">
+                                                                Villa
+                                                            </option>
+
+                                                            <option value="Bungalow">
+                                                                Bungalow
+                                                            </option>
+
+                                                            <option value="Independent House">
+                                                                Independent House
+                                                            </option>
+
+                                                            <option value="Builder Floor">
+                                                                Builder Floor
+                                                            </option>
+
+                                                            <option value="Studio Apartment">
+                                                                Studio Apartment
+                                                            </option>
+
+                                                            <option value="Penthouse">
+                                                                Penthouse
+                                                            </option>
+
+                                                            <option value="Row House">
+                                                                Row House
+                                                            </option>
+
+                                                        </select>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
                                                     <label for="bhk">BHK</label>
                                                     <div class="property-input-wrapper">                                                       
                                                         <select id="bhk" name="bhk" class="form-control category-data-filter">
@@ -2385,19 +2441,36 @@
                                         <div class="row property-filter-grid">
                                             <div class="col-xl-3 col-lg-4 col-md-6">
                                                 <div class="property-filter-field">
-                                                    <label for="commercial_type">Commercial Type</label>
-                                                    <div class="property-input-wrapper">                                                        
-                                                        <select id="commercial_type" name="commercial_type"
-                                                                class="form-control category-data-filter">
-                                                            <option value="">All Commercial Types</option>
-                                                            <option value="Office">Office</option>
-                                                            <option value="Shop">Shop</option>
-                                                            <option value="Warehouse">Warehouse</option>
-                                                            <option value="Showroom">Showroom</option>
+                                                    <label for="commercial_type">
+                                                        Commercial Type
+                                                    </label>
+                                                    <div class="property-input-wrapper">
+                                                        <select id="commercial_type" name="commercial_type" class="form-control category-data-filter">
+                                                            <option value="">
+                                                                All Commercial Types
+                                                            </option>
+                                                            <option value="Office Spaces">
+                                                                Office Spaces
+                                                            </option>
+                                                            <option value="Shops">
+                                                                Shops
+                                                            </option>
+                                                            <option value="Showrooms">
+                                                                Showrooms
+                                                            </option>
+                                                            <option value="Retail Spaces">
+                                                                Retail Spaces
+                                                            </option>
+                                                            <option value="Commercial Buildings">
+                                                                Commercial Buildings
+                                                            </option>
+                                                            <option value="Business Spaces">
+                                                                Business Spaces
+                                                            </option>
                                                         </select>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>                                      
                                             <div class="col-xl-3 col-lg-4 col-md-6">
                                                 <div class="property-filter-field">
                                                     <label for="business_type">Business Type</label>
@@ -2498,13 +2571,16 @@
                                             </div>
                                             <div class="col-xl-3 col-lg-4 col-md-6">
                                                 <div class="property-filter-field">
-                                                    <label for="land_type">Land Type</label>
-                                                    <select id="land_type" name="land_type"  class="form-control category-data-filter">
-                                                        <option value="">Any Land Type</option>
+                                                    <label for="land_type">
+                                                        Land Type
+                                                    </label>
+                                                    <select  id="land_type" name="land_type" class="form-control category-data-filter">
+                                                        <option value=""> Any Land Type </option>
                                                         <option value="Residential Plot">Residential Plot</option>
-                                                        <option value="Commercial Plot">Commercial Plot</option>
-                                                        <option value="Agricultural Land">Agricultural Land</option>
+                                                        <option value="Open Plot">Open Plot</option>
+                                                        <option value="Commercial Land">Commercial Land</option>
                                                         <option value="Industrial Land">Industrial Land</option>
+                                                        <option value="Agricultural Land">Agricultural Land</option>
                                                         <option value="Farm Land">Farm Land</option>
                                                     </select>
                                                 </div>
@@ -2600,18 +2676,334 @@
                                             <span class="category-filter-badge">Resale</span>
                                         </div>
                                         <div class="row property-filter-grid">
+                                            {{-- Resale Type --}}
                                             <div class="col-xl-3 col-lg-4 col-md-6">
                                                 <div class="property-filter-field">
-                                                    <label for="purchase_year">Purchase Year</label>
-                                                    <input type="number" id="purchase_year" name="purchase_year"  class="form-control category-data-filter"  min="1900" max="{{ date('Y') }}" placeholder="YYYY">
+
+                                                    <label for="resale_type">
+                                                        Resale Type
+                                                    </label>
+
+                                                    <select
+                                                        id="resale_type"
+                                                        name="resale_type"
+                                                        class="form-control category-data-filter">
+
+                                                        <option value="">
+                                                            Any Resale Type
+                                                        </option>
+
+                                                        <option value="Resale Flats">
+                                                            Resale Flats
+                                                        </option>
+
+                                                        <option value="Resale Apartments">
+                                                            Resale Apartments
+                                                        </option>
+
+                                                        <option value="Resale Houses">
+                                                            Resale Houses
+                                                        </option>
+
+                                                        <option value="Resale Villas">
+                                                            Resale Villas
+                                                        </option>
+
+                                                        <option value="Resale Office Spaces">
+                                                            Resale Office Spaces
+                                                        </option>
+
+                                                        <option value="Resale Shops">
+                                                            Resale Shops
+                                                        </option>
+
+                                                        <option value="Other Resale Properties">
+                                                            Other Resale Properties
+                                                        </option>
+
+                                                    </select>
+
                                                 </div>
                                             </div>
+
+
+                                            {{-- BHK --}}
                                             <div class="col-xl-3 col-lg-4 col-md-6">
                                                 <div class="property-filter-field">
-                                                    <label for="property_age">Property Age</label>
-                                                    <input type="number" id="property_age"  name="property_age" class="form-control category-data-filter" min="0" placeholder="Maximum age">
+
+                                                    <label for="bhk">
+                                                        BHK
+                                                    </label>
+
+                                                    <select
+                                                        id="bhk"
+                                                        name="bhk"
+                                                        class="form-control category-data-filter">
+
+                                                        <option value="">
+                                                            Any BHK
+                                                        </option>
+
+                                                        <option value="1">
+                                                            1 BHK
+                                                        </option>
+
+                                                        <option value="2">
+                                                            2 BHK
+                                                        </option>
+
+                                                        <option value="3">
+                                                            3 BHK
+                                                        </option>
+
+                                                        <option value="4">
+                                                            4 BHK
+                                                        </option>
+
+                                                        <option value="5">
+                                                            5 BHK
+                                                        </option>
+
+                                                        <option value="6">
+                                                            6+ BHK
+                                                        </option>
+
+                                                    </select>
+
                                                 </div>
                                             </div>
+
+
+                                            {{-- Bedrooms --}}
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+
+                                                    <label for="bedrooms">
+                                                        Bedrooms
+                                                    </label>
+
+                                                    <input
+                                                        type="number"
+                                                        id="bedrooms"
+                                                        name="bedrooms"
+                                                        class="form-control category-data-filter"
+                                                        min="0"
+                                                        placeholder="Minimum bedrooms">
+
+                                                </div>
+                                            </div>
+
+
+                                            {{-- Bathrooms --}}
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+
+                                                    <label for="bathrooms">
+                                                        Bathrooms
+                                                    </label>
+
+                                                    <input
+                                                        type="number"
+                                                        id="bathrooms"
+                                                        name="bathrooms"
+                                                        class="form-control category-data-filter"
+                                                        min="0"
+                                                        placeholder="Minimum bathrooms">
+
+                                                </div>
+                                            </div>
+
+
+                                            {{-- Balconies --}}
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+
+                                                    <label for="balconies">
+                                                        Balconies
+                                                    </label>
+
+                                                    <input
+                                                        type="number"
+                                                        id="balconies"
+                                                        name="balconies"
+                                                        class="form-control category-data-filter"
+                                                        min="0"
+                                                        placeholder="Minimum balconies">
+
+                                                </div>
+                                            </div>
+
+
+                                            {{-- Facing --}}
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+
+                                                    <label for="facing">
+                                                        Facing
+                                                    </label>
+
+                                                    <select
+                                                        id="facing"
+                                                        name="facing"
+                                                        class="form-control category-data-filter">
+
+                                                        <option value="">
+                                                            Any Facing
+                                                        </option>
+
+                                                        <option value="North">
+                                                            North
+                                                        </option>
+
+                                                        <option value="South">
+                                                            South
+                                                        </option>
+
+                                                        <option value="East">
+                                                            East
+                                                        </option>
+
+                                                        <option value="West">
+                                                            West
+                                                        </option>
+
+                                                        <option value="North-East">
+                                                            North-East
+                                                        </option>
+
+                                                        <option value="North-West">
+                                                            North-West
+                                                        </option>
+
+                                                        <option value="South-East">
+                                                            South-East
+                                                        </option>
+
+                                                        <option value="South-West">
+                                                            South-West
+                                                        </option>
+
+                                                    </select>
+
+                                                </div>
+                                            </div>
+
+
+                                            {{-- Floor Number --}}
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+
+                                                    <label for="floor_number">
+                                                        Floor Number
+                                                    </label>
+
+                                                    <input
+                                                        type="number"
+                                                        id="floor_number"
+                                                        name="floor_number"
+                                                        class="form-control category-data-filter"
+                                                        min="0"
+                                                        placeholder="Floor number">
+
+                                                </div>
+                                            </div>
+
+
+                                            {{-- Total Floors --}}
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+
+                                                    <label for="total_floors">
+                                                        Total Floors
+                                                    </label>
+
+                                                    <input
+                                                        type="number"
+                                                        id="total_floors"
+                                                        name="total_floors"
+                                                        class="form-control category-data-filter"
+                                                        min="0"
+                                                        placeholder="Total floors">
+
+                                                </div>
+                                            </div>
+
+
+                                            {{-- Furnishing --}}
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+
+                                                    <label for="furnishing">
+                                                        Furnishing
+                                                    </label>
+
+                                                    <select
+                                                        id="furnishing"
+                                                        name="furnishing"
+                                                        class="form-control category-data-filter">
+
+                                                        <option value="">
+                                                            Any Furnishing
+                                                        </option>
+
+                                                        <option value="Unfurnished">
+                                                            Unfurnished
+                                                        </option>
+
+                                                        <option value="Semi Furnished">
+                                                            Semi Furnished
+                                                        </option>
+
+                                                        <option value="Fully Furnished">
+                                                            Fully Furnished
+                                                        </option>
+
+                                                    </select>
+
+                                                </div>
+                                            </div>
+
+
+                                            {{-- Purchase Year --}}
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+
+                                                    <label for="purchase_year">
+                                                        Purchase Year
+                                                    </label>
+
+                                                    <input
+                                                        type="number"
+                                                        id="purchase_year"
+                                                        name="purchase_year"
+                                                        class="form-control category-data-filter"
+                                                        min="1900"
+                                                        max="{{ date('Y') }}"
+                                                        placeholder="YYYY">
+
+                                                </div>
+                                            </div>
+
+
+                                            {{-- Property Age --}}
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="property-filter-field">
+
+                                                    <label for="property_age">
+                                                        Property Age
+                                                    </label>
+
+                                                    <input
+                                                        type="number"
+                                                        id="property_age"
+                                                        name="property_age"
+                                                        class="form-control category-data-filter"
+                                                        min="0"
+                                                        placeholder="Maximum age">
+
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                     <div id="newProjectFilters" class="category-filter-section category-wise-panel" data-category-type="project" style="display:none;">
