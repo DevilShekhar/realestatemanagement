@@ -1454,7 +1454,7 @@ select:focus {
     font-size: 14px;
     line-height: 50px;
     text-align: center;
-    transition: all 700ms ease 100ms; 
+    transition: all 700ms ease 100ms;  
 }
 .header-social-links-style1 li a:hover i{
     color: #ffffff;
@@ -1462,13 +1462,6 @@ select:focus {
     transform: rotate(360deg);
 }
 
-
-
-/*** 
-=====================================================
-	Main Slider style
-=====================================================
-***/
 .main-slider {
     position: relative;
     z-index: 10;
