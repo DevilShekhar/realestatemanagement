@@ -127,6 +127,12 @@ class PropertySearchController extends Controller
             | RESIDENTIAL FILTERS
             |--------------------------------------------------------------------------
             */
+            if ($request->filled('residential_type')) {
+                $query->where(
+                    'residential_type',
+                    $request->residential_type
+                );
+            }
 
             if ($request->filled('bhk')) {
 
@@ -369,8 +375,73 @@ class PropertySearchController extends Controller
             |--------------------------------------------------------------------------
             */
 
-            if ($request->filled('purchase_year')) {
+            if ($request->filled('resale_type')) {
+                $query->where(
+                    'resale_type',
+                    $request->resale_type
+                );
+            }
 
+            if ($request->filled('bhk')) {
+                $query->where(
+                    'bhk',
+                    $request->bhk
+                );
+            }
+
+            if ($request->filled('bedrooms')) {
+                $query->where(
+                    'bedrooms',
+                    '>=',
+                    $request->bedrooms
+                );
+            }
+
+            if ($request->filled('bathrooms')) {
+                $query->where(
+                    'bathrooms',
+                    '>=',
+                    $request->bathrooms
+                );
+            }
+
+            if ($request->filled('balconies')) {
+                $query->where(
+                    'balconies',
+                    '>=',
+                    $request->balconies
+                );
+            }
+
+            if ($request->filled('facing')) {
+                $query->where(
+                    'facing',
+                    $request->facing
+                );
+            }
+
+            if ($request->filled('floor_number')) {
+                $query->where(
+                    'floor_number',
+                    $request->floor_number
+                );
+            }
+
+            if ($request->filled('total_floors')) {
+                $query->where(
+                    'total_floors',
+                    $request->total_floors
+                );
+            }
+
+            if ($request->filled('furnishing')) {
+                $query->where(
+                    'furnishing',
+                    $request->furnishing
+                );
+            }
+
+            if ($request->filled('purchase_year')) {
                 $query->where(
                     'purchase_year',
                     $request->purchase_year
@@ -378,7 +449,6 @@ class PropertySearchController extends Controller
             }
 
             if ($request->filled('property_age')) {
-
                 $query->where(
                     'property_age',
                     '<=',

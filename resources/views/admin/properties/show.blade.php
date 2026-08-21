@@ -2242,6 +2242,12 @@
                                         <strong> {{ $property->propertyCategory->name ?? '-' }}</strong>
                                     </div>
                                     <div class="property-detail-item">
+                                        <span>Residential Type</span>
+                                        <strong>
+                                            {{ $property->residential_type ?? '-' }}
+                                        </strong>
+                                    </div>
+                                    <div class="property-detail-item">
                                         <span> BHK  </span>
                                         <strong>
                                             {{ $property->bhk
@@ -2407,6 +2413,120 @@
                                             }}
                                         </strong>
                                     </div>
+                                    @elseif($categoryName === 'resale')
+
+                                        {{-- Property Type --}}
+                                        <div class="property-detail-item">
+                                            <span>Property Type</span>
+                                            <strong>
+                                                {{ $property->propertyCategory->name ?? '-' }}
+                                            </strong>
+                                        </div>
+
+                                        {{-- Resale Type --}}
+                                        <div class="property-detail-item">
+                                            <span>Resale Type</span>
+                                            <strong>
+                                                {{ $property->resale_type ?? '-' }}
+                                            </strong>
+                                        </div>
+
+                                        {{-- BHK --}}
+                                        <div class="property-detail-item">
+                                            <span>BHK</span>
+                                            <strong>
+                                                {{ $property->bhk ? $property->bhk . ' BHK' : '-' }}
+                                            </strong>
+                                        </div>
+
+                                        {{-- Bedrooms --}}
+                                        <div class="property-detail-item">
+                                            <span>Bedrooms</span>
+                                            <strong>
+                                                {{ $property->bedrooms ?? '-' }}
+                                            </strong>
+                                        </div>
+
+                                        {{-- Bathrooms --}}
+                                        <div class="property-detail-item">
+                                            <span>Bathrooms</span>
+                                            <strong>
+                                                {{ $property->bathrooms ?? '-' }}
+                                            </strong>
+                                        </div>
+
+                                        {{-- Balconies --}}
+                                        <div class="property-detail-item">
+                                            <span>Balconies</span>
+                                            <strong>
+                                                {{ $property->balconies ?? '-' }}
+                                            </strong>
+                                        </div>
+
+                                        {{-- Facing --}}
+                                        <div class="property-detail-item">
+                                            <span>Facing</span>
+                                            <strong>
+                                                {{ $property->facing ?? '-' }}
+                                            </strong>
+                                        </div>
+
+                                        {{-- Floor Number --}}
+                                        <div class="property-detail-item">
+                                            <span>Floor Number</span>
+                                            <strong>
+                                                {{ $property->floor_number ?? '-' }}
+                                            </strong>
+                                        </div>
+
+                                        {{-- Total Floors --}}
+                                        <div class="property-detail-item">
+                                            <span>Total Floors</span>
+                                            <strong>
+                                                {{ $property->total_floors ?? '-' }}
+                                            </strong>
+                                        </div>
+
+                                        {{-- Furnishing --}}
+                                        <div class="property-detail-item">
+                                            <span>Furnished Status</span>
+                                            <strong>
+                                                {{ $property->furnishing
+                                                    ? ucwords(str_replace('_', ' ', $property->furnishing))
+                                                    : '-'
+                                                }}
+                                            </strong>
+                                        </div>
+
+                                        {{-- Purchase Year --}}
+                                        <div class="property-detail-item">
+                                            <span>Purchase Year</span>
+                                            <strong>
+                                                {{ $property->purchase_year ?? '-' }}
+                                            </strong>
+                                        </div>
+
+                                        {{-- Property Age --}}
+                                        <div class="property-detail-item">
+                                            <span>Property Age</span>
+                                            <strong>
+                                                {{ $property->property_age !== null
+                                                    ? $property->property_age . ' Years'
+                                                    : '-'
+                                                }}
+                                            </strong>
+                                        </div>
+
+                                        {{-- Ownership --}}
+                                        <div class="property-detail-item">
+                                            <span>Ownership</span>
+                                            <strong>
+                                                {{ $property->ownership
+                                                    ? ucwords(str_replace('_', ' ', $property->ownership))
+                                                    : '-'
+                                                }}
+                                            </strong>
+                                        </div>
                                 @elseif($categoryName === 'plot')
                                     <div class="property-detail-item">
                                         <span> Property Type </span>
@@ -2510,6 +2630,12 @@
                                             @else
                                                 -
                                             @endif
+                                        </strong>
+                                    </div>
+                                    <div class="property-detail-item">
+                                        <span>Land Type</span>
+                                        <strong>
+                                            {{ $property->land_type ?? '-' }}
                                         </strong>
                                     </div>
                                     <div class="property-detail-item">

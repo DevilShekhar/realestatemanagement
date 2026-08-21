@@ -414,6 +414,7 @@ class PropertyController extends Controller
             'string',
             'max:100',
         ],
+        'resale_type' => 'nullable|in:Resale Flats,Resale Apartments,Resale Houses,Resale Villas,Resale Office Spaces,Resale Shops,Other Resale Properties',
 
             'purchase_year' => [
             'nullable',
@@ -1136,6 +1137,7 @@ class PropertyController extends Controller
             | Resale Fields
             |--------------------------------------------------------------------------
             */
+             'resale_type' => 'nullable|in:Resale Flats,Resale Apartments,Resale Houses,Resale Villas,Resale Office Spaces,Resale Shops,Other Resale Properties',
 
             'purchase_year' => [
                 'nullable',
