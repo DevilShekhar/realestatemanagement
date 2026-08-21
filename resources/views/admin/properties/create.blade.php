@@ -626,6 +626,35 @@
                                 </div>
 
                                 <div class="row">
+                                    {{-- Residential Type --}}
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="residential_type">
+                                                Residential Type
+                                            </label>
+                                            <select name="residential_type" id="residential_type" class="form-control">
+                                                <option value="">
+                                                    Select Residential Type
+                                                </option>
+                                                @foreach([
+                                                    'Apartment / Flat',
+                                                    'Villa',
+                                                    'Bungalow',
+                                                    'Independent House',
+                                                    'Builder Floor',
+                                                    'Studio Apartment',
+                                                    'Penthouse',
+                                                    'Row House'
+                                                ] as $type)
+                                                    <option
+                                                        value="{{ $type }}"
+                                                        {{ old('residential_type') == $type ? 'selected' : '' }}>
+                                                        {{ $type }}
+                                                    </option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
 
                                     {{-- BHK --}}
                                     <div class="col-md-4">

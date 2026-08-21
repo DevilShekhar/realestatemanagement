@@ -24,6 +24,7 @@ class Property extends Model
 
     protected $fillable = [
         'property_category_id',
+        'residential_type',
         'approval',
 
         'country_id',
