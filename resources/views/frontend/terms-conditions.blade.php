@@ -3,7 +3,6 @@
 @section('title', 'Terms & Conditions')
 
 @section('content')
-
 <style>
     .legal-page {
         background: #f7f9fc;
@@ -56,7 +55,7 @@
     .legal-breadcrumb-content p {
         color: rgba(255,255,255,.80);
         font-size: 16px;
-        max-width: 680px;
+        max-width: 650px;
         margin: 0;
         line-height: 1.7;
     }
@@ -81,9 +80,9 @@
         color: #f4b942;
     }
 
-    /* Main */
+    /* Content */
     .legal-content-wrapper {
-        position: relative;
+         position: relative;
         z-index: 5;
     }
 
@@ -133,6 +132,7 @@
     .legal-section {
         margin-bottom: 35px;
     }
+  
 
     .legal-section:last-child {
         margin-bottom: 0;
@@ -159,24 +159,24 @@
         margin-bottom: 14px;
     }
 
-    .legal-section ul,
-    .legal-section ol {
+  /* Privacy Policy Bullet Lists */
+    .legal-section ul {
+        display: block;
         margin: 12px 0 18px;
-        padding-left: 24px;
+        padding-left: 25px !important;
+        list-style: disc !important;
     }
 
-    .legal-section ul li,
-    .legal-section ol li {
+    .legal-section ul li {
+        display: list-item !important;
         color: #667085;
         font-size: 15px;
         line-height: 1.9;
         margin-bottom: 7px;
+        list-style-type: disc !important;
     }
 
-    .legal-section ul li::marker {
-        color: #f4b942;
-    }
-
+ 
     .legal-section a {
         color: #17233c;
         font-weight: 600;
@@ -187,7 +187,7 @@
         color: #f4b942;
     }
 
-    /* Highlight */
+    /* Highlight Box */
     .legal-highlight {
         background: #f8f9fb;
         border-left: 4px solid #f4b942;
@@ -198,6 +198,40 @@
 
     .legal-highlight p {
         margin: 0;
+    }
+
+    /* Table */
+    .privacy-table-wrapper {
+        overflow-x: auto;
+        margin: 20px 0;
+    }
+
+    .privacy-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 650px;
+    }
+
+    .privacy-table th {
+        background: #17233c;
+        color: #fff;
+        text-align: left;
+        padding: 14px 16px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .privacy-table td {
+        border: 1px solid #e8ebf0;
+        padding: 14px 16px;
+        color: #667085;
+        font-size: 14px;
+        line-height: 1.7;
+        vertical-align: top;
+    }
+
+    .privacy-table tr:nth-child(even) td {
+        background: #fafbfc;
     }
 
     /* Sidebar */
@@ -239,12 +273,6 @@
         padding-left: 5px;
     }
 
-    .legal-nav a.active {
-        color: #f4b942;
-        font-weight: 700;
-    }
-
-    /* Contact Box */
     .contact-box {
         background: #17233c;
         border-radius: 14px;
@@ -329,13 +357,11 @@
         }
 
         .legal-section p,
-        .legal-section ul li,
-        .legal-section ol li {
+        .legal-section ul li {
             font-size: 14px;
         }
     }
 </style>
- 
     <section class="legal-breadcrumb" style="background-image: url('{{ asset('assets/frontend/images/resources/breadcrumb-bg.jpg') }}');">
         <div class="container">
             <div class="legal-breadcrumb-content">
@@ -364,298 +390,432 @@
             <div class="row">               
                 <div class="col-xl-8 col-lg-8">
                     <div class="legal-card">
+
                         <div class="legal-intro">
+
                             <div class="legal-label">
                                 <span>●</span>
                                 Terms of Use
                             </div>
+
                             <h2>
                                 Terms & Conditions
                             </h2>
+
                             <p class="last-updated">
-                                Last Updated:
-                                {{ date('F d, Y') }}
+                                <strong>Last Updated: 21 August 2026</strong>
                             </p>
+
                         </div>
+
+
                         <div class="legal-section">
-                            <h3>1. Acceptance of Terms</h3>
+
+                            <h3>Welcome to Kalp Realty</h3>
+
                             <p>
-                                Welcome to our website. By accessing, browsing,
-                                registering on, or using this website and its
-                                services, you agree to be bound by these Terms
-                                & Conditions.
+                                These Terms &amp; Conditions govern your use of the Kalp Realty
+                                website, services, property listings and related features.
                             </p>
+
                             <p>
-                                If you do not agree with any part of these terms,
-                                please do not use our website or services.
+                                By accessing or using Kalp Realty, you agree to comply with these
+                                Terms &amp; Conditions.
                             </p>
+
                         </div>
+
+
                         <div class="legal-section">
-                            <h3>2. About Our Services</h3>
+
+                            <h3>1. About Kalp Realty</h3>
+
                             <p>
-                                Our website provides information, features and
-                                services intended for users, buyers, sellers
-                                and other authorized visitors.
+                                Kalp Realty is a property discovery and listing platform that helps users:
                             </p>
-                            <p>
-                                We reserve the right to modify, update, suspend
-                                or discontinue any part of our website or
-                                services at any time without prior notice.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>3. User Registration</h3>
-                            <p>
-                                Certain features may require you to create an
-                                account or provide registration information.
-                            </p>
-                            <p>
-                                You agree that the information you provide is
-                                accurate, complete and current.
-                            </p>
+
                             <ul>
-                                <li>
-                                    You are responsible for maintaining the
-                                    confidentiality of your account information.
-                                </li>
-                                <li>
-                                    You are responsible for activities performed
-                                    through your account.
-                                </li>
-                                <li>
-                                    You must notify us promptly if you believe
-                                    your account has been accessed without
-                                    authorization.
-                                </li>
+                                <li>Search for Properties</li>
+                                <li>Buy Properties</li>
+                                <li>Sell Properties</li>
+                                <li>Find Rental Properties</li>
+                                <li>Explore Resale Properties</li>
+                                <li>Discover New Projects</li>
+                                <li>List Properties for Sale or Rent</li>
+                                <li>Send and Receive Property Enquiries</li>
                             </ul>
-                        </div>
-                        <div class="legal-section">
-                            <h3>4. Acceptable Use</h3>
+
                             <p>
-                                You agree to use this website only for lawful
-                                purposes and in accordance with these terms.
+                                Our platform may include different property categories, including:
                             </p>
-                            <p>You must not:</p>
+
                             <ul>
-                                <li>
-                                    Use the website for unlawful or fraudulent
-                                    activities.
-                                </li>
-                                <li>
-                                    Attempt to gain unauthorized access to
-                                    systems, accounts or data.
-                                </li>
-                                <li>
-                                    Upload or transmit malicious software,
-                                    viruses or harmful code.
-                                </li>
-                                <li>
-                                    Interfere with the normal operation of
-                                    the website.
-                                </li>
-                                <li>
-                                    Copy, reproduce or distribute website
-                                    content without appropriate authorization.
-                                </li>
-                                <li>
-                                    Use the website in a manner that could
-                                    harm other users or our business.
-                                </li>
+                                <li>Residential Properties</li>
+                                <li>Commercial Properties</li>
+                                <li>Resale Properties</li>
+                                <li>Rental Properties</li>
+                                <li>New Projects</li>
+                                <li>Land &amp; Plots</li>
+                                <li>Villas &amp; Bungalows</li>
+                                <li>Independent Houses</li>
+                                <li>Apartments &amp; Flats</li>
+                                <li>Builder Floors</li>
+                                <li>Office Spaces</li>
+                                <li>Shops &amp; Showrooms</li>
+                                <li>Industrial Properties</li>
+                                <li>Warehouses &amp; Godowns</li>
+                                <li>Factories</li>
+                                <li>Agricultural Land</li>
+                                <li>Farm Land</li>
                             </ul>
+
+                            <p>
+                                Kalp Realty primarily focuses on property opportunities in
+                                <strong>Pune and Mumbai</strong>.
+                            </p>
+
                         </div>
+
+
                         <div class="legal-section">
-                            <h3>5. User Content</h3>
+
+                            <h3>2. User Accounts</h3>
+
                             <p>
-                                If you submit information, comments, enquiries,
-                                reviews or other content through our website,
-                                you are responsible for ensuring that the
-                                content is accurate and lawful.
+                                Certain features of Kalp Realty may require you to create an account.
                             </p>
+
                             <p>
-                                You must not submit content that is unlawful,
-                                misleading, defamatory, abusive, discriminatory,
-                                fraudulent or infringes the rights of another
-                                person.
+                                You are responsible for:
                             </p>
+
+                            <ul>
+                                <li>Providing accurate information</li>
+                                <li>Keeping your account details updated</li>
+                                <li>Maintaining the confidentiality of your login details</li>
+                                <li>Activities performed through your account</li>
+                            </ul>
+
+                            <p>
+                                You must not create an account using false information or impersonate
+                                another person or organisation.
+                            </p>
+
                         </div>
+
+
                         <div class="legal-section">
-                            <h3>6. Intellectual Property</h3>
+
+                            <h3>3. Property Listings</h3>
+
                             <p>
-                                Unless otherwise stated, all website content,
-                                including text, graphics, logos, images,
-                                designs, icons, software and other materials,
-                                is owned by or licensed to us.
+                                Property owners, sellers, landlords, agents, consultants, builders,
+                                developers and authorised representatives may be allowed to list
+                                properties on Kalp Realty.
                             </p>
+
                             <p>
-                                You may not reproduce, modify, distribute,
-                                publish, sell or commercially exploit our
-                                intellectual property without prior written
-                                permission.
+                                By submitting a property listing, you confirm that:
                             </p>
+
+                            <ul>
+                                <li>You have the authority to list the property</li>
+                                <li>The information provided is accurate to the best of your knowledge</li>
+                                <li>You have permission to use and upload the images and content</li>
+                                <li>The property listing is not misleading or fraudulent</li>
+                                <li>You will update important changes, including price and availability</li>
+                            </ul>
+
+                            <p>
+                                Kalp Realty reserves the right to review, reject, edit, suspend or
+                                remove any listing that violates these Terms or applicable laws.
+                            </p>
+
                         </div>
+
+
                         <div class="legal-section">
-                            <h3>7. Third-Party Links and Services</h3>
+
+                            <h3>4. Property Information</h3>
+
                             <p>
-                                Our website may contain links to websites,
-                                products or services operated by third parties.
+                                Property information displayed on Kalp Realty may be provided by
+                                property owners, sellers, agents, builders, developers or other third parties.
                             </p>
+
                             <p>
-                                These links are provided for convenience only.
-                                We do not necessarily endorse or control
-                                third-party websites and are not responsible
-                                for their content, policies or practices.
+                                Kalp Realty does not guarantee that every property listing is:
                             </p>
+
+                            <ul>
+                                <li>Accurate</li>
+                                <li>Complete</li>
+                                <li>Available</li>
+                                <li>Current</li>
+                                <li>Verified</li>
+                            </ul>
+
+                            <p>
+                                Users are responsible for independently verifying property information
+                                before making any decision.
+                            </p>
+
+                            <p>
+                                This may include verifying:
+                            </p>
+
+                            <ul>
+                                <li>Property Ownership</li>
+                                <li>Legal Title</li>
+                                <li>Property Documents</li>
+                                <li>Seller or Owner Authority</li>
+                                <li>Property Area</li>
+                                <li>Price or Rent</li>
+                                <li>Approvals and Permissions</li>
+                                <li>RERA Registration, where applicable</li>
+                                <li>Property Condition</li>
+                                <li>Encumbrances or Liabilities</li>
+                            </ul>
+
                         </div>
+
+
                         <div class="legal-section">
-                            <h3>8. Payments and Transactions</h3>
+
+                            <h3>5. Property Enquiries</h3>
+
                             <p>
-                                Where our website provides payment or transaction
-                                functionality, users agree to provide accurate
-                                information and comply with the applicable
-                                payment terms.
+                                When you submit an enquiry regarding a property, your contact details
+                                and enquiry information may be shared with the relevant:
                             </p>
+
+                            <ul>
+                                <li>Property Owner</li>
+                                <li>Seller</li>
+                                <li>Landlord</li>
+                                <li>Agent</li>
+                                <li>Builder</li>
+                                <li>Developer</li>
+                                <li>Authorised Representative</li>
+                            </ul>
+
                             <p>
-                                Any transaction-specific terms, pricing,
-                                cancellation, refund or payment conditions
-                                may be communicated separately and may apply
-                                in addition to these Terms & Conditions.
+                                Submitting an enquiry does not guarantee:
                             </p>
+
+                            <ul>
+                                <li>Property Availability</li>
+                                <li>A Response</li>
+                                <li>A Sale or Rental Agreement</li>
+                                <li>Reservation of the Property</li>
+                            </ul>
+
                         </div>
+
+
                         <div class="legal-section">
-                            <h3>9. Availability of the Website</h3>
+
+                            <h3>6. No Guarantee of Transaction</h3>
+
                             <p>
-                                We aim to keep our website available and
-                                functioning properly. However, we do not
-                                guarantee that the website will always be
-                                available, uninterrupted, secure or error-free.
+                                Kalp Realty acts as a platform to help users discover and enquire
+                                about properties.
                             </p>
-                            <div class="legal-highlight">
-                                <p>
-                                    Website availability may occasionally be
-                                    affected by maintenance, technical issues,
-                                    third-party services, network failures or
-                                    circumstances beyond our reasonable control.
-                                </p>
-                            </div>
-                        </div>                        
-                        <div class="legal-section">
-                            <h3>10. Disclaimer of Warranties</h3>
+
                             <p>
-                                To the extent permitted by applicable law,
-                                the website and its content are provided on
-                                an "as available" and "as is" basis.
+                                Unless otherwise expressly agreed in writing, Kalp Realty is not a
+                                party to any transaction between buyers, sellers, landlords, tenants,
+                                agents, builders or other users.
                             </p>
+
                             <p>
-                                We do not guarantee that all information on
-                                the website will always be complete, accurate,
-                                current or suitable for every user's particular
-                                requirements.
+                                Any purchase, sale, rental, lease, payment, agreement or transfer is
+                                the responsibility of the parties involved.
                             </p>
+
+                            <p>
+                                Users should conduct appropriate due diligence before entering into
+                                any property transaction.
+                            </p>
+
                         </div>
+
+
                         <div class="legal-section">
+
+                            <h3>7. Prohibited Activities</h3>
+
+                            <p>
+                                Users must not use Kalp Realty to:
+                            </p>
+
+                            <ul>
+                                <li>Publish false or misleading property information</li>
+                                <li>List a property without authority</li>
+                                <li>Commit fraud or attempt fraudulent activity</li>
+                                <li>Impersonate another person or organisation</li>
+                                <li>Upload unlawful or harmful content</li>
+                                <li>Violate another person's privacy or intellectual property rights</li>
+                                <li>Upload viruses, malware or harmful software</li>
+                                <li>Interfere with the security or functionality of the website</li>
+                                <li>Use the platform for unlawful purposes</li>
+                            </ul>
+
+                        </div>
+
+
+                        <div class="legal-section">
+
+                            <h3>8. Intellectual Property</h3>
+
+                            <p>
+                                The Kalp Realty name, branding, website design, logos, text, graphics
+                                and other proprietary content may belong to Kalp Realty or its licensors.
+                            </p>
+
+                            <p>
+                                You may not copy, reproduce, distribute or commercially use such content
+                                without appropriate permission.
+                            </p>
+
+                            <p>
+                                Users remain responsible for ensuring that the content and images they
+                                upload do not violate the rights of any third party.
+                            </p>
+
+                        </div>
+
+
+                        <div class="legal-section">
+
+                            <h3>9. Suspension or Termination</h3>
+
+                            <p>
+                                Kalp Realty may suspend, restrict or terminate a user's account or
+                                property listing if we reasonably believe that the user has:
+                            </p>
+
+                            <ul>
+                                <li>Violated these Terms &amp; Conditions</li>
+                                <li>Provided misleading information</li>
+                                <li>Engaged in fraudulent activity</li>
+                                <li>Listed a property without authority</li>
+                                <li>Created a security risk</li>
+                                <li>Used the platform for unlawful purposes</li>
+                            </ul>
+
+                        </div>
+
+
+                        <div class="legal-section">
+
+                            <h3>10. Website Availability</h3>
+
+                            <p>
+                                We aim to keep Kalp Realty available and functioning properly. However,
+                                we do not guarantee uninterrupted or error-free access to the website.
+                            </p>
+
+                            <p>
+                                The platform may occasionally be unavailable due to:
+                            </p>
+
+                            <ul>
+                                <li>Maintenance</li>
+                                <li>Technical Issues</li>
+                                <li>System Updates</li>
+                                <li>Security Issues</li>
+                                <li>Circumstances beyond our reasonable control</li>
+                            </ul>
+
+                        </div>
+
+
+                        <div class="legal-section">
+
                             <h3>11. Limitation of Liability</h3>
+
                             <p>
-                                To the maximum extent permitted by applicable
-                                law, we will not be responsible for indirect,
-                                incidental, special or consequential losses
-                                arising from or related to your use of the
-                                website or services.
+                                To the maximum extent permitted by applicable law, Kalp Realty shall
+                                not be responsible for losses or damages arising from:
                             </p>
+
+                            <ul>
+                                <li>Incorrect property information provided by third parties</li>
+                                <li>Property transactions between users</li>
+                                <li>Actions or conduct of property owners, buyers, sellers, tenants or agents</li>
+                                <li>Property availability or condition</li>
+                                <li>Legal or ownership disputes</li>
+                                <li>Financial or investment decisions</li>
+                                <li>Communications or agreements between users</li>
+                                <li>Unauthorised or fraudulent actions by third parties</li>
+                            </ul>
+
                             <p>
-                                Nothing in these terms is intended to exclude
-                                liability that cannot legally be excluded
-                                under applicable law.
+                                Nothing in these Terms excludes liability where such exclusion is not
+                                permitted under applicable law.
                             </p>
+
                         </div>
+
+
                         <div class="legal-section">
-                            <h3>12. Indemnification</h3>
+
+                            <h3>12. Changes to These Terms</h3>
+
                             <p>
-                                To the extent permitted by applicable law,
-                                you agree to indemnify and hold harmless the
-                                company, its directors, employees, partners
-                                and service providers from claims, losses,
-                                liabilities and expenses arising from your
-                                misuse of the website or violation of these
-                                terms.
+                                Kalp Realty may update these Terms &amp; Conditions from time to time.
                             </p>
+
+                            <p>
+                                The updated version will be published on this page with a revised
+                                <strong>Last Updated</strong> date.
+                            </p>
+
                         </div>
+
+
                         <div class="legal-section">
-                            <h3>13. Suspension or Termination</h3>
+
+                            <h3>13. Governing Law</h3>
+
                             <p>
-                                We may suspend or terminate access to the
-                                website or particular services if we reasonably
-                                believe that a user has violated these terms,
-                                applicable laws or our policies.
+                                These Terms &amp; Conditions shall be governed by the applicable
+                                laws of India.
                             </p>
+
                             <p>
-                                We may also suspend access where necessary to
-                                protect the security or integrity of our
-                                website and users.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>14. Privacy</h3>
-                            <p>
-                                Your use of our website may involve the
-                                collection and processing of personal information.
-                                Please review our
-                                <a href="{{ route('frontend.privacy') }}">
-                                    Privacy Policy
-                                </a>
-                                for information about how we handle personal
-                                data.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>15. Changes to These Terms</h3>
-                            <p>
-                                We may update these Terms & Conditions from
-                                time to time. Changes will become effective
-                                when the revised terms are published on this
-                                website unless otherwise stated.
-                            </p>
-                            <p>
-                                Your continued use of the website after changes
-                                are published constitutes your acceptance of
-                                the revised terms, to the extent permitted by
-                                applicable law.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>16. Governing Law</h3>
-                            <p>
-                                These Terms & Conditions shall be governed by
-                                and interpreted in accordance with the
-                                applicable laws and regulations governing
-                                your relationship with the company.
-                            </p>
-                            <p>
-                                Any disputes arising in connection with these
-                                terms shall be subject to the jurisdiction of
-                                the appropriate courts or authorities as
+                                Any disputes shall be subject to the appropriate jurisdiction as
                                 determined under applicable law.
                             </p>
+
                         </div>
+
+
                         <div class="legal-section">
-                            <h3>17. Contact Us</h3>
+
+                            <h3>14. Contact Us</h3>
+
                             <p>
-                                If you have any questions regarding these
-                                Terms & Conditions, please contact us.
+                                For any questions regarding these Terms &amp; Conditions, please contact:
                             </p>
+
                             <div class="legal-highlight">
+
                                 <p>
-                                    <strong>Email:</strong>
-                                    <a href="mailto:info@example.com">
-                                        info@example.com
-                                    </a>
+                                    <strong>Kalp Realty</strong>
                                     <br>
-                                    <strong>Phone:</strong>
-                                    <a href="tel:+919999999999">
-                                        +91 99999 99999
-                                    </a>
+                                    <strong>Email:</strong> [Insert Email Address]
+                                    <br>
+                                    <strong>Phone:</strong> [Insert Phone Number]
+                                    <br>
+                                    <strong>Address:</strong> [Insert Business Address]
                                 </p>
+
                             </div>
+
                         </div>
+
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4">

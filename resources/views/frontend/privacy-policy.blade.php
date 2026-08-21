@@ -133,6 +133,7 @@
     .legal-section {
         margin-bottom: 35px;
     }
+  
 
     .legal-section:last-child {
         margin-bottom: 0;
@@ -159,22 +160,24 @@
         margin-bottom: 14px;
     }
 
+  /* Privacy Policy Bullet Lists */
     .legal-section ul {
+        display: block;
         margin: 12px 0 18px;
-        padding-left: 22px;
+        padding-left: 25px !important;
+        list-style: disc !important;
     }
 
     .legal-section ul li {
+        display: list-item !important;
         color: #667085;
         font-size: 15px;
         line-height: 1.9;
         margin-bottom: 7px;
+        list-style-type: disc !important;
     }
 
-    .legal-section ul li::marker {
-        color: #f4b942;
-    }
-
+ 
     .legal-section a {
         color: #17233c;
         font-weight: 600;
@@ -405,204 +408,282 @@
                                 <span>●</span>
                                 Privacy & Security
                             </div>
+
                             <h2>
-                                Our Privacy Policy
+                                Privacy Policy
                             </h2>
+
                             <p class="last-updated">
-                                Last Updated:
-                                {{ date('F d, Y') }}
+                                <strong>Last Updated:</strong> 21 August 2026
                             </p>
                         </div>
+
                         <div class="legal-section">
-                            <h3>1. Introduction</h3>
+                            <h3>Welcome to Kalp Realty</h3>
+
                             <p>
-                                We respect your privacy and are committed to
-                                protecting the personal information you provide
-                                to us. This Privacy Policy explains how we
-                                collect, use, store and protect your information
-                                when you visit our website or use our services.
+                                Kalp Realty is a property discovery and listing platform focused
+                                primarily on <strong>Pune and Mumbai</strong>. Our platform helps users
+                                explore properties for <strong>buying, selling, renting and resale</strong>,
+                                while also allowing property owners, sellers, agents, builders and
+                                developers to list and manage their properties.
                             </p>
+
                             <p>
-                                By accessing or using our website, you acknowledge
-                                that you have read and understood this Privacy
-                                Policy.
+                                This Privacy Policy explains how Kalp Realty collects, uses, stores
+                                and shares your information when you use our website and services.
+                            </p>
+
+                            <p>
+                                By accessing or using the Kalp Realty website, you agree to this
+                                Privacy Policy.
                             </p>
                         </div>
+                        
                         <div class="legal-section">
-                            <h3>2. Information We Collect</h3>
+                            <h3>1. Information We Collect</h3>
+
                             <p>
-                                We may collect information that you voluntarily
-                                provide when you register, contact us, submit a
-                                form, or use our services.
+                                Depending on how you use Kalp Realty, we may collect the following
+                                information.
                             </p>
+
                             <h4>Personal Information</h4>
+
                             <ul>
-                                <li>Full name</li>
-                                <li>Email address</li>
-                                <li>Phone number</li>
-                                <li>Business or company information</li>
-                                <li>Account and registration information</li>
-                                <li>Information submitted through contact forms</li>
+                                <li>Full Name</li>
+                                <li>Mobile Number</li>
+                                <li>Email Address</li>
+                                <li>City and Preferred Location</li>
+                                <li>Account Information</li>
+                                <li>Login and Authentication Details</li>
+                                <li>Profile Information</li>
+                            </ul>
+
+                            <h4>Property Requirement Information</h4>
+
+                            <p>
+                                When you search for or enquire about a property, we may collect
+                                information such as:
+                            </p>
+                            
+
+                            <ul>
+                                <li>Property Type</li>
+                                <li>Preferred Location</li>
+                                <li>Budget</li>
+                                <li>Property Purpose</li>
+                                <li>Residential or Commercial Requirements</li>
+                                <li>Other Information You Voluntarily Provide</li>
+                            </ul>                            
+                            <h4>Property Listing Information</h4>
+                            <p>
+                                If you list a property on Kalp Realty, we may collect:
+                            </p>
+                            <ul>
+                                <li>Property Type</li>
+                                <li>Property Category</li>
+                                <li>Property Purpose, such as Sale, Rent or Resale</li>
+                                <li>Property Location</li>
+                                <li>Property Area</li>
+                                <li>Expected Price or Rent</li>
+                                <li>Property Description</li>
+                                <li>Property Features and Amenities</li>
+                                <li>Property Images and Videos</li>
+                                <li>Contact Details</li>
                             </ul>
                             <h4>Technical Information</h4>
+                            <p>
+                                When you use our website, we may automatically collect certain
+                                information, including:
+                            </p>
                             <ul>
-                                <li>IP address</li>
-                                <li>Browser type</li>
-                                <li>Device information</li>
-                                <li>Operating system</li>
-                                <li>Website usage information</li>
+                                <li>IP Address</li>
+                                <li>Browser Type</li>
+                                <li>Device Information</li>
+                                <li>Operating System</li>
+                                <li>Pages Visited</li>
+                                <li>Date and Time of Access</li>
+                                <li>Website Usage Information</li>
+                                <li>Cookies and Similar Technologies</li>
                             </ul>
                         </div>
                         <div class="legal-section">
-                            <h3>3. How We Use Your Information</h3>
+                            <h3>2. How We Use Your Information</h3>
                             <p>
-                                The information we collect may be used for the
-                                following purposes:
+                                We may use your information to:
                             </p>
                             <ul>
+                                <li>Create and manage your account</li>
+                                <li>Help you search and explore properties</li>
+                                <li>Allow you to list and manage properties</li>
+                                <li>Process property enquiries</li>
                                 <li>
-                                    To provide and maintain our services.
+                                    Connect property seekers with relevant property owners,
+                                    sellers, agents or builders
                                 </li>
+                                <li>Contact you regarding your enquiry or account</li>
+                                <li>Improve our website and services</li>
+                                <li>Provide customer support</li>
+                                <li>Maintain the security of our platform</li>
+                                <li>Detect and prevent fraudulent or unlawful activities</li>
+                                <li>Send important service-related communications</li>
                                 <li>
-                                    To process registrations and enquiries.
-                                </li>
-                                <li>
-                                    To respond to your questions and requests.
-                                </li>
-                                <li>
-                                    To improve our website and services.
-                                </li>
-                                <li>
-                                    To communicate important service updates.
-                                </li>
-                                <li>
-                                    To prevent fraud, misuse and unauthorized access.
-                                </li>
-                                <li>
-                                    To comply with applicable legal requirements.
+                                    Send promotional or marketing communications, where permitted
                                 </li>
                             </ul>
+                        </div>
+                        <div class="legal-section">
+                            <h3>3. How We Share Your Information</h3>
+                            <p>
+                                Kalp Realty may share relevant information with:
+                            </p>
+                            <ul>
+                                <li>Property Owners</li>
+                                <li>Sellers</li>
+                                <li>Landlords</li>
+                                <li>Real Estate Agents</li>
+                                <li>Property Consultants</li>
+                                <li>Builders and Developers</li>
+                                <li>Authorised Representatives</li>
+                                <li>Service Providers supporting our platform</li>
+                                <li>
+                                    Government or Regulatory Authorities, where required by law
+                                </li>
+                            </ul>
+                            <h4>Property Enquiries</h4>
+                            <p>
+                                When you submit an enquiry for a property, your relevant contact
+                                details and enquiry information may be shared with the person or
+                                organisation responsible for that property listing.
+                            </p>
+                            <p>
+                                This helps them contact you regarding your property requirement.
+                            </p>
+                            <h4>Property Listings</h4>
+                            <p>
+                                Information that you choose to publish in your property listing
+                                may be visible to visitors and users of the Kalp Realty platform.
+                            </p>
+                            <div class="legal-highlight">
+                                <p>
+                                    Please do not publish confidential or unnecessary personal
+                                    information in your public property listing.
+                                </p>
+                            </div>
                         </div>
                         <div class="legal-section">
                             <h3>4. Cookies</h3>
                             <p>
-                                Our website may use cookies and similar technologies
-                                to improve your browsing experience, understand
-                                website usage and provide relevant functionality.
+                                Kalp Realty may use cookies and similar technologies to:
+                            </p>
+                            <ul>
+                                <li>Improve website functionality</li>
+                                <li>Remember your preferences</li>
+                                <li>Understand website usage</li>
+                                <li>Analyse website traffic</li>
+                                <li>Improve user experience</li>
+                                <li>Support security features</li>
+                            </ul>
+                            <div class="legal-highlight">
+                                <p>
+                                    You may manage or disable cookies through your browser settings.
+                                    However, some website features may not work properly if certain
+                                    cookies are disabled.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="legal-section">
+                            <h3>5. Data Security</h3>
+                            <p>
+                                We take reasonable steps to protect the information under our
+                                control from unauthorised access, misuse, loss or disclosure.
+                            </p>
+                            <p>
+                                However, no method of data transmission or storage over the
+                                internet is completely secure. Therefore, we cannot guarantee
+                                absolute security of your information.
                             </p>
                             <div class="legal-highlight">
                                 <p>
-                                    You can configure your browser to refuse or
-                                    restrict cookies. However, disabling certain
-                                    cookies may affect some features of the website.
+                                    You are responsible for keeping your login credentials
+                                    confidential.
                                 </p>
                             </div>
-                        </div>                        
-                        <div class="legal-section">
-                            <h3>5. How We Protect Your Information</h3>
-                            <p>
-                                We take reasonable technical and organizational
-                                measures to protect your personal information
-                                against unauthorized access, alteration,
-                                disclosure or destruction.
-                            </p>
-                            <p>
-                                However, no method of transmission over the
-                                Internet or method of electronic storage is
-                                completely secure. Therefore, we cannot guarantee
-                                absolute security.
-                            </p>
                         </div>
                         <div class="legal-section">
-                            <h3>6. Sharing of Information</h3>
+                            <h3>6. Data Retention</h3>
                             <p>
-                                We do not sell or rent your personal information.
-                                We may share information with trusted service
-                                providers where necessary to operate our website
-                                and provide our services.
-                            </p>
-                            <p>
-                                Information may also be disclosed where required
-                                by applicable law, regulation, legal process or
-                                governmental request.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>7. Data Retention</h3>
-                            <p>
-                                We retain personal information only for as long
-                                as reasonably necessary to fulfill the purposes
-                                described in this Privacy Policy, comply with
-                                legal obligations, resolve disputes and enforce
-                                our agreements.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>8. Your Rights</h3>
-                            <p>
-                                Depending on applicable laws, you may have certain
-                                rights regarding your personal information,
-                                including the ability to:
+                                We may retain your information for as long as reasonably necessary
+                                to:
                             </p>
                             <ul>
-                                <li>Request access to your personal information.</li>
-                                <li>Request correction of inaccurate information.</li>
-                                <li>Request deletion where legally applicable.</li>
-                                <li>Withdraw consent where applicable.</li>
-                                <li>Ask questions about how your information is used.</li>
+                                <li>Provide our services</li>
+                                <li>Maintain your account</li>
+                                <li>Manage property listings and enquiries</li>
+                                <li>Meet legal or regulatory requirements</li>
+                                <li>Resolve disputes</li>
+                                <li>Prevent fraud or misuse</li>
+                                <li>Enforce our Terms &amp; Conditions</li>
                             </ul>
                         </div>
                         <div class="legal-section">
-                            <h3>9. Third-Party Links</h3>
+                            <h3>7. Your Rights and Choices</h3>
                             <p>
-                                Our website may contain links to third-party
-                                websites or services. We are not responsible for
-                                the privacy practices, policies or content of
-                                those third-party websites.
+                                Subject to applicable law, you may contact us regarding:
                             </p>
-                            <p>
-                                We recommend reviewing the privacy policy of any
-                                third-party website you visit.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>10. Children's Privacy</h3>
-                            <p>
-                                Our services are not intended to knowingly collect
-                                personal information from children where such
-                                collection is prohibited by applicable law.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>11. Changes to This Privacy Policy</h3>
-                            <p>
-                                We may update this Privacy Policy from time to
-                                time to reflect changes to our practices,
-                                technology, legal requirements or services.
-                            </p>
-                            <p>
-                                Any updated version will be published on this
-                                page with a revised "Last Updated" date.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>12. Contact Us</h3>
-                            <p>
-                                If you have questions, concerns or requests
-                                regarding this Privacy Policy, please contact us.
-                            </p>
+                            <ul>
+                                <li>Updating your personal information</li>
+                                <li>Correcting inaccurate information</li>
+                                <li>Deleting your account</li>
+                                <li>Requesting deletion of certain personal information</li>
+                                <li>Withdrawing applicable consent</li>
+                                <li>Privacy-related questions or concerns</li>
+                            </ul>
                             <div class="legal-highlight">
                                 <p>
-                                    <strong>Email:</strong>
-                                    <a href="mailto:info@example.com">
-                                        info@example.com
-                                    </a>
-                                    <br>
-                                    <strong>Phone:</strong>
-                                    <a href="tel:+919999999999">
-                                        +91 99999 99999
-                                    </a>
+                                    We may need to verify your identity before processing certain
+                                    requests.
                                 </p>
+                            </div>
+                            <div class="legal-section">
+                                <h3>8. Third-Party Websites</h3>
+                                <p>
+                                    Kalp Realty may contain links to third-party websites or services.
+                                </p>
+                                <p>
+                                    We are not responsible for the privacy practices, content or
+                                    policies of third-party websites. We recommend reviewing their
+                                    privacy policies before sharing your information.
+                                </p>
+                            </div>
+                            <div class="legal-section">
+                                <h3>9. Changes to This Privacy Policy</h3>
+                                <p>
+                                    Kalp Realty may update this Privacy Policy from time to time.
+                                </p>
+                                <p>
+                                    Any changes will be posted on this page along with an updated
+                                    <strong>Last Updated</strong> date.
+                                </p>
+                            </div>
+                            <div class="legal-section">
+                                <h3>10. Contact Us</h3>
+                                <p>
+                                    If you have any questions regarding this Privacy Policy or your
+                                    personal information, please contact us:
+                                </p>
+                                <div class="legal-highlight">
+                                    <p>
+                                        <strong>Kalp Realty</strong>
+                                        <br>
+                                        <strong>Email:</strong> [Insert Email Address]
+                                        <br>
+                                        <strong>Phone:</strong> [Insert Phone Number]
+                                        <br>
+                                        <strong>Address:</strong> [Insert Business Address]
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
