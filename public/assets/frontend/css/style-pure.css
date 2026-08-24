@@ -1,35 +1,3 @@
-/***************************************************************************************************************
-||||||||||||||||||||||||||       MASTER STYLESHEET FOR INTEXURE             ||||||||||||||||||||||||||||||||||||
-****************************************************************************************************************
-||||||||||||||||||||||||||                TABLE OF CONTENT               |||||||||||||||||||||||||||||||||||||||
-****************************************************************************************************************
-****************************************************************************************************************
-
-01. Imported styles
-02. Flaticon reset styles
-03. Header styles
-04. Mainmenu styles
-05. Rev_slider_wrapper styles
-66. Call to action area Style
-07. Categories area style
-08. Fact counter area style
-09. Latest Blog area style
-10. Latest blog area style 
-11. Testimonial area style
-12. Brand area style
-13. Single service style
-14. Pricing table area style
-15. About page style
-16. Account page style
-17. 404 page style style
-18. Blog page style
-19. Blog single style
-20. Contact page style
-
-****************************************************************************************************************
-||||||||||||||||||||||||||||            End TABLE OF CONTENT                ||||||||||||||||||||||||||||||||||||
-****************************************************************************************************************/
-
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
@@ -8092,7 +8060,7 @@ li .single-footer-contact-info .text p span{
     padding-bottom: 22px;
 }
 .sidebar-contact-box .inner-content .icon-holder span:before{
-    color: #132d5a;
+    color: #fff;
     font-size: 65px;
     line-height: 65px;
 }
@@ -13009,11 +12977,643 @@ li .single-footer-contact-info .text p span{
 .timer-box .subscribe-box .text p span{
     font-weight: 600;
 }
+ .kalp-hero {
+                position: relative;
+                width: 100%;
+                min-height: 790px;
+                height: 790px;
+                overflow: hidden;
+                font-family: Arial, Helvetica, sans-serif;
+                background: #071321;
+            }
+            .kalp-hero-bg {
+                position: absolute;
+                inset: 0;
+                background-image: url("https://www.squareyards.com/assets/images/home-desktop-cover.png");
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                transform: scale(1.01);
+            }
+            .kalp-hero-overlay {
+                position: absolute;
+                inset: 0;
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(0, 10, 20, 0.94) 0%,
+                        rgba(0, 10, 20, 0.78) 32%,
+                        rgba(0, 10, 20, 0.40) 65%,
+                        rgba(0, 10, 20, 0.10) 100%
+                    );
+                z-index: 1;
+            }
+            .kalp-hero-container {
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                max-width: 1730px;
+                margin: 0 auto;
+                padding: 110px 15px 0;
+            }
+            .kalp-hero-content {
+                max-width: 1050px;
+            }
+            .kalp-rating {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 11px 25px;
+                border: 1px solid rgba(255, 255, 255, 0.28);
+                border-radius: 40px;
+                background: rgba(10, 15, 18, 0.60);
+                color: #ffffff;
+                font-size: 15px;
+                line-height: 1;
+                backdrop-filter: blur(6px);
+                -webkit-backdrop-filter: blur(6px);
+                margin-bottom: 26px;
+            }
+            .kalp-rating-star {
+                color: #ffd315;
+                font-size: 21px;
+                line-height: 1;
+            }
+            .kalp-rating-number {
+                color: #ffd315;
+                font-weight: 700;
+            }
+            .kalp-rating-dot {
+                color: #ffd315;
+                font-size: 25px;
+            }
+            .kalp-rating-text {
+                color: #ffd315;
+                font-weight: 500;
+            }
+            .kalp-hero-title {
+                margin: 0;
+                color: #ffffff;
+                font-size: clamp(55px, 5.2vw, 60px);
+                font-weight: 800;
+                line-height: 1.05;
+                letter-spacing: -2px;
+                text-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+            }
+            .kalp-hero-subtitle {
+                display: flex;
+                align-items: center;
+                flex-wrap: nowrap;
+                gap: 15px;
+                margin-top: 25px;
+                margin-bottom: 30px;
+                color: #ffffff;
+                font-size: 20px;
+                line-height: 1.4;
+                overflow: hidden;
+            }
+            .kalp-subtitle-static {
+                flex-shrink: 0;
+                color: #ffffff;
+                font-weight: 400;
+                white-space: nowrap;
+            }
+            .kalp-subtitle-dot {
+                width: 13px;
+                height: 13px;
+                flex: 0 0 13px;
+                display: inline-block;
+                border-radius: 50%;
+                background: #ffd315;
+                box-shadow: 0 0 10px rgba(255, 211, 21, 0.55);
+            }
+            .kalp-text-slider {
+                position: relative;
+                display: block;
+                height: 30px;
+                min-width: 470px;
+                overflow: hidden;
+                color: #ffd315;
+                font-weight: 700;
+            }
+            .kalp-text-slider-track {
+                display: flex;
+                flex-direction: column;
+                animation: kalpVerticalText 12s cubic-bezier(0.77, 0, 0.18, 1) infinite;
+            }
+            .kalp-text-slider-track span {
+                display: flex;
+                align-items: center;
+                height: 30px;
+                min-height: 30px;
+                white-space: nowrap;
+            }
+            @keyframes kalpVerticalText {
+                0% {
+                    transform: translateY(0);
+                }
+                18% {
+                    transform: translateY(0);
+                }
+                25% {
+                    transform: translateY(-30px);
+                }
+                43% {
+                    transform: translateY(-30px);
+                }
+                50% {
+                    transform: translateY(-60px);
+                }
+                68% {
+                    transform: translateY(-60px);
+                }
+                75% {
+                    transform: translateY(-90px);
+                }
+                93% {
+                    transform: translateY(-90px);
+                }
+                100% {
+                    transform: translateY(-120px);
+                }
+            }
+            .kalp-category-wrapper {
+                position: absolute;
+                left: 15px;       
+            }
+            .kalp-category-tabs {
+                display: flex;
+                width: 100%;
+                max-width: 1320px;
+                margin: 0 auto;
+                height: 60px;
+            }
+            .kalp-category-tab {
+                position: relative;
+                flex: 1;
+                min-width: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                color: #c6cbd1;
+                background:
+                    linear-gradient(
+                        180deg,
+                        rgba(20, 31, 44, 0.88),
+                        rgba(8, 20, 32, 0.94)
+                    );
+                border: 1px solid rgba(255, 255, 255, 0.20);
+                border-right: 0;
+                text-decoration: none;
+                font-size: 21px;
+                font-weight: 500;
+                transition:
+                    background 0.25s ease,
+                    color 0.25s ease,
+                    transform 0.25s ease;
+            }
+            .kalp-category-tab:first-child {
+                border-radius: 10px 0 0 0;
+            }
+            .kalp-category-tab:last-child {
+                border-right: 1px solid rgba(255, 255, 255, 0.20);
+                border-radius: 0 10px 0 0;
+            }
+            .kalp-category-tab:hover,
+            .kalp-category-tab.active {
+                color: #ffffff;
+                background:
+                    linear-gradient(
+                        180deg,
+                        rgba(35, 48, 63, 0.96),
+                        rgba(17, 28, 42, 0.98)
+                    );
+                text-decoration: none;
+            }
+            .kalp-category-tab.active::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 24px;
+                right: 24px;
+                height: 4px;
+                background: #ffffff;
+                border-radius: 4px 4px 0 0;
+            }
+            .kalp-tab-icon {
+                width: 30px;
+                height: 30px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .kalp-tab-icon svg {
+                width: 27px;
+                height: 27px;
+                fill: none;
+                stroke: currentColor;
+                stroke-width: 1.8;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+            .kalp-tab-badge {
+                position: absolute;
+                top: -6px;
+                right: 15px;
+                padding: 3px 7px;
+                border-radius: 4px;
+                background: #ffd315;
+                color: #111111;
+                font-size: 11px;
+                line-height: 1;
+                font-weight: 800;
+            }
+            .kalp-search-box {
+                position: relative;
+                width: 100%;
+                max-width: 1350px;
+                min-height: 103px;
+                margin: 0 auto;
+                display: flex;
+                align-items: stretch;
+                background: #ffffff;
+                border-radius: 0 14px 14px 14px;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.28);
+                overflow: visible;
+            }
+            .kalp-location {
+                position: relative;
+                width: 235px;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 24px 0 20px;
+                border-right: 1px solid #dddddd;
+                color: #1d1d1d;
+                font-size: 24px;
+                font-weight: 700;
+                z-index: 20;
+            }
+            .kalp-location-arrow {
+                width: 35px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+                transition: transform 0.2s ease;
+            }
+            .kalp-location.active .kalp-location-arrow {
+                transform: rotate(180deg);
+            }
+            .kalp-location-dropdown {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 220px;
+                padding: 8px;
+                margin-top: 8px;
+                background: #ffffff;
+                border: 1px solid #e2e2e2;
+                border-radius: 10px;
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+                z-index: 9999;
+                display: none;
+            }
+            .kalp-location.active .kalp-location-dropdown {
+                display: block;
+            }
+            .kalp-location-option {
+                width: 100%;
+                padding: 12px 14px;
+                border: 0;
+                border-radius: 7px;
+                background: transparent;
+                color: #222222;
+                text-align: left;
+                font-size: 16px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: background 0.2s ease, color 0.2s ease;
+            }
+            .kalp-location-option:hover,
+            .kalp-location-option.active {
+                background: #ffd315;
+                color: #111111;
+                font-weight: 700;
+            }
+            .kalp-location-arrow svg {
+                width: 25px;
+                height: 25px;
+                fill: none;
+                stroke: #111111;
+                stroke-width: 2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+            .kalp-search-input-wrapper {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                padding: 0 25px;
+            }
+            .kalp-search-icon {
+                display: flex;
+                width: 48px;
+                margin-right: 13px;
+            }
+            .kalp-search-icon svg {
+                width: 37px;
+                height: 37px;
+                fill: none;
+                stroke: #87909a;
+                stroke-width: 1.6;
+                stroke-linecap: round;
+            }
+            .kalp-search-input {
+                width: 100%;
+                height: 100%;
+                border: 0;
+                outline: none;
+                background: transparent;
+                color: #222222;
+                font-size: 23px;
+                font-weight: 400;
+            }
+            .kalp-search-input::placeholder {
+                color: #777d83;
+                opacity: 1;
+            }
+            .kalp-search-button {
+                width: 192px;
+                margin: 17px;
+                border: 0;
+                border-radius: 13px;
+                background: #ffd315;
+                color: #171717;
+                font-size: 20px;
+                font-weight: 700;
+                cursor: pointer;
+                transition:
+                    background 0.2s ease,
+                    transform 0.2s ease;
+            }
+            .kalp-search-button:hover {
+                background: #f3c500;
+                transform: translateY(-1px);
+            }
+            @media (max-width: 1200px) {
+                .kalp-hero-container {
+                    padding-top: 170px;
+                }
+                .kalp-hero-title {
+                    font-size: 55px;
+                }
+                .kalp-hero-subtitle {
+                    font-size: 18px;
+                }
+                .kalp-text-slider {
+                    min-width: 400px;
+                }
+                .kalp-category-tab {
+                    font-size: 18px;
+                    gap: 10px;
+                }
+                .kalp-location {
+                    width: 210px;
+                    font-size: 21px;
+                }
+                .kalp-search-button {
+                    width: 160px;
+                }
+            }
+            @media (max-width: 1100px) {
+                .kalp-hero {
+                    min-height: 720px;
+                    height: 720px;
+                }
+                .kalp-hero-container {
+                    padding-top: 150px;
+                }
+                .kalp-hero-title {
+                    font-size: 50px;
+                }
+                .kalp-hero-subtitle {
+                    font-size: 17px;
+                }
+                .kalp-text-slider {
+                    min-width: 350px;
+                }
+                .kalp-category-tab {
+                    font-size: 16px;
+                    gap: 8px;
+                }
+                .kalp-location {
+                    width: 190px;
+                }
+                .kalp-search-button {
+                    width: 150px;
+                }
+            }
+            @media (max-width: 767px) {
+                .kalp-hero {
+                    min-height: auto;
+                    height: auto;
+                    padding-bottom: 30px;
+                }
+                .kalp-hero-bg {
+                    background-position: center;
+                }
+                .kalp-hero-overlay {
+                    background:
+                        linear-gradient(
+                            180deg,
+                            rgba(0, 10, 20, 0.93) 0%,
+                            rgba(0, 10, 20, 0.80) 50%,
+                            rgba(0, 10, 20, 0.95) 100%
+                        );
+                }
+                .kalp-hero-container {
+                    padding: 105px 15px 30px;
+                }
+                .kalp-rating {
+                    padding: 9px 15px;
+                    font-size: 14px;
+                    gap: 7px;
+                    margin-bottom: 20px;
+                }
+                .kalp-rating-star {
+                    font-size: 23px;
+                }
+                .kalp-rating-dot {
+                    font-size: 19px;
+                }
+                .kalp-hero-title {
+                    font-size: 43px;
+                    line-height: 1.08;
+                    letter-spacing: -1px;
+                }
+                .kalp-hero-subtitle {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 9px;
+                    margin-top: 16px;
+                    font-size: 17px;
+                }
+                .kalp-subtitle-static {
+                    width: 100%;
+                    white-space: normal;
+                }
+                .kalp-subtitle-dot {
+                    width: 8px;
+                    height: 8px;
+                    flex: 0 0 8px;
+                }
+                .kalp-text-slider {
+                    width: calc(100% - 25px);
+                    min-width: 0;
+                    height: 26px;
+                    font-size: 16px;
+                }
+                .kalp-text-slider-track span {
+                    height: 26px;
+                    min-height: 26px;
+                }
+                .kalp-category-wrapper {
+                    position: relative;
+                    left: auto;
+                    right: auto;
+                    bottom: auto;
+                    margin-top: 45px;
+                }
+                .kalp-category-tabs {
+                    height: auto;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 2px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                }
+                .kalp-category-tab {
+                    min-height: 65px;
+                    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+                    border-radius: 0 !important;
+                    font-size: 13px;
+                    gap: 5px;
+                    flex-direction: column;
+                }
+                .kalp-category-tab.active::after {
+                    left: 12px;
+                    right: 12px;
+                    height: 3px;
+                }
+                .kalp-tab-icon {
+                    width: 25px;
+                    height: 25px;
+                }
+                .kalp-tab-icon svg {
+                    width: 23px;
+                    height: 23px;
+                }
+                .kalp-tab-badge {
+                    top: 2px;
+                    right: 3px;
+                    font-size: 8px;
+                    padding: 2px 4px;
+                }
+                .kalp-search-box {
+                    margin-top: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 10px;
+                    overflow: visible;
+                    padding: 10px;
+                }
+                .kalp-location {
+                    width: 100%;
+                    height: 55px;
+                    border-right: 0;
+                    border-bottom: 1px solid #dddddd;
+                    padding: 0 10px;
+                    font-size: 18px;
+                }
+                .kalp-location-dropdown {
+                    top: calc(100% + 5px);
+                    left: 0;
+                    width: 100%;
+                }
+                .kalp-search-input-wrapper {
+                    min-height: 65px;
+                    padding: 0 8px;
+                }
+                .kalp-search-icon {
+                    width: 38px;
+                    margin-right: 5px;
+                }
+                .kalp-search-icon svg {
+                    width: 30px;
+                    height: 30px;
+                }
+                .kalp-search-input {
+                    font-size: 17px;
+                }
+                .kalp-search-button {
+                    width: 100%;
+                    height: 52px;
+                    margin: 0;
+                    border-radius: 9px;
+                    font-size: 17px;
+                }
+                @keyframes kalpVerticalText {
+                    0% {
+                        transform: translateY(0);
+                    }
+                    18% {
+                        transform: translateY(0);
+                    }
+                    25% {
+                        transform: translateY(-26px);
+                    }
+                    43% {
+                        transform: translateY(-26px);
+                    }
+                    50% {
+                        transform: translateY(-52px);
+                    }
+                    68% {
+                        transform: translateY(-52px);
+                    }
+                    75% {
+                        transform: translateY(-78px);
+                    }
+                    93% {
+                        transform: translateY(-78px);
+                    }
+                    100% {
+                        transform: translateY(-104px);
+                    }
+                }
+            }
+            @media (max-width: 420px) {
+                .kalp-hero-title {
+                    font-size: 36px;
+                }
+                .kalp-hero-subtitle {
+                    font-size: 15px;
+                }
+                .kalp-text-slider {
+                    font-size: 14px;
+                }
 
-
-
-
-
-
-
-
+                .kalp-rating {
+                    font-size: 12px;
+                }
+                .kalp-category-tab {
+                    font-size: 11px;
+                }
+            }

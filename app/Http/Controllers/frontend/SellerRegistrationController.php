@@ -34,8 +34,6 @@ class SellerRegistrationController extends Controller
                 'required',
                 'email',
                 'max:255',
-
-                // Email must be unique only among sellers.
                 Rule::unique('users', 'email')
                     ->where(function ($query) {
                         return $query->where('user_type', 'seller');
@@ -49,12 +47,6 @@ class SellerRegistrationController extends Controller
                 'unique:users,mobile',
             ],
 
-            'gender' => [
-                'required',
-                'string',
-                'max:30',
-            ],
-
             'password' => [
                 'required',
                 'confirmed',
@@ -66,16 +58,15 @@ class SellerRegistrationController extends Controller
         ]);
 
         $user = User::create([
-            'name' => $validated['name'],
-            'email' => $validated['email'],
+            'name'      => $validated['name'],
+            'email'     => $validated['email'],
+            'mobile'    => $validated['mobile'],
+            'password'  => Hash::make($validated['password']),
             'user_type' => 'seller',
-            'mobile' => $validated['mobile'],
-            'gender' => $validated['gender'],
-            'status' => 1,
-            'password' => Hash::make($validated['password']),
+            'status'    => 1,
         ]);
 
-        // Assign Seller role
+        // Assign seller role
         $user->assignRole('seller');
 
         return redirect()

@@ -48,13 +48,6 @@ class BuyerRegistrationController extends Controller
                 'max:20',
                 'unique:users,mobile',
             ],
-
-            'gender' => [
-                'required',
-                'string',
-                'max:30',
-            ],
-
             'password' => [
                 'required',
                 'confirmed',
@@ -62,15 +55,14 @@ class BuyerRegistrationController extends Controller
             ],
         ], [
             'email.unique' => 'This email is already registered as a buyer.',
-            'mobile.unique' => 'This mobile number is already registered.',
+            'mobile.unique' => 'This mobile number is already registered.',           
         ]);
 
         $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'user_type' => 'buyer',
-            'mobile' => $validated['mobile'],
-            'gender' => $validated['gender'],
+            'mobile' => $validated['mobile'],           
             'status' => 1,
             'password' => Hash::make($validated['password']),
         ]);
