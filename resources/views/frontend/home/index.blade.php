@@ -1,7 +1,104 @@
 @extends('layouts.app')
 
 @section('content')
-
+        <section class="kalp-hero">
+            <div class="kalp-hero-bg"></div>
+            <div class="kalp-hero-overlay"></div>
+            <div class="kalp-hero-container">
+                <div class="kalp-hero-content">
+                    <div class="kalp-rating">
+                        <span class="kalp-rating-star">★</span>
+                        <span class="kalp-rating-number">4.7</span>
+                        <span class="kalp-rating-dot">•</span>
+                        <span class="kalp-rating-text">18k Google reviews</span>
+                    </div>
+                    <h1 class="kalp-hero-title">
+                        Mumbai & Pune Real Estate
+                    </h1>
+                    <div class="kalp-hero-subtitle">
+                        <span class="kalp-subtitle-static">
+                            From Search to Keys, we've got you covered
+                        </span>
+                        <span class="kalp-subtitle-dot"></span>
+                        <span class="kalp-text-slider">
+                            <span class="kalp-text-slider-track">
+                                <span>3800+ Properties under Management</span>
+                                <span>Buy, Sell & Rent Properties</span>
+                                <span>Verified Properties Across Bangalore</span>
+                                <span>Find Your Dream Property With Kalp Realty</span>
+                                <span>3800+ Properties under Management</span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="kalp-category-wrapper">
+                    <div class="kalp-category-tabs">
+                        <a href="javascript:void(0)" class="kalp-category-tab active"  data-placeholder='Search by "Property"' data-type="buy" >
+                            <span class="kalp-tab-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M3 10.5L12 3l9 7.5"></path>
+                                    <path d="M5 9.5V20h14V9.5"></path>
+                                    <path d="M9 20v-5h6v5"></path>
+                                </svg>
+                            </span>
+                            <span>Buy</span>
+                        </a>
+                        <a href="javascript:void(0)" class="kalp-category-tab" data-placeholder='Search by "Property"' data-type="rent" >
+                            <span class="kalp-tab-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M20.5 13.5L12 22l-8.5-8.5"></path>
+                                    <path d="M3.5 13.5L12 5l8.5 8.5"></path>
+                                    <path d="M12 5V2"></path>
+                                    <path d="M7 9h.01"></path>
+                                </svg>
+                            </span>
+                            <span>Rent</span>
+                        </a>
+                        <a href="javascript:void(0)" class="kalp-category-tab kalp-list-tab kalp-badge-tab" data-type="sell">
+                            <span class="kalp-tab-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M6 21V7l6-4 6 4v14"></path>
+                                    <path d="M3 21h18"></path>
+                                    <path d="M9 11h6"></path>
+                                    <path d="M9 15h6"></path>
+                                    <path d="M10 21v-4h4v4"></path>
+                                </svg>
+                            </span>
+                            <span>List Property</span>
+                            <small class="kalp-tab-badge">
+                                FREE
+                            </small>
+                        </a>
+                    </div>
+                    <div class="kalp-search-box">
+                        <div class="kalp-location">
+                            <span class="kalp-location-name" id="kalpSelectedLocation">Mumbai</span>
+                            <button type="button" class="kalp-location-arrow" id="kalpLocationButton" aria-label="Change location">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M6 9l6 6 6-6"></path>
+                                </svg>
+                            </button>
+                            <div class="kalp-location-dropdown" id="kalpLocationDropdown">
+                                <button type="button" class="kalp-location-option active" data-location="Mumbai">Mumbai</button>
+                                <button type="button" class="kalp-location-option" data-location="Pune">Pune</button>                             
+                            </div>
+                        </div>
+                        <div class="kalp-search-input-wrapper">
+                            <span class="kalp-search-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="11" cy="11" r="7"></circle>
+                                    <path d="M16.5 16.5L22 22"></path>
+                                </svg>
+                            </span>
+                            <input type="text" id="kalpPropertySearch" class="kalp-search-input"  placeholder='Search by "Builder"' autocomplete="off">
+                        </div>
+                        <button type="button" class="kalp-search-button" id="kalpSearchButton">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>       
         <!--Main Slider-->
         <section class="main-slider">
             <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
@@ -772,7 +869,7 @@
                         <strong>the Right Visibility.</strong>
                     </div>
                     <div class="list-property-bottom-divider"></div>
-                    <a href="{{ route('properties.create') }}" class="list-property-button">
+                    <a href="{{ route('seller.register') }}" class="list-property-button">
                         <span class="list-button-icon">
                             <i class="fa fa-home"></i>
                         </span>
@@ -1855,5 +1952,92 @@
             </div>
         </section>
         <!--End Brand area-->
+         <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const tabs = document.querySelectorAll('.kalp-category-tab');
+                const searchInput = document.getElementById('kalpPropertySearch');
+                const searchButton = document.getElementById('kalpSearchButton');
+                tabs.forEach(function (tab) {
+                    tab.addEventListener('click', function () {
+                        if (
+                            this.getAttribute('href') &&
+                            this.getAttribute('href') !== 'javascript:void(0)'
+                        ) {
+                            return;
+                        }
+                        tabs.forEach(function (item) {
+                            item.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                        const placeholder = this.getAttribute('data-placeholder');
+                        if (placeholder) {
+                            searchInput.placeholder = placeholder;
+                        }
+                    });
+                });
+                searchButton.addEventListener('click', function () {
+                    const selectedType = document.querySelector('.kalp-category-tab.active')?.getAttribute('data-type');
+
+                    if (selectedType === 'buy') {
+                        window.location.href = "{{ url('/buyer/register') }}";
+                        return;
+                    }
+
+                    if (selectedType === 'rent') {
+                        window.location.href = "{{ url('/buyer/register') }}";
+                        return;
+                    }
+
+                    if (selectedType === 'sell') {
+                        window.location.href = "{{ url('/seller/register') }}";
+                        return;
+                    }
+                });
+                searchInput.addEventListener('keydown', function (event) {
+                    if (event.key === 'Enter') {
+                        event.preventDefault();
+                        searchButton.click();
+                    }
+                });
+
+                const locationBox = document.querySelector('.kalp-location');
+                const locationButton = document.getElementById('kalpLocationButton');
+                const selectedLocation = document.getElementById('kalpSelectedLocation');
+                const locationDropdown = document.getElementById('kalpLocationDropdown');
+                const locationOptions = document.querySelectorAll('.kalp-location-option');
+
+                locationButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    locationBox.classList.toggle('active');
+                });
+
+                locationDropdown.addEventListener('click', function (event) {
+                    event.stopPropagation();
+                });
+
+                locationOptions.forEach(function (option) {
+                    option.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        const location = this.getAttribute('data-location');
+
+                        selectedLocation.textContent = location;
+
+                        locationOptions.forEach(function (item) {
+                            item.classList.remove('active');
+                        });
+
+                        this.classList.add('active');
+                        locationBox.classList.remove('active');
+                    });
+                });
+
+                document.addEventListener('click', function () {
+                    locationBox.classList.remove('active');
+                });
+            });
+        </script>
         
 @endsection
