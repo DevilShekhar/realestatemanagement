@@ -10,9 +10,7 @@
         padding-bottom: 90px;
     }
 
-    /* ================================
-       BREADCRUMB
-    ================================= */
+    /* Breadcrumb */
     .legal-breadcrumb {
         position: relative;
         min-height: 300px;
@@ -58,7 +56,7 @@
     .legal-breadcrumb-content p {
         color: rgba(255,255,255,.80);
         font-size: 16px;
-        max-width: 680px;
+        max-width: 650px;
         margin: 0;
         line-height: 1.7;
     }
@@ -83,11 +81,9 @@
         color: #f4b942;
     }
 
-    /* ================================
-       MAIN CONTENT
-    ================================= */
+    /* Content */
     .legal-content-wrapper {
-        position: relative;
+         position: relative;
         z-index: 5;
     }
 
@@ -133,12 +129,11 @@
         margin: 0;
     }
 
-    /* ================================
-       SECTIONS
-    ================================= */
+    /* Sections */
     .legal-section {
         margin-bottom: 35px;
     }
+  
 
     .legal-section:last-child {
         margin-bottom: 0;
@@ -165,24 +160,24 @@
         margin-bottom: 14px;
     }
 
-    .legal-section ul,
-    .legal-section ol {
+  /* Privacy Policy Bullet Lists */
+    .legal-section ul {
+        display: block;
         margin: 12px 0 18px;
-        padding-left: 24px;
+        padding-left: 25px !important;
+        list-style: disc !important;
     }
 
-    .legal-section ul li,
-    .legal-section ol li {
+    .legal-section ul li {
+        display: list-item !important;
         color: #667085;
         font-size: 15px;
         line-height: 1.9;
         margin-bottom: 7px;
+        list-style-type: disc !important;
     }
 
-    .legal-section ul li::marker {
-        color: #f4b942;
-    }
-
+ 
     .legal-section a {
         color: #17233c;
         font-weight: 600;
@@ -193,9 +188,7 @@
         color: #f4b942;
     }
 
-    /* ================================
-       HIGHLIGHT BOX
-    ================================= */
+    /* Highlight Box */
     .legal-highlight {
         background: #f8f9fb;
         border-left: 4px solid #f4b942;
@@ -208,30 +201,41 @@
         margin: 0;
     }
 
-    /* Warning */
-    .legal-warning {
-        background: #fff8e8;
-        border: 1px solid #f4d98a;
-        border-radius: 10px;
-        padding: 22px;
-        margin: 25px 0;
+    /* Table */
+    .privacy-table-wrapper {
+        overflow-x: auto;
+        margin: 20px 0;
     }
 
-    .legal-warning-title {
-        color: #8a6400;
-        font-size: 16px;
-        font-weight: 700;
-        margin-bottom: 8px;
+    .privacy-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 650px;
     }
 
-    .legal-warning p {
-        color: #765c18;
-        margin: 0;
+    .privacy-table th {
+        background: #17233c;
+        color: #fff;
+        text-align: left;
+        padding: 14px 16px;
+        font-size: 14px;
+        font-weight: 600;
     }
 
-    /* ================================
-       SIDEBAR
-    ================================= */
+    .privacy-table td {
+        border: 1px solid #e8ebf0;
+        padding: 14px 16px;
+        color: #667085;
+        font-size: 14px;
+        line-height: 1.7;
+        vertical-align: top;
+    }
+
+    .privacy-table tr:nth-child(even) td {
+        background: #fafbfc;
+    }
+
+    /* Sidebar */
     .legal-sidebar {
         position: sticky;
         top: 30px;
@@ -270,12 +274,6 @@
         padding-left: 5px;
     }
 
-    .legal-nav a.active {
-        color: #f4b942;
-        font-weight: 700;
-    }
-
-    /* Contact Box */
     .contact-box {
         background: #17233c;
         border-radius: 14px;
@@ -304,9 +302,7 @@
         text-decoration: none;
     }
 
-    /* ================================
-       RESPONSIVE
-    ================================= */
+    /* Responsive */
     @media (max-width: 991px) {
 
         .legal-breadcrumb {
@@ -362,325 +358,391 @@
         }
 
         .legal-section p,
-        .legal-section ul li,
-        .legal-section ol li {
+        .legal-section ul li {
             font-size: 14px;
         }
     }
 </style>
-    <section class="legal-breadcrumb" style="background-image: url('{{ asset('assets/frontend/images/resources/breadcrumb-bg.jpg') }}');">
-        <div class="container">
-            <div class="legal-breadcrumb-content">
-                <div class="eyebrow">
-                    Legal Information
-                </div>
-                <h1>Disclaimer</h1>
-                <p>
-                    Important information about the use of our website,
-                    content and services.
-                </p>
-                <div class="breadcrumb-links">
-                    <a href="{{ route('frontend.home') }}">
-                        Home
-                    </a>
-                    <span class="separator">/</span>
-                    <span class="active">
-                        Disclaimer
-                    </span>
-                </div>
+<section class="legal-breadcrumb" style="background-image: url('{{ asset('assets/frontend/images/resources/breadcrumb-bg.jpg') }}');">
+    <div class="container">
+        <div class="legal-breadcrumb-content">
+            <div class="eyebrow">
+                Legal Information
+            </div>
+            <h1>Disclaimer</h1>
+            <p>
+                Important information about the use of our website,
+                content and services.
+            </p>
+            <div class="breadcrumb-links">
+                <a href="{{ route('frontend.home') }}">
+                    Home
+                </a>
+                <span class="separator">/</span>
+                <span class="active">
+                    Disclaimer
+                </span>
             </div>
         </div>
-    </section>
-    <section class="legal-content-wrapper py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8 col-lg-8">
-                    <div class="legal-card">
-                        <div class="legal-intro">
-                            <div class="legal-label">
-                                <span>●</span>
-                                Important Notice
-                            </div>
-                            <h2>
-                                Website Disclaimer
-                            </h2>
-                            <p class="last-updated">
-                                Last Updated:
-                                {{ date('F d, Y') }}
-                            </p>
+    </div>
+</section>
+
+<section class="legal-content-wrapper py-4">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xl-8 col-lg-8">
+                <div class="legal-card">
+
+                    <div class="legal-intro">
+                        <div class="legal-label">
+                            <span>●</span>
+                            Important Notice
                         </div>
-                        <div class="legal-warning">
-                            <div class="legal-warning-title">
-                                Please Read Carefully
-                            </div>
-                            <p>
-                                The information provided on this website is
-                                intended for general informational purposes only.
-                                It should not be considered professional, legal,
-                                financial, technical or other specialized advice
-                                unless expressly stated otherwise.
-                            </p>
+
+                        <h2>
+                            Disclaimer
+                        </h2>
+
+                        <p class="last-updated">
+                            Last Updated: 21 August 2026
+                        </p>
+                    </div>
+
+                    <div class="legal-warning">
+                        <div class="legal-warning-title">
+                            Disclaimer
                         </div>
-                        <div class="legal-section">
-                            <h3>1. General Information</h3>
+
+                        <p>
+                            Kalp Realty is a property discovery and listing platform.
+                        </p>
+
+                        <p>
+                            Our website is designed to help users explore and enquire about
+                            properties and allow property owners, sellers, landlords, agents,
+                            consultants, builders and developers to list and manage their properties.
+                        </p>
+                    </div>
+
+                    <div class="legal-section">
+                        <h3>1. Property Information Disclaimer</h3>
+
+                        <p>
+                            Property information displayed on Kalp Realty may be provided by
+                            property owners, sellers, agents, builders, developers or other third parties.
+                        </p>
+
+                        <p>
+                            While we aim to maintain useful and relevant information, Kalp Realty
+                            does not guarantee that every property listing, description, image, price,
+                            area, amenity, location or availability status is:
+                        </p>
+
+                        <ul>
+                            <li>Accurate</li>
+                            <li>Complete</li>
+                            <li>Current</li>
+                            <li>Verified</li>
+                        </ul>
+
+                        <p>
+                            Users should independently verify all property information before making
+                            any decision.
+                        </p>
+                    </div>
+
+                    <div class="legal-section">
+                        <h3>2. No Ownership or Title Guarantee</h3>
+
+                        <p>
+                            Unless specifically stated otherwise, a property being listed on Kalp
+                            Realty does not mean that Kalp Realty has verified or guaranteed:
+                        </p>
+
+                        <ul>
+                            <li>Ownership</li>
+                            <li>Legal Title</li>
+                            <li>Seller Authority</li>
+                            <li>Property Approvals</li>
+                            <li>RERA Registration</li>
+                            <li>Property Boundaries</li>
+                            <li>Encumbrances</li>
+                            <li>Government Permissions</li>
+                            <li>Legal Status</li>
+                            <li>Availability</li>
+                        </ul>
+
+                        <p>
+                            Users are strongly advised to conduct appropriate legal and property due
+                            diligence.
+                        </p>
+                    </div>
+
+                    <div class="legal-section">
+                        <h3>3. No Legal, Financial or Investment Advice</h3>
+
+                        <p>
+                            The information available on Kalp Realty is provided for general
+                            information and property discovery purposes only.
+                        </p>
+
+                        <p>
+                            Nothing on this website should be considered as:
+                        </p>
+
+                        <ul>
+                            <li>Legal Advice</li>
+                            <li>Financial Advice</li>
+                            <li>Investment Advice</li>
+                            <li>Tax Advice</li>
+                            <li>Property Valuation Advice</li>
+                        </ul>
+
+                        <p>
+                            Users should consult qualified professionals before making important
+                            property or financial decisions.
+                        </p>
+                    </div>
+
+                    <div class="legal-section">
+                        <h3>4. No Guarantee of Sale or Rental</h3>
+
+                        <p>
+                            Kalp Realty does not guarantee that:
+                        </p>
+
+                        <ul>
+                            <li>A property will be sold</li>
+                            <li>A property will be rented</li>
+                            <li>A buyer or tenant will be found</li>
+                            <li>A property listing will receive enquiries</li>
+                            <li>A transaction will be completed</li>
+                            <li>A property will remain available</li>
+                            <li>A property will be available at the displayed price or rent</li>
+                        </ul>
+
+                        <p>
+                            All property transactions depend on the discussions, negotiations,
+                            agreements and decisions of the parties involved.
+                        </p>
+                    </div>
+
+                    <div class="legal-section">
+                        <h3>5. Third-Party Listings and Communications</h3>
+
+                        <p>
+                            Kalp Realty may allow users to connect with property owners, sellers,
+                            agents, landlords, builders or other users.
+                        </p>
+
+                        <p>
+                            Kalp Realty is not responsible for the statements, actions, conduct
+                            or representations of third parties.
+                        </p>
+
+                        <p>
+                            Users should exercise caution when:
+                        </p>
+
+                        <ul>
+                            <li>Communicating with another party</li>
+                            <li>Sharing personal documents</li>
+                            <li>Making payments</li>
+                            <li>Paying token amounts or deposits</li>
+                            <li>Signing agreements</li>
+                            <li>Entering into property transactions</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-section">
+                        <h3>6. Fraud and Payment Warning</h3>
+
+                        <p>
+                            Users should independently verify the identity and authority of the
+                            person they are dealing with before making any payment.
+                        </p>
+
+                        <p>
+                            Before making any property-related payment, users are advised to:
+                        </p>
+
+                        <ul>
+                            <li>Verify Property Documents</li>
+                            <li>Verify Ownership or Authority</li>
+                            <li>Conduct Legal Due Diligence</li>
+                            <li>Use Appropriate Written Agreements</li>
+                            <li>Seek Professional Advice where required</li>
+                        </ul>
+
+                        <p>
+                            Do not make payments based solely on information displayed on the
+                            Kalp Realty website.
+                        </p>
+                    </div>
+
+                    <div class="legal-section">
+                        <h3>7. Images, Maps and Visual Content</h3>
+
+                        <p>
+                            Property photographs, videos, renderings, layouts, maps and other
+                            visual materials may be provided by third parties.
+                        </p>
+
+                        <p>
+                            Such content may be for illustrative purposes and may not always
+                            represent:
+                        </p>
+
+                        <ul>
+                            <li>The Current Condition of the Property</li>
+                            <li>Exact Dimensions</li>
+                            <li>Final Specifications</li>
+                            <li>Actual Surroundings</li>
+                            <li>Current Availability</li>
+                        </ul>
+
+                        <p>
+                            Users should physically inspect and independently verify the property
+                            wherever appropriate.
+                        </p>
+                    </div>
+
+                    <div class="legal-section">
+                        <h3>8. Price and Availability</h3>
+
+                        <p>
+                            Property prices, rents and availability may change at any time.
+                        </p>
+
+                        <p>
+                            A property displayed on Kalp Realty may already be:
+                        </p>
+
+                        <ul>
+                            <li>Sold</li>
+                            <li>Rented</li>
+                            <li>Withdrawn</li>
+                            <li>Unavailable</li>
+                        </ul>
+
+                        <p>
+                            Users should confirm the latest price, availability and other important
+                            information with the relevant property owner, seller, agent, builder or
+                            authorised representative.
+                        </p>
+                    </div>
+
+                    <div class="legal-section">
+                        <h3>9. Website Availability</h3>
+
+                        <p>
+                            Kalp Realty does not guarantee uninterrupted or error-free access to the
+                            website.
+                        </p>
+
+                        <p>
+                            The website may occasionally be unavailable due to maintenance,
+                            technical problems, updates or circumstances beyond our control.
+                        </p>
+                    </div>
+
+                    <div class="legal-section">
+                        <h3>10. External Links</h3>
+
+                        <p>
+                            Kalp Realty may contain links to third-party websites or services.
+                        </p>
+
+                        <p>
+                            We do not control or guarantee the content, availability or practices
+                            of these external websites.
+                        </p>
+                    </div>
+
+                    <div class="legal-section">
+                        <h3>11. User Responsibility</h3>
+
+                        <p>
+                            By using Kalp Realty, you understand that buying, selling, renting or
+                            investing in property may involve financial and legal risks.
+                        </p>
+
+                        <p>
+                            You are responsible for your own decisions and should conduct
+                            appropriate verification and due diligence before entering into any
+                            property transaction.
+                        </p>
+                    </div>
+
+                    <div class="legal-section">
+                        <h3>Contact Us</h3>
+
+                        <p>
+                            For any questions regarding this Disclaimer, please contact:
+                        </p>
+
+                        <div class="legal-highlight">
                             <p>
-                                The content published on this website is provided
-                                in good faith and for general information and
-                                educational purposes.
+                                <strong>Kalp Realty</strong>
+                                <br><br>
+
+                                <strong>Email:</strong> [Insert Email Address]
+                                <br>
+
+                                <strong>Phone:</strong> [Insert Phone Number]
+                                <br>
+
+                                <strong>Address:</strong> [Insert Business Address]
                             </p>
-                            <p>
-                                While we make reasonable efforts to keep the
-                                information accurate and current, we do not
-                                guarantee that all information is complete,
-                                accurate, reliable or up to date at all times.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>2. No Professional Advice</h3>
-                            <p>
-                                Nothing on this website should be interpreted
-                                as professional advice unless explicitly stated.
-                            </p>
-                            <p>
-                                Information available through the website should
-                                not replace advice from a qualified professional
-                                who understands your individual circumstances.
-                            </p>
-                            <div class="legal-highlight">
-                                <p>
-                                    Before making important business, financial,
-                                    legal, technical or other decisions, you
-                                    should obtain appropriate professional advice
-                                    where necessary.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="legal-section">
-                            <h3>3. Accuracy of Information</h3>
-                            <p>
-                                We make reasonable efforts to maintain accurate
-                                information on our website. However, errors,
-                                omissions, outdated information or inaccuracies
-                                may occasionally occur.
-                            </p>
-                            <p>
-                                We reserve the right to correct, update or modify
-                                website content at any time without necessarily
-                                providing prior notice.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>4. External Links</h3>
-                            <p>
-                                Our website may contain links to external
-                                websites or third-party services.
-                            </p>
-                            <p>
-                                These links may be provided for convenience or
-                                additional information. We do not necessarily
-                                endorse the content, products or services offered
-                                by third-party websites.
-                            </p>
-                            <p>
-                                We are not responsible for the availability,
-                                accuracy, security, privacy practices or content
-                                of external websites.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>5. Third-Party Products and Services</h3>
-                            <p>
-                                Where third-party products, services, platforms,
-                                tools or providers are referenced on our website,
-                                such references do not necessarily constitute an
-                                endorsement or guarantee.
-                            </p>
-                            <p>
-                                Any transaction or interaction with a third party
-                                is subject to that third party's own terms,
-                                policies and conditions.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>6. Website Availability</h3>
-                            <p>
-                                We make reasonable efforts to keep our website
-                                operational. However, we do not guarantee that
-                                the website will always be available,
-                                uninterrupted, secure or error-free.
-                            </p>
-                            <p>
-                                Access may occasionally be interrupted due to
-                                maintenance, technical issues, network failures,
-                                hosting problems or circumstances beyond our
-                                reasonable control.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>7. Limitation of Liability</h3>
-                            <p>
-                                To the maximum extent permitted by applicable law,
-                                we shall not be liable for any direct, indirect,
-                                incidental, special or consequential loss arising
-                                from your use of, or reliance upon, information
-                                provided through this website.
-                            </p>
-                            <p>
-                                This includes, where legally permitted, loss of
-                                data, business opportunities, revenue, profits
-                                or other economic loss.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>8. User Responsibility</h3>
-                            <p>
-                                Users are responsible for evaluating the accuracy,
-                                completeness and suitability of information
-                                available through the website before relying
-                                upon it.
-                            </p>
-                            <ul>
-                                <li>
-                                    Verify important information before making
-                                    decisions.
-                                </li>
-                                <li>
-                                    Obtain professional advice where appropriate.
-                                </li>
-                                <li>
-                                    Review applicable third-party terms before
-                                    using external services.
-                                </li>
-                                <li>
-                                    Maintain appropriate security when using
-                                    online services.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="legal-section">
-                            <h3>9. Results and Outcomes</h3>
-                            <p>
-                                Any examples, statements, descriptions or
-                                information regarding potential results or
-                                outcomes should not be interpreted as a guarantee
-                                of a particular result.
-                            </p>
-                            <p>
-                                Actual results may vary depending on individual
-                                circumstances, market conditions, user actions,
-                                third-party services and other factors.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>10. Testimonials and Examples</h3>
-                            <p>
-                                If the website contains testimonials, case
-                                studies or examples, they represent the individual
-                                experiences or circumstances of the persons
-                                involved.
-                            </p>
-                            <p>
-                                Such examples should not be interpreted as a
-                                guarantee that another user will experience
-                                identical or similar results.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>11. Changes to This Disclaimer</h3>
-                            <p>
-                                We may update this Disclaimer from time to time
-                                to reflect changes to our services, website,
-                                business practices or applicable requirements.
-                            </p>
-                            <p>
-                                The updated version will be published on this
-                                page with a revised "Last Updated" date.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>12. Acceptance</h3>
-                            <p>
-                                By accessing or using this website, you acknowledge
-                                that you have read and understood this Disclaimer
-                                and agree to use the information provided at your
-                                own discretion and responsibility.
-                            </p>
-                        </div>
-                        <div class="legal-section">
-                            <h3>13. Related Policies</h3>
-                            <p>
-                                For additional information, please review our
-                                other website policies:
-                            </p>
-                            <ul>
-                                <li>
-                                    <a href="{{ route('frontend.privacy') }}">
-                                        Privacy Policy
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('frontend.terms') }}">
-                                        Terms & Conditions
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="legal-section">
-                            <h3>14. Contact Us</h3>
-                            <p>
-                                If you have questions regarding this Disclaimer
-                                or any information published on our website,
-                                please contact us.
-                            </p>
-                            <div class="legal-highlight">
-                                <p>
-                                    <strong>Email:</strong>
-                                    <a href="mailto:info@example.com">
-                                        info@example.com
-                                    </a>
-                                    <br>
-                                    <strong>Phone:</strong>
-                                    <a href="tel:+919999999999">
-                                        +91 99999 99999
-                                    </a>
-                                </p>
-                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4">
-                    <div class="legal-sidebar">
-                        <div class="legal-nav">
-                            <h4>
-                                Legal Information
-                            </h4>
-                            <a href="{{ route('frontend.privacy') }}">
-                                Privacy Policy
-                            </a>
-                            <a href="{{ route('frontend.terms') }}">
-                                Terms & Conditions
-                            </a>
-                            <a href="{{ route('frontend.disclaimer') }}"
-                               class="active">
-                                Disclaimer
-                            </a>
-                        </div>
-                        <div class="contact-box">
-                            <h4>
-                                Need Help?
-                            </h4>
-                            <p>
-                                If you have questions about our policies,
-                                services or website information, please
-                                get in touch with our team.
-                            </p>
-                            <a href="{{ route('frontend.contact') }}">
-                                Contact Us →
-                            </a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <div class="legal-sidebar">
+
+                    <div class="legal-nav">
+                        <h4>
+                            Legal Information
+                        </h4>
+
+                        <a href="{{ route('frontend.privacy') }}">
+                            Privacy Policy
+                        </a>
+
+                        <a href="{{ route('frontend.terms') }}">
+                            Terms & Conditions
+                        </a>
+
+                        <a href="{{ route('frontend.disclaimer') }}"
+                           class="active">
+                            Disclaimer
+                        </a>
+                    </div>
+
+                    <div class="contact-box">
+                        <h4>
+                            Need Help?
+                        </h4>
+
+                        <p>
+                            If you have questions about our policies,
+                            services or website information, please
+                            get in touch with our team.
+                        </p>
+
+                        <a href="{{ route('frontend.contact') }}">
+                            Contact Us →
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 @endsection
