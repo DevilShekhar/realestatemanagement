@@ -1497,44 +1497,7 @@
         <!--End Testimonial Area-->
 
         <!--Start appointment Area-->
-        <section class="appointment-area" style="background-image:url('{{ asset('assets/frontend/images/resources/newsletter.png') }}');">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="map-content-box">
-                            <div class="sec-title">
-                                <p>NEWSLETTER</p>
-                                <div class="title">Subscribe Our Newsletter</div>
-                            </div>
-                            <div class="appointment">
-                                <form class="appointment-form" action="#" method="POST">
-                                    @csrf
-                                    <div class="row">
-                                        <div class="col-xl-12">
-                                            <div class="single-box">
-                                                <input type="email" name="email" value="{{ old('email') }}" placeholder="Enter your email" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xl-12">
-                                            <div class="single-box">
-                                                <button class="btn-one" type="submit">Subscribe<span class="flaticon-next"></span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="inner">
-                                <p class="text-white">Get latest updates and properties in your inbox.</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
+       
         <!--End appointment Area-->
         <section class="working-process-area">
             <div class="container">
