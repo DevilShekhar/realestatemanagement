@@ -135,7 +135,7 @@
                             <span>Pimpri-Chinchwad</span>
                             <span>Chakan and more</span>
                         </div>
-                        <a href="{{ route('properties.index') }}" class="pune-properties-button">
+                        <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="pune-properties-button">
                             <span>
                                 <i class="fa fa-map-marker"></i>
                                 Explore Pune Properties
@@ -181,7 +181,7 @@
                             <span>Dadar</span>
                             <span>Panvel and more</span>
                         </div>
-                        <a href="{{ route('properties.index') }}" class="pune-properties-button">
+                        <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="pune-properties-button">
                             <span>
                                 <i class="fa fa-map-marker"></i>
                                 Explore Mumbai Properties
@@ -260,14 +260,8 @@
                                     </span>
 
                                 </div>
-
-                                <a href="#"
-                                class="property-category-btn">
-
-                                    <span>
-                                        Explore Residential Properties
-                                    </span>
-
+                                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="property-category-btn">
+                                    <span>Explore Residential Properties</span>
                                     <i class="flaticon-next"></i>
                                 </a>
                             </div>
@@ -317,8 +311,7 @@
                                         Commercial Spaces
                                     </span>
                                 </div>
-                                <a href="#"
-                                class="property-category-btn">
+                                 <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="property-category-btn">
                                     <span>
                                         Explore Commercial Properties
                                     </span>
@@ -381,8 +374,7 @@
                                         Godowns
                                     </span>
                                 </div>
-                                <a href="#"
-                                class="property-category-btn">
+                                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="property-category-btn">
                                     <span>
                                         Explore Industrial Properties
                                     </span>
@@ -435,8 +427,7 @@
                                         Farm Land
                                     </span>
                                 </div>
-                                <a href="#"
-                                class="property-category-btn">
+                                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="property-category-btn">
                                     <span>
                                         Explore Land &amp; Plots
                                     </span>
@@ -559,10 +550,8 @@
                         <div class="buy-search-text">
                             Search by <strong>location</strong>, <strong>property type</strong> and <strong>budget.</strong>
                         </div>
-                        <a href="{{ route('properties.index') }}" class="buy-property-cta">
-                            <span>
-                                Explore Properties for Sale
-                            </span>
+                        <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="buy-property-cta">
+                            <span>Find Your Property</span>
                             <i class="fa fa-long-arrow-right"></i>
                         </a>
                     </div>
@@ -684,11 +673,11 @@
                                 <span></span>
                             </div>
                         </div>
-                        <a href="{{ route('properties.index') }}" class="rent-property-button">
+                        <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="rent-property-button">
                             <div class="rent-button-icon">
                                 <i class="fa fa-calendar"></i>
                             </div>
-                            <span>Explore Rental Properties</span>
+                            <span>Find Rental Property</span>
                             <div class="rent-button-arrow">
                                 <i class="fa fa-arrow-right"></i>
                             </div>
@@ -852,10 +841,16 @@
                                 <span>Explore Today's Opportunities.</span>
                                 <strong>Plan for Tomorrow.</strong>
                             </div>
-                            <a href="{{ route('properties.index') }}" class="new-projects-button">
-                                <span>Explore New Projects</span>
-                                <i class="fa fa-long-arrow-right"></i>
-                            </a>
+                            <div class="new-projects-buttons d-flex align-items-center gap-3">
+                                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="new-projects-button mr-2">
+                                    <span>Explore Properties</span>
+                                    <i class="fa fa-long-arrow-right"></i>
+                                </a>
+                                <a href="{{ auth()->check() ? route('seller.dashboard') : route('seller.login') }}" class="new-projects-button seller-button">
+                                    <span>List Your Property</span>
+                                    <i class="fa fa-long-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>                    
                 </div>
@@ -877,7 +872,7 @@
                             <i class="fa fa-check-circle"></i>
                             <span>With your Kalp Realty account, you can:</span>
                         </div>
-                        <a href="{{ route('register') }}" class="owner-account-button">
+                        <a href="{{ route('seller.register') }}" class="owner-account-button">
                             <span>Create Your Account</span>
                             <i class="fa fa-long-arrow-right"></i>
                         </a>
@@ -1076,16 +1071,18 @@
         <!--End about Area-->
          <section class="about-area">
              <div class="container">
-                 <div class="sec-title with-text max-width text-center wow fadeInDown"  data-wow-delay="100ms" data-wow-duration="1200ms">
-                    <p>Property Services</p>
-                    <div class="title ">
-                        We Help<span> You Find</span>
-                    </div>
-                    <p class="bottom-text">
-                        Discover the right property for your needs with our trusted
-                        residential and commercial property solutions for sale and rent.
-                    </p>
+                <div class="how-kalp-header">
+                     <div class="list-property-label">
+                        <span class="label-line"></span>
+                        <i class="fa fa-building"></i>
+                        <span>Property Services</span>
+                        <span class="label-line"></span>
+                    </div>                     
+                    <h2> We Help <span> You Find</span></h2>
+                    <p>  Discover the right property for your needs with our trusted
+                        residential and commercial property solutions for sale and rent.</p>
                 </div>
+                 
                 <div class="row fact-counter">
                     <!--Start Single Fact Counter-->
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
@@ -1149,22 +1146,17 @@
         <!--Start Recently Project Area-->
         <section class="recently-project-area">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="sec-title float-left">
-                            <p>Property Types</p>
-                            <div class="title">
-                                Explore <span>Properties</span>
-                            </div>
-                        </div>
-                        <div class="more-project-button float-right">
-                            <a class="btn-two" href="#">
-                                More Properties
-                                <span class="flaticon-next"></span>
-                            </a>
-                        </div>
-                    </div>
+                <div class="how-kalp-header">
+                     <div class="list-property-label">
+                        <span class="label-line"></span>
+                        <i class="fa fa-building"></i>
+                        <span>Property Types</span>
+                        <span class="label-line"></span>
+                    </div>                     
+                    <h2> Explore <span> Properties</span></h2>
+                    <p> Find the perfect property with curated residential and commercial spaces for living, investing, and growing your business.</p>
                 </div>
+                
             </div>
             <div class="container-fluid">
                 <div class="project-carousel owl-carousel owl-theme">
@@ -1553,125 +1545,152 @@
         <!--End appointment Area-->
         <section class="working-process-area">
             <div class="container">
-                <div class="sec-title with-text max-width text-center wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
-                    <p>FOR PROPERTY BUYERS</p>
-                    <div class="title">Find Your <span>Perfect Property</span></div>
-                    <p class="bottom-text">Discover properties for sale and rent, compare your options and connect with property owners.</p>
+                <div class="why-kalp-header">
+                    <div class="list-property-label">
+                        <span class="label-line"></span>
+                        <i class="fa fa-building"></i>
+                        <span>FOR PROPERTY BUYERS</span>
+                        <span class="label-line"></span>
+                    </div>                    
+                    <h2>Find Your<span>Perfect Property</span></h2>
+                    <h3>Property Search Made Simple.</h3>
+                    <p>Discover properties for sale and rent, compare your options and connect with property owners.</p>
                 </div>
-                <div class="row align-items-center">
+                 
+                <div class="row align-items-center">                    
                     <div class="col-xl-6 col-lg-6 col-md-12">
-                        <div class="sec-title">
-                            <p>BUY WITH CONFIDENCE</p>
-                            <div class="title">Your Search For The Right <span>Property Starts Here</span></div>
-                        </div>
-                        <div class="text">
-                            <p>Explore homes, apartments, villas, plots and commercial properties available for sale and rent in your preferred locations.</p>
-                            <p>Create your buyer account to save your property interests, submit enquiries and connect with property owners.</p>
-                        </div>
-                        <div class="button">
-                            <a class="btn-one" href="{{ route('buyer.register') }}">
-                                Register As Buyer
-                                <span class="flaticon-next"></span>
-                            </a>
-                            <a class="btn-one" href="{{ route('buyer.login') }}">
-                                Buyer Login
-                                <span class="flaticon-next"></span>
-                            </a>
+                        <div class="buyer-content-left">                            
+
+                            <div class="buyer-confidence-title">
+                                <p>BUY WITH CONFIDENCE</p>
+                                <div class="title">Your Search For The Right <span>Property Starts Here</span></div>
+                            </div>
+
+                            <div class="buyer-feature-list">
+                                <div class="buyer-feature-item">
+                                    <div class="buyer-feature-icon">
+                                        <span class="icon-architecture-and-city1"></span>
+                                    </div>
+                                    <div class="buyer-feature-content">
+                                        <h4>Explore The Right Properties</h4>
+                                        <p>Explore homes, apartments, villas, plots and commercial properties available for sale and rent in your preferred locations.</p>
+                                    </div>
+                                </div>
+
+                                <div class="buyer-feature-item">
+                                    <div class="buyer-feature-icon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <div class="buyer-feature-content">
+                                        <h4>Save & Manage Your Interests</h4>
+                                        <p>Create your buyer account to save your favourite properties, manage your enquiries and keep track of your property interests.</p>
+                                    </div>
+                                </div>
+
+                                <div class="buyer-feature-item">
+                                    <div class="buyer-feature-icon">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div>
+                                    <div class="buyer-feature-content">
+                                        <h4>Connect With Property Owners</h4>
+                                        <p>Find the property that matches your requirements and connect directly with property owners for further details.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="button buyer-buttons">
+                                <a class="btn-one" href="{{ route('buyer.register') }}">Register As Buyer <span class="flaticon-next"></span></a>
+                                <a class="btn-one" href="{{ route('buyer.login') }}">Buyer Login <span class="flaticon-next"></span></a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-12">
                         <div class="single-working-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
                             <div class="img-holder">
                                 <div class="inner">
-                                    <img src="{{ asset('assets/frontend/images/resources/working-2.jpg') }}" alt="Find Your Property">
+                                    <img src="{{ asset('assets/frontend/images/resources/find-properties.png') }}" alt="Find Your Property">
                                     <div class="overlay-style-one"></div>
                                 </div>
-                            </div>
-                            <div class="text-holder">
-                                <div class="plus-icon-box">
-                                    <span class="icon-plus"></span>
-                                </div>
-                                <div class="outer-box">
-                                    <div class="icon">
-                                        <div class="inner">
-                                            <div class="box">
-                                                <span class="icon-architecture-and-city1"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text">
-                                        <h3>Find Your Property</h3>
-                                        <p>Browse properties for sale and rent and connect with the right property owner.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="working-area" style="background-image:url('{{ asset('assets/frontend/images/parallax-background/working-bg.jpg') }}');">
-            <div class="container map-content-box">
-                <div class="sec-title with-text max-width text-center wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
-                    <p class="bottom-text">FOR PROPERTY SELLERS</p>
-                    <div class="title">Sell Your <span>Property With Confidence</span></div>
-                    <p class="bottom-text">List your property, reach genuine buyers and connect with interested customers easily.</p>
-                </div>
-
-                <div class="row align-items-center">
-                    <div class="col-xl-6 col-lg-6 col-md-12">
-                        <div class="single-working-box wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <div class="img-holder">
-                                <div class="inner">
-                                    <img src="{{ asset('assets/frontend/images/resources/working-2.jpg') }}" alt="Sell Your Property">
-                                    <div class="overlay-style-one"></div>
-                                </div>
-                            </div>
-                            <div class="text-holder">
-                                <div class="plus-icon-box">
-                                    <span class="icon-plus"></span>
-                                </div>
-                                <div class="outer-box">
-                                    <div class="icon">
-                                        <div class="inner">
-                                            <div class="box">
-                                                <span class="icon-company"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text mt-4">
-                                        <h3>Sell Your Property</h3>
-                                        <p>List your property for sale or rent and connect with genuine buyers.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-6 col-lg-6 col-md-12">
-                        <div class="sec-title">
-                            <p class="text-white">FOR PROPERTY SELLERS</p>
-                            <div class="title">List Your Property And <span>Reach More Buyers</span></div>
-                        </div>
-                        <div class="text">
-                            <p class="text-white">Showcase your residential or commercial property to potential buyers and tenants looking for properties in your preferred location.</p>
-                            <p class="text-white">Create your seller account to add properties, manage enquiries and connect with interested buyers.</p>
-                        </div>
-                        <div class="button">
-                            <a class="btn-one" href="{{ route('seller.register') }}">
-                                Register As Seller
-                                <span class="flaticon-next"></span>
-                            </a>
-                            <a class="btn-one" href="{{ route('seller.login') }}">
-                                Seller Login
-                                <span class="flaticon-next"></span>
-                            </a>
+                            </div>                           
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
+        <section class="working-process-area">
+            <div class="container">
+                <div class="why-kalp-header">
+                    <div class="list-property-label">
+                        <span class="label-line"></span>
+                        <i class="fa fa-building"></i>
+                        <span>FOR PROPERTY SELLERS</span>
+                        <span class="label-line"></span>
+                    </div>
+                    <h2>Sell Your <span>Property With Confidence</span></h2>
+                    <h3>Property Selling Made Simple.</h3>
+                    <p>List your property, reach genuine buyers and connect with interested customers easily.</p>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="single-working-box wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
+                            <div class="img-holder">
+                                <div class="inner">
+                                    <img src="{{ asset('assets/frontend/images/resources/sell-property.png') }}" alt="Sell Your Property">
+                                    <div class="overlay-style-one"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="buyer-content-left seller-content-left">
+                            <div class="buyer-confidence-title">
+                                <p>SELL WITH CONFIDENCE</p>
+                                <div class="title">List Your Property And <span>Reach More Buyers</span></div>
+                            </div>
+
+                            <div class="buyer-feature-list">
+                                <div class="buyer-feature-item">
+                                    <div class="buyer-feature-icon">
+                                        <i class="fa fa-building"></i>
+                                    </div>
+                                    <div class="buyer-feature-content">
+                                        <h4>List Your Property</h4>
+                                        <p>Add your residential or commercial property for sale or rent and showcase it to potential buyers and tenants.</p>
+                                    </div>
+                                </div>
+
+                                <div class="buyer-feature-item">
+                                    <div class="buyer-feature-icon">
+                                        <i class="fa fa-users"></i>
+                                    </div>
+                                    <div class="buyer-feature-content">
+                                        <h4>Reach Genuine Buyers</h4>
+                                        <p>Get your property in front of genuine buyers and tenants who are actively searching for properties in your preferred location.</p>
+                                    </div>
+                                </div>
+
+                                <div class="buyer-feature-item">
+                                    <div class="buyer-feature-icon">
+                                        <i class="fa fa-comments"></i>
+                                    </div>
+                                    <div class="buyer-feature-content">
+                                        <h4>Connect With Interested Customers</h4>
+                                        <p>Receive enquiries, manage your property interests and connect directly with buyers and tenants.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="button buyer-buttons">
+                                <a class="btn-one" href="{{ route('seller.register') }}">Register As Seller <span class="flaticon-next"></span></a>
+                                <a class="btn-one" href="{{ route('seller.login') }}">Seller Login <span class="flaticon-next"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>       
        
 
         <!--Start Brand area-->
