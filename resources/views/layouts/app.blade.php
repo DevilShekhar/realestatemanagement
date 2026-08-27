@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Master Stylesheet -->
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/style-pure.css') }}">
-     <link rel="stylesheet" href="{{ asset('assets/frontend/css/custome-new.css') }}">
+     <link rel="stylesheet" href="{{ asset('assets/frontend/css/customenew.css') }}">
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/responsive.css') }}">
     <!-- Favicon -->
