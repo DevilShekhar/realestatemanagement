@@ -61,7 +61,7 @@
                                         <tbody>
                                             @forelse($countries as $key => $country)
                                                 <tr>                                               
-                                                    <td>{{ $countries->firstItem() + $key }}</td>
+                                                     <td>{{ $key + 1 }}</td>
                                                     <td>
                                                         <strong>
                                                             {{ $country->name }}

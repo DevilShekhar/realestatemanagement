@@ -26,7 +26,7 @@ class AreaController extends Controller
             'updater',
         ])
             ->latest('id')
-            ->paginate(10);
+            ->get();
 
         return view('admin.areas.index', compact('areas'));
     }

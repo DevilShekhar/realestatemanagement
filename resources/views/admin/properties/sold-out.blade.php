@@ -106,9 +106,7 @@
                                     <tbody>
                                         @forelse($properties as $key => $property)
                                             <tr>
-                                                <td>
-                                                    {{ $properties->firstItem() + $key }}
-                                                </td>
+                                                <td>{{ $key + 1 }}</td>
                                                 <td>
                                                     <strong>
                                                         {{ $property->title }}

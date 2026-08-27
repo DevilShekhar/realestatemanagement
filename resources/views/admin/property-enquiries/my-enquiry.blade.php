@@ -10,9 +10,9 @@
             <div class="card-header">
                 <h4>My Property Enquiries</h4>
             </div>
-            <div class="card-body p-0">
+            <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-striped">
+                    <table class="table table-bordered table-hover"  id="table-1">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -78,6 +78,22 @@
         </div>
     </div>
 </section>
+@push('scripts')
+<script>
+$(document).ready(function () {
+
+    $('#table-1').DataTable({
+        pageLength: 10,
+        lengthChange: true,
+        searching: true,
+        ordering: true,
+        paging: true,
+        info: true
+    });
+
+});
+</script>
+@endpush
 @endsection
 @else
     @php

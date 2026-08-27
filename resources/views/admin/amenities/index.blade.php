@@ -64,7 +64,7 @@
                                         <tbody>
                                             @forelse($amenities as $key => $amenity)
                                                 <tr>                                                    
-                                                    <td> {{ $amenities->firstItem() + $key }} </td>
+                                                    <td>{{ $key + 1 }}</td>
                                                     <td>
                                                         <strong>
                                                             {{ $amenity->name }}

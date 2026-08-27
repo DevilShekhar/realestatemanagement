@@ -21,7 +21,7 @@ class CountryController extends Controller
             'updater:id,name',
         ])
             ->latest('id')
-            ->paginate(10);
+            ->get();
 
         return view('admin.countries.index', compact('countries'));
     }

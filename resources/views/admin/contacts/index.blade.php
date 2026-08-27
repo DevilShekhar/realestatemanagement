@@ -42,7 +42,7 @@
                         </h4>
                         <div class="card-header-action">
                             <span class="badge badge-primary">
-                                {{ $contacts->total() }} Total
+                               {{ $contacts->count() }} Total
                             </span>
                         </div>
                     </div>
@@ -63,9 +63,7 @@
                                 <tbody>
                                     @forelse($contacts as $key => $contact)
                                         <tr>
-                                            <td>
-                                                {{ $contacts->firstItem() + $key }}
-                                            </td>
+                                            <td>{{ $key + 1 }}</td>
                                             <td>
                                                 <strong>
                                                     {{ $contact->name }}

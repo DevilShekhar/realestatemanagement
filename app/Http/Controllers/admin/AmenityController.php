@@ -19,7 +19,7 @@ class AmenityController extends Controller
             'updater:id,name',
         ])
             ->latest('id')
-            ->paginate(10);
+            ->get();
 
         return view('admin.amenities.index', compact('amenities'));
     }

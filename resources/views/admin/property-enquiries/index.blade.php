@@ -26,7 +26,7 @@
                 </h4>
                 <div class="ml-auto">
                     <span class="badge badge-primary p-2">
-                        {{ $enquiries->total() }} Enquiries
+                        {{ $enquiries->count() }} Enquiries
                     </span>
                 </div>
             </div>
@@ -49,9 +49,7 @@
                         <tbody>
                             @forelse($enquiries as $key => $enquiry)
                                 <tr>                                    
-                                    <td>
-                                        {{ $enquiries->firstItem() + $key }}
-                                    </td>
+                                    <td>{{ $key + 1 }}</td>
                                     <td>
                                         @if($enquiry->property)
                                             <a href="{{ route('properties.show', $enquiry->property->id) }}" class="text-black">
@@ -164,15 +162,18 @@
 @endsection
 @push('scripts')
 <script>
-    $(document).ready(function () {
+$(document).ready(function () {
 
-        $('#table-1').DataTable({
-            pageLength: 10,
-            ordering: true,
-            searching: true,
-            lengthChange: true
-        });
+    $('#table-1').DataTable({
+        pageLength: 10,
+        lengthChange: true,
+        searching: true,
+        ordering: true,
+        paging: true,
+        info: true
     });
+
+});
 </script>
 @endpush
 @else

@@ -60,7 +60,7 @@ class PropertyController extends Controller
 
         $properties = $query
             ->latest('id')
-            ->paginate(10);
+            ->get();
 
         return view(
             'admin.properties.index',
@@ -104,7 +104,7 @@ class PropertyController extends Controller
 
         $properties = $query
             ->latest('id')
-            ->paginate(10);
+            ->get();
 
         return view(
             'admin.properties.sold-out',
