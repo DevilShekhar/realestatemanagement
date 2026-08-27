@@ -1091,7 +1091,7 @@
                     budget to find options that match your requirements.
                 </p>
                 <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="service-btn">
-                    Explore Properties for Sale
+                    Find Properties
                     <i class="fa fa-arrow-right"></i>
                 </a>
             </div>
@@ -1131,7 +1131,7 @@
                     suitable rental options.
                 </p>
                 <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="service-btn">
-                    Explore Properties for Sale
+                     Find Rental Properties
                     <i class="fa fa-arrow-right"></i>
                 </a>
             </div>
@@ -1181,7 +1181,7 @@
                 </p>
 
                 <a href="{{ auth()->check() ? route('properties.create') : route('seller.login') }}" class="service-btn">
-                    Sell Your Property
+                    List Your Property
                     <i class="fa fa-arrow-right"></i>
                 </a>
             </div>
@@ -1652,8 +1652,8 @@
                     Find options based on your preferred location, budget and requirements.
                 </p>
 
-                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="service-btn">
-                    Explore Resale Properties
+                <a href="{{ auth()->check() ? route('properties.index') : route('seller.login') }}" class="service-btn">
+                    List Resale Properties
                     <i class="fa fa-arrow-right"></i>
                 </a>
             </div>
