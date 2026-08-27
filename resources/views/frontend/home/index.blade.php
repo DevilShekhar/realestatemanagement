@@ -192,8 +192,6 @@
                 </div>
             </div>
         </section>
-         
-        
         <section class="property-categories-section">
             <div class="container">
                 <div class="property-categories-header text-center">
@@ -457,7 +455,6 @@
                 </div>
             </div>
         </section>
-       
         <section class="buy-property-section">
             <div class="container">
                 <div class="property-categories-header text-center">
@@ -1067,7 +1064,6 @@
                 </div>
             </div>
         </section>      
-          
         <!--End about Area-->
          <section class="about-area">
              <div class="container">
@@ -1384,7 +1380,6 @@
             </div>
         </section>
         <!--End slogan area-->
-
         <!--Start Testimonial Area-->
         <section class="testimonial-area">
             <div class="container">
@@ -1495,9 +1490,6 @@
             </div>
         </section>
         <!--End Testimonial Area-->
-
-        <!--Start appointment Area-->
-       
         <!--End appointment Area-->
         <section class="working-process-area">
             <div class="container">
@@ -1573,7 +1565,6 @@
                 </div>
             </div>
         </section>
-        
         <section class="working-process-area">
             <div class="container">
                 <div class="why-kalp-header">
@@ -1646,172 +1637,7 @@
                     </div>
                 </div>
             </div>
-        </section>       
-       
-
-        <!--Start Brand area-->
-       <section class="brand-area">
-            <div class="container">
-                <div class="sec-title">
-                    <p>Corporate Clients</p>
-                    <div class="title">More than <span>2000 Clients</span></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xl-12">
-
-                        <ul class="brand-items-carousel owl-carousel owl-theme">
-
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item wow fadeInUp"
-                                data-wow-delay="0ms"
-                                data-wow-duration="1500ms">
-
-                                <a href="#">
-                                    <img
-                                        src="{{ asset('assets/frontend/images/brand/1.png') }}"
-                                        alt="Awesome Brand Image"
-                                    >
-                                </a>
-
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item wow fadeInUp"
-                                data-wow-delay="200ms"
-                                data-wow-duration="1500ms">
-
-                                <a href="#">
-                                    <img
-                                        src="{{ asset('assets/frontend/images/brand/2.png') }}"
-                                        alt="Awesome Brand Image"
-                                    >
-                                </a>
-
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item wow fadeInUp"
-                                data-wow-delay="400ms"
-                                data-wow-duration="1500ms">
-
-                                <a href="#">
-                                    <img
-                                        src="{{ asset('assets/frontend/images/brand/3.png') }}"
-                                        alt="Awesome Brand Image"
-                                    >
-                                </a>
-
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item wow fadeInUp"
-                                data-wow-delay="600ms"
-                                data-wow-duration="1500ms">
-
-                                <a href="#">
-                                    <img
-                                        src="{{ asset('assets/frontend/images/brand/4.png') }}"
-                                        alt="Awesome Brand Image"
-                                    >
-                                </a>
-
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item wow fadeInUp"
-                                data-wow-delay="800ms"
-                                data-wow-duration="1500ms">
-
-                                <a href="#">
-                                    <img
-                                        src="{{ asset('assets/frontend/images/brand/5.png') }}"
-                                        alt="Awesome Brand Image"
-                                    >
-                                </a>
-
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item wow fadeInUp"
-                                data-wow-delay="800ms"
-                                data-wow-duration="1500ms">
-
-                                <a href="#">
-                                    <img
-                                        src="{{ asset('assets/frontend/images/brand/6.png') }}"
-                                        alt="Awesome Brand Image"
-                                    >
-                                </a>
-
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item wow fadeInUp"
-                                data-wow-delay="800ms"
-                                data-wow-duration="1500ms">
-
-                                <a href="#">
-                                    <img
-                                        src="{{ asset('assets/frontend/images/brand/5.png') }}"
-                                        alt="Awesome Brand Image"
-                                    >
-                                </a>
-
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item wow fadeInUp"
-                                data-wow-delay="800ms"
-                                data-wow-duration="1500ms">
-
-                                <a href="#">
-                                    <img
-                                        src="{{ asset('assets/frontend/images/brand/6.png') }}"
-                                        alt="Awesome Brand Image"
-                                    >
-                                </a>
-
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-        </section>
+        </section>    
         <!--End Brand area-->
          <script>
             document.addEventListener('DOMContentLoaded', function () {
@@ -1900,5 +1726,4 @@
                 });
             });
         </script>
-        
 @endsection
