@@ -1388,30 +1388,23 @@
         <!--Start Testimonial Area-->
         <section class="testimonial-area">
             <div class="container">
+                 <div class="how-kalp-header">
+                     <div class="list-property-label">
+                        <span class="label-line"></span>
+                        <i class="fa fa-building"></i>
+                        <span>Testimonials</span>
+                        <span class="label-line"></span>
+                    </div>                     
+                    <h2> Our Customer  <span> Words</span></h2>
+                    <p>Discover what our customers have to say about their experience with us and how we helped them find the right property with confidence.</p>
+                </div>              
                 <div class="row">
-                    <div class="col-xl-12">
-                        <div class="sec-title float-left">
-                            <p>Testimonials</p>
-                            <div class="title">Our Customer <span>Words</span></div>
-                        </div>
-
-                        <div class="more-reviews-button float-right">
-                            <a class="btn-two" href="#">
-                                More Reviews<span class="flaticon-next"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-
                     <!--Start Single Testimonial Item-->
                     <div class="col-xl-4 col-lg-4">
                         <div class="single-testimonial-item text-center">
                             <div class="quote-icon">
                                 <span class="icon-quote1"></span>
                             </div>
-
                             <div class="inner-content">
                                 <div class="client-info">
                                     <h3>Shelly Johnson</h3>
