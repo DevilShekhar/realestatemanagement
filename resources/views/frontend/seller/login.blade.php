@@ -261,6 +261,17 @@
                                         </div>
 
                                     </div>
+                                    <div class="form-group mt-3">
+                                        <a  href="{{ route('seller.google') }}"  class="btn btn-light btn-lg btn-block border"  >
+                                            <img
+                                                src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                                                alt="Google"
+                                                style="width:20px; margin-right:8px;"
+                                            >
+
+                                            {{ __('Continue with Google') }}
+                                        </a>
+                                    </div>
 
                                 </form>
 

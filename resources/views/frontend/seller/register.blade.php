@@ -476,6 +476,15 @@
                                         &rarr;
                                     </span>
                                 </button>
+                                <div class="text-center mt-3">
+                                    <div class="mb-2 text-muted">
+                                        Or
+                                    </div>
+                                    <a href="{{ route('seller.google') }}"  class="btn btn-light btn-lg btn-block border"  style="display:flex; align-items:center; justify-content:center; gap:8px;">
+                                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google"  style="width:20px; height:20px;" >
+                                        {{ __('Register with Google') }}
+                                    </a>
+                                </div>
                                 <p class="seller-hero-terms">
                                     By continuing you agree to our terms.
                                     Your details are kept private.

@@ -37,6 +37,8 @@ Route::prefix('seller')->name('seller.')->group(function () {
     Route::post('/register', [SellerRegistrationController::class, 'store'])->name('register.store');
     Route::get('/login', [SellerLoginController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [SellerLoginController::class, 'login'])->name('login.submit');
+     Route::get('/google', [SellerLoginController::class, 'redirectToGoogle'])->name('google');
+    Route::get('/google/callback', [SellerLoginController::class, 'handleGoogleCallback'])->name('google.callback');
     Route::post('/logout', [SellerLoginController::class, 'logout'])->name('logout');
 });
 
@@ -45,6 +47,8 @@ Route::prefix('buyer')->name('buyer.')->group(function () {
     Route::post('/register', [BuyerRegistrationController::class, 'store'])->name('register.store');
     Route::get('/login', [BuyerLoginController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [BuyerLoginController::class, 'login'])->name('login.submit');
+    Route::get('/google', [BuyerLoginController::class, 'redirectToGoogle'])->name('google');
+    Route::get('/google/callback', [BuyerLoginController::class, 'handleGoogleCallback'])->name('google.callback');
     Route::post('/logout', [BuyerLoginController::class, 'logout'])->name('logout');
 });
 Route::name('frontend.')->group(function () {

@@ -83,9 +83,11 @@
                                     class="login-logo"
                                 >
 
+
                                 <div class="seller-title">
                                     Buyer Login
                                 </div>
+                                
 
                             </div>
 
@@ -260,6 +262,18 @@
 
                                         </div>
 
+                                    </div>
+                                    {{-- GOOGLE LOGIN --}}
+                                    <div class="form-group mt-3">
+                                        <a href="{{ route('buyer.google') }}"
+                                        class="btn btn-light btn-lg btn-block border">
+                                            <img
+                                                src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                                                alt="Google"
+                                                style="width:20px; margin-right:8px;"
+                                            >
+                                            {{ __('Continue with Google') }}
+                                        </a>
                                     </div>
 
                                 </form>
