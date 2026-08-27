@@ -1035,17 +1035,25 @@
 </section>
 <section class="services-page">
     <div class="services-container">
-        <div class="services-heading">
-            <span>OUR SERVICES</span>
-            <h2>Everything You Need to Find, Buy, Sell, Rent or List a Property </h2>
+        <div class="about-kalp-header">
+            <div class="about-kalp-label">
+                <span class="about-kalp-label-line"></span>
+                <i class="fa fa-building"></i>
+                <span>OUR SERVICES</span>
+                <span class="about-kalp-label-line"></span>
+            </div>
+            <h2>
+                Everything You Need to <span> Find, Buy, Sell, Rent or
+                List a Property</span>
+            </h2>
             <p>
                 At Kalp Realty, we make property search and property listing simple.
                 Whether you want to buy a home, rent a property, sell your existing
                 property or list a property for sale or rent, Kalp Realty brings
-                different property opportunities together in one place.
-                With a major focus on Pune and Mumbai, you can explore residential,
-                commercial, industrial and land properties based on your location,
-                budget and requirements.
+                different property opportunities together in one place. With a major
+                focus on Pune and Mumbai, you can explore residential, commercial,
+                industrial and land properties based on your location, budget and
+                requirements.
             </p>
         </div>
         <div class="service-row">
@@ -1082,7 +1090,7 @@
                     Search based on your preferred location, property type, area and
                     budget to find options that match your requirements.
                 </p>
-                <a href="{{ route('frontend.home') }}" class="service-btn">
+                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="service-btn">
                     Explore Properties for Sale
                     <i class="fa fa-arrow-right"></i>
                 </a>
@@ -1122,8 +1130,8 @@
                     Choose your preferred location and requirements to explore
                     suitable rental options.
                 </p>
-                <a href="{{ route('frontend.home') }}" class="service-btn">
-                    Explore Rental Properties
+                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="service-btn">
+                    Explore Properties for Sale
                     <i class="fa fa-arrow-right"></i>
                 </a>
             </div>
@@ -1172,7 +1180,7 @@
                     Give Your Property the Visibility It Deserves.
                 </p>
 
-                <a href="{{ route('seller.register') }}" class="service-btn">
+                <a href="{{ auth()->check() ? route('properties.create') : route('seller.login') }}" class="service-btn">
                     Sell Your Property
                     <i class="fa fa-arrow-right"></i>
                 </a>
@@ -1278,30 +1286,30 @@
                     </div>
                 </div>
 
-                <a href="{{ route('seller.register') }}" class="service-btn">
+                <a href="{{ auth()->check() ? route('properties.create') : route('seller.login') }}" class="service-btn">
                     List Your Property
                     <i class="fa fa-arrow-right"></i>
                 </a>
             </div>
         </div>
-
-        <div class="category-heading">
-            <span>PROPERTY CATEGORIES</span>
-
-            <h2>
-                Explore Properties by Category
-            </h2>
-
-            <p>
-                Every property requirement is different.
+        <div class="about-kalp-header">
+                    <div class="about-kalp-label">
+                        <span class="about-kalp-label-line"></span>
+                        <i class="fa fa-building"></i>
+                        <span>PROPERTY CATEGORIES</span>
+                        <span class="about-kalp-label-line"></span>
+                    </div>
+                    <h2> Explore Properties by <span> Category </span></h2>
+                    <p> Every property requirement is different.
 
                 Some people are looking for a home. Some need a place for their business.
                 Others are searching for land, investment opportunities or industrial spaces.
 
                 Kalp Realty brings multiple property categories together so you can easily
-                explore the type of property you need.
-            </p>
-        </div>
+                explore the type of property you need.</p>
+                </div>
+
+         
 
         <div class="service-row">
             <div class="service-image">
@@ -1347,7 +1355,7 @@
                     <span>Rental Homes</span>
                 </div>
 
-                <a href="{{ route('frontend.home') }}" class="service-btn">
+                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="service-btn">
                     Explore Residential Properties
                     <i class="fa fa-arrow-right"></i>
                 </a>
@@ -1396,7 +1404,7 @@
                     and business requirements.
                 </p>
 
-                <a href="{{ route('frontend.home') }}" class="service-btn">
+                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="service-btn">
                     Explore Commercial Properties
                     <i class="fa fa-arrow-right"></i>
                 </a>
@@ -1445,7 +1453,7 @@
                     and your growth tomorrow.
                 </p>
 
-                <a href="{{ route('frontend.home') }}" class="service-btn">
+                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="service-btn">
                     Explore Industrial Properties
                     <i class="fa fa-arrow-right"></i>
                 </a>
@@ -1494,7 +1502,7 @@
                     Explore available spaces based on location and area requirements.
                 </p>
 
-                <a href="{{ route('frontend.home') }}" class="service-btn">
+                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="service-btn">
                     Explore Warehouses & Godowns
                     <i class="fa fa-arrow-right"></i>
                 </a>
@@ -1539,7 +1547,7 @@
                     Find land opportunities based on your preferred location and requirements.
                 </p>
 
-                <a href="{{ route('frontend.home') }}" class="service-btn">
+                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="service-btn">
                     Explore Land & Plots
                     <i class="fa fa-arrow-right"></i>
                 </a>
@@ -1586,10 +1594,19 @@
                     Explore available project information and find options that suit your requirements.
                 </p>
 
-                <a href="{{ route('frontend.home') }}" class="service-btn">
-                    Explore New Projects
-                    <i class="fa fa-arrow-right"></i>
-                </a>
+                <div class="service-btn-group">
+                    <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" 
+                    class="service-btn">
+                        Explore Properties
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+
+                    <a href="{{ auth()->check() ? route('properties.create') : route('seller.register') }}" 
+                    class="service-btn">
+                        List Your Property
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -1635,7 +1652,7 @@
                     Find options based on your preferred location, budget and requirements.
                 </p>
 
-                <a href="{{ route('frontend.home') }}" class="service-btn">
+                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}" class="service-btn">
                     Explore Resale Properties
                     <i class="fa fa-arrow-right"></i>
                 </a>
@@ -1708,15 +1725,16 @@
                 </a>
             </div>
         </div>
-
-        <div class="category-heading">
-            <span>HOW KALP REALTY WORKS</span>
-
-            <h2>
-                Finding the Right Property is Simple
-            </h2>
-        </div>
-
+        <div class="about-kalp-header mt-4">
+            <div class="about-kalp-label">
+                <span class="about-kalp-label-line"></span>
+                <i class="fa fa-building"></i>
+                <span>HOW KALP REALTY WORKS</span>
+                <span class="about-kalp-label-line"></span>
+            </div>
+            <h2>  Finding the <span>Right Property </span>is Simple </h2>
+            <p>Kalp Realty is a real estate platform designed to make it easier to <strong>buy, sell, rent and list properties</strong>.</p>
+        </div>         
         <div class="service-row">
             <div class="service-image">
                 <img
@@ -1836,18 +1854,11 @@
             </h3>
 
             <div class="services-cta-buttons">
-                <a
-                    href="{{ route('frontend.home') }}"
-                    class="cta-btn primary"
-                >
+                <a href="{{ auth()->check() ? route('properties.index') : route('buyer.login') }}"  class="cta-btn primary"  >
                     <span>Find a Property</span>
                     <i class="fa fa-arrow-right"></i>
                 </a>
-
-                <a
-                    href="{{ route('seller.register') }}"
-                    class="cta-btn secondary"
-                >
+                <a href="{{ auth()->check() ? route('properties.create') : route('seller.register') }}" class="cta-btn secondary" >
                     <span>List Your Property</span>
                     <i class="fa fa-arrow-right"></i>
                 </a>
