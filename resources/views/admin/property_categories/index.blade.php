@@ -53,7 +53,7 @@
                                         <tbody>
                                             @forelse($categories as $key => $category)
                                                 <tr>                                                
-                                                    <td> {{ $categories->firstItem() + $key }}</td>
+                                                    <td>{{ $key + 1 }}</td>
                                                     <td><strong>{{ $category->name }}</strong> </td>
                                                     <td>
                                                         @if($category->status)

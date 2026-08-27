@@ -19,7 +19,7 @@ class CityController extends Controller
     {
         $cities = City::with('state')
             ->latest('id')
-            ->paginate(10);
+            ->get();
 
         return view('admin.cities.index', compact('cities'));
     }

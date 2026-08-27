@@ -70,7 +70,7 @@
                                         <tbody>
                                             @forelse($areas as $key => $area)
                                                 <tr>
-                                                    <td>{{ $areas->firstItem() + $key }}</td>
+                                                    <td>{{ $key + 1 }}</td>
                                                     <td>
                                                         <strong>
                                                             {{ $area->name }}

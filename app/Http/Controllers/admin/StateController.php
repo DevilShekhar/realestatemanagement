@@ -19,7 +19,7 @@ class StateController extends Controller
     {
         $states = State::with('country')
             ->latest('id')
-            ->paginate(10);
+            ->get();
 
         return view('admin.states.index', compact('states'));
     }

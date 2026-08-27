@@ -16,7 +16,7 @@ class PropertyCategoryController extends Controller
     {
         $categories = PropertyCategory::with(['createdBy', 'updatedBy'])
             ->latest()
-            ->paginate(10);
+            ->get();
 
         return view('admin.property_categories.index', compact('categories'));
     }

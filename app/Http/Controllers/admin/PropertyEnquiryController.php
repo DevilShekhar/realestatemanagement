@@ -18,19 +18,14 @@ class PropertyEnquiryController extends Controller
         $enquiries = PropertyEnquiry::with([
             'property',
             'buyer',
-        ])->latest()->paginate(20);
+        ])->latest()->get();
 
         return view('admin.property-enquiries.index',compact('enquiries'));
     }
     public function myEnquiries()
     {
         $user = Auth::user();
-
-        $enquiries = PropertyEnquiry::with('property')
-            ->where('buyer_id', $user->id)
-            ->latest()
-            ->get();
-
-        return view('admin.property-enquiries.my-enquiry', compact('enquiries'));
+        $enquiries = PropertyEnquiry::with(['property','buyer',])->where('buyer_id', $user->id)->latest()->get();
+        return view('admin.property-enquiries.my-enquiry',compact('enquiries'));
     }
 }
