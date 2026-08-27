@@ -1601,7 +1601,7 @@
                         <i class="fa fa-arrow-right"></i>
                     </a>
 
-                    <a href="{{ auth()->check() ? route('properties.create') : route('seller.register') }}" 
+                    <a href="{{ auth()->check() ? route('properties.create') : route('seller.login') }}" 
                     class="service-btn">
                         List Your Property
                         <i class="fa fa-arrow-right"></i>
