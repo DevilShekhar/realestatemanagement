@@ -846,7 +846,7 @@
                                     <span>Explore Properties</span>
                                     <i class="fa fa-long-arrow-right"></i>
                                 </a>
-                                <a href="{{ auth()->check() ? route('seller.dashboard') : route('seller.login') }}" class="new-projects-button seller-button">
+                                <a href="{{ auth()->check() ? route('properties.create') : route('seller.login') }}" class="new-projects-button seller-button">
                                     <span>List Your Property</span>
                                     <i class="fa fa-long-arrow-right"></i>
                                 </a>
