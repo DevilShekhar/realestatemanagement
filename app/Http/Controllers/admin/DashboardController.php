@@ -42,11 +42,11 @@ class DashboardController extends Controller
         $totalCities = City::count();
         $totalAreas = Area::count();
         $totalContacts = Contact::count();
-        $recentContacts = Contact::latest()->take(5)->get();      
+        $recentContacts = Contact::latest()->get();      
         $totalPropertyEnquiries = 0;
         $recentEnquiries = collect();
         $totalPropertyEnquiries = PropertyEnquiry::count();
-        $recentEnquiries = PropertyEnquiry::with(['property','buyer',])->latest('created_at')->take(5)->get();
+        $recentEnquiries = PropertyEnquiry::with(['property','buyer',])->latest('created_at')->get();
         $recentPropertyQuery = Property::latest();
         $sellerProperties = 0;
         $sellerActiveProperties = 0;
@@ -65,7 +65,7 @@ class DashboardController extends Controller
         if ($role === 'buyer') {
             $buyerEnquiries = PropertyEnquiry::where('buyer_id', $user->id)->count();
         }   
-        $recentProperties = $recentPropertyQuery->take(5)->get();
+        $recentProperties = $recentPropertyQuery->get();
         return view('admin.dashboard', compact(
             'user',
             'role',

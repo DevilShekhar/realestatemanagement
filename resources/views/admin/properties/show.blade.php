@@ -3043,7 +3043,7 @@
                         <div class="record-information-body">
                             @if($property->enquiries->count() > 0)
                                 <div class="table-responsive">
-                                    <table class="table table-bordered table-hover mb-0">
+                                    <table class="table table-striped" id="table-1">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
@@ -4241,6 +4241,22 @@
 </div>
 @endsection
 @push('scripts')
+<script>
+    $(document).ready(function () {
+
+        // Table 1 - Recent Properties
+        $('#table-1').DataTable({
+            pageLength: 10,
+            ordering: true,
+            searching: true,
+            lengthChange: true,
+            paging: true,
+            info: true
+        });
+    });
+</script>
+@endpush
+@push('scripts')
 
 <script>
 
@@ -4780,6 +4796,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 @endpush
+
 @else
     @php
         abort(403);
