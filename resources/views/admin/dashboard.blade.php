@@ -450,9 +450,9 @@
                         <a href="{{ route('properties.index') }}" class="btn btn-primary"> View All</a>
                     </div>
                 </div>
-                <div class="card-body p-0">
+                <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-striped">
+                        <table class="table table-striped" id="table-1">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -522,9 +522,9 @@
                       <a href="{{ route('property-enquiries.index') }}" class="btn btn-primary" >View All</a>
                   </div>
               </div>
-              <div class="card-body p-0">
-                  <div class="table-responsive">
-                      <table class="table table-hover">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="table-2">
                           <thead>
                               <tr>
                                   <th>#</th>
@@ -606,9 +606,9 @@
                         </a>
                     </div>
                 </div>
-                <div class="card-body p-0">
+                <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-hover">
+                        <table class="table table-striped" id="table-3">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -681,3 +681,40 @@
     </div>
 </section>
 @endsection
+@push('scripts')
+<script>
+    $(document).ready(function () {
+
+        // Table 1 - Recent Properties
+        $('#table-1').DataTable({
+            pageLength: 10,
+            ordering: true,
+            searching: true,
+            lengthChange: true,
+            paging: true,
+            info: true
+        });
+
+        // Table 2 - Recent Property Enquiries
+        $('#table-2').DataTable({
+            pageLength: 10,
+            ordering: true,
+            searching: true,
+            lengthChange: true,
+            paging: true,
+            info: true
+        });
+
+        // Table 3 - Third Table
+        $('#table-3').DataTable({
+            pageLength: 10,
+            ordering: true,
+            searching: true,
+            lengthChange: true,
+            paging: true,
+            info: true
+        });
+
+    });
+</script>
+@endpush
