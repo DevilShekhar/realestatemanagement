@@ -26,11 +26,13 @@ use App\Http\Controllers\admin\ProfileController;
 use App\Http\Controllers\frontend\BuyerLoginController;
 use App\Http\Controllers\frontend\SellerLoginController;
 use App\Http\Controllers\frontend\ServiceController;
+use App\Http\Controllers\frontend\PropertyListingController;
 
 Route::get('/', [HomePageController::class, 'index'])->name('frontend.home');
 Route::get('/about', [AboutController::class, 'index'])->name('frontend.about');
 Route::post('/contact', [ContactController::class, 'store'])->name('frontend.contact.store');
 Route::get('/contact', [ContactController::class, 'index'])->name('frontend.contact');
+Route::get('/list-properties', [PropertyListingController::class, 'index'])->name('frontend.properties');
 
 Route::prefix('seller')->name('seller.')->group(function () {
     Route::get('/register', [SellerRegistrationController::class, 'create'])->name('register');
@@ -86,4 +88,4 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
     Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::get('/my-enquiry', [PropertyEnquiryController::class, 'myEnquiries'])->name('my-enquiry');
-});
+    });
