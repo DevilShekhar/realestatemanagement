@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content') 
         <section class="kalp-hero">
             <div class="kalp-hero-bg"></div>
             <div class="kalp-hero-overlay"></div>
@@ -99,6 +99,67 @@
                 </div>
             </div>
         </section> 
+        <section class="recently-project-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="sec-title float-left">
+                            <p>Properties</p>
+                            <div class="title">Latest <span>Properties</span></div>
+                        </div>
+                        <div class="more-project-button float-right">
+                            <a class="btn-two" href="{{ route('frontend.properties') }}">
+                                View All Properties<span class="flaticon-next"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="project-carousel owl-carousel owl-theme">
+                    @forelse($properties as $property)
+                        @php
+                            $image = $property->images->first();
+                            $imageUrl = $image ? asset('storage/' . $image->image) : asset('images/property-placeholder.jpg');
+                            $category = $property->propertyCategory->name ?? 'Property';
+                            $location = collect([
+                                $property->propertyArea->name ?? null,
+                                $property->city->name ?? null,
+                                $property->state->name ?? null,
+                            ])->filter()->implode(', ');
+                        @endphp
+                        <div class="single-project-style1">
+                            <div class="img-holder">
+                                <img src="{{ $imageUrl }}" alt="{{ $property->title }}">
+                                <div class="overlay-content">
+                                    <div class="inner-content">
+                                        <div class="link-box">
+                                            <a class="btn-one" href="{{ auth()->check() ? route('properties.show', $property->id) : route('buyer.login') }}">
+                                                View Details<span class="flaticon-next"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="title-box">
+                                    <span>{{ $category }}</span>
+                                    <h3>{{ $property->title }}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    @empty
+                        <div class="single-project-style1">
+                            <div class="img-holder">
+                                <img src="{{ asset('images/property-placeholder.jpg') }}" alt="No Properties">
+                                <div class="title-box">
+                                    <span>Properties</span>
+                                    <h3>No Properties Found</h3>
+                                </div>
+                            </div>
+                        </div>
+                    @endforelse
+                </div>
+            </div>
+        </section>
         <section class="pune-properties-section">
             <div class="container">
                 <div class="pune-properties-wrapper">

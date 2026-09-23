@@ -44,6 +44,17 @@
                         <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation clearfix">
                                 <li class="{{ request()->routeIs('frontend.home') ? 'current' : '' }}"> <a href="{{ route('frontend.home') }}">Home</a>  </li>
+                                <li class="dropdown">
+                                    <a href="{{ route('frontend.properties') }}">Properties</a>
+                                    <ul>
+                                        <li>
+                                            <a href="{{ route('frontend.properties') }}">Find Properties</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ auth()->check() ? route('properties.create') : route('seller.login') }}">List Your Property</a>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li class="{{ request()->routeIs('frontend.about') ? 'current' : '' }}"> <a href="{{ route('frontend.about') }}">About Us</a> </li>
                                 <li class="{{ request()->routeIs('frontend.services') ? 'active' : '' }}"><a href="{{ route('frontend.services') }}">Services</a>  </li>                     
                                 <li class="{{ request()->routeIs('frontend.contact') ? 'current' : '' }}"><a href="{{ route('frontend.contact') }}">Contact Us</a></li>
